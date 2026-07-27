@@ -1,0 +1,23 @@
+{
+  "name": "admit-match",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Real-time eligibility matching for German MSc CS programs, with every requirement cited to its source.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "seeds": "tsx src/cli/seeds.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

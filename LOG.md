@@ -8,6 +8,39 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-27 — Day 1: schema + seeds
+
+Scaffolded (TS strict, zod, typecheck green) and wrote [`src/schema.ts`](src/schema.ts) and
+[`src/seeds.ts`](src/seeds.ts).
+
+Every extracted value is wrapped in `Cited<T>` — value plus `{sourceType, sourceUrl, snippet,
+section, lang, fetchedAt}`. There is no way to express a bare number in this schema, which is the
+point. `snippetSupportsNumber()` is the deterministic anti-hallucination check: a numeric value must
+literally appear in the snippet cited for it, with German decimal commas normalised.
+
+Four real programs immediately justified fields I'd have called speculative yesterday:
+
+- **TUM** — points-based Eignungsverfahren, **70+ points passes**. So `pointsPassMark` is real, not
+  hypothetical.
+- **RWTH** — **Auflagen ceiling of 42 CP**: more than that in additional requirements and admission
+  is impossible. Also a GRE percentile gate (Quant >75th, Verbal >15th, AW ≥3.5) that **exempts
+  EU/EEA and Bildungsinländer**. Confirms `auflagen.maxEcts` and `TestRequirement.exemptions`.
+- **KIT** — Informatik M.Sc. requires **German C1**. A "German MSc CS" that most international
+  applicants can't enter, and invisible on aggregator listings.
+- **TU Dresden** — a dated Eignungsfeststellungsordnung PDF. Cleanest statute-tier source so far.
+
+Seeds have an explicit `checked` state: `opened` / `found` / `todo`. **Nothing gets extracted below
+`opened`.** Right now 7 of 15 have URLs surfaced by search and **0 are `opened`** — I found them,
+I haven't verified them. Recording that honestly rather than letting a plausible URL masquerade as
+a checked one; the entire product is a claim about provenance, so the seed list is where that claim
+either starts or quietly dies.
+
+Remaining 8 chosen for a spread of *mechanisms* — points vs binary, NC vs NC-free, English vs
+German, uni-assist vs direct — not for ranking. The extractor has to survive variety, not prestige.
+
+**Next:** open all 15 admission pages + statutes, flip them to `opened`, fix whatever the search
+results got wrong. Then Day 2 extraction on 5.
+
 ## 2026-07-27 — The web page isn't the rule
 
 Chased why ECTS requirements read as vague online. They aren't vague — the web page is a
