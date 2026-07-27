@@ -8,6 +8,58 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-27 — Day 1b: all 15 seeds sourced, and the schema is already too small
+
+Worked through every seed against official pages. 15/15 now have an admission URL, 6 have a statute
+URL, and 6 admission pages were opened and read rather than trusted from a search snippet.
+
+Corrections to yesterday's optimism, worth recording because both were plausible and wrong:
+
+- **RWTH's 42 CP Auflagen ceiling and GRE percentile gate are NOT on the official admission page.**
+  They came from a search summary. Marked UNVERIFIED until located in the MPO. The schema fields
+  they justified stay, because other programs need them — but the *facts* don't get to be facts yet.
+- **TUM's "70 points passes" is likewise not on the program page.** Same treatment.
+- **KIT is two programs, not one**: German-taught Informatik M.Sc. (German C1) and English-taught
+  Computer Science M.Sc. (INT). Seeding it as one entry would have been silently wrong.
+
+### Four things the real pages do that the schema can't express yet
+
+1. **Alternative requirement sets** (KIT INT). Primary: maths 25 / theory 15 / practical 30 /
+   computer engineering 8. If unmet, admission is still possible when **at least 3 of 4** lower
+   thresholds {20, 15, 20, 6} are met *plus* an aptitude interview. My schema has one requirement
+   list, not a fallback ladder with a k-of-n rule.
+2. **Requirements defined by reference to another curriculum** (TU Darmstadt). Not subject-area
+   totals — ≥60 CP that "must not differ significantly" from TUD's own B.Sc. core courses, mapped
+   course by course. This is course-level equivalence, which I'd deferred to v1.
+3. **Nationality-dependent gates.** Freiburg's deadlines split EU vs non-EU (non-EU gets a window
+   six weeks shorter). Konstanz's pass mark is 60 for Lisbon Convention countries and **80 for
+   non-signatories**, with GRE/GMAT worth up to 20 points for the latter only. A deadline isn't
+   per-intake; it's per-intake-per-applicant-group.
+4. **Admission before graduation.** LMU and Hamburg both accept ~150 ECTS with a registered (not
+   completed) thesis. The profile model assumed a finished degree.
+
+None of these are edge cases — they're 5 of 15 programs. Fixing the schema before extracting beats
+extracting into a shape that can't hold the answer.
+
+### The variance is the product
+
+Same country, same degree, same subject:
+
+- **English B2** (TU Berlin, KIT INT) vs **English C1 / IELTS 7.0** (TU Dresden, Bonn, Stuttgart)
+- **German C1 required** (KIT Informatik, Hamburg) — two "German MSc CS" programs most
+  international applicants simply cannot enter, and nothing on an aggregator listing says so
+- **Binary** (TU Dresden: accepted or rejected, no conditional admission) vs **points-based**
+  (Konstanz, with a published 0–105 rubric)
+- **Grade-triggered testing** (Würzburg: worse than 2.5 German scale → 30-minute oral exam)
+- **Nationality-triggered testing** (TUM: GRE required for applicants from Bangladesh, China,
+  India, Iran, Pakistan — minimum quantitative 164)
+
+Also confirmed Würzburg is the actual source of the 100 / 25 / 10 ECTS example I'd written into
+RESEARCH.md §3.7 as "representative". Good — it was real.
+
+**Next:** schema v2 for the four gaps above, then Day 2 extraction on the 5 programs that have both
+documents.
+
 ## 2026-07-27 — Day 1: schema + seeds
 
 Scaffolded (TS strict, zod, typecheck green) and wrote [`src/schema.ts`](src/schema.ts) and
