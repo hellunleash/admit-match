@@ -1,14 +1,14 @@
 {
   "programId": "uni-wuerzburg-cs-msc",
-  "extractedAt": "2026-07-27T22:04:34.050Z",
+  "extractedAt": "2026-07-27T22:14:48.893Z",
   "promptVersion": "2026-07-28.3",
   "model": "gemini-2.5-flash",
   "docHashes": {
     "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf": "d5406ec872acad03e4034422028399f46353743d22b7fdb710dced22ae5ba3d0",
     "https://www.informatik.uni-wuerzburg.de/en/studies/degree-programmes/master-computer-science/application/": "7e787d7f592b12bd5b15a4febec42690ca272cf4860e4422edb1cc1f636d048f"
   },
-  "totalTokens": 19966,
-  "costUsd": 0.0217836,
+  "totalTokens": 40154,
+  "costUsd": 0.050205200000000005,
   "defects": 1,
-  "reviews": 5
+  "reviews": 3
 }

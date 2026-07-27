@@ -50,7 +50,24 @@ async function callOnce(
       generationConfig: {
         temperature: 0,
         responseMimeType: "application/json",
-        thinkingConfig: { thinkingBudget: 0 },
+        /**
+         * BOUNDED thinking, not zero and not unlimited.
+         *
+         * Three measured points on the same document (Würzburg, same prompt, cached inputs):
+         *   - default/dynamic thinking: ~₹14, and 87–150s per extraction
+         *   - budget 0:                 ~₹1.92, 19–49s — but it DROPPED the "≥25 ECTS mathematics
+         *                               and theoretical computer science" requirement entirely
+         *   - budget 2048:              ~₹4.42, and that requirement came back, statute-cited
+         *
+         * A missing requirement is not a cheaper answer, it's a wrong one — it would have told an
+         * applicant they qualify when they don't. So thinking stays on with a ceiling: still ~3x
+         * cheaper than the unbounded default, without silently losing thresholds on dense statutes.
+         *
+         * Simpler documents (Dresden, TU Berlin, Darmstadt) extracted identically at budget 0, so
+         * the right long-term answer is per-document escalation driven by a golden set, not one
+         * global number.
+         */
+        thinkingConfig: { thinkingBudget: Number(process.env["GEMINI_THINKING_BUDGET"] ?? 2048) },
       },
     }),
   });

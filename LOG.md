@@ -8,6 +8,42 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-28 — Thinking off was cheaper AND wrong
+
+I said quality held with thinking disabled. I'd checked one program, informally. Asked to actually
+measure it, I diffed the pre/post snapshots out of git history — free, no API calls.
+
+Four of six programs extracted **identical thresholds** with thinking off (Dresden 20/35/35,
+TU Berlin 12/12/12/18/30, Darmstadt 60/180, RWTH none-stated). Two changed. One of those was a real
+regression:
+
+**Würzburg lost `≥25 ECTS in mathematics and theoretical computer science`.** A requirement I had
+read on their page myself, and the exact threshold my own transcript is weakest against.
+
+The first diff confounded three changes at once (thinking, per-requirement provenance, prompt
+version), so I isolated it: same prompt, same cached documents, thinking budget 2048. The 25 came
+back, statute-cited, alongside 180/100/10.
+
+Three measured points on that one document:
+
+| thinking | cost | latency | result |
+|---|---|---|---|
+| dynamic (default) | ~₹14 | 87–150s | — |
+| 0 | ₹1.92 | 19–49s | **dropped the 25 ECTS requirement** |
+| 2048 | ₹4.42 | — | 180 / 100 / **25** / 10, all cited |
+
+So the default is now a **bounded** budget rather than zero. A missing requirement isn't a cheaper
+answer, it's a wrong one — it would tell an applicant they qualify when they don't. Still ~3x below
+the unbounded default, without silently losing thresholds on dense statutes.
+
+The general lesson is the one I keep re-learning here: **a cost optimisation that isn't measured
+against correctness is just a way of being wrong faster.** I disabled thinking, watched the bill
+drop 12x, eyeballed one program, and called it free. It wasn't.
+
+And the right fix isn't one global number — simple documents were identical at budget 0, so
+per-document escalation is the real answer. That needs a golden set to drive it, which is now the
+clearest blocker on the project rather than a nice-to-have.
+
 ## 2026-07-28 — The bill was thinking tokens, and I wasn't even counting them
 
 Caching fixed the *repeat* cost. A single extraction still cost ~₹14, which matches no Flash rate:

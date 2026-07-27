@@ -9,8 +9,8 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-      "snippet": "Der Studiengang ist komplett in deutscher Sprache studierbar. 2Um den Studiengang auch\nfür ausländische Studierende attraktiv zu machen, ist er aber auch komplett in englischer Sprache\nstudierbar. Alle Pflichtmodule sowie die Abschlussarbeit werden daher parallel sowohl in deut-\nscher als auch in englischer Sprache angeboten. “Hinsichtlich des Wahlpflichtbereichs stehen\nModule jeweils in ausreichendem Umfang in deutscher als auch in englischer Sprache zur Verfü-\ngung (Angebot der Wahlpflichtmodule teilweise parallel sowohl in deutscher als auch in engli-\nscher Sprache, teilweise ausschließlich in deutscher oder englischer Sprache).",
-      "section": "§ 2 Abs. 3",
+      "snippet": "Der Studiengang ist komplett in deutscher Sprache studierbar. Um den Studiengang auch für ausländische Studierende attraktiv zu machen, ist er aber auch komplett in englischer Sprache studierbar. Alle Pflichtmodule sowie die Abschlussarbeit werden daher parallel sowohl in deutscher als auch in englischer Sprache angeboten. Hinsichtlich des Wahlpflichtbereichs stehen Module jeweils in ausreichendem Umfang in deutscher als auch in englischer Sprache zur Verfügung (Angebot der Wahlpflichtmodule teilweise parallel sowohl in deutscher als auch in englischer Sprache, teilweise ausschließlich in deutscher oder englischer Sprache).",
+      "section": "§ 2 (3)",
       "lang": "de",
       "fetchedAt": "2026-07-27T22:03:43.851Z"
     },
@@ -19,22 +19,24 @@
   "admissionRestricted": {
     "value": "unstated",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.informatik.uni-wuerzburg.de/en/studies/degree-programmes/master-computer-science/application/",
-      "snippet": "The admission requirements are further detailed in the Section 4 of the FSB , as well as in the FSB’s Appendix, Section 2 (3). Your application documents will be subject to an aptitude test conducted by our department (FSB’s Appendix, Section 4). In case your grades are not sufficient, you might still be admitted to the programme for as long as you achieve an accordingly better grade in an aptitude assessment procedure.",
-      "lang": "en",
-      "fetchedAt": "2026-07-27T22:03:54.130Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
+      "snippet": "Voraussetzung für den Zugang zum Master-Studium ist das Bestehen eines Eignungsverfahrens.",
+      "section": "Anlage EV",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T22:03:43.851Z"
     },
-    "confidence": 0.5
+    "confidence": 0.8
   },
   "minGermanGrade": {
     "value": 2.5,
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.informatik.uni-wuerzburg.de/en/studies/degree-programmes/master-computer-science/application/",
-      "snippet": "If you fulfil these requirements and your degree grade in the German grading system is 2.5 or better you can be directly admitted to the programme.",
-      "lang": "en",
-      "fetchedAt": "2026-07-27T22:03:54.130Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
+      "snippet": "Als besonders qualifiziert gilt, a) wer einen einschlägigen Erstabschluss mit der Note 2,5 oder besser vorweisen kann",
+      "section": "§ 4 (2) 1. a)",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T22:03:43.851Z"
     },
     "confidence": 0.9
   },
@@ -46,7 +48,7 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://www.informatik.uni-wuerzburg.de/en/studies/degree-programmes/master-computer-science/application/",
-      "snippet": "If you fulfil these requirements but with a grade worse than 2.5 you can still be invited to an oral aptitude test for admittance.\nThis 30 minute oral test examines your knowledge in these areas: Theoretical computer science Practical computer science (algorithms and data structures, programming, software technology) Technical computer science (digital computer systems, information transmission)",
+      "snippet": "If you fulfil these requirements but with a grade worse than 2.5 you can still be invited to an oral aptitude test for admittance. This 30 minute oral test examines your knowledge in these areas: Theoretical computer science Practical computer science (algorithms and data structures, programming, software technology) Technical computer science (digital computer systems, information transmission)",
       "lang": "en",
       "fetchedAt": "2026-07-27T22:03:54.130Z"
     },
@@ -56,7 +58,7 @@
     "value": [
       {
         "setId": "primary",
-        "label": "primary requirements",
+        "label": "Zugang zum Master-Studienfach Informatik",
         "requirements": [
           {
             "canonical": [
@@ -66,8 +68,8 @@
             "provenance": {
               "sourceType": "satzung",
               "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-              "snippet": "einen Abschluss in einem Bachelor-Studiengang (Erwerb von 180 ECTS-Punkten) an\nder JMU oder an einer anderen in- oder ausländischen Hochschule oder einen gleich-\nwertigen in- oder ausländischen Abschluss (z.B. Staatsexamen),",
-              "section": "§ 4 Abs. 1 Buchst. a)",
+              "snippet": "einen Abschluss in einem Bachelor-Studiengang (Erwerb von 180 ECTS-Punkten) an der JMU oder an einer anderen in- oder ausländischen Hochschule oder einen gleichwertigen in- oder ausländischen Abschluss (z.B. Staatsexamen)",
+              "section": "§ 4 (1) a)",
               "lang": "de",
               "fetchedAt": "2026-07-27T22:03:43.851Z"
             },
@@ -78,173 +80,78 @@
             "canonical": [
               "cs_theory",
               "math_pure",
+              "math_applied",
+              "cs_practical",
+              "cs_technical",
               "cs_applied"
             ],
-            "label": "Kompetenzen im Umfang von insgesamt mindestens 100 ECTS-Punkten im Bereich der mathematischen und informatischen Grundlagen, darunter mindestens 25 ECTS-Punkte aus dem Bereich der Mathematik und theoretischen Informatik",
+            "label": "Kompetenzen im Umfang von insgesamt mindestens 100 ECTS-Punkten im Bereich der mathematischen und informatischen Grundlagen",
             "provenance": {
               "sourceType": "satzung",
               "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-              "snippet": "den Nachweis von Kompetenzen im Umfang von insgesamt mindestens 100 ECTS-\nPunkten im Bereich der mathematischen und informatischen Grundlagen, darunter\nmindestens 25 ECTS-Punkte aus dem Bereich der Mathematik und theoretischen In-\nformatik",
-              "section": "§ 4 Abs. 1 Buchst. b)",
+              "snippet": "den Nachweis von Kompetenzen im Umfang von insgesamt mindestens 100 ECTS-Punkten im Bereich der mathematischen und informatischen Grundlagen",
+              "section": "§ 4 (1) b)",
               "lang": "de",
               "fetchedAt": "2026-07-27T22:03:43.851Z"
             },
             "minEcts": 100,
-            "exampleCourses": []
-          },
-          {
-            "canonical": [
-              "thesis"
-            ],
-            "label": "Abschlussarbeit im Umfang von mindestens 10 ECTS-Punkten mit einem Thema aus der Informatik",
-            "provenance": {
-              "sourceType": "satzung",
-              "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-              "snippet": "und aus einer Abschlussarbeit im Umfang von mindestens 10 ECTS-Punkten\nmit einem Thema aus der Informatik",
-              "section": "§ 4 Abs. 1 Buchst. b)",
-              "lang": "de",
-              "fetchedAt": "2026-07-27T22:03:43.851Z"
-            },
-            "minEcts": 10,
-            "exampleCourses": []
-          }
-        ]
-      },
-      {
-        "setId": "conditional_admission",
-        "label": "Conditional Admission",
-        "requirements": [
-          {
-            "canonical": [
-              "total"
-            ],
-            "label": "den Nachweis von mindestens 150 ECTS-Punkten oder –bei nicht im Sinne des ECTS modularisierten Studiengängen- Leistungen im entsprechenden Umfang zum Zeitpunkt der Bewerbung im nach Abs. 1 Satz 1 Buchst. a) vorausgesetzten Erststudium",
-            "provenance": {
-              "sourceType": "satzung",
-              "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-              "snippet": "den Nachweis von mindestens 150 ECTS-Punkten oder –bei nicht im Sinne des ECTS\nmodularisierten Studiengängen- Leistungen im entsprechenden Umfang zum Zeitpunkt\nder Bewerbung im nach Abs. 1 Satz 1 Buchst. a) vorausgesetzten Erststudium,",
-              "section": "§ 4 Abs. 4 Buchst. a)",
-              "lang": "de",
-              "fetchedAt": "2026-07-27T22:03:43.851Z"
-            },
-            "minEcts": 150,
             "exampleCourses": []
           },
           {
             "canonical": [
               "cs_theory",
               "math_pure",
-              "cs_applied"
+              "math_applied"
             ],
-            "label": "den Nachweis von Kompetenzen im Umfang von insgesamt mindestens 100 ECTS-Punkten im Bereich der mathematischen und informatischen Grundlagen, darunter mindestens 25 ECTS-Punkte aus dem Bereich der Mathematik und theoretischen Informatik",
+            "label": "mindestens 25 ECTS-Punkte aus dem Bereich der Mathematik und theoretischen Informatik",
             "provenance": {
               "sourceType": "satzung",
               "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-              "snippet": "den Nachweis von Kompetenzen im Umfang von insgesamt mindestens 100 ECTS-\nPunkten im Bereich der mathematischen und informatischen Grundlagen, darunter\nmindestens 25 ECTS-Punkte aus dem Bereich der Mathematik und theoretischen\nInformatik",
-              "section": "§ 4 Abs. 4 Buchst. b)",
+              "snippet": "darunter mindestens 25 ECTS-Punkte aus dem Bereich der Mathematik und theoretischen Informatik",
+              "section": "§ 4 (1) b)",
               "lang": "de",
               "fetchedAt": "2026-07-27T22:03:43.851Z"
             },
-            "minEcts": 100,
+            "minEcts": 25,
             "exampleCourses": []
           },
           {
             "canonical": [
               "thesis"
             ],
-            "label": "der Vergabe eines Themas aus der Informatik für eine Abschlussarbeit im Umfang von mindestens 10 ECTS-Punkten",
+            "label": "einer Abschlussarbeit im Umfang von mindestens 10 ECTS-Punkten mit einem Thema aus der Informatik",
             "provenance": {
               "sourceType": "satzung",
               "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-              "snippet": "und der Vergabe eines Themas aus der Informatik für eine Abschlussarbeit\nim Umfang von mindestens 10 ECTS-Punkten",
-              "section": "§ 4 Abs. 4 Buchst. b)",
+              "snippet": "und aus einer Abschlussarbeit im Umfang von mindestens 10 ECTS-Punkten mit einem Thema aus der Informatik",
+              "section": "§ 4 (1) b)",
               "lang": "de",
               "fetchedAt": "2026-07-27T22:03:43.851Z"
             },
             "minEcts": 10,
             "exampleCourses": []
           }
-        ]
+        ],
+        "additionalStep": "Eignungsverfahren (aptitude test)"
       }
     ],
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-      "snippet": "§ 4 Zugang zum Studium, empfohlene Grundkenntnisse\n(1) 'Der Zugang zum Master-Studienfach Informatik erfordert\na)\nb)\nc)\neinen Abschluss in einem Bachelor-Studiengang (Erwerb von 180 ECTS-Punkten) an\nder JMU oder an einer anderen in- oder ausländischen Hochschule oder einen gleich-\nwertigen in- oder ausländischen Abschluss (z.B. Staatsexamen),\nden Nachweis von Kompetenzen im Umfang von insgesamt mindestens 100 ECTS-\nPunkten im Bereich der mathematischen und informatischen Grundlagen, darunter\nmindestens 25 ECTS-Punkte aus dem Bereich der Mathematik und theoretischen In-\nformatik und aus einer Abschlussarbeit im Umfang von mindestens 10 ECTS-Punkten\nmit einem Thema aus der Informatik, jeweils entsprechend dem an der JMU für den\nBachelor-Studiengang Informatik verwendeten ECTS-Punkte-Schema. Die benötigten\nKompetenzen werden beispielweise im Rahmen des Studienfachs Informatik mit dem\nAbschluss Bachelor of Science (Erwerb von 180 ECTS-Punkten) erworben,\nden Nachweis der erforderlichen Sprachkenntnisse:\n1Für den Zugang sind erforderlich\nentweder\naa) deutsche Sprachkenntnisse\n1Für Bewerber bzw. Bewerberinnen, die den einschlägigen Erstabschluss nicht an ei-\nner deutschsprachigen Einrichtung erworben haben, ist zusätzlich ein Nachweis über\nausreichende Deutschkenntnisse erforderlich. Dieser Nachweis ist entsprechend den\nVorgaben der Immatrikulationssatzung der JMU in der jeweils geltenden Fassung zu\nführen.\noder\nbb) englische Sprachkenntnisse auf dem Niveau B2 des Gemeinsamen Europäischen\nReferenzrahmens für Sprachen (GER); der Nachweis erfolgt in geeigneter Weise, zum\nBeispiel durch:\n(1)\nden Test of English as a Foreign Language (TOEFL) mit mindestens 72\nPunkten (internet-based TOEFL-Test) oder\n(2) das International English Language Test System (IELTS) mit einem Ergebnis\nvon 6,0 oder besser oder\n(3)\n(4)\nein Cambridge First Certificate in English (FCE) oder\neine mindestens befriedigende Note in Englisch (entsprechend mindestens\n7 von 15 Punkten) in einer inländischen Hochschulzugangsberechtigung\n(HZB)\noder\neine ausländische HZB mit nachgewiesenen Kenntnissen der englischen\nSprache, die der vorbezeichneten HZB mindestens gleichwertig sind oder\n(5) den Nachweis, dass bereits eine Ausbildung (insbesondere im Rahmen des\nunter a) genannten Erststudiums) absolviert wurde mit englischen Sprach-\nkenntnissen auf dem in (aa) bis (dd) genannten Niveau.\nd)\nsowie die Feststellung der Eignung für das Master-Studienfach Informatik in einem Eig-\nnungsverfahren (vgl. Anlage EV).",
-      "section": "§ 4 Abs. 1",
+      "snippet": "Der Zugang zum Master-Studienfach Informatik erfordert a) einen Abschluss in einem Bachelor-Studiengang (Erwerb von 180 ECTS-Punkten) an der JMU oder an einer anderen in- oder ausländischen Hochschule oder einen gleichwertigen in- oder ausländischen Abschluss (z.B. Staatsexamen), b) den Nachweis von Kompetenzen im Umfang von insgesamt mindestens 100 ECTS-Punkten im Bereich der mathematischen und informatischen Grundlagen, darunter mindestens 25 ECTS-Punkte aus dem Bereich der Mathematik und theoretischen Informatik und aus einer Abschlussarbeit im Umfang von mindestens 10 ECTS-Punkten mit einem Thema aus der Informatik, jeweils entsprechend dem an der JMU für den Bachelor-Studiengang Informatik verwendeten ECTS-Punkte-Schema. Die benötigten Kompetenzen werden beispielweise im Rahmen des Studienfachs Informatik mit dem Abschluss Bachelor of Science (Erwerb von 180 ECTS-Punkten) erworben, c) den Nachweis der erforderlichen Sprachkenntnisse: 1Für den Zugang sind erforderlich entweder aa) deutsche Sprachkenntnisse 1Für Bewerber bzw. Bewerberinnen, die den einschlägigen Erstabschluss nicht an einer deutschsprachigen Einrichtung erworben haben, ist zusätzlich ein Nachweis über ausreichende Deutschkenntnisse erforderlich. Dieser Nachweis ist entsprechend den Vorgaben der Immatrikulationssatzung der JMU in der jeweils geltenden Fassung zu führen. oder bb) englische Sprachkenntnisse auf dem Niveau B2 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER); der Nachweis erfolgt in geeigneter Weise, zum Beispiel durch: (1) den Test of English as a Foreign Language (TOEFL) mit mindestens 72 Punkten (internet-based TOEFL-Test) oder (2) das International English Language Test System (IELTS) mit einem Ergebnis von 6,0 oder besser oder (3) ein Cambridge First Certificate in English (FCE) oder (4) eine mindestens befriedigende Note in Englisch (entsprechend mindestens 7 von 15 Punkten) in einer inländischen Hochschulzugangsberechtigung (HZB) oder eine ausländische HZB mit nachgewiesenen Kenntnissen der englischen Sprache, die der vorbezeichneten HZB mindestens gleichwertig sind oder (5) den Nachweis, dass bereits eine Ausbildung (insbesondere im Rahmen des unter a) genannten Erststudiums) absolviert wurde mit englischen Sprachkenntnissen auf dem in (aa) bis (dd) genannten Niveau. d) sowie die Feststellung der Eignung für das Master-Studienfach Informatik in einem Eignungsverfahren (vgl. Anlage EV).",
+      "section": "§ 4 (1)",
       "lang": "de",
       "fetchedAt": "2026-07-27T22:03:43.851Z"
     },
     "confidence": 0.9
   },
   "assessmentStyle": {
-    "value": "points",
+    "value": "unstated",
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-      "snippet": "10Im Rahmen der zweiten Stufe des Eignungsverfahrens gilt ein Bewerber oder eine Bewerberin\nals ebenfalls besonders qualifiziert, wenn in der Eignungsprüfung eine Note nach folgender Ta-\nbelle erreicht wird; hierbei wird die Gesamtnote des Erstabschlusses mit der ersten Dezimalstelle\nhinter dem Komma berücksichtigt; alle weiteren Stellen werden ohne Rundung gestrichen:\nNote Erstabschluss\nBenötigte Mindestnote in der Einzelprüfung\n2,6-3,0\n4,0\n3,1-3,5\n3,0\n3,6-4,0\n2,0",
-      "section": "Anlage EV § 4 Abs. 3",
-      "lang": "de",
-      "fetchedAt": "2026-07-27T22:03:43.851Z"
-    },
-    "confidence": 0.9
-  },
-  "pointsRubric": {
-    "value": {
-      "criteria": [],
-      "passMarks": [
-        {
-          "appliesTo": {
-            "description": "Note Erstabschluss 2,6-3,0",
-            "nationalities": [],
-            "euEea": "any",
-            "lisbonConvention": "any"
-          },
-          "value": 4
-        },
-        {
-          "appliesTo": {
-            "description": "Note Erstabschluss 3,1-3,5",
-            "nationalities": [],
-            "euEea": "any",
-            "lisbonConvention": "any"
-          },
-          "value": 3
-        },
-        {
-          "appliesTo": {
-            "description": "Note Erstabschluss 3,6-4,0",
-            "nationalities": [],
-            "euEea": "any",
-            "lisbonConvention": "any"
-          },
-          "value": 2
-        },
-        {
-          "appliesTo": {
-            "description": "Note Erstabschluss 3,1-3,5, if first degree was completed in the standard length of programme",
-            "nationalities": [],
-            "euEea": "any",
-            "lisbonConvention": "any"
-          },
-          "value": 3.5
-        },
-        {
-          "appliesTo": {
-            "description": "Note Erstabschluss 3,6-4,0, if first degree was completed in the standard length of programme",
-            "nationalities": [],
-            "euEea": "any",
-            "lisbonConvention": "any"
-          },
-          "value": 2.5
-        }
-      ]
-    },
-    "provenance": {
-      "sourceType": "satzung",
-      "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-      "snippet": "10Im Rahmen der zweiten Stufe des Eignungsverfahrens gilt ein Bewerber oder eine Bewerberin\nals ebenfalls besonders qualifiziert, wenn in der Eignungsprüfung eine Note nach folgender Ta-\nbelle erreicht wird; hierbei wird die Gesamtnote des Erstabschlusses mit der ersten Dezimalstelle\nhinter dem Komma berücksichtigt; alle weiteren Stellen werden ohne Rundung gestrichen:\nNote Erstabschluss\nBenötigte Mindestnote in der Einzelprüfung\n2,6-3,0\n4,0\n3,1-3,5\n3,0\n3,6-4,0\n2,0\n11Wurde der Erstabschluss in der Regelstudienzeit erworben oder die Regelstudienzeit um maxi-\nmal einen Monat überschritten, wird ein Bonus von 0,5 Notenpunkten gewährt und nach folgender\nTabelle entschieden:\nBenötigte Mindestnote in der Einzelprüfung\nNote Erstabschluss\n2,6-3,0\nkeine Einzelprüfung erforderlich\n3,1-3,5\n3,5\n3,6-4,0\n2,5",
-      "section": "Anlage EV § 4 Abs. 3",
+      "snippet": "Das Eignungsverfahren wird in zwei Stufen durchgeführt: 1. Zunächst findet eine Vorauswahl statt (erste Stufe des Eignungsverfahrens), in der aufgrund der eingereichten Unterlagen geprüft wird, ob wegen besonderer Qualifikation des Bewerbers/der Bewerberin eine Aufnahme in das Master-Studium ohne eine Qualifikations-prüfung gerechtfertigt ist. Als besonders qualifiziert gilt, a) wer einen einschlägigen Erstabschluss mit der Note 2,5 oder besser vorweisen kann oder b) 1eine Durchschnittsnote von 2,5 oder besser im Bereich der in § 4 Abs. 1 Satz 1 Buchst. b) FSB genannten Kompetenzen vorweisen kann. Diese Durchschnittsnote wird auf folgende Weise gebildet: zunächst werden alle erfolgreich abgelegten benoteten Module aus den in § 4 Abs. 1 Satz 1 Buchst. b) genannten Bereichen nach Notenstufen beginnend mit der besten und innerhalb derselben Notenstufe beginnend mit den höchsten ECTS-Punkten geordnet; sodann werden in der so entstandenen Reihenfolge so viele Module ausgewählt, bis deren ECTS-Punkte-Summe die Anzahl von 100 ECTS-Punkten erreicht; die Durchschnittsnote errechnet sich schließlich aus dem nach ECTS-Punkten gewichteten Durchschnitt (gewichtetes arithmetisches) Mittel der Noten der einzelnen herangezogenen Module, wobei das letzte in die Rechnung einbezogene Modul nur mit den ECTS-Punkten gewichtet wird, die zur Erreichung der 100 ECTS-Punkte benötigt werden. 2Die Berechnung der Note erfolgt auf die erste Dezimalstelle hinter dem Komma genau, alle weiteren Stellen werden ohne Rundung gestrichen. 3Sollte der Bewerber/die Bewerberin zwar Module im Umfang von mindestens 100 ECTS-Punkten bestanden haben, der hierbei erreichte Anteil der mit numerischen Noten versehenen Module allerdings weniger als 100 ECTS-Punkte betragen, werden nur die mit numerischen Noten versehenen Module berücksichtigt. 2. 1Bewerber oder Bewerberinnen, deren Eignung gemäß Abs. 2 Ziffer 1 noch nicht festgestellt werden konnte, werden zu einer zusätzlichen Prüfung eingeladen, die einen weiteren Aufschluss über die studiengangspezifische Eignung des Bewerbers oder der Bewerberin für das Master-Studienfach Informatik geben soll (zweite Stufe des Eignungsverfahrens).",
+      "section": "§ 4 (2)",
       "lang": "de",
       "fetchedAt": "2026-07-27T22:03:43.851Z"
     },
@@ -254,32 +161,33 @@
     "value": {
       "offered": "yes",
       "maxEcts": 42,
-      "deadline": "third semester"
+      "deadline": "zum Ablauf des dritten Fachsemesters"
     },
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-      "snippet": "2Im Falle des Eintritts der auflösenden Bedingung, dass der nach Abs. 1 Satz 1 Buchst. a) ge-\nnannte Erstabschluss nicht spätestens zum Ablauf der Rückmeldefrist für das dritte Fachsemes-\nter im Master-Studienfach Informatik nachgewiesen wird, ist der Bewerber oder die Bewerberin\nzum Ablauf des ersten Fachsemesters zu exmatrikulieren. Im Falle des Nichteintritts dieser auf-\nlösenden Bedingung ist ein endgültiger Zugang zum Master-Studienfach Informatik gegeben.",
-      "section": "§ 4 Abs. 4",
+      "snippet": "Um einen ununterbrochenen Übergang vom Bachelor- zum Master-Studium zu ermöglichen, kann ein Bewerber oder eine Bewerberin, der bzw. die zum Zeitpunkt der Bewerbung den nach Abs. 1 Satz 1 Buchst. a) erforderlichen Abschluss noch nicht nachweisen kann, einen mit einer auflösenden Bedingung versehenen Zugang zum Master-Studium zum sich unmittelbar anschließenden Semester unter folgenden Voraussetzungen erhalten: ... 2Im Falle des Eintritts der auflösenden Bedingung, dass der nach Abs. 1 Satz 1 Buchst. a) genannte Erstabschluss nicht spätestens zum Ablauf der Rückmeldefrist für das dritte Fachsemester im Master-Studienfach Informatik nachgewiesen wird, ist der Bewerber oder die Bewerberin zum Ablauf des ersten Fachsemesters zu exmatrikulieren. 3Im Falle des Nichteintritts dieser auflösenden Bedingung ist ein endgültiger Zugang zum Master-Studienfach Informatik gegeben.",
+      "section": "§ 4 (4)",
       "lang": "de",
       "fetchedAt": "2026-07-27T22:03:43.851Z"
     },
-    "confidence": 0.8
+    "confidence": 0.9
   },
   "degreeInProgress": {
     "value": {
       "allowed": "yes",
       "minEctsSoFar": 150,
-      "certificateDeadline": "March 15 (for applications to the summer semester) or September 15 (for applications to the winter semester)"
+      "certificateDeadline": "zum Ablauf der Rückmeldefrist für das dritte Fachsemester"
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.informatik.uni-wuerzburg.de/en/studies/degree-programmes/master-computer-science/application/",
-      "snippet": "Any exam results that have not been officially recorded until that date can be handed in by March 15 (for applications to the summer semester) or September 15 (for applications to the winter semester).",
-      "lang": "en",
-      "fetchedAt": "2026-07-27T22:03:54.130Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
+      "snippet": "Um einen ununterbrochenen Übergang vom Bachelor- zum Master-Studium zu ermöglichen, kann ein Bewerber oder eine Bewerberin, der bzw. die zum Zeitpunkt der Bewerbung den nach Abs. 1 Satz 1 Buchst. a) erforderlichen Abschluss noch nicht nachweisen kann, einen mit einer auflösenden Bedingung versehenen Zugang zum Master-Studium zum sich unmittelbar anschließenden Semester unter folgenden Voraussetzungen erhalten: a) den Nachweis von mindestens 150 ECTS-Punkten oder –bei nicht im Sinne des ECTS modularisierten Studiengängen- Leistungen im entsprechenden Umfang zum Zeitpunkt der Bewerbung im nach Abs. 1 Satz 1 Buchst. a) vorausgesetzten Erststudium, ... 2Im Falle des Eintritts der auflösenden Bedingung, dass der nach Abs. 1 Satz 1 Buchst. a) genannte Erstabschluss nicht spätestens zum Ablauf der Rückmeldefrist für das dritte Fachsemester im Master-Studienfach Informatik nachgewiesen wird, ist der Bewerber oder die Bewerberin zum Ablauf des ersten Fachsemesters zu exmatrikulieren.",
+      "section": "§ 4 (4) a)",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T22:03:43.851Z"
     },
-    "confidence": 0.8
+    "confidence": 0.9
   },
   "language": {
     "value": [
@@ -287,7 +195,7 @@
         "language": "german",
         "cefr": "B2",
         "acceptedEvidence": [],
-        "waiverIfMediumOfInstruction": "yes",
+        "waiverIfMediumOfInstruction": "unstated",
         "requiredFor": "admission"
       },
       {
@@ -303,7 +211,8 @@
             "overall": 6
           },
           {
-            "name": "Cambridge First Certificate in English (FCE)"
+            "name": "Cambridge First Certificate in English",
+            "note": "FCE"
           },
           {
             "name": "inländische Hochschulzugangsberechtigung (HZB)",
@@ -311,7 +220,7 @@
           },
           {
             "name": "ausländische HZB",
-            "note": "nachgewiesenen Kenntnissen der englischen Sprache, die der vorbezeichneten HZB mindestens gleichwertig sind"
+            "note": "mit nachgewiesenen Kenntnissen der englischen Sprache, die der vorbezeichneten HZB mindestens gleichwertig sind"
           },
           {
             "name": "medium of instruction certificate",
@@ -325,8 +234,8 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
-      "snippet": "den Nachweis der erforderlichen Sprachkenntnisse:\n1Für den Zugang sind erforderlich\nentweder\naa) deutsche Sprachkenntnisse\n1Für Bewerber bzw. Bewerberinnen, die den einschlägigen Erstabschluss nicht an ei-\nner deutschsprachigen Einrichtung erworben haben, ist zusätzlich ein Nachweis über\nausreichende Deutschkenntnisse erforderlich. Dieser Nachweis ist entsprechend den\nVorgaben der Immatrikulationssatzung der JMU in der jeweils geltenden Fassung zu\nführen.\noder\nbb) englische Sprachkenntnisse auf dem Niveau B2 des Gemeinsamen Europäischen\nReferenzrahmens für Sprachen (GER); der Nachweis erfolgt in geeigneter Weise, zum\nBeispiel durch:\n(1)\nden Test of English as a Foreign Language (TOEFL) mit mindestens 72\nPunkten (internet-based TOEFL-Test) oder\n(2) das International English Language Test System (IELTS) mit einem Ergebnis\nvon 6,0 oder besser oder\n(3)\n(4)\nein Cambridge First Certificate in English (FCE) oder\neine mindestens befriedigende Note in Englisch (entsprechend mindestens\n7 von 15 Punkten) in einer inländischen Hochschulzugangsberechtigung\n(HZB)\noder\neine ausländische HZB mit nachgewiesenen Kenntnissen der englischen\nSprache, die der vorbezeichneten HZB mindestens gleichwertig sind oder\n(5) den Nachweis, dass bereits eine Ausbildung (insbesondere im Rahmen des\nunter a) genannten Erststudiums) absolviert wurde mit englischen Sprach-\nkenntnissen auf dem in (aa) bis (dd) genannten Niveau.",
-      "section": "§ 4 Abs. 1 Buchst. c)",
+      "snippet": "den Nachweis der erforderlichen Sprachkenntnisse: 1Für den Zugang sind erforderlich entweder aa) deutsche Sprachkenntnisse 1Für Bewerber bzw. Bewerberinnen, die den einschlägigen Erstabschluss nicht an einer deutschsprachigen Einrichtung erworben haben, ist zusätzlich ein Nachweis über ausreichende Deutschkenntnisse erforderlich. Dieser Nachweis ist entsprechend den Vorgaben der Immatrikulationssatzung der JMU in der jeweils geltenden Fassung zu führen. oder bb) englische Sprachkenntnisse auf dem Niveau B2 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER); der Nachweis erfolgt in geeigneter Weise, zum Beispiel durch: (1) den Test of English as a Foreign Language (TOEFL) mit mindestens 72 Punkten (internet-based TOEFL-Test) oder (2) das International English Language Test System (IELTS) mit einem Ergebnis von 6,0 oder besser oder (3) ein Cambridge First Certificate in English (FCE) oder (4) eine mindestens befriedigende Note in Englisch (entsprechend mindestens 7 von 15 Punkten) in einer inländischen Hochschulzugangsberechtigung (HZB) oder eine ausländische HZB mit nachgewiesenen Kenntnissen der englischen Sprache, die der vorbezeichneten HZB mindestens gleichwertig sind oder (5) den Nachweis, dass bereits eine Ausbildung (insbesondere im Rahmen des unter a) genannten Erststudiums) absolviert wurde mit englischen Sprachkenntnissen auf dem in (aa) bis (dd) genannten Niveau.",
+      "section": "§ 4 (1) c)",
       "lang": "de",
       "fetchedAt": "2026-07-27T22:03:43.851Z"
     },
@@ -337,7 +246,7 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://www.informatik.uni-wuerzburg.de/en/studies/degree-programmes/master-computer-science/application/",
-      "snippet": "B2 German or C1 English proficiency certificate (e.g. IELTS or a proof of English/German as a medium of instruction in your Bachelor's degree)",
+      "snippet": "The application period for the summer semester is from the end of August to October 31 (from 2025) The application deadline for the winter semester is from the end of January to March 15 Any exam results that have not been officially recorded until that date can be handed in until March 15 or September 15 respectively. Please direct any questions regarding your application or any additional documents after the deadline to master.informatik@uni-wuerzburg.de .",
       "lang": "en",
       "fetchedAt": "2026-07-27T22:03:54.130Z"
     },
@@ -348,7 +257,7 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://www.informatik.uni-wuerzburg.de/en/studies/degree-programmes/master-computer-science/application/",
-      "snippet": "If you fulfil these requirements but with a grade worse than 2.5 you can be invited to an oral aptitude test for admittance.\nThis 30 minute oral test examines your knowledge in these areas: Theoretical computer science Practical computer science (algorithms and data structures, programming, software technology) Technical computer science (digital computer systems, information transmission)",
+      "snippet": "If you fulfil these requirements but with a grade worse than 2.5 you can be invited to an oral aptitude test for admittance. This 30 minute oral test examines your knowledge in these areas: Theoretical computer science Practical computer science (algorithms and data structures, programming, software technology) Technical computer science (digital computer systems, information transmission)",
       "lang": "en",
       "fetchedAt": "2026-07-27T22:03:54.130Z"
     },
@@ -359,7 +268,7 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://www.informatik.uni-wuerzburg.de/en/studies/degree-programmes/master-computer-science/application/",
-      "snippet": "All applications must be submitted through WueStudy .",
+      "snippet": "Applicants with a Higher Education Entrance Qualification from Germany All applications must be submitted through WueStudy . ... International Applicants without a Higher Education Entrance Qualification from Germany All applications must be submitted through WueStudy .",
       "lang": "en",
       "fetchedAt": "2026-07-27T22:03:54.130Z"
     },
@@ -369,9 +278,10 @@
     "value": [
       {
         "intake": "summer",
-        "closes": "31 October",
+        "opens": "end of August",
+        "closes": "October 31",
         "appliesTo": {
-          "description": "for the summer semester",
+          "description": "(from 2025)",
           "nationalities": [],
           "euEea": "any",
           "lisbonConvention": "any"
@@ -379,13 +289,8 @@
       },
       {
         "intake": "winter",
-        "closes": "15 March",
-        "appliesTo": {
-          "description": "for the winter semester",
-          "nationalities": [],
-          "euEea": "any",
-          "lisbonConvention": "any"
-        }
+        "opens": "end of January",
+        "closes": "March 15"
       }
     ],
     "provenance": {
@@ -397,6 +302,43 @@
     },
     "confidence": 0.9
   },
-  "qualitative": [],
-  "extractedAt": "2024-01-09T18:00:00Z"
+  "qualitative": [
+    {
+      "value": "Die benötigten Kompetenzen werden beispielweise im Rahmen des Studienfachs Informatik mit dem Abschluss Bachelor of Science (Erwerb von 180 ECTS-Punkten) erworben",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
+        "snippet": "Die benötigten Kompetenzen werden beispielweise im Rahmen des Studienfachs Informatik mit dem Abschluss Bachelor of Science (Erwerb von 180 ECTS-Punkten) erworben",
+        "section": "§ 4 (1) b)",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T22:03:43.851Z"
+      },
+      "confidence": 0.8
+    },
+    {
+      "value": "Über die Gleichwertigkeit der Erstabschlüsse (Satz 1 Buchst. a)) sowie über das Vorliegen der Voraussetzungen nach Satz 1 Buchst. b) und c) entscheidet die Eignungskommission (vgl. Anlage EV). Bei der Entscheidung über die Gleichwertigkeit der Erstabschlüsse mit dem genannten Referenzabschluss gilt nach Maßgabe des Art. 63 Satz 1 BayHSchG der Grundsatz der Beweislastumkehr sowie die Verpflichtung, Gleichwertigkeit festzustellen, soweit keine wesentlichen Unterschiede hinsichtlich der erworbenen Kompetenzen bestehen.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
+        "snippet": "Über die Gleichwertigkeit der Erstabschlüsse (Satz 1 Buchst. a)) sowie über das Vorliegen der Voraussetzungen nach Satz 1 Buchst. b) und c) entscheidet die Eignungskommission (vgl. Anlage EV). Bei der Entscheidung über die Gleichwertigkeit der Erstabschlüsse mit dem genannten Referenzabschluss gilt nach Maßgabe des Art. 63 Satz 1 BayHSchG der Grundsatz der Beweislastumkehr sowie die Verpflichtung, Gleichwertigkeit festzustellen, soweit keine wesentlichen Unterschiede hinsichtlich der erworbenen Kompetenzen bestehen.",
+        "section": "§ 4 (1) d)",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T22:03:43.851Z"
+      },
+      "confidence": 0.8
+    },
+    {
+      "value": "Im Eignungsverfahren wird anhand 1. des Bildungsganges, insbesondere der Leistungen, auf denen der Erstabschluss beruht 2. sowie der nachzuweisenden fachlichen und methodischen Kenntnisse in den in § 4 Abs. 1 Buchst. b) FSB genannten Teilgebieten der Informatik beurteilt, wer die Qualifikation für ein Master-Studium aufweist. Ziel ist es festzustellen, ob der Bewerber oder die Bewerberin den Anforderungen des Master-Studiums Informatik genügt und in der Lage sein wird, selbständig wissenschaftlich zu arbeiten. Diese Anforderungen beinhalten neben den informatischen Fachkenntnissen insbesondere kognitive Fähigkeiten wie Abstraktionsvermögen und Problemlösungsfähigkeit. Die Qualifikation für den Master-Studiengang Informatik setzt den Nachweis der Eignung nach Maßgabe der folgenden Regelungen voraus.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.uni-wuerzburg.de/fileadmin/32020000/Ordnungen/Informatik-MA-120-5aes-20210428-kon-Netz.pdf",
+        "snippet": "Im Eignungsverfahren wird anhand 1. des Bildungsganges, insbesondere der Leistungen, auf denen der Erstabschluss beruht 2. sowie der nachzuweisenden fachlichen und methodischen Kenntnisse in den in § 4 Abs. 1 Buchst. b) FSB genannten Teilgebieten der Informatik beurteilt, wer die Qualifikation für ein Master-Studium aufweist. Ziel ist es festzustellen, ob der Bewerber oder die Bewerberin den Anforderungen des Master-Studiums Informatik genügt und in der Lage sein wird, selbständig wissenschaftlich zu arbeiten. Diese Anforderungen beinhalten neben den informatischen Fachkenntnissen insbesondere kognitive Fähigkeiten wie Abstraktionsvermögen und Problemlösungsfähigkeit. Die Qualifikation für den Master-Studiengang Informatik setzt den Nachweis der Eignung nach Maßgabe der folgenden Regelungen voraus.",
+        "section": "Anlage EV § 1",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T22:03:43.851Z"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "extractedAt": "2024-07-27T12:00:00Z"
 }
