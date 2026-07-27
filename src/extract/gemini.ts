@@ -17,7 +17,27 @@ const ENDPOINT = (model: string) =>
 
 export type Part = { text: string } | { inlineData: { mimeType: string; data: string } };
 
-export type Usage = { inputTokens: number; outputTokens: number; totalTokens: number };
+export type Usage = {
+  inputTokens: number;
+  outputTokens: number;
+  /** Billed at the OUTPUT rate. Invisible unless you ask for it — and it dominated our bill. */
+  thinkingTokens: number;
+  cachedTokens: number;
+  totalTokens: number;
+  costUsd: number;
+};
+
+/**
+ * USD per million tokens, gemini-2.5-flash. Data, not truth: prices move, and this is a local
+ * estimate for visibility, never a substitute for the billing console.
+ */
+const PRICE = { input: 0.3, output: 2.5 } as const;
+
+export function estimateCostUsd(u: { inputTokens: number; outputTokens: number; thinkingTokens: number }): number {
+  return (
+    (u.inputTokens * PRICE.input) / 1e6 + ((u.outputTokens + u.thinkingTokens) * PRICE.output) / 1e6
+  );
+}
 
 export type GeminiResult<T> =
   | { ok: true; value: T; usage: Usage; attempts: number }
@@ -44,7 +64,20 @@ async function callOnce(
     body: JSON.stringify({
       systemInstruction: { parts: [{ text: system }] },
       contents: [{ role: "user", parts }],
-      generationConfig: { temperature: 0, responseMimeType: "application/json" },
+      generationConfig: {
+        temperature: 0,
+        responseMimeType: "application/json",
+        /**
+         * Thinking OFF. On 2.5 Flash it is on by default and its tokens bill at the OUTPUT rate
+         * ($2.50/M) — eight times the input rate — while never appearing in `candidatesTokenCount`,
+         * so it is invisible unless you specifically ask for it. It was the bulk of our bill.
+         *
+         * Extraction is a reading task: find the sentence, copy the number, cite the line. There is
+         * no reasoning step worth paying eight times over for. Revisit only if a golden set shows
+         * accuracy actually drops without it.
+         */
+        thinkingConfig: { thinkingBudget: 0 },
+      },
     }),
   });
 
@@ -54,20 +87,30 @@ async function callOnce(
 
   const body = (await res.json()) as {
     candidates?: { content?: { parts?: { text?: string }[] } }[];
-    usageMetadata?: { promptTokenCount?: number; candidatesTokenCount?: number; totalTokenCount?: number };
+    usageMetadata?: {
+      promptTokenCount?: number;
+      candidatesTokenCount?: number;
+      thoughtsTokenCount?: number;
+      cachedContentTokenCount?: number;
+      totalTokenCount?: number;
+    };
   };
 
   const text = body.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("") ?? "";
   if (!text) throw new Error("Gemini returned no text (blocked or empty candidate)");
 
-  return {
-    text,
-    usage: {
-      inputTokens: body.usageMetadata?.promptTokenCount ?? 0,
-      outputTokens: body.usageMetadata?.candidatesTokenCount ?? 0,
-      totalTokens: body.usageMetadata?.totalTokenCount ?? 0,
-    },
+  const m = body.usageMetadata ?? {};
+  const usage: Usage = {
+    inputTokens: m.promptTokenCount ?? 0,
+    outputTokens: m.candidatesTokenCount ?? 0,
+    thinkingTokens: m.thoughtsTokenCount ?? 0,
+    cachedTokens: m.cachedContentTokenCount ?? 0,
+    totalTokens: m.totalTokenCount ?? 0,
+    costUsd: 0,
   };
+  usage.costUsd = estimateCostUsd(usage);
+
+  return { text, usage };
 }
 
 /**
@@ -84,7 +127,15 @@ export async function generateStructured<T>(
 ): Promise<GeminiResult<T>> {
   let lastError = "";
   let lastText = "";
-  let carriedTokens = 0;
+  /** Accumulated across attempts, so a repair retry's cost is visible rather than discarded. */
+  const carried: Usage = {
+    inputTokens: 0,
+    outputTokens: 0,
+    thinkingTokens: 0,
+    cachedTokens: 0,
+    totalTokens: 0,
+    costUsd: 0,
+  };
 
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
@@ -109,17 +160,15 @@ export async function generateStructured<T>(
 
       const { text, usage } = await callOnce(callParts, system);
       lastText = text;
-      carriedTokens += usage.totalTokens;
+      carried.inputTokens += usage.inputTokens;
+      carried.outputTokens += usage.outputTokens;
+      carried.thinkingTokens += usage.thinkingTokens;
+      carried.cachedTokens += usage.cachedTokens;
+      carried.totalTokens += usage.totalTokens;
+      carried.costUsd += usage.costUsd;
       const parsed = schema.safeParse(stripNulls(JSON.parse(stripFence(text))));
 
-      if (parsed.success) {
-        return {
-          ok: true,
-          value: parsed.data,
-          usage: { ...usage, totalTokens: carriedTokens },
-          attempts: attempt,
-        };
-      }
+      if (parsed.success) return { ok: true, value: parsed.data, usage: carried, attempts: attempt };
       lastError = JSON.stringify(parsed.error.issues.slice(0, 12));
     } catch (err) {
       lastError = err instanceof Error ? err.message : String(err);

@@ -8,6 +8,41 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-28 — The bill was thinking tokens, and I wasn't even counting them
+
+Caching fixed the *repeat* cost. A single extraction still cost ~₹14, which matches no Flash rate:
+29k tokens at $0.30/M input should be under a rupee.
+
+The cause: **Gemini 2.5 Flash has thinking ON by default, thinking tokens bill at the OUTPUT rate
+($2.50/M — eight times input), and they appear in `thoughtsTokenCount`, which my usage parser
+ignored entirely.** So the "29,349 tokens" I'd been reporting excluded the expensive part. I was
+measuring the cheap half of the bill and reasoning confidently about the total.
+
+Two fixes:
+
+- `thinkingConfig: { thinkingBudget: 0 }`. Extraction is a reading task — find the sentence, copy
+  the number, cite the line. There is no reasoning step worth paying 8× for.
+- Parse and print the full breakdown: input, output, thinking, cached, plus an estimated cost per
+  call and per run, in USD and rupees. An invisible bill is how this got expensive in the first
+  place; the estimate is for visibility and the console remains the authority.
+
+**₹14 → ₹1.14 for the same program.** The split is now legible: 7,954 input (₹0.02) and 4,207
+output. Roughly 21k thinking tokens were the entire difference.
+
+Quality check, because a cheaper wrong answer is worse than an expensive right one — same document,
+thinking off:
+
+- All three thresholds still extracted, each citing its own statute line (§ 5 Abs. 2 Nr. 1/2/3)
+- `binary` assessment and `auflagen: no` still correct
+- One language requirement with **9** accepted evidence entries — the array fix holding
+- 4 deadlines, correctly split by applicant group
+- Zero defects
+
+One regression: `math_pure` where the previous run said `math_applied` for "Grundlagen der
+Mathematik, theoretische Informatik". Both are defensible for that wording and the label and
+citation are preserved either way, but it's the sort of drift a golden set is supposed to catch —
+which is an argument for building one before trusting any model swap, Flash-Lite included.
+
 ## 2026-07-28 — Re-running stopped costing money
 
 The API bill was not a model-pricing problem. It was me re-sending the same 700 KB statute PDFs on

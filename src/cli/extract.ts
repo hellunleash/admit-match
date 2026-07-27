@@ -23,6 +23,11 @@ import type { SourceType } from "../schema.js";
 
 const SNAPSHOT_DIR = join(process.cwd(), "snapshots");
 
+/** Rough, for readability only. The billing console is the authority. */
+const INR_PER_USD = 88;
+
+let runCostUsd = 0;
+
 type RunOutcome = "extracted" | "skipped" | "failed";
 
 async function runOne(programId: string, opts: { refresh: boolean; force: boolean }): Promise<RunOutcome> {
@@ -88,7 +93,13 @@ async function runOne(programId: string, opts: { refresh: boolean; force: boolea
   );
 
   const sets = result.data.requirementSets.value.length;
-  console.log(`  extracted: ${sets} requirement set(s), ~${result.costHint} tokens`);
+  const u = result.usage;
+  // Cost printed per call, in both currencies, because an invisible bill is how this got expensive.
+  console.log(
+    `  extracted: ${sets} requirement set(s) — in ${u.inputTokens}, out ${u.outputTokens}, ` +
+      `thinking ${u.thinkingTokens} → $${u.costUsd.toFixed(4)} (~₹${(u.costUsd * INR_PER_USD).toFixed(2)})`
+  );
+  runCostUsd += u.costUsd;
 
   const defects = result.issues.filter((i) => i.severity === "defect");
   const reviews = result.issues.filter((i) => i.severity === "review");
@@ -109,7 +120,8 @@ async function runOne(programId: string, opts: { refresh: boolean; force: boolea
     promptVersion: PROMPT_VERSION,
     model,
     docHashes,
-    totalTokens: result.costHint,
+    totalTokens: result.usage.totalTokens,
+    costUsd: result.usage.costUsd,
     defects: defects.length,
     reviews: reviews.length,
   });
@@ -156,6 +168,7 @@ async function main() {
   console.log(
     `\n${tally.extracted} extracted, ${tally.skipped} skipped (free), ${tally.failed} failed — of ${ids.length}`
   );
+  console.log(`run cost: $${runCostUsd.toFixed(4)} (~₹${(runCostUsd * INR_PER_USD).toFixed(2)})`);
 }
 
 main().catch(async (err) => {

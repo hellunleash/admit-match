@@ -104,6 +104,7 @@ export type SnapshotMeta = {
   model: string;
   docHashes: Record<string, string>;
   totalTokens: number;
+  costUsd: number;
   defects: number;
   reviews: number;
 };

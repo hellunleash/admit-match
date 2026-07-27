@@ -13,7 +13,7 @@ import {
   snippetSupportsNumber,
   type SourceType,
 } from "../schema.js";
-import { generateStructured, pdfPart, textPart, type Part } from "./gemini.js";
+import { generateStructured, pdfPart, textPart, type Part, type Usage } from "./gemini.js";
 import { observeWith } from "../tracing.js";
 import type { FetchedDoc } from "./fetch.js";
 
@@ -159,7 +159,12 @@ export type VerifyIssue = {
 };
 
 export type ExtractionResult =
-  | { ok: true; data: z.infer<typeof ProgramRequirements>; issues: VerifyIssue[]; costHint: number }
+  | {
+      ok: true;
+      data: z.infer<typeof ProgramRequirements>;
+      issues: VerifyIssue[];
+      usage: Usage;
+    }
   | { ok: false; error: string };
 
 export async function extractProgram(input: ExtractionInput): Promise<ExtractionResult> {
@@ -207,7 +212,14 @@ export async function extractProgram(input: ExtractionInput): Promise<Extraction
           model: process.env["GEMINI_MODEL"] ?? "gemini-2.5-flash",
           attempts: r.attempts,
           promptVersion: PROMPT_VERSION,
-          ...(r.ok ? { totalTokens: r.usage.totalTokens } : {}),
+          ...(r.ok
+            ? {
+                inputTokens: r.usage.inputTokens,
+                outputTokens: r.usage.outputTokens,
+                thinkingTokens: r.usage.thinkingTokens,
+                costUsd: r.usage.costUsd,
+              }
+            : {}),
         },
       },
     };
@@ -223,8 +235,7 @@ export async function extractProgram(input: ExtractionInput): Promise<Extraction
     ok: true,
     data: result.value,
     issues: verify(result.value, bestAvailable),
-    // Flash pricing is a rounding error at this volume; this is a relative signal, not a bill.
-    costHint: result.usage.totalTokens,
+    usage: result.usage,
   };
 }
 
