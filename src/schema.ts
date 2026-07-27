@@ -30,11 +30,38 @@ export type SourceType = z.infer<typeof SourceType>;
 
 export const SOURCE_RANK: Record<SourceType, number> = { satzung: 3, program_page: 2, faq: 1 };
 
+/**
+ * Optional number that tolerates the model writing "unstated"/""/null instead of omitting the
+ * field. Anything non-numeric becomes `undefined` — i.e. unknown — rather than failing the parse.
+ */
+const looseNumber = z.preprocess((v) => {
+  if (typeof v === "number") return v;
+  if (typeof v === "string" && /^-?\d+(?:[.,]\d+)?$/.test(v.trim())) return Number(v.replace(",", "."));
+  return undefined;
+}, z.number().optional());
+
+const looseBoolean = z.preprocess((v) => {
+  if (typeof v === "boolean") return v;
+  if (v === "true") return true;
+  if (v === "false") return false;
+  return undefined;
+}, z.boolean().optional());
+
+/** URLs arrive as "...", relative paths, or prose. Keep the string; don't fail the document. */
+const looseUrl = z.string().optional();
+
 export const Provenance = z.object({
   sourceType: SourceType,
-  sourceUrl: z.string().url(),
-  /** Verbatim text containing the value. The verify step asserts the value appears in here. */
-  snippet: z.string().min(1),
+  sourceUrl: z.string(),
+  /**
+   * Verbatim text containing the value.
+   *
+   * Deliberately NOT `.min(1)`. A single empty snippet used to reject the entire document, taking
+   * twenty good fields down with one bad one — strict parsing at document granularity contradicts
+   * the field-level quarantine this project is built on. Empty snippets are a `verify()` defect,
+   * which quarantines that field alone.
+   */
+  snippet: z.string(),
   /** Statute section where identifiable, e.g. "§ 4 Abs. 3". */
   section: z.string().optional(),
   /** Statutes are frequently German. Expected, not an anomaly. */
@@ -89,10 +116,39 @@ export type CanonicalArea = z.infer<typeof CanonicalArea>;
 /* ------------------------------------------------------------------ requirements */
 
 export const AreaRequirement = z.object({
-  canonical: CanonicalArea,
+  /**
+   * A requirement routinely spans several areas. TU Dresden's statute asks for 35 LP across
+   * "Grundlagen der Mathematik, theoretische Informatik, KI" — one bucket covering pure maths,
+   * CS theory and applied CS. v2 modelled this as a single canonical value, which flattened three
+   * areas into one and (worse) collapsed two distinct requirements into the same bucket, so
+   * matching would have double-counted. A requirement covers a SET of areas.
+   */
+  /**
+   * `.catch("other")` on each entry: the model occasionally invents a plausible-looking area
+   * ("cs_other") that isn't in the taxonomy. Degrading that one entry to "other" keeps the label
+   * and the citation — which is where the meaning actually lives — instead of discarding an
+   * otherwise-correct requirement over a vocabulary miss.
+   */
+  canonical: z.array(CanonicalArea.catch("other")).min(1),
   /** The program's own phrasing, verbatim. Never discarded. */
   label: z.string().min(1),
-  minEcts: z.number().nonnegative(),
+  /**
+   * Provenance belongs HERE, per requirement — not on the array wrapper.
+   *
+   * A statute lists each threshold on its own line, so one wrapper-level snippet cannot support
+   * "35 and 35 and 20". Verification against the wrapper snippet therefore reported defects for
+   * values that were correctly extracted from adjacent lines. Worse, it let a genuinely derived
+   * number hide: Dresden's "90 ECTS total" is 35+35+20 ADDED UP by the model, and no snippet
+   * states it. Per-requirement provenance is what separates those two cases.
+   */
+  provenance: Provenance.optional(),
+  /**
+   * OPTIONAL, because plenty of programs name required subject areas without attaching a credit
+   * figure. RWTH lists four areas ("applied computer science: programming, data structures and
+   * algorithms, databases…") with no ECTS at all. Demanding a number there forces the model to
+   * invent one — the exact failure this project exists to prevent. Absent means "named, unquantified".
+   */
+  minEcts: looseNumber,
   /** Example courses the source names, if any — the best signal for classifying a transcript. */
   exampleCourses: z.array(z.string()).default([]),
 });
@@ -124,12 +180,12 @@ export const RequirementSet = z.object({
  */
 export const ReferenceCurriculumRequirement = z.object({
   referenceProgram: z.string().min(1), // "B.Sc. Computer Science, TU Darmstadt"
-  minEcts: z.number().nonnegative(),
+  minEcts: looseNumber,
   /** Verbatim equivalence wording — "must not differ significantly" is doing real work. */
   equivalenceWording: z.string().min(1),
-  referenceCurriculumUrl: z.string().url().optional(),
+  referenceCurriculumUrl: looseUrl,
   /** Where the university publishes a self-assessment mapping tool. */
-  selfAssessmentUrl: z.string().url().optional(),
+  selfAssessmentUrl: looseUrl,
 });
 
 /* ------------------------------------------------------------------ applicant-group gating */
@@ -174,16 +230,33 @@ export const PointsRubric = z.object({
 export const Auflagen = z.object({
   offered: z.enum(["yes", "no", "unstated"]),
   /** Ceiling above which admission is refused, where stated. */
-  maxEcts: z.number().nonnegative().optional(),
+  maxEcts: looseNumber,
   deadline: z.string().optional(),
 });
 
+/**
+ * ONE requirement per language, with the accepted proofs listed underneath.
+ *
+ * v2 modelled each accepted test as its own LanguageRequirement, so TU Dresden came back as eight
+ * "English C1" requirements — TOEFL, IELTS, Cambridge, PTE, UNIcert and three empties. That reads
+ * as eight hurdles when it is one hurdle with eight doors, and it would have made matching demand
+ * every test at once.
+ */
 export const LanguageRequirement = z.object({
   language: z.enum(["english", "german"]),
   cefr: z.string().optional(), // "B2", "C1"
-  test: z
-    .object({ name: z.string(), overall: z.number().optional(), minBand: z.number().optional() })
-    .optional(),
+  /** Any ONE of these satisfies the requirement. */
+  acceptedEvidence: z
+    .array(
+      z.object({
+        name: z.string(), // "TOEFL iBT", "IELTS", "medium of instruction certificate"
+        // Loose: scores arrive as "6.5" or "7,0" as often as 6.5.
+        overall: looseNumber,
+        minBand: looseNumber,
+        note: z.string().optional(),
+      })
+    )
+    .default([]),
   waiverIfMediumOfInstruction: z.enum(["yes", "no", "unstated"]),
   /** Whether this is required to ENROL/for a visa rather than to be admitted. */
   requiredFor: z.enum(["admission", "enrolment", "unstated"]).default("admission"),
@@ -201,8 +274,8 @@ export const TestRequirement = z.object({
 /** LMU and Hamburg admit before graduation: ~150 ECTS plus a registered bachelor's thesis. */
 export const DegreeInProgress = z.object({
   allowed: z.enum(["yes", "no", "unstated"]),
-  minEctsSoFar: z.number().nonnegative().optional(),
-  thesisMustBeRegistered: z.boolean().optional(),
+  minEctsSoFar: looseNumber,
+  thesisMustBeRegistered: looseBoolean,
   /** When the final certificate has to arrive. */
   certificateDeadline: z.string().optional(),
 });
@@ -225,7 +298,8 @@ export const ProgramRequirements = z.object({
   field: z.string().min(1), // "Computer Science", "Computational Science", "Physics"
   degree: z.literal("MSc"),
 
-  taughtIn: cited(z.enum(["english", "german", "mixed"])),
+  /** "unstated" is a real answer: RWTH's admission page never says which language it teaches in. */
+  taughtIn: cited(z.enum(["english", "german", "mixed", "unstated"])),
   admissionRestricted: cited(z.enum(["nc", "nc_free", "unstated"])),
 
   /** Grade cutoff ONLY where one exists. Absent for most NC-free programs, and absence must never
@@ -239,25 +313,33 @@ export const ProgramRequirements = z.object({
   requirementSets: cited(z.array(RequirementSet)),
   referenceCurriculum: cited(ReferenceCurriculumRequirement).optional(),
 
-  assessmentStyle: cited(AssessmentStyle),
+  /**
+   * Everything below is OPTIONAL, and that is a correctness decision rather than laziness.
+   *
+   * A required field the source never mentions leaves the model two choices: invent something, or
+   * fail the whole document. KIT's extraction died on a missing `auflagen` while carrying a
+   * complete, correct set of requirements. "Silence is a finding" has to hold at the schema level
+   * too — absence is recorded by `verify()` as a gap, not papered over with a default.
+   */
+  assessmentStyle: cited(AssessmentStyle).optional(),
   pointsRubric: cited(PointsRubric).optional(),
 
-  auflagen: cited(Auflagen),
-  degreeInProgress: cited(DegreeInProgress),
+  auflagen: cited(Auflagen).optional(),
+  degreeInProgress: cited(DegreeInProgress).optional(),
 
-  language: cited(z.array(LanguageRequirement)),
-  tests: cited(z.array(TestRequirement)),
-  interview: cited(z.enum(["yes", "no", "unstated"])),
+  language: cited(z.array(LanguageRequirement)).optional(),
+  tests: cited(z.array(TestRequirement)).optional(),
+  interview: cited(z.enum(["yes", "no", "unstated"])).optional(),
 
-  applicationRoute: cited(z.enum(["direct", "uni_assist", "both", "unstated"])),
-  deadlines: cited(z.array(Deadline)),
+  applicationRoute: cited(z.enum(["direct", "uni_assist", "both", "unstated"])).optional(),
+  deadlines: cited(z.array(Deadline)).optional(),
 
   /** Genuinely qualitative requirements ("sufficient merit", "appropriate curricular content",
    *  "strong background in mathematics"). Surfaced with their snippet for a human to judge, never
    *  normalised into a number — inventing one is the failure this project exists to prevent. */
-  qualitative: z.array(cited(z.string())),
+  qualitative: z.array(cited(z.string())).default([]),
 
-  extractedAt: z.string().datetime(),
+  extractedAt: z.string(),
 });
 export type ProgramRequirements = z.infer<typeof ProgramRequirements>;
 

@@ -1,0 +1,203 @@
+{
+  "programId": "tu-berlin-cs-msc",
+  "university": "Technische Universität Berlin",
+  "programName": "M.Sc. Computer Science (Informatik)",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu.berlin/en/eecs/academics-teaching/study-offer/masters-programs/msc-computer-science-informatik/msc-cs-in-application-admission",
+      "snippet": "The study program is taught in English.",
+      "section": "B) English language proficiency at level B2",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:19:29.016Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "nc_free",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu.berlin/en/eecs/academics-teaching/study-offer/masters-programs/msc-computer-science-informatik/msc-cs-in-application-admission",
+      "snippet": "The Master's program is admission-free (open admission).",
+      "section": "Admission requirements",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:19:29.016Z"
+    },
+    "confidence": 0.9
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "primary",
+        "label": "ein erster berufsqualifizierender Hochschulabschluss in einem Studiengang der Fachrichtung Informatik oder der Fachrichtung Computer Science oder einem fachlich nahestehenden Studiengang. Der Studiengang muss mindestens folgende Anteile enthalten:",
+        "requirements": [
+          {
+            "canonical": [
+              "cs_theory"
+            ],
+            "label": "12 LP aus dem Bereich der Theoretischen Informatik",
+            "minEcts": 12,
+            "exampleCourses": [
+              "formal languages",
+              "automata",
+              "computability",
+              "complexity",
+              "logic"
+            ]
+          },
+          {
+            "canonical": [
+              "cs_technical"
+            ],
+            "label": "12 LP aus dem Bereich der Technischen Informatik oder Informationstechnik",
+            "minEcts": 12,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_practical"
+            ],
+            "label": "12 LP aus dem Bereich der Methodischen-Praktischen Informatik",
+            "minEcts": 12,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure"
+            ],
+            "label": "18 LP aus dem Bereich der Mathematik",
+            "minEcts": 18,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "other"
+            ],
+            "label": "mindestens weitere 30 LP in der Informatik. Die Abschlussarbeit kann nicht auf die 30 LP angerechnet werden.",
+            "minEcts": 30,
+            "exampleCourses": []
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.static.tu.berlin/fileadmin/www/10000040/1_Studium_Lehre/1_Studienangebot/2_Masterstudiengaenge/2_M_CS/Zugangsordnung_MSc_CS_AMBl._Nr._26_vom_31.10.2018.pdf",
+      "snippet": "1. ein erster berufsqualifizierender Hochschulabschluss in einem Studiengang der Fachrichtung Informatik oder der Fachrichtung Computer Science oder einem fachlich nahestehenden Studiengang. Der Studiengang muss mindestens folgende Anteile enthalten:\n36 LP aus den Grundlagen der Informatik, davon\n• 12 LP aus dem Bereich der Theoretischen Informatik,\n• 12 LP aus dem Bereich der Technischen Informatik oder Informationstechnik,\n• 12 LP aus dem Bereich der Methodischen-Praktischen Informatik,\n18 LP aus dem Bereich der Mathematik, sowie\nmindestens weitere 30 LP in der Informatik. Die Abschlussarbeit kann nicht auf die 30 LP angerechnet werden.",
+      "section": "§ 3 Zugangsvoraussetzungen",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:19:26.246Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "binary",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.static.tu.berlin/fileadmin/www/10000040/1_Studium_Lehre/1_Studienangebot/2_Masterstudiengaenge/2_M_CS/Zugangsordnung_MSc_CS_AMBl._Nr._26_vom_31.10.2018.pdf",
+      "snippet": "Über die fachliche Qualifikation im Sinne des § 3 Nr. 1 und die Gleichwertigkeit von Leistungen gemäß § 3 Nr. 2 entscheidet die für Immatrikulationen bzw. Zulassungen zuständige Stelle der Zentralen Universitätsverwaltung auf der Grundlage eines Votums des für den Studiengang zuständigen Prüfungsausschusses.",
+      "section": "§ 4 Verfahren",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:19:26.246Z"
+    },
+    "confidence": 0.9
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.static.tu.berlin/fileadmin/www/10000040/1_Studium_Lehre/1_Studienangebot/2_Masterstudiengaenge/2_M_CS/Zugangsordnung_MSc_CS_AMBl._Nr._26_vom_31.10.2018.pdf",
+      "snippet": "No information on auflagen found.",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:19:26.246Z"
+    },
+    "confidence": 0
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "yes"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu.berlin/en/eecs/academics-teaching/study-offer/masters-programs/msc-computer-science-informatik/msc-cs-in-application-admission",
+      "snippet": "If you are applying for a master’s program and will shortly complete your bachelor’s degree but will not be able to submit proof of the completed degree by the application deadline, you can apply with an ECTS certificate.",
+      "section": "Application with an ECTS Certificate",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:19:29.016Z"
+    },
+    "confidence": 0.8
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "B2",
+        "acceptedEvidence": [],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "admission"
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.static.tu.berlin/fileadmin/www/10000040/1_Studium_Lehre/1_Studienangebot/2_Masterstudiengaenge/2_M_CS/Zugangsordnung_MSc_CS_AMBl._Nr._26_vom_31.10.2018.pdf",
+      "snippet": "englische Sprachkenntnisse auf der Niveaustufe B2 gemäß dem Gemeinsamen Europäischen Referenz-rahmen für Sprachen (GER).",
+      "section": "§ 3 Zugangsvoraussetzungen",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:19:26.246Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.static.tu.berlin/fileadmin/www/10000040/1_Studium_Lehre/1_Studienangebot/2_Masterstudiengaenge/2_M_CS/Zugangsordnung_MSc_CS_AMBl._Nr._26_vom_31.10.2018.pdf",
+      "snippet": "No information on standardized tests found.",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:19:26.246Z"
+    },
+    "confidence": 0
+  },
+  "interview": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.static.tu.berlin/fileadmin/www/10000040/1_Studium_Lehre/1_Studienangebot/2_Masterstudiengaenge/2_M_CS/Zugangsordnung_MSc_CS_AMBl._Nr._26_vom_31.10.2018.pdf",
+      "snippet": "No information on interviews found.",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:19:26.246Z"
+    },
+    "confidence": 0
+  },
+  "applicationRoute": {
+    "value": "both",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu.berlin/en/eecs/academics-teaching/study-offer/masters-programs/msc-computer-science-informatik/msc-cs-in-application-admission",
+      "snippet": "First Degree Semester: Graduates of German Universities ... must submit their application directly to the TU Berlin. ... First Degree Semester: Graduates who studied at a foreign university ... will need a preliminary review documentation (VPD) for their application to TU Berlin from the summer semester of 2026 onwards. This must be requested from uni-assist specifically for TU Berlin.",
+      "section": "Application",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:19:29.016Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu.berlin/en/eecs/academics-teaching/study-offer/masters-programs/msc-computer-science-informatik/msc-cs-in-application-admission",
+      "snippet": "The current application deadline for Master's study programs can be found here !",
+      "section": "Application",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:19:29.016Z"
+    },
+    "confidence": 0.8
+  },
+  "qualitative": [],
+  "extractedAt": "2024-07-27T12:00:00Z"
+}

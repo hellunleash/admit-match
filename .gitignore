@@ -10,3 +10,4 @@ dist/
 profile.local.json
 *.local.json
 transcripts/
+.cache/

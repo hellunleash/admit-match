@@ -7,12 +7,11 @@
   "taughtIn": {
     "value": "english",
     "provenance": {
-      "sourceType": "satzung",
-      "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-      "snippet": "über sichere Kenntnisse der englischen Sprache auf dem Niveau C1 des Europäischen Referenzrahmens für Sprachen verfügt",
-      "section": "§ 2 Abs. 2 Nr. 2",
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
+      "snippet": "Der Masterstudiengang wird in englischer Sprache gelehrt.",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:41.528Z"
+      "fetchedAt": "2026-07-27T21:34:51.125Z"
     },
     "confidence": 0.9
   },
@@ -21,47 +20,104 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-      "snippet": "Ordnung über die Feststellung der Eignung im konsekutiven Masterstudiengang Computer Science",
-      "section": "§ 1",
+      "snippet": "unstated",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:41.528Z"
+      "fetchedAt": "2026-07-27T21:34:48.443Z"
     },
     "confidence": 0.5
   },
   "requirementSets": {
     "value": [
       {
-        "setId": "primary",
-        "label": "Nachweis ausreichender Fachkenntnisse",
+        "setId": "first_degree",
+        "label": "erster berufsqualifizierender Hochschulabschluss",
         "requirements": [
           {
-            "canonical": "cs_practical",
-            "label": "mindestens 35 Leistungspunkte zu Themen der Betriebssysteme, Rechnernetze, Verteilte Systeme, Rechnerarchitektur, Technische Informatik, Datenbanken, Datensicherheit, Computergrafik bzw. Mensch-Computer-Interaktion",
-            "minEcts": 35,
-            "exampleCourses": []
-          },
-          {
-            "canonical": "math_pure",
-            "label": "mindestens 35 Leistungspunkte zu Themen der Grundlagen der Mathematik (für Informatik), Theoretische Informatik bzw. Künstliche Intelligenz",
-            "minEcts": 35,
-            "exampleCourses": []
-          },
-          {
-            "canonical": "cs_practical",
-            "label": "mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Datenstrukturen bzw. Software Engineering",
-            "minEcts": 20,
+            "canonical": [
+              "other"
+            ],
+            "label": "einen ersten berufsqualifizierenden Hochschulabschluss auf dem Gebiet Informatik nachweist",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
+              "snippet": "einen ersten berufsqualifizierenden Hochschulabschluss auf dem Gebiet Informatik nachweist,",
+              "section": "§ 2 Abs. 2 Nr. 1",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T21:34:48.443Z"
+            },
             "exampleCourses": []
           }
         ]
+      },
+      {
+        "setId": "academic_ects",
+        "label": "Nachweis ausreichender Fachkenntnisse durch sich inhaltlich nicht überschneidende 90 Leistungspunkte",
+        "requirements": [
+          {
+            "canonical": [
+              "cs_practical",
+              "cs_technical",
+              "cs_applied"
+            ],
+            "label": "mindestens 35 Leistungspunkte zu Themen der Betriebssysteme, Rechnernetze, Verteilte Systeme, Rechnerarchitektur, Technische Informatik, Datenbanken, Datensicherheit, Computergrafik bzw. Mensch-Computer-Interaktion",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
+              "snippet": "mindestens 35 Leistungspunkte zu Themen der Betriebssysteme, Rechnernetze, Verteilte Systeme, Rechnerarchitektur, Technische Informatik, Datenbanken, Datensicherheit, Computergrafik bzw. Mensch-Computer-Interaktion,",
+              "section": "§ 5 Abs. 2 Nr. 1",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T21:34:48.443Z"
+            },
+            "minEcts": 35,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_applied",
+              "cs_theory",
+              "cs_applied"
+            ],
+            "label": "mindestens 35 Leistungspunkte zu Themen der Grundlagen der Mathematik (für Informatik), Theoretische Informatik bzw. Künstliche Intelligenz",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
+              "snippet": "mindestens 35 Leistungspunkte zu Themen der Grundlagen der Mathematik (für Informatik), Theoretische Informatik bzw. Künstliche Intelligenz,",
+              "section": "§ 5 Abs. 2 Nr. 2",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T21:34:48.443Z"
+            },
+            "minEcts": 35,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_practical",
+              "cs_theory",
+              "cs_applied"
+            ],
+            "label": "mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Datenstrukturen bzw. Software Engineering",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
+              "snippet": "mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Daten-strukturen bzw. Software Engineering.",
+              "section": "§ 5 Abs. 2 Nr. 3",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T21:34:48.443Z"
+            },
+            "minEcts": 20,
+            "exampleCourses": []
+          }
+        ],
+        "additionalStep": "Sollte der Zugangsausschuss aufgrund der Unterlagen keine Entscheidung treffen können, wird ein Eignungsgespräch gemäß § 6 vor dem Zugangsausschuss durchgeführt."
       }
     ],
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-      "snippet": "Der Nachweis ausreichender Fachkenntnisse gilt als erbracht, wenn folgende Leistungsnachweise vorliegen:\n1. mindestens 35 Leistungspunkte zu Themen der Betriebssysteme, Rechnernetze, Verteilte Systeme, Rechnerarchitektur, Technische Informatik, Datenbanken, Datensicherheit, Computergrafik bzw. Mensch-Computer-Interaktion,\n2. mindestens 35 Leistungspunkte zu Themen der Grundlagen der Mathematik (für Informatik), Theoretische Informatik bzw. Künstliche Intelligenz,\n3. mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Datenstrukturen bzw. Software Engineering.",
-      "section": "§ 5 Abs. 2",
+      "snippet": "Die besondere Eignung für den Masterstudiengang Computer Science gemäß § 2 Absatz 2 Nummer 3 liegt dann vor, wenn der Nachweis ausreichender Fachkenntnisse durch sich inhaltlich nicht überschneidende 90 Leistungspunkte aus den Bereichen gemäß Absatz 2 erbracht wurde. (2) Der Nachweis ausreichender Fachkenntnisse gilt als erbracht, wenn folgende Leistungsnachweise vorliegen: 1. mindestens 35 Leistungspunkte zu Themen der Betriebssysteme, Rechnernetze, Verteilte Systeme, Rechnerarchitektur, Technische Informatik, Datenbanken, Datensicherheit, Computergrafik bzw. Mensch-Computer-Interaktion, 2. mindestens 35 Leistungspunkte zu Themen der Grundlagen der Mathematik (für Informatik), Theoretische Informatik bzw. Künstliche Intelligenz, 3. mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Daten-strukturen bzw. Software Engineering.",
+      "section": "§ 5 Abs. 1, 2",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:41.528Z"
+      "fetchedAt": "2026-07-27T21:34:48.443Z"
     },
     "confidence": 0.9
   },
@@ -72,7 +128,7 @@
       "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
       "snippet": "Die Entscheidung des Eignungsfeststellungsverfahrens ist binär, d.h. Anträge werden nur angenommen oder abgelehnt.",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:44.186Z"
+      "fetchedAt": "2026-07-27T21:34:51.125Z"
     },
     "confidence": 0.9
   },
@@ -85,7 +141,7 @@
       "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
       "snippet": "Eine Auflagenerteilung zum Erreichen der entsprechenden fachlichen Voraussetzungen ist nicht möglich.",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:44.186Z"
+      "fetchedAt": "2026-07-27T21:34:51.125Z"
     },
     "confidence": 0.9
   },
@@ -97,10 +153,10 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-      "snippet": "Kann die Bewerberin bzw. der Bewerber den erfolgreichen Abschluss über den gemäß § 2 Absatz 2 Nummer 1 erforderlichen Hochschulabschluss nicht bis zum Ende der Immatrikulationsfrist dem Immatrikulationsamt bzw. dem International Office der Technischen Universität Dresden vorlegen, erfolgt eine befristete Immatrikulation.",
-      "section": "§ 7 Abs. 3",
+      "snippet": "Liegt zum Zeitpunkt der Antragstellung der Nachweis des ersten berufsqualifizierenden Hochschulabschlusses (Abschlusszeugnis) gemäß Absatz 2 Nummer 2 noch nicht vor, wird die Bewerberin bzw. der Bewerber auch dann in das Eignungsfeststellungsverfahren nach dieser Ordnung einbezogen, wenn bereits 80 Prozent der durch den Hochschulabschluss erreichbaren Leistungspunkte durch Bescheinigung der Herkunftshochschule nachgewiesen werden. ... Kann die Bewerberin bzw. der Bewerber den erfolgreichen Abschluss über den gemäß § 2 Absatz 2 Nummer 1 erforderlichen Hochschulabschluss nicht bis zum Ende der Immatrikulationsfrist dem Immatrikulationsamt bzw. dem International Office der Technischen Universität Dresden vorlegen, erfolgt eine befristete Immatrikulation. Die Dauer der Befristung wird vom Immatrikulationsamt festgelegt und beträgt in der Regel ein Semester.",
+      "section": "§ 4 Abs. 4, § 7 Abs. 3",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:41.528Z"
+      "fetchedAt": "2026-07-27T21:34:48.443Z"
     },
     "confidence": 0.9
   },
@@ -109,67 +165,42 @@
       {
         "language": "english",
         "cefr": "C1",
-        "test": {
-          "name": "TOEFL iBT",
-          "overall": 100
-        },
-        "waiverIfMediumOfInstruction": "yes",
-        "requiredFor": "admission"
-      },
-      {
-        "language": "english",
-        "cefr": "C1",
-        "test": {
-          "name": "IELTS",
-          "overall": 7,
-          "minBand": 7
-        },
-        "waiverIfMediumOfInstruction": "yes",
-        "requiredFor": "admission"
-      },
-      {
-        "language": "english",
-        "cefr": "C1",
-        "test": {
-          "name": "Cambridge English Test"
-        },
-        "waiverIfMediumOfInstruction": "yes",
-        "requiredFor": "admission"
-      },
-      {
-        "language": "english",
-        "cefr": "C1",
-        "test": {
-          "name": "Pearson PTE Academic Test",
-          "overall": 78
-        },
-        "waiverIfMediumOfInstruction": "yes",
-        "requiredFor": "admission"
-      },
-      {
-        "language": "english",
-        "cefr": "C1",
-        "test": {
-          "name": "UNIcert-Test"
-        },
-        "waiverIfMediumOfInstruction": "yes",
-        "requiredFor": "admission"
-      },
-      {
-        "language": "english",
-        "cefr": "C1",
-        "waiverIfMediumOfInstruction": "yes",
-        "requiredFor": "admission"
-      },
-      {
-        "language": "english",
-        "cefr": "C1",
-        "waiverIfMediumOfInstruction": "yes",
-        "requiredFor": "admission"
-      },
-      {
-        "language": "english",
-        "cefr": "C1",
+        "acceptedEvidence": [
+          {
+            "name": "medium of instruction certificate",
+            "note": "das bisherige Studium vollständig in englischer Sprache (z.B. durch Angabe der Unterrichtssprache als „Medium of Instruction“, MOI) und in einem Land der Europäischen Union, Australien, Großbritannien, Norwegen, der Schweiz, Kanada, Neuseeland, USA, Hong Kong, Taiwan oder Singapur durchgeführt wurde"
+          },
+          {
+            "name": "TOEFL iBT",
+            "overall": 100,
+            "note": "gesamt und alle Abschnittswertungen"
+          },
+          {
+            "name": "IELTS",
+            "overall": 7,
+            "minBand": 7
+          },
+          {
+            "name": "Cambridge English Test",
+            "note": "mit nachgewiesenen Kenntnissen mindestens auf dem Niveau C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER)"
+          },
+          {
+            "name": "Pearson PTE Academic Test",
+            "overall": 78
+          },
+          {
+            "name": "UNIcert",
+            "note": "Level III"
+          },
+          {
+            "name": "Abitur",
+            "note": "im Zeugnis der allgemeinen oder fachgebundenen Hochschulreife (Abitur) das Fach Englisch bis einschließlich des letzten Schuljahrs belegt wurde"
+          },
+          {
+            "name": "Sprachzertifikate",
+            "note": "die die entsprechende Englischausbildung im Rahmen des vorangegangenen Hochschulstudiums nachweisen, vorliegen."
+          }
+        ],
         "waiverIfMediumOfInstruction": "yes",
         "requiredFor": "admission"
       }
@@ -177,9 +208,9 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
-      "snippet": "Der Masterstudiengang wird in englischer Sprache gelehrt. Daher sind entsprechende Kenntnisse der englischen Sprache auf dem Niveau C1 GER Voraussetzung und für die Zulassung zum Masterstudiengang Computer Science nachzuweisen. Dies kann bspw. durch Sprachzertifikate wie z.B. der TOEFL oder IELTS erfolgen (Liste s.u.).\nNachweis der geforderten Englischkenntnisse auf dem Niveau C1 des Europäischen Referenzrahmens für Sprachen (GER) anhand des Ergebnisses eines international angebotenen Tests. Der Nachweis gilt als erbracht, wenn:\na) das bisherige Studium vollständig in englischer Sprache (z.B. durch Angabe der Unterrichtssprache als „Medium of Instruction“, MOI) und in einem Land der Europäischen Union, Australien, Großbritannien, Norwegen, der Schweiz, Kanada, Neuseeland, USA, Hong Kong, Taiwan oder Singapur durchgeführt wurde oder\nb) der \"Test of English as a Foreign Language\" (TOEFL) iBT mit mindestens 100 bzw. ab Januar 2026 mit 5,0 Punkten ( gesamt und alle Abschnittswertungen) bestanden wurde oder\nc) der IELTS-Test mit mindestens Score 7.0 ( Overall Band Score und Einzelergebnisse) bestanden wurde oder\nd) der Cambridge English Test (z.B. CAE oder FCE) mit nachgewiesenen Kenntnissen mindestens auf dem Niveau C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER) bestanden wurde oder\ne) der Pearson PTE Academic Test mit mindestens 78 Punkten bestanden wurde oder\nf) der UNIcert-Test mit mindestens Level III bestanden wurde oder\ng) im Zeugnis der allgemeinen oder fachgebundenen Hochschulreife (Abitur) das Fach Englisch bis einschließlich des letzten Schuljahrs belegt wurde oder\nh) Sprachzertifikate, die die entsprechende Englischausbildung im Rahmen des vorangegangenen Hochschulstudiums nachweisen, vorliegen.",
+      "snippet": "Der Masterstudiengang wird in englischer Sprache gelehrt. Daher sind entsprechende Kenntnisse der englischen Sprache auf dem Niveau C1 GER Voraussetzung und für die Zulassung zum Masterstudiengang Computer Science nachzuweisen. Dies kann bspw. durch Sprachzertifikate wie z.B. der TOEFL oder IELTS erfolgen (Liste s.u.). ... Nachweis der geforderten Englischkenntnisse auf dem Niveau C1 des Europäischen Referenzrahmens für Sprachen (GER) anhand des Ergebnisses eines international angebotenen Tests. Der Nachweis gilt als erbracht, wenn: a) das bisherige Studium vollständig in englischer Sprache (z.B. durch Angabe der Unterrichtssprache als „Medium of Instruction“, MOI) und in einem Land der Europäischen Union, Australien, Großbritannien, Norwegen, der Schweiz, Kanada, Neuseeland, USA, Hong Kong, Taiwan oder Singapur durchgeführt wurde oder b) der \"Test of English as a Foreign Language\" (TOEFL) iBT mit mindestens 100 bzw. ab Januar 2026 mit 5,0 Punkten ( gesamt und alle Abschnittswertungen) bestanden wurde oder c) der IELTS-Test mit mindestens Score 7.0 ( Overall Band Score und Einzelergebnisse) bestanden wurde oder d) der Cambridge English Test (z.B. CAE oder FCE) mit nachgewiesenen Kenntnissen mindestens auf dem Niveau C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER) bestanden wurde oder e) der Pearson PTE Academic Test mit mindestens 78 Punkten bestanden wurde oder f) der UNIcert-Test mit mindestens Level III bestanden wurde oder g) im Zeugnis der allgemeinen oder fachgebundenen Hochschulreife (Abitur) das Fach Englisch bis einschließlich des letzten Schuljahrs belegt wurde oder h) Sprachzertifikate, die die entsprechende Englischausbildung im Rahmen des vorangegangenen Hochschulstudiums nachweisen, vorliegen.",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:44.186Z"
+      "fetchedAt": "2026-07-27T21:34:51.125Z"
     },
     "confidence": 0.9
   },
@@ -188,7 +219,6 @@
       {
         "name": "GRE General Test",
         "required": "no",
-        "thresholds": "empfohlen",
         "appliesTo": {
           "description": "internationale Bewerbungen mit einem Bachelorabschluss aus einem Land außerhalb der EU oder des EWR",
           "nationalities": [],
@@ -202,7 +232,7 @@
       "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
       "snippet": "Für internationale Bewerbungen mit einem Bachelorabschluss aus einem Land außerhalb der EU oder des EWR wird außerdem dringend die Einreichung von Testergebnissen des Graduate Record Examinations (GRE) General Test empfohlen.",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:44.186Z"
+      "fetchedAt": "2026-07-27T21:34:51.125Z"
     },
     "confidence": 0.9
   },
@@ -214,7 +244,7 @@
       "snippet": "Sollte der Zugangsausschuss aufgrund der Unterlagen keine Entscheidung treffen können, wird ein Eignungsgespräch gemäß § 6 vor dem Zugangsausschuss durchgeführt.",
       "section": "§ 5 Abs. 3",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:41.528Z"
+      "fetchedAt": "2026-07-27T21:34:48.443Z"
     },
     "confidence": 0.9
   },
@@ -223,10 +253,10 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-      "snippet": "Bewerberinnen und Bewerber mit einem im Ausland erworbenen Hochschulabschluss (Masterzugangsberechtigung) müssen sich bei uni-assist e.V. bewerben.",
-      "section": "§ 4 Abs. 1 Nr. 2",
+      "snippet": "Bewerberinnen und Bewerber mit einem in Deutschland erworbenen Hochschulabschluss (Masterzugangsberechtigung) müssen sich bei folgender Stelle bewerben: ... bei ausländischer Staatsbürgerschaft und einem ausländischen Abitur gilt folgende Anschrift: ... Bewerberinnen und Bewerber mit einem im Ausland erworbenen Hochschulabschluss (Masterzugangsberechtigung) müssen sich bei uni-assist e.V. bewerben.",
+      "section": "§ 4 Abs. 1 Nr. 1, 2",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:41.528Z"
+      "fetchedAt": "2026-07-27T21:34:48.443Z"
     },
     "confidence": 0.9
   },
@@ -234,32 +264,29 @@
     "value": [
       {
         "intake": "winter",
-        "opens": "01 June",
-        "closes": "15 July",
+        "closes": "31 May",
         "appliesTo": {
-          "description": "Bewerbungen deutscher Studienbewerber:innen",
+          "description": "Bewerberinnen und Bewerber mit einer Staatsbürgerschaft außerhalb der EU, die ihren Hochschulabschluss (Masterzugangsberechtigung) an einer ausländischen Hochschule erbracht haben",
           "nationalities": [],
-          "euEea": "any",
+          "euEea": "excluded",
           "lisbonConvention": "any"
         }
       },
       {
         "intake": "summer",
-        "opens": "01 December",
-        "closes": "15 January",
+        "closes": "30 November",
         "appliesTo": {
-          "description": "Bewerbungen deutscher Studienbewerber:innen",
+          "description": "Bewerberinnen und Bewerber mit einer Staatsbürgerschaft außerhalb der EU, die ihren Hochschulabschluss (Masterzugangsberechtigung) an einer ausländischen Hochschule erbracht haben",
           "nationalities": [],
-          "euEea": "any",
+          "euEea": "excluded",
           "lisbonConvention": "any"
         }
       },
       {
         "intake": "winter",
-        "opens": "01 April",
-        "closes": "31 May",
+        "closes": "15 July",
         "appliesTo": {
-          "description": "Bewerber:innen mit einer im Ausland erworbenen Hochschulzugangsberechtigung",
+          "description": "Alle anderen deutschen und ausländischen Bewerberinnen und Bewerber",
           "nationalities": [],
           "euEea": "any",
           "lisbonConvention": "any"
@@ -267,10 +294,9 @@
       },
       {
         "intake": "summer",
-        "opens": "01 October",
-        "closes": "30 November",
+        "closes": "15 January",
         "appliesTo": {
-          "description": "Bewerber:innen mit einer im Ausland erworbenen Hochschulzugangsberechtigung",
+          "description": "Alle anderen deutschen und ausländischen Bewerberinnen und Bewerber",
           "nationalities": [],
           "euEea": "any",
           "lisbonConvention": "any"
@@ -278,39 +304,39 @@
       }
     ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
-      "snippet": "Bewerbungen deutscher Studienbewerber:innen ... für den Studienbeginn im Wintersemester sind 01.06.–15.07. eines jeden Jahres bzw. für den Studienbeginn im Sommersemester sind 01.12.–15.01. eines jeden Jahres möglich.\nBewerber:innen mit einer im Ausland erworbenen Hochschulzugangsberechtigung ... bewerben sich für einen Studienbeginn im Wintersemester im Zeitraum 01.04.–31.05. und für den Studienbeginn im Sommersemester im Zeitraum 01.10.–30.11. jeden Jahres .",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
+      "snippet": "Bewerberinnen und Bewerber mit einer Staatsbürgerschaft außerhalb der EU, die ihren Hochschulabschluss (Masterzugangsberechtigung) an einer ausländischen Hochschule erbracht haben, müssen sich für das Wintersemester bis zum 31. Mai und für das Sommersemester bis zum 30. November des Vorjahres bewerben. Alle anderen deutschen und ausländischen Bewerberinnen und Bewerber müssen sich für das Wintersemester bis zum 15. Juli und für das zum Sommersemester bis zum 15. Januar des jeweiligen Jahres bewerben.",
+      "section": "§ 4 Abs. 1 Nr. 3",
       "lang": "de",
-      "fetchedAt": "2026-07-27T20:20:44.186Z"
+      "fetchedAt": "2026-07-27T21:34:48.443Z"
     },
     "confidence": 0.9
   },
   "qualitative": [
     {
-      "value": "Nachweis von mindestens 80 Prozent der zum Hochschulabschluss notwendigen Leistungspunkte durch Bescheinigung der Herkunftshochschule",
-      "provenance": {
-        "sourceType": "satzung",
-        "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-        "snippet": "Liegt zum Zeitpunkt der Antragstellung der Nachweis des ersten berufsqualifizierenden Hochschulabschlusses (Abschlusszeugnis) gemäß Absatz 2 Nummer 2 noch nicht vor, wird die Bewerberin bzw. der Bewerber auch dann in das Eignungsfeststellungsverfahren nach dieser Ordnung einbezogen, wenn bereits 80 Prozent der durch den Hochschulabschluss erreichbaren Leistungspunkte durch Bescheinigung der Herkunftshochschule nachgewiesen werden.",
-        "section": "§ 4 Abs. 4",
-        "lang": "de",
-        "fetchedAt": "2026-07-27T20:20:41.528Z"
-      },
-      "confidence": 0.9
-    },
-    {
       "value": "formloses Motivationsschreiben, das Anhaltspunkte für den Studienwunsch und die besondere Eignung darlegt",
       "provenance": {
         "sourceType": "satzung",
         "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-        "snippet": "formloses Motivationsschreiben, das Anhaltspunkte für den Studienwunsch und die besondere Eignung darlegt",
+        "snippet": "formloses Motivationsschreiben, das Anhaltspunkte für den Studienwunsch und die besondere Eignung darlegt,",
         "section": "§ 4 Abs. 2 Nr. 3",
         "lang": "de",
-        "fetchedAt": "2026-07-27T20:20:41.528Z"
+        "fetchedAt": "2026-07-27T21:34:48.443Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "you must split the ECTS so that the total sum of claimed ECTS does not exceed the course's/module's total ECTS. Violating this requirement is grounds for rejection without further assessment of the application.",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
+        "snippet": "In rare cases where a course/module really is split with substantial contents from two categories, you may use it in both categories – but you must split the ECTS so that the total sum of claimed ECTS does not exceed the course's/module's total ECTS . Violating this requirement is grounds for rejection without further assessment of the application.",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T21:34:51.125Z"
       },
       "confidence": 0.9
     }
   ],
-  "extractedAt": "2024-07-27T12:00:00Z"
+  "extractedAt": "2024-07-27T21:34:48.443Z"
 }

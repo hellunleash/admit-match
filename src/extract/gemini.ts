@@ -83,18 +83,43 @@ export async function generateStructured<T>(
   schema: z.ZodType<T, z.ZodTypeDef, unknown>
 ): Promise<GeminiResult<T>> {
   let lastError = "";
+  let lastText = "";
+  let carriedTokens = 0;
 
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
-      const retryNote =
-        attempt === 1
-          ? ""
-          : `\n\nYour previous response failed validation:\n${lastError}\nReturn corrected JSON only.`;
+      /**
+       * REPAIR retry, not a re-run. The second attempt sends the previous JSON plus the validation
+       * errors — a couple of thousand tokens — instead of resending 700 KB of PDF. Re-running the
+       * whole extraction was silently doubling the cost of every failed program, and the model
+       * doesn't need to re-read the statute to fix a type error in its own output.
+       */
+      const isRepair = attempt > 1 && lastText.length > 0;
+      const callParts: Part[] = isRepair
+        ? [
+            {
+              text:
+                `Your previous JSON response failed validation.\n\nERRORS:\n${lastError}\n\n` +
+                `PREVIOUS RESPONSE:\n${lastText}\n\n` +
+                `Return the corrected JSON only. Fix ONLY what the errors name — do not drop or ` +
+                `alter any other field, and do not invent values you did not previously have.`,
+            },
+          ]
+        : parts;
 
-      const { text, usage } = await callOnce(parts, system + retryNote);
-      const parsed = schema.safeParse(JSON.parse(stripFence(text)));
+      const { text, usage } = await callOnce(callParts, system);
+      lastText = text;
+      carriedTokens += usage.totalTokens;
+      const parsed = schema.safeParse(stripNulls(JSON.parse(stripFence(text))));
 
-      if (parsed.success) return { ok: true, value: parsed.data, usage, attempts: attempt };
+      if (parsed.success) {
+        return {
+          ok: true,
+          value: parsed.data,
+          usage: { ...usage, totalTokens: carriedTokens },
+          attempts: attempt,
+        };
+      }
       lastError = JSON.stringify(parsed.error.issues.slice(0, 12));
     } catch (err) {
       lastError = err instanceof Error ? err.message : String(err);
@@ -106,6 +131,27 @@ export async function generateStructured<T>(
   }
 
   return { ok: false, error: lastError, attempts: 2 };
+}
+
+/**
+ * Drop null-valued keys recursively before validation.
+ *
+ * Models write `"section": null` where the instruction was to omit the field. Semantically these
+ * are identical — both mean "not present" — but zod treats null as a type error and, at document
+ * granularity, one stray null discards an entire extraction. Six of TU Berlin's fields failed for
+ * exactly this reason while carrying perfectly good values.
+ */
+export function stripNulls(input: unknown): unknown {
+  if (Array.isArray(input)) return input.map(stripNulls);
+  if (input && typeof input === "object") {
+    const out: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(input as Record<string, unknown>)) {
+      if (v === null) continue;
+      out[k] = stripNulls(v);
+    }
+    return out;
+  }
+  return input;
 }
 
 function stripFence(text: string): string {

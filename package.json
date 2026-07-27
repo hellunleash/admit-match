@@ -13,6 +13,9 @@
     "extract": "tsx --env-file=.env src/cli/extract.ts"
   },
   "dependencies": {
+    "@langfuse/otel": "^5.9.1",
+    "@langfuse/tracing": "^5.9.1",
+    "@opentelemetry/sdk-node": "^0.221.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {

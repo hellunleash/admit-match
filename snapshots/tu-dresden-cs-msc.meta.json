@@ -1,0 +1,13 @@
+{
+  "programId": "tu-dresden-cs-msc",
+  "extractedAt": "2026-07-27T21:36:19.445Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf": "77122e6590014031cbe33d74221c2fe0e8695f97ad432881201e7f3b2504edf5",
+    "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission": "b067afe4f8911f327ae1e4946bee2c250201b54d2a03a3fe4f91f3f557e1f107"
+  },
+  "totalTokens": 29349,
+  "defects": 0,
+  "reviews": 5
+}

@@ -19,16 +19,19 @@ export type FetchedDoc =
 /** ASCII only: HTTP header values are ByteStrings, so a stray em-dash throws on every request. */
 const UA = "admit-match/0.1 (+https://github.com/hellunleash/admit-match)";
 
-/** Domain allowlist: official university domains only, never aggregators. */
+/**
+ * Official-domain allowlist. Never aggregators.
+ *
+ * A TLD test alone is wrong: TU Berlin lives on `tu.berlin` and `static.tu.berlin` under the
+ * `.berlin` gTLD, so a `.de`-only rule silently refused to fetch either of its documents and the
+ * failure read like a blocked scraper. German universities are not all on `.de`.
+ */
+const ALLOWED_SUFFIXES = [".de", ".edu", ".berlin", ".bayern", ".hamburg", ".koeln", ".nrw"];
+
 export function isAllowedHost(url: string): boolean {
   try {
     const host = new URL(url).hostname.toLowerCase();
-    return (
-      host.endsWith(".de") ||
-      host.endsWith(".edu") ||
-      host.endsWith("uni-assist.de") ||
-      host.endsWith("anabin.kmk.org")
-    );
+    return ALLOWED_SUFFIXES.some((suffix) => host.endsWith(suffix));
   } catch {
     return false;
   }

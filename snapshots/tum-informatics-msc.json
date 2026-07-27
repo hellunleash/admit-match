@@ -1,0 +1,462 @@
+{
+  "programId": "tum-informatics-msc",
+  "university": "Technische Universität München",
+  "programName": "Master Informatics",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "Im Masterstudiengang Informatik ist die Unterrichtssprache in der Regel Englisch.",
+      "section": "§ 37 Abs. 3",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "nc",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "Die Qualifikation für den Masterstudiengang Informatik setzt neben den Voraussetzungen der § 36 Abs. 1 Nrn. 1 bis 3 den Nachweis der Eignung gemäß § 36 Abs. 1 Nr. 4 nach Maßgabe der folgenden Regelungen voraus.",
+      "section": "Anlage 2, 1.",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "degree",
+        "label": "Academic Degree",
+        "requirements": [
+          {
+            "canonical": [
+              "other"
+            ],
+            "label": "einen an einer in- oder ausländischen Hochschule erworbenen mindestens sechssemestrigen qualifizierten Bachelorabschluss oder einen mindestens gleichwertigen Abschluss in dem Studiengang Informatik oder vergleichbaren Studiengängen",
+            "exampleCourses": []
+          }
+        ]
+      },
+      {
+        "setId": "curricular_analysis",
+        "label": "Subject-Specific Qualifications (Curricular Analysis)",
+        "requirements": [
+          {
+            "canonical": [
+              "cs_theory",
+              "cs_practical"
+            ],
+            "label": "Module der Grundlagen der Informatik (Einführung in die Informatik, Rechnerarchitektur, Softwaretechnik, Algorithmen und Datenstrukturen, Datenbanken, Betriebssysteme und Systemsoftware, Rechnernetze und Verteilte Systeme)",
+            "minEcts": 50,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_theory"
+            ],
+            "label": "Fachliche Grundlagen im Bereich Theoretische Informatik",
+            "minEcts": 6,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_practical"
+            ],
+            "label": "Fachliche Grundlagen im Bereich Funktionale Programmierung und Verifikation",
+            "minEcts": 5,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure",
+              "math_applied"
+            ],
+            "label": "Module der Mathematischen Grundlagen (Diskrete Strukturen, Lineare Algebra, Analysis, Diskrete Wahrscheinlichkeitstheorie, Numerisches Programmieren)",
+            "minEcts": 28,
+            "exampleCourses": []
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "Die Qualifikation für den Masterstudiengang Informatik wird nachgewiesen durch: 1. einen an einer in- oder ausländischen Hochschule erworbenen mindestens sechssemestrigen qualifizierten Bachelorabschluss oder einen mindestens gleichwertigen Abschluss in dem Studiengang Informatik oder vergleichbaren Studiengängen, ... 4. das Bestehen des Eignungsverfahrens gemäß Anlage 2. ... Die curriculare Analyse erfolgt dabei nicht durch schematischen Abgleich der Module, sondern auf der Basis von Kompetenzen. Sie orientiert sich an den in der folgenden Tabelle aufgelisteten elementaren Fächergruppen des Bachelorstudiengangs Informatik der Technischen Universität München.",
+      "section": "§ 36 Abs. 1 Nr. 1, Anlage 2, 5.1.1.1",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "referenceCurriculum": {
+    "value": {
+      "referenceProgram": "Bachelorstudiengangs Informatik der Technischen Universität München",
+      "equivalenceWording": "keine wesentlichen Unterschiede hinsichtlich der erworbenen Kompetenzen (Lernergebnisse)"
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "Sie orientiert sich an den in der folgenden Tabelle aufgelisteten elementaren Fächergruppen des Bachelorstudiengangs Informatik der Technischen Universität München. ... Wenn festgestellt wurde, dass keine wesentlichen Unterschiede hinsichtlich der erworbenen Kompetenzen (Lernergebnisse) bestehen, werden maximal 50 Punkte vergeben.",
+      "section": "Anlage 2, 5.1.1.1",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "points",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "Die eingereichten Unterlagen werden auf einer Skala von 0 bis 57 Punkten bewertet, wobei 0 das schlechteste und 57 das beste zu erzielende Ergebnis ist: ... Die Punktzahl der ersten Stufe ergibt sich aus der Summe der Einzelbewertungen der Nummern 5.1.1.1 und 5.1.1.2, wobei auf ganze Punktzahlen aufgerundet wird. ... Wer mindestens 51 Punkte erreicht hat, hat das Eignungsverfahren bestanden. ... Die schriftliche Begründung wird von der jeweiligen Auswahlkommission auf einer Skala von 0 bis 24 Punkten bewertet. ... Der Essay wird von der jeweiligen Auswahlkommission auf einer Skala von 0 bis 27 Punkten bewertet. ... Die Gesamtpunktzahl ergibt sich aus der Summe der Punkte aus 5.2.1.1 (Begründungsschreiben) und 5.2.1.2 (Essay) sowie aus 5.1.1.1 (fachliche Qualifikation) und 5.1.1.2 (Note). ... Die bei der Leistungserhebung maximal erreichbare Punktzahl beträgt 51. ... Die Gesamtpunktzahl nach Teilnahme an dem Test ergibt sich als Summe der Punkte aus 5.3.3 sowie der Punkte aus 5.1.1.1 (fachliche Qualifikation) und 5.1.1.2 (Note). Wer 85 oder mehr Punkte erreicht hat, hat das Eignungsverfahren bestanden.",
+      "section": "Anlage 2, 5.1.1, 5.1.2, 5.1.3, 5.2.1.1, 5.2.1.2, 5.2.2, 5.3.3, 5.3.5",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "pointsRubric": {
+    "value": {
+      "criteria": [
+        {
+          "name": "Fachliche Qualifikation (Curricular Analysis)",
+          "max": 50
+        },
+        {
+          "name": "Note",
+          "max": 7
+        },
+        {
+          "name": "Begründungsschreiben",
+          "max": 24
+        },
+        {
+          "name": "Essay",
+          "max": 27
+        },
+        {
+          "name": "Test (Leistungserhebung)",
+          "max": 51
+        }
+      ],
+      "passMarks": [
+        {
+          "value": 51
+        },
+        {
+          "value": 85
+        }
+      ]
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "Die eingereichten Unterlagen werden auf einer Skala von 0 bis 57 Punkten bewertet, wobei 0 das schlechteste und 57 das beste zu erzielende Ergebnis ist: ... Die Punktzahl der ersten Stufe ergibt sich aus der Summe der Einzelbewertungen der Nummern 5.1.1.1 und 5.1.1.2, wobei auf ganze Punktzahlen aufgerundet wird. ... Wer mindestens 51 Punkte erreicht hat, hat das Eignungsverfahren bestanden. ... Die schriftliche Begründung wird von der jeweiligen Auswahlkommission auf einer Skala von 0 bis 24 Punkten bewertet. ... Der Essay wird von der jeweiligen Auswahlkommission auf einer Skala von 0 bis 27 Punkten bewertet. ... Die Gesamtpunktzahl ergibt sich aus der Summe der Punkte aus 5.2.1.1 (Begründungsschreiben) und 5.2.1.2 (Essay) sowie aus 5.1.1.1 (fachliche Qualifikation) und 5.1.1.2 (Note). ... Die bei der Leistungserhebung maximal erreichbare Punktzahl beträgt 51. ... Die Gesamtpunktzahl nach Teilnahme an dem Test ergibt sich als Summe der Punkte aus 5.3.3 sowie der Punkte aus 5.1.1.1 (fachliche Qualifikation) und 5.1.1.2 (Note). Wer 85 oder mehr Punkte erreicht hat, hat das Eignungsverfahren bestanden.",
+      "section": "Anlage 2, 5.1.1, 5.1.2, 5.1.3, 5.2.1.1, 5.2.1.2, 5.2.2, 5.3.3, 5.3.5",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "auflagen": {
+    "value": {
+      "offered": "no"
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "Ein qualifizierter Hochschulabschluss im Sinne von Abs. 1 Nr. 1 liegt nicht vor, wenn die fehlenden Kompetenzen in den Modulen „Funktionale Programmierung und Verifikation“, „Einführung in die Theoretische Informatik“, „Diskrete Strukturen“, „Lineare Algebra für Informatik“, „Analysis für Informatik“, „Numerisches Programmieren“ und „Diskrete Wahrscheinlichkeitstheorie“ insgesamt 14 Credits oder mehr betragen.",
+      "section": "§ 36 Abs. 2",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.8
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "yes",
+      "minEctsSoFar": 140,
+      "certificateDeadline": "fünf Wochen nach Vorlesungsbeginn"
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "ein Transcript of Records mit Modulen im Umfang von mindestens 140 Credits bei einem sechssemestrigen Bachelorstudiengang, von mindestens 164 Credits bei einem siebensemestrigen Bachelorstudiengang und von mindestens 187 Credits bei einem achtsemestrigen Bachelorstudiengang; das Transcript of Records muss von der zuständigen Prüfungsbehörde oder dem zuständigen Studiensekretariat ausgestellt sein, ... Die Urkunde und das Zeugnis als Nachweis über das Bestehen des Bachelorstudiengangs müssen dem TUM Center for Study and Teaching – Bewerbung und Immatrikulation bis spätestens fünf Wochen nach Vorlesungsbeginn vorgelegt werden.",
+      "section": "Anlage 2, 2.3.1, 2.2 (4)",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "unstated",
+        "acceptedEvidence": [
+          {
+            "name": "TOEFL",
+            "overall": 88
+          },
+          {
+            "name": "IELTS",
+            "overall": 6.5
+          },
+          {
+            "name": "Cambridge Main Suite of English Examinations"
+          },
+          {
+            "name": "medium of instruction certificate",
+            "note": "Abschlussarbeit (Bachelor's Thesis) in englischer Sprache verfasst"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "yes",
+        "requiredFor": "admission"
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "adäquate Kenntnisse der englischen Sprache; hierzu ist von Studierenden, deren Ausbildungssprache nicht Englisch ist, der Nachweis durch einen anerkannten Sprachtest wie den „Test of Englisch as a Foreign Language” (TOEFL) (mindestens 88 Punkte), das „International English Language Testing System” (IELTS) (mindestens 6,5 Punkte) oder die „Cambridge Main Suite of English Examinations” zu erbringen; wurde die Abschlussarbeit (Bachelor's Thesis) in englischer Sprache verfasst, so sind hiermit ebenfalls adäquate Kenntnisse der englischen Sprache nachgewiesen",
+      "section": "§ 36 Abs. 1 Nr. 2",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [
+      {
+        "name": "GRE General Test",
+        "required": "yes",
+        "thresholds": "Quantitative reasoning: 164, Analytical writing: 4.0",
+        "appliesTo": {
+          "description": "Bewerberinnen und Bewerber, die ihr Erststudium in folgenden Ländern abgeschlossen haben: China, Bangladesch, Indien, Iran, Pakistan",
+          "nationalities": [
+            "China",
+            "Bangladesh",
+            "India",
+            "Iran",
+            "Pakistan"
+          ],
+          "euEea": "any",
+          "lisbonConvention": "non_signatory"
+        },
+        "exemptions": "bei Abschlüssen, die aus Unterzeichnerstaaten der Lissabon-Konvention stammen, wird eine Nachforderung nicht erforderlich"
+      },
+      {
+        "name": "GATE",
+        "required": "yes",
+        "thresholds": "The minimal qualifying score of the respective year is necessary.",
+        "appliesTo": {
+          "description": "Bewerberinnen und Bewerber, die ihr Erststudium in folgenden Ländern abgeschlossen haben: China, Bangladesch, Indien, Iran, Pakistan",
+          "nationalities": [
+            "China",
+            "Bangladesh",
+            "India",
+            "Iran",
+            "Pakistan"
+          ],
+          "euEea": "any",
+          "lisbonConvention": "non_signatory"
+        },
+        "exemptions": "bei Abschlüssen, die aus Unterzeichnerstaaten der Lissabon-Konvention stammen, wird eine Nachforderung nicht erforderlich"
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "einen Nachweis über Fachkenntnisse in Form eines „Graduate Record Examination (GRE) General Test“ oder in Form eines „Graduate Aptitude Test in Engineering\" (GATE) verpflichtend für Bewerberinnen und Bewerber, die ihr Erststudium in folgenden Ländern abgeschlossen haben: China, Bangladesch, Indien, Iran, Pakistan; für andere Bewerber und Bewerberinnen mit einem Erststudium, das nicht in einem Unterzeichnerstaat des Übereinkommens über die Anerkennung von Qualifikationen im Hochschulbereich in der europäischen Region vom 11. April 1997 (im Folgenden: Lissabon-Konvention) abgeschlossen wurde, wird die Einreichung des Tests nach Satz 1 empfohlen, da dieser bei Vorliegen wesentlicher Unterschiede hinsichtlich der mit dem Erstabschluss nachgewiesenen Kompetenzen gemäß Abs. 2 nachgefordert wird; bei Abschlüssen, die aus Unterzeichnerstaaten der Lissabon-Konvention stammen, wird eine Nachforderung nicht erforderlich",
+      "section": "§ 36 Abs. 1 Nr. 3",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "no",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+      "snippet": "unstated",
+      "section": "general reading",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T21:13:32.834Z"
+    },
+    "confidence": 0.9
+  },
+  "applicationRoute": {
+    "value": "both",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.cit.tum.de/en/cit/studies/degree-programs/master-informatics/",
+      "snippet": "You have to apply for the Master's degree via TUMonline . After you have created your account in TUMonline, enter personal data and information about your education, and upload the required documents. The application is done completely electronically. Prospective students with a Bachelor's degree from outside Germany have to request a preliminary examination documentation from uni-assist (VPD) in advance.",
+      "section": "How do I apply?",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:13:34.765Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [
+      {
+        "intake": "winter",
+        "opens": "01 February",
+        "closes": "31 May"
+      },
+      {
+        "intake": "winter",
+        "opens": "01 February",
+        "closes": "31 March",
+        "appliesTo": {
+          "description": "applicants who need a visa",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "summer",
+        "opens": "01 October",
+        "closes": "30 November"
+      },
+      {
+        "intake": "summer",
+        "opens": "01 October",
+        "closes": "31 October",
+        "appliesTo": {
+          "description": "applicants who need a visa",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.cit.tum.de/en/cit/studies/degree-programs/master-informatics/",
+      "snippet": "Online application and submission of required documents For the winter semester: February 1 – March 31: recommended application deadline for applicants who need a visa February 1 – May 31: compulsory application deadline \n For the summer semester: October 1 – October 31: recommended application for applicants who need a visa October 1 - November 30: compulsory application deadline",
+      "section": "Application Periods",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:13:34.765Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [
+    {
+      "value": "die Fähigkeit zu wissenschaftlicher bzw. grundlagen- und methodenorientierter Arbeitsweise",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "die Fähigkeit zu wissenschaftlicher bzw. grundlagen- und methodenorientierter Arbeitsweise",
+        "section": "Anlage 2, 1.1",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Befähigung zur Lösung komplexer und schwieriger Probleme",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "Befähigung zur Lösung komplexer und schwieriger Probleme",
+        "section": "Anlage 2, 1.3",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Befähigung zur Abstraktion und Übertragung der Informatik-Methoden zur Lösung von Problemen in Anwendungsbereichen.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "Befähigung zur Abstraktion und Übertragung der Informatik-Methoden zur Lösung von Problemen in Anwendungsbereichen.",
+        "section": "Anlage 2, 1.4",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Besondere Leistungsbereitschaft: Darlegung der einschlägigen Qualifikationen, die über die im Erststudium erworbenen Kenntnisse und Qualifikationen hinausgehen, wie z. B. studiengangspezifische Berufsausbildungen, Praktika, Auslandsaufenthalte (vgl. Nr. 2.3.3)",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "Besondere Leistungsbereitschaft: Darlegung der einschlägigen Qualifikationen, die über die im Erststudium erworbenen Kenntnisse und Qualifikationen hinausgehen, wie z. B. studiengangspezifische Berufsausbildungen, Praktika, Auslandsaufenthalte (vgl. Nr. 2.3.3)",
+        "section": "Anlage 2, 5.2.1.1 (1)",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Besondere Eignung: Strukturierte Darstellung des Zusammenhangs zwischen persönlicher Eignung und Inhalten des Studiengangs.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "Besondere Eignung: Strukturierte Darstellung des Zusammenhangs zwischen persönlicher Eignung und Inhalten des Studiengangs.",
+        "section": "Anlage 2, 5.2.1.1 (2)",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "formaler und schlüssiger Aufbau",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "formaler und schlüssiger Aufbau",
+        "section": "Anlage 2, 5.2.1.2 (1)",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "inhaltliche Vollständigkeit und Korrektheit sowie schlüssige Argumentation",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "inhaltliche Vollständigkeit und Korrektheit sowie schlüssige Argumentation",
+        "section": "Anlage 2, 5.2.1.2 (2)",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "wissenschaftliche Fundierung",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "wissenschaftliche Fundierung",
+        "section": "Anlage 2, 5.2.1.2 (3)",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Der Test soll zeigen, ob der Bewerber oder die Bewerberin erwarten lässt, das Ziel des Studiengangs auf wissenschaftlicher Grundlage selbstständig und verantwortungsbewusst zu erreichen und ob er oder sie über den erforderlichen allgemeinen Wissensstand verfügt, der den Grundlagen des einschlägigen Bachelorstudiengangs entspricht, so dass ein erfolgreicher Studienabschluss zu erwarten ist.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf",
+        "snippet": "Der Test soll zeigen, ob der Bewerber oder die Bewerberin erwarten lässt, das Ziel des Studiengangs auf wissenschaftlicher Grundlage selbstständig und verantwortungsbewusst zu erreichen und ob er oder sie über den erforderlichen allgemeinen Wissensstand verfügt, der den Grundlagen des einschlägigen Bachelorstudiengangs entspricht, so dass ein erfolgreicher Studienabschluss zu erwarten ist.",
+        "section": "Anlage 2, 5.3.3",
+        "lang": "de",
+        "fetchedAt": "2026-07-27T21:13:32.834Z"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "extractedAt": "2026-07-27T21:13:32.834Z"
+}

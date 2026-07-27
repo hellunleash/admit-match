@@ -14,7 +14,14 @@ import {
   type SourceType,
 } from "../schema.js";
 import { generateStructured, pdfPart, textPart, type Part } from "./gemini.js";
+import { observeWith } from "../tracing.js";
 import type { FetchedDoc } from "./fetch.js";
+
+/**
+ * Bump on every prompt change. Tagged onto each trace so "which prompt version regressed?" is a
+ * query rather than an archaeology exercise — the whole reason for tracing the extractor at all.
+ */
+export const PROMPT_VERSION = "2026-07-28.3";
 
 export const SYSTEM_PROMPT = `You extract admission requirements from German university documents into JSON.
 
@@ -64,9 +71,13 @@ Omit optional fields entirely rather than emitting null.
   "requirementSets": { "value": [
     { "setId": "primary", "label": "primary requirements",
       "requirements": [
-        { "canonical": "math_pure|math_applied|cs_theory|cs_practical|cs_technical|cs_applied|physics|electronics|materials_chemistry|engineering_other|thesis|total|other",
+        // canonical is an ARRAY: list every area the requirement covers. "Grundlagen der Mathematik,
+        // theoretische Informatik, KI" is ONE requirement covering ["math_pure","cs_theory","cs_applied"].
+        // Do not split it into three requirements, and do not pick just one area.
+        { "canonical": ["math_pure|math_applied|cs_theory|cs_practical|cs_technical|cs_applied|physics|electronics|materials_chemistry|engineering_other|thesis|total|other"],
           "label": "<the document's OWN wording, verbatim>",
-          "minEcts": 25,
+          "minEcts": 25,                    // OMIT when the document names an area with no credit figure
+          "provenance": PROV,               // THIS requirement's own line — not the section as a whole
           "exampleCourses": ["<courses the document names, if any>"] }
       ],
       "satisfyAtLeast": 3,                       // OMIT unless the source says "at least N of the following"
@@ -84,7 +95,11 @@ Omit optional fields entirely rather than emitting null.
   "auflagen":        { "value": { "offered": "yes|no|unstated", "maxEcts": 42, "deadline": "first two semesters" }, "provenance": PROV, "confidence": 0.8 },
   "degreeInProgress":{ "value": { "allowed": "yes|no|unstated", "minEctsSoFar": 150, "thesisMustBeRegistered": true, "certificateDeadline": "<verbatim>" }, "provenance": PROV, "confidence": 0.8 },
 
-  "language": { "value": [ { "language": "english|german", "cefr": "C1", "test": { "name": "IELTS", "overall": 7.0, "minBand": 5.5 }, "waiverIfMediumOfInstruction": "yes|no|unstated", "requiredFor": "admission|enrolment|unstated" } ], "provenance": PROV, "confidence": 0.9 },
+  // ONE entry per LANGUAGE, not per test. Every accepted proof goes in acceptedEvidence —
+  // "English C1, satisfied by TOEFL 100 or IELTS 7.0 or ..." is ONE requirement with many doors.
+  "language": { "value": [ { "language": "english|german", "cefr": "C1",
+      "acceptedEvidence": [ { "name": "TOEFL iBT", "overall": 100 }, { "name": "IELTS", "overall": 7.0, "minBand": 5.5 }, { "name": "medium of instruction certificate", "note": "<verbatim conditions>" } ],
+      "waiverIfMediumOfInstruction": "yes|no|unstated", "requiredFor": "admission|enrolment|unstated" } ], "provenance": PROV, "confidence": 0.9 },
   "tests":    { "value": [ { "name": "GRE General Test", "required": "yes|no|unstated", "thresholds": "<verbatim>", "appliesTo": GROUP, "exemptions": "<verbatim>" } ], "provenance": PROV, "confidence": 0.9 },
   "interview":{ "value": "yes|no|unstated", "provenance": PROV, "confidence": 0.9 },
 
@@ -104,8 +119,25 @@ GROUP (omit entirely when a rule applies to everyone) =
   { "description": "<the document's own wording>", "nationalities": ["India"],
     "euEea": "only|excluded|any", "lisbonConvention": "signatory|non_signatory|any" }
 
-Arrays are never null: use [] when a document states nothing. Enums must be exactly one of the
-listed literals — "not specified" is written as "unstated".`;
+Hard rules about shape, learned from real failures:
+- EVERY cited wrapper needs all three of value, provenance, confidence. A wrapper without
+  provenance is discarded, so omit the whole field rather than emitting a bare value.
+- "tests", "language", "deadlines" and "requirementSets" are CITED WRAPPERS whose value happens to
+  be an array. Write {"value": [...], "provenance": {...}, "confidence": 0.9} — never a bare array.
+- Omit fields you cannot fill. Do NOT write null: no field anywhere accepts null.
+- Each entry in "requirements" carries its OWN provenance, quoting the specific line that states
+  that threshold. Do not reuse one snippet for several thresholds.
+- NEVER add up numbers. If a statute lists 35, 35 and 20, do not emit a 90 "total" requirement —
+  that total appears in no sentence, and a value you computed is a value you invented.
+- Arrays are never null: use [] when a document states nothing.
+- Enums must be exactly one of the listed literals. "not specified" is written as "unstated".
+- NUMBER and BOOLEAN fields must be a number or a boolean. Never write "unstated" into one —
+  omit the field instead. Omission already means unknown.
+- minEcts is OPTIONAL. Many programs name required subject areas with no credit figure attached.
+  Omit minEcts in that case; do NOT invent, estimate or infer a number.
+- Every required top-level field must be present: taughtIn, admissionRestricted, requirementSets,
+  assessmentStyle, auflagen, degreeInProgress, language, tests, interview, applicationRoute,
+  deadlines, qualitative, extractedAt.`;
 
 export type ExtractionInput = {
   programId: string;
@@ -117,7 +149,12 @@ export type ExtractionInput = {
 
 export type VerifyIssue = {
   path: string;
-  kind: "snippet_missing_value" | "source_tier_violation" | "empty_snippet";
+  kind: "snippet_missing_value" | "weaker_source_used" | "empty_snippet";
+  /**
+   * "defect" quarantines the field — it cannot prove itself, so it must not reach a user.
+   * "review" is a signal for a human, not a failure.
+   */
+  severity: "defect" | "review";
   detail: string;
 };
 
@@ -156,7 +193,26 @@ export async function extractProgram(input: ExtractionInput): Promise<Extraction
     }
   }
 
-  const result = await generateStructured(parts, SYSTEM_PROMPT, ProgramRequirements);
+  const result = await observeWith("extract_program", async () => {
+    const r = await generateStructured(parts, SYSTEM_PROMPT, ProgramRequirements);
+    return {
+      result: r,
+      fields: {
+        input: {
+          programId: input.programId,
+          docs: usable.map((d) => ({ sourceType: d.sourceType, kind: d.doc.kind })),
+        },
+        output: r.ok ? { requirementSets: r.value.requirementSets.value.length } : { error: r.error },
+        metadata: {
+          model: process.env["GEMINI_MODEL"] ?? "gemini-2.5-flash",
+          attempts: r.attempts,
+          promptVersion: PROMPT_VERSION,
+          ...(r.ok ? { totalTokens: r.usage.totalTokens } : {}),
+        },
+      },
+    };
+  });
+
   if (!result.ok) return { ok: false, error: result.error };
 
   const bestAvailable = usable
@@ -187,14 +243,19 @@ export function verify(
     const prov = (node as { provenance: { snippet?: string; sourceType: SourceType } }).provenance;
 
     if (!prov.snippet || prov.snippet.trim().length === 0) {
-      issues.push({ path, kind: "empty_snippet", detail: "no snippet supplied" });
+      issues.push({ path, kind: "empty_snippet", severity: "defect", detail: "no snippet supplied" });
       return;
     }
+    // REVIEW, not defect. Plenty of real facts — deadlines, accepted English tests — are published
+    // only on the program page and appear in no statute. Treating that as a violation produced five
+    // false positives on the very first extraction. Whether the statute *also* covers a field is
+    // not mechanically knowable, so this flags for a human instead of pretending to know.
     if (SOURCE_RANK[prov.sourceType] < SOURCE_RANK[bestAvailable]) {
       issues.push({
         path,
-        kind: "source_tier_violation",
-        detail: `read from ${prov.sourceType} while ${bestAvailable} was available`,
+        kind: "weaker_source_used",
+        severity: "review",
+        detail: `read from ${prov.sourceType} while ${bestAvailable} was available — confirm the statute is silent on this`,
       });
     }
     for (const n of numbers) {
@@ -202,6 +263,7 @@ export function verify(
         issues.push({
           path,
           kind: "snippet_missing_value",
+          severity: "defect",
           detail: `value ${n} does not appear in the cited snippet`,
         });
       }
@@ -217,20 +279,58 @@ export function verify(
     ]);
   }
 
-  checkCited(
-    "requirementSets",
-    data.requirementSets,
-    data.requirementSets.value.flatMap((set) => set.requirements.map((r) => r.minEcts))
-  );
+  // The wrapper carries no numbers of its own — each requirement is checked against ITS OWN
+  // citation. A threshold whose line doesn't contain it was derived rather than read.
+  checkCited("requirementSets", data.requirementSets, []);
+  data.requirementSets.value.forEach((set, si) => {
+    set.requirements.forEach((req, ri) => {
+      const path = `requirementSets[${si}].requirements[${ri}] (${req.label.slice(0, 40)})`;
+      if (req.minEcts === undefined) return; // named but unquantified — legitimate
+      if (!req.provenance) {
+        issues.push({
+          path,
+          kind: "empty_snippet",
+          severity: "defect",
+          detail: `minEcts ${req.minEcts} has no citation of its own`,
+        });
+        return;
+      }
+      if (!snippetSupportsNumber(req.provenance.snippet, req.minEcts)) {
+        issues.push({
+          path,
+          kind: "snippet_missing_value",
+          severity: "defect",
+          detail: `value ${req.minEcts} does not appear in its cited snippet — derived, not read`,
+        });
+      }
+    });
+  });
 
   if (data.referenceCurriculum) {
-    checkCited("referenceCurriculum", data.referenceCurriculum, [data.referenceCurriculum.value.minEcts]);
+    const refMin = data.referenceCurriculum.value.minEcts;
+    checkCited("referenceCurriculum", data.referenceCurriculum, refMin === undefined ? [] : [refMin]);
   }
-  checkCited("auflagen", data.auflagen, data.auflagen.value.maxEcts ? [data.auflagen.value.maxEcts] : []);
-  checkCited("assessmentStyle", data.assessmentStyle, []);
-  checkCited("deadlines", data.deadlines, []);
-  checkCited("tests", data.tests, []);
-  checkCited("language", data.language, []);
+  if (data.auflagen) {
+    const max = data.auflagen.value.maxEcts;
+    checkCited("auflagen", data.auflagen, max === undefined ? [] : [max]);
+  }
+  if (data.assessmentStyle) checkCited("assessmentStyle", data.assessmentStyle, []);
+  if (data.deadlines) checkCited("deadlines", data.deadlines, []);
+  if (data.tests) checkCited("tests", data.tests, []);
+  if (data.language) checkCited("language", data.language, []);
+
+  // Absence is recorded, not defaulted. A missing field means the source was silent (or the model
+  // missed it) — both are worth knowing and neither is a value.
+  for (const [name, present] of [
+    ["assessmentStyle", Boolean(data.assessmentStyle)],
+    ["auflagen", Boolean(data.auflagen)],
+    ["language", Boolean(data.language)],
+    ["deadlines", Boolean(data.deadlines)],
+  ] as const) {
+    if (!present) {
+      issues.push({ path: name, kind: "empty_snippet", severity: "review", detail: "not extracted" });
+    }
+  }
 
   return issues;
 }

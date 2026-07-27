@@ -8,6 +8,40 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-28 — Re-running stopped costing money
+
+The API bill was not a model-pricing problem. It was me re-sending the same 700 KB statute PDFs on
+every run to test **prompt** changes. The documents hadn't changed; the code had.
+
+Three fixes:
+
+- **Disk cache** for fetched documents (`.cache/docs/`, gitignored, keyed by URL hash, 14-day TTL,
+  `--refresh` to override). University statutes change about once a cycle.
+- **Skip when nothing changed.** A sidecar `<programId>.meta.json` records the document hashes,
+  prompt version and model that produced each snapshot. Same inputs → no API call at all. Verified:
+  second run of TU Dresden printed `skipped — documents, prompt and model unchanged (no API call)`.
+- **Repair retries instead of re-runs.** A validation failure used to resend the entire PDF. It now
+  sends only the previous JSON plus the errors — a couple of thousand tokens instead of 55,000. The
+  model doesn't need to re-read a statute to fix a type error in its own output.
+
+Also checked the alternatives before assuming a model swap was the answer. **DeepSeek V3**
+($0.14/$0.28 per M) is cheaper per token but text-only — no native PDF, so it needs a
+PDF→text step, which is exactly what we avoid to keep the § structure. **Kimi K2.5** ($0.60/$2.50)
+and **K2.6** ($0.95/$4.00) are *more* expensive than Gemini Flash on input, which is ~95% of our
+spend. Gemini Flash with native PDF stays. Flash-Lite ($0.10/M) is a 3× saving worth A/B-ing once
+there's a golden set to measure it against — not before, since cheaper output that's wrong costs
+more than it saves. Noting for later: 2.5 Flash is scheduled for deprecation on 16 Oct 2026.
+
+**Per-requirement provenance paid off immediately.** Dresden now extracts 2 requirement sets with
+ZERO defects, and each threshold cites its own statute line — § 5 Abs. 2 Nr. 1, Nr. 2, Nr. 3. The
+fabricated "90 total" is gone; the model kept 90 in the set *label*, where the statute actually says
+it, and no longer emits it as a requirement it invented by addition.
+
+The multi-area fix shows up too: "Grundlagen der Mathematik, theoretische Informatik, KI" now maps
+to `math_applied+cs_theory+cs_applied` instead of being flattened to one bucket.
+
+**Next:** the match engine — my transcript against these requirements.
+
 ## 2026-07-28 — Day 2: the extractor, and a header that wasn't ASCII
 
 Wrote fetch → extract → verify → snapshot. Ran it. It failed, which is why running it mattered.

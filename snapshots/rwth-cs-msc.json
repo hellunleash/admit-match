@@ -1,0 +1,191 @@
+{
+  "programId": "rwth-cs-msc",
+  "university": "RWTH Aachen University",
+  "programName": "Computer Science M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "mixed",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://sc.informatik.rwth-aachen.de/en/pos-und-modulhandbuecher/",
+      "snippet": "The module handbooks are available in German and English.",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:05.550Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "The admission requirements are defined in Section 3 of the Master’s Examination Regulations .",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.5
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "primary",
+        "label": "educational background",
+        "requirements": [
+          {
+            "canonical": [
+              "cs_practical",
+              "cs_applied"
+            ],
+            "label": "Applied computer science: programming, data structures and algorithms, databases and information systems, software engineering",
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_technical"
+            ],
+            "label": "Technical computer science: technical computer science, operating systems and systems software, data communication and security, system programming",
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_theory"
+            ],
+            "label": "Theoretical computer science: formal systems, automata and processes, and calculability and complexity, mathematical logic",
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure",
+              "math_applied"
+            ],
+            "label": "Mathematics: Discrete mathematics, analysis for computer scientists, linear algebra, applied stochastics",
+            "exampleCourses": []
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "The educational background required for the Computer Science M.Sc. program according to Section 3.2 includes the skills and competencies in: Applied computer science: programming, data structures and algorithms, databases and information systems, software engineering Technical computer science: technical computer science, operating systems and systems software, data communication and security, system programming Theoretical computer science: formal systems, automata and processes, and calculability and complexity, mathematical logic Mathematics: Discrete mathematics, analysis for computer scientists, linear algebra, applied stochastics",
+      "section": "Section 3.2",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "binary",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "Based on the application documents, the examination board will decide on whether the applicant meets the above educational admission requirements.",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.9
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "The admission requirements are defined in Section 3 of the Master’s Examination Regulations .",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.5
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "The admission requirements are defined in Section 3 of the Master’s Examination Regulations .",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.5
+  },
+  "language": {
+    "value": [
+      {
+        "language": "german",
+        "acceptedEvidence": [],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "unstated"
+      },
+      {
+        "language": "english",
+        "acceptedEvidence": [
+          {
+            "name": "Bachelor’s thesis in English",
+            "note": "The equivalence/sufficiency of the qualification is determined by the relevant examination board for each individual applicant."
+          }
+        ],
+        "waiverIfMediumOfInstruction": "yes",
+        "requiredFor": "unstated"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "Furthermore, the applicant has to provide evidence of the required language skills in German and English as defined in Section 3 of the General Examination Regulations . Aside from the evidence of English language proficiency listed there, other comparable evidence is also accepted. For example, if the applicant has written his or her Bachelor’s thesis in English, this is typically accepted as sufficient proof of proficiency in English. The equivalence/sufficiency of the qualification is determined by the relevant examination board for each individual applicant.",
+      "section": "Section 3",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "The admission requirements are defined in Section 3 of the Master’s Examination Regulations .",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.5
+  },
+  "interview": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "The admission requirements are defined in Section 3 of the Master’s Examination Regulations .",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.5
+  },
+  "applicationRoute": {
+    "value": "direct",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "RWTH Online Application",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1",
+      "snippet": "Deadlines",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T21:16:07.729Z"
+    },
+    "confidence": 0.5
+  },
+  "qualitative": [],
+  "extractedAt": "2024-07-27T12:00:00Z"
+}
