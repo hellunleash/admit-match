@@ -1,0 +1,343 @@
+{
+  "programId": "kit-informatik-msc-de",
+  "university": "Karlsruher Institut für Technologie",
+  "programName": "Informatik M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "german",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.sle.kit.edu/english/vorstudium/master-informatics.php",
+      "snippet": "Language of instruction: German",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T22:02:26.369Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "nc",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.sle.kit.edu/english/vorstudium/master-informatics.php",
+      "snippet": "Limited capacity:\nFirst semester: yes\nHigher semester: yes",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T22:02:26.369Z"
+    },
+    "confidence": 0.9
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "primary",
+        "label": "Voraussetzungen für den Zugang zu dem Masterstudiengang Informatik",
+        "requirements": [
+          {
+            "canonical": [
+              "other"
+            ],
+            "label": "ein bestandener Bachelorabschluss oder mindestens gleichwertiger Abschluss an einer Universität, Fachhochschule oder Berufsakademie im Geltungsbereich des Hochschulrahmengesetzes oder an einer ausländischen Hochschule, wobei das Studium mit einem Mindestumfang von 180 ECTS-Punkten, alternativ mit mindestens dreijähriger Regelstudienzeit in dem Fach Informatik oder einem verwandten Fachgebiet absolviert worden sein muss",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+              "snippet": "ein bestandener Bachelorabschluss oder mindestens gleichwertiger Abschluss an einer\nUniversität, Fachhochschule oder Berufsakademie im Geltungsbereich des Hochschul-\nrahmengesetzes oder an einer ausländischen Hochschule, wobei das Studium mit einem\nMindestumfang von 180 ECTS-Punkten, alternativ mit mindestens dreijähriger Regelstu-\ndienzeit in dem Fach Informatik oder einem verwandten Fachgebiet absolviert worden\nsein muss",
+              "section": "§ 2 Abs. 1 Nr. 1",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T22:02:24.522Z"
+            },
+            "minEcts": 180,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_theory"
+            ],
+            "label": "Theoretischer Informatik Leistungen im Umfang von mindestens 15 ECTS",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+              "snippet": "Theoretischer Informatik Leistungen im Umfang von mindestens 15 ECTS",
+              "section": "§ 2 Abs. 1 Nr. 2",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T22:02:24.522Z"
+            },
+            "minEcts": 15,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_practical"
+            ],
+            "label": "Praktischer Informatik Leistungen im Umfang von mindestens 20 ECTS",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+              "snippet": "Praktischer Informatik Leistungen im Umfang von mindestens 20 ECTS",
+              "section": "§ 2 Abs. 1 Nr. 2",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T22:02:24.522Z"
+            },
+            "minEcts": 20,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_technical"
+            ],
+            "label": "Technischer Informatik Leistungen im Umfang von mindestens 6 ECTS",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+              "snippet": "Technischer Informatik Leistungen im Umfang von mindestens 6 ECTS",
+              "section": "§ 2 Abs. 1 Nr. 2",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T22:02:24.522Z"
+            },
+            "minEcts": 6,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure"
+            ],
+            "label": "Mathematik Leistungen im Umfang von mindestens 20 ECTS",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+              "snippet": "Mathematik Leistungen im Umfang von mindestens 20 ECTS",
+              "section": "§ 2 Abs. 1 Nr. 2",
+              "lang": "de",
+              "fetchedAt": "2026-07-27T22:02:24.522Z"
+            },
+            "minEcts": 20,
+            "exampleCourses": []
+          }
+        ],
+        "satisfyAtLeast": 3
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+      "snippet": "Voraussetzungen für den Zugang zu dem Masterstudiengang Informatik sind:\n1. ein bestandener Bachelorabschluss oder mindestens gleichwertiger Abschluss an einer\nUniversität, Fachhochschule oder Berufsakademie im Geltungsbereich des Hochschul-\nrahmengesetzes oder an einer ausländischen Hochschule, wobei das Studium mit einem\nMindestumfang von 180 ECTS-Punkten, alternativ mit mindestens dreijähriger Regelstu-\ndienzeit in dem Fach Informatik oder einem verwandten Fachgebiet absolviert worden\nsein muss und\n2. erbrachte Mindestleistungen in mindestens drei der vier Bereiche Theoretische Informa-\ntik, Praktische Informatik, Technische Informatik und Mathematik, wobei die Mindestleis-\ntungen in einem Bereich als erfüllt gelten, wenn in\nTheoretischer Informatik Leistungen im Umfang von mindestens 15 ECTS,\nPraktischer Informatik Leistungen im Umfang von mindestens 20 ECTS,\nTechnischer Informatik Leistungen im Umfang von mindestens 6 ECTS und\nMathematik Leistungen im Umfang von mindestens 20 ECTS\nerbracht wurden.",
+      "section": "§ 2 Abs. 1",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T22:02:24.522Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "points",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+      "snippet": "Die Auswahl erfolgt durch die Auswahlkommission auf der Grundlage einer für jeden Bewer-\nber zu ermittelnden Gesamtpunktzahl, wobei die für die Gesamtnote der akademischen Ab-\nschlussprüfung vergebene Punktzahl, die für die bisher erbrachten Studienleistungen ermittelte\nPunktzahl und die für die sonstigen, wissenschaftlichen und beruflichen Leistungen ermittelte\nPunktzahl zu einer abschließenden Gesamtpunktzahl addiert werden.",
+      "section": "§ 9 Abs. 1",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T22:02:24.522Z"
+    },
+    "confidence": 0.9
+  },
+  "pointsRubric": {
+    "value": {
+      "criteria": [
+        {
+          "name": "Gesamtnote der Abschlussprüfung",
+          "max": 40
+        },
+        {
+          "name": "Studienleistungen im Bereich der Theoretischen Informatik",
+          "max": 25
+        },
+        {
+          "name": "Studienleistungen im Bereich der Praktischen Informatik",
+          "max": 45
+        },
+        {
+          "name": "Studienleistungen im Bereich der Technischen Informatik",
+          "max": 15
+        },
+        {
+          "name": "Studienleistungen im Bereich der Mathematik",
+          "max": 35
+        },
+        {
+          "name": "sonstige, wissenschaftliche und berufliche Leistungen",
+          "max": 15
+        }
+      ],
+      "passMarks": []
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+      "snippet": "(1) Für die Gesamtnote der Abschlussprüfung (§ 2 Abs. 1 Nr. 1) werden anhand des folgenden\nSchemas maximal 40 Punkte vergeben:\n1,0 bis 1,3\n40 Punkte\n1,4 bis 1,7\n30 Punkte\n1,8 bis 2,3\n20 Punkte\n2,4 bis 3,0\n5 Punkte\n(2) Für Studienleistungen in den in § 2 Abs. 1 Nr. 2 genannten Bereichen bzw. für als gleichwer-\ntig anerkannte Studienleistungen werden zusätzlich maximal 120 Punkte vergeben. Der Bewer-\nber erhält\nbis zu 25 Punkte für erbrachte Leistungen im Bereich der Theoretischen Informatik bis zu\neinem Umfang von maximal 25 ECTS,\nbis zu 45 Punkte für erbrachte Leistungen im Bereich der Praktischen Informatik bis zu ei-\nnem Umfang von maximal 45 ECTS,\nbis zu 15 Punkte für erbrachte Leistungen im Bereich der Technischen Informatik bis zu\neinem Umfang von maximal 15 ECTS und\nbis zu 35 Punkte für erbrachte Leistungen im Bereich der Mathematik bis zu einem Um-\nfang von maximal 35 ECTS.\nDie Punkte werden in den einzelnen Bereichen linear progressiv bis zum Erreichen der Maximal-\npunktzahl festgestellt und ergeben in ihrer Summe die Gesamtpunktzahl der Studienleistungen\ndes Bewerbers. Falls sich aus den vorgelegten Zeugnissen nicht klar ergibt, ob eine Veranstal-\ntung einem der Bereiche zuordenbar ist, so entscheidet hierüber die Auswahlkommission.\n§ 8 Sonstige, wissenschaftliche und berufliche Leistungen\nDie Mitglieder der Auswahlkommission bewerten die sonstigen, wissenschaftlichen und berufli-\nchen Leistungen gesondert auf einer Skala von 0 bis 15.",
+      "section": "§ 7, § 8",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T22:02:24.522Z"
+    },
+    "confidence": 0.8
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.sle.kit.edu/english/vorstudium/master-informatics.php",
+      "snippet": "If you do not meet the above requirements, you can still be enrolled on the master's degree program in Informatics, provided you successfully take part in an aptitude interview. The proven knowledge and achievements must not fall below the following requirements in three of the four areas mentioned:\ntheoretical computer science: 15 credit points\npractical computer science: 20 credit points\ncomputer engineering: 6 credit points\nmathematics: 20 credit points",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T22:02:26.369Z"
+    },
+    "confidence": 0.8
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "yes",
+      "certificateDeadline": "spätestens zwei Monate nach Beginn des Semesters"
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+      "snippet": "Liegt das Zeugnis über den Bachelorabschluss wegen Fehlens einzelner Prüfungen noch\nnicht vor und ist aufgrund des bisherigen Studienverlaufs, insbesondere der bisherigen Prü-\nfungsleistungen des Bewerbers, zu erwarten, dass er das Bachelorstudium rechtzeitig vor Be-\nginn des Masterstudiengangs Informatik abschließen wird, kann im Rahmen der Auswahlent-\nscheidung eine Durchschnittsnote berücksichtigt werden, die aufgrund der bisherigen Prüfungs-\nleistungen ermittelt wird. Der Bewerber nimmt ausschließlich mit der ermittelten Durchschnittsno-\nte seiner bisherigen Prüfungsleistungen am Auswahlverfahren teil, auch wenn das spätere\nZeugnis über den Bachelorabschluss besser ausfällt. Das spätere Zeugnis über den Bachelor-\nabschluss bleibt unbeachtet, so dass eine spätere Rangverbesserung ausgeschlossen ist. Die\nBerücksichtigung des Ergebnisses des Auswahlverfahrens bei der Zulassung sowie die Zulas-\nsung selbst erfolgen unter dem Vorbehalt, dass das endgültige Zeugnis über den Bachelor-\nabschluss spätestens zwei Monate nach Beginn des Semesters, zu dem die Zulassung erfolgen\nsoll, nachgereicht wird (Ausschlussfrist).",
+      "section": "§ 4 Abs. 3",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T22:02:24.522Z"
+    },
+    "confidence": 0.8
+  },
+  "language": {
+    "value": [
+      {
+        "language": "german",
+        "cefr": "C1",
+        "acceptedEvidence": [
+          {
+            "name": "Feststellungspruefung",
+            "note": "passed German section"
+          },
+          {
+            "name": "DSH",
+            "overall": 2,
+            "note": "overall result DSH-2"
+          },
+          {
+            "name": "TestDaF",
+            "overall": 4,
+            "note": "level 4 in all four parts of the exam"
+          },
+          {
+            "name": "DSD II"
+          },
+          {
+            "name": "Goethe certificate C1"
+          },
+          {
+            "name": "telc Deutsch C1 Hochschule"
+          },
+          {
+            "name": "Austrian Language Diploma C1"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "yes",
+        "requiredFor": "enrolment"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.sle.kit.edu/english/vorstudium/master-informatics.php",
+      "snippet": "For the master's degree program in Informatics , you need sufficient knowledge of the German language . Your German language skills must correspond to at least level C1 of the Common European Framework of Reference for Languages (CEFR).\nImportant: you must provide proof of the required language skills regardless of your citizenship and by the end of the enrollment period at the latest , but preferably at the time of application.\nAs proof of your German language skills, your higher education or master's entrance qualification (e.g. Abitur, university degree or a professional qualification that entitles you to study) is sufficient if you have acquired it at a German-speaking institution with German as the language of instruction .\nIf, on the other hand, you did not obtain your higher education or master's entrance qualification at a German-speaking institution with German as the language of instruction , you must provide proof of German language proficiency at least at DSH-2 level . This corresponds to CEFR level C1 .\nOnly the following certificates are accepted in accordance with the KIT admission and enrollment regulations :\npassed German section of the Feststellungspruefung (assessment test)\npassed German language test for university admission (DSH) with overall result DSH-2\npassed Test of German as a Foreign Language (TestDaF) with level 4 in all four parts of the exam\nGerman Language Diploma of the Standing Conference of the Ministers of Education and Cultural Affairs - second level (DSD II)\nGoethe certificate C1 or higher\npassed telc Deutsch C1 Hochschule exam\nAustrian Language Diploma C1 or higher\nNote: The above-mentioned tests are accepted as proof of language proficiency for an unlimited period of time, even if the provider specifies an expiration date.\nWhat if I cannot provide suitable C1 proof of German at the time of application?\nIf you are unable to provide any of the C1 certificates listed above demonstrating your German language skills by the application deadline, you may still be admitted if you can provisionally demonstrate at least B1 language proficiency. Proof of B1 level is provided by a recognized language certificate or other certification from a language or other educational institution that clearly shows that B1 level has been achieved.\nBut please don't forget: you still have to submit the C1 certificate by the end of your enrollment period at the latest, which is stated in your admission letter .",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T22:02:26.369Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.sle.kit.edu/english/vorstudium/master-informatics.php",
+      "snippet": "The aptitude interview can be conducted online (Zoom) in exceptional cases and within the scope of the available slots.",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T22:02:26.369Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "yes",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.sle.kit.edu/english/vorstudium/master-informatics.php",
+      "snippet": "If you do not meet the above requirements, you can still be enrolled on the master's degree program in Informatics, provided you successfully take part in an aptitude interview.",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T22:02:26.369Z"
+    },
+    "confidence": 0.9
+  },
+  "applicationRoute": {
+    "value": "direct",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf",
+      "snippet": "(1) Der Antrag auf Zulassung zum Masterstudium Informatik ist im Rahmen des Online-Bewer-\nbungsverfahrens der Universität Karlsruhe (TH) durch Ausfüllen des vorgesehenen Online-\nBewerbungsformulars zu stellen. Zusätzlich ist der Bewerbungsantrag der Universität Karlsruhe (TH)\nvom Bewerber eigenhändig zu unterschreiben und an das Studienbüro der Universität Karlsruhe (TH)\nzu schicken.",
+      "section": "§ 4 Abs. 1",
+      "lang": "de",
+      "fetchedAt": "2026-07-27T22:02:24.522Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [
+      {
+        "intake": "winter",
+        "closes": "15. Juli",
+        "appliesTo": {
+          "description": "German and EU nationals",
+          "nationalities": [],
+          "euEea": "only",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "summer",
+        "closes": "15. Januar",
+        "appliesTo": {
+          "description": "German and EU nationals",
+          "nationalities": [],
+          "euEea": "only",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "winter",
+        "closes": "July 15",
+        "appliesTo": {
+          "description": "Non-EU nationals",
+          "nationalities": [],
+          "euEea": "excluded",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "summer",
+        "closes": "January 15",
+        "appliesTo": {
+          "description": "Non-EU nationals",
+          "nationalities": [],
+          "euEea": "excluded",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.sle.kit.edu/english/vorstudium/master-informatics.php",
+      "snippet": "Application deadline:\nGerman and EU nationals\nFirst semester: July 15 for winter term, January 15 for summer term\nHigher semester: July 15 for winter term, January 15 for summer term\nNon-EU nationals\nFirst semester: July 15 for winter term, January 15 for summer term\nHigher semester: July 15 for winter term, January 15 for summer term",
+      "lang": "en",
+      "fetchedAt": "2026-07-27T22:02:26.369Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [],
+  "extractedAt": "2024-07-27T22:02:24.522Z"
+}

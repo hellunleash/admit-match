@@ -1,0 +1,14 @@
+{
+  "programId": "rwth-cs-msc",
+  "extractedAt": "2026-07-27T22:02:04.659Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://sc.informatik.rwth-aachen.de/en/pos-und-modulhandbuecher/": "7c40e8a869eb74a1c7bbd0319383c0e35bde1a55b4e523ca13d6a530a36fddff",
+    "https://www.informatik.rwth-aachen.de/cms/informatik/studium/vor-dem-studium/bewerbungsinfos/~npqg/master-informatik/?lidx=1": "dc2b9f952a62bcd1a665bf30879d53b2274af46d7386b20ed38b08ea83d85c84"
+  },
+  "totalTokens": 20000,
+  "costUsd": 0.0211932,
+  "defects": 0,
+  "reviews": 8
+}

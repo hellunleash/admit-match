@@ -1,0 +1,14 @@
+{
+  "programId": "tu-darmstadt-cs-msc",
+  "extractedAt": "2026-07-27T22:05:06.267Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf": "0c18b5e2ca5739641902f876a3b6bde133897b8eeacb24e2c184f381578b77ba",
+    "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp": "2aaa10e0b3101ddd3c567d96ae24dbfe35e875ec30eda5b95e1bab8480f7e448"
+  },
+  "totalTokens": 17128,
+  "costUsd": 0.020613199999999998,
+  "defects": 0,
+  "reviews": 3
+}

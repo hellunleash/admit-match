@@ -1,0 +1,14 @@
+{
+  "programId": "tum-informatics-msc",
+  "extractedAt": "2026-07-27T22:01:29.443Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.cit.tum.de/fileadmin/w00byx/cit/Studium/Studiengaenge/Master_Informatik/Lesb.F._FPSO_MA_Informatik_mit_5._AES_vom_19.08.2024.pdf": "db49af4f7e260abd5563a15f7d628d154eb1becd7af89025b9dcf760a1f26b6d",
+    "https://www.cit.tum.de/en/cit/studies/degree-programs/master-informatics/": "a99e2f96a92b374486e387a0fdedb463251670709df5a9cbb4c0395b4bd95833"
+  },
+  "totalTokens": 29424,
+  "costUsd": 0.0318634,
+  "defects": 0,
+  "reviews": 1
+}

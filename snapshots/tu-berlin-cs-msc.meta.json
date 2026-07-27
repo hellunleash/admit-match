@@ -1,0 +1,14 @@
+{
+  "programId": "tu-berlin-cs-msc",
+  "extractedAt": "2026-07-27T22:03:43.850Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.static.tu.berlin/fileadmin/www/10000040/1_Studium_Lehre/1_Studienangebot/2_Masterstudiengaenge/2_M_CS/Zugangsordnung_MSc_CS_AMBl._Nr._26_vom_31.10.2018.pdf": "92c8f121893231dfa670dbda4169fa16b7dcc8205d4c3cab97eba6a238edc2da",
+    "https://www.tu.berlin/en/eecs/academics-teaching/study-offer/masters-programs/msc-computer-science-informatik/msc-cs-in-application-admission": "e485f245f6cc7fd15256070c073c6dbb5879f349ef440a863775fc061e0601a8"
+  },
+  "totalTokens": 11698,
+  "costUsd": 0.0135458,
+  "defects": 0,
+  "reviews": 3
+}

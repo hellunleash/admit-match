@@ -5,83 +5,77 @@
   "field": "Computer Science",
   "degree": "MSc",
   "taughtIn": {
-    "value": "mixed",
+    "value": "english",
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
-      "snippet": "The language of instruction for the study program is English. Individual courses/modules may be offered in German. This is indicated in the module description. It is to be assumed that scientific literature is also to be read and processed in German",
+      "snippet": "The language of instruction for the study program is English.",
       "section": "§ 11 (5)",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:34.051Z"
     },
     "confidence": 0.9
   },
   "admissionRestricted": {
     "value": "unstated",
     "provenance": {
-      "sourceType": "satzung",
-      "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
-      "snippet": "No information found regarding admission restriction (NC).",
-      "section": "unstated",
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp",
+      "snippet": "Admission : Applicants need an adequate Bachelor of Science degree (180 CP) in computer science or related subjects.",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:35.834Z"
     },
-    "confidence": 0.7
+    "confidence": 0.5
   },
   "requirementSets": {
     "value": [
       {
         "setId": "primary",
-        "label": "Bachelor's degree in Informatik (B.Sc.) from the TU Darmstadt or a degree in a study program which imparts competencies amounting to at least 180 CP, of which at least 60 CP are not significantly different from the entry competencies taught in the reference study program (comparable study program).",
+        "label": "Entry competencies for a consecutive Master's program",
         "requirements": [
           {
             "canonical": [
               "total"
             ],
-            "label": "Bachelor's degree in a study program",
+            "label": "Bachelor's degree in Informatik (B.Sc.) from the TU Darmstadt or a degree in a study program which imparts competencies amounting to at least 180 CP",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+              "snippet": "The admission requirement for the Master's program Computer Science (M.Sc.) is a Bachelor's degree in Informatik (B.Sc.) from the TU Darmstadt or a degree in a study program which imparts competencies amounting to at least 180 CP",
+              "section": "§ 17a (2)",
+              "lang": "en",
+              "fetchedAt": "2026-07-27T22:04:34.051Z"
+            },
             "minEcts": 180,
             "exampleCourses": []
           },
           {
             "canonical": [
-              "cs_theory",
-              "cs_practical",
-              "cs_technical"
+              "other"
             ],
-            "label": "entry competencies from the reference study program or equivalent competencies",
+            "label": "at least 60 CP are not significantly different from the entry competencies taught in the reference study program (comparable study program)",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+              "snippet": "of which at least 60 CP are not significantly different from the entry competencies taught in the reference study program (comparable study program).",
+              "section": "§ 17a (2)",
+              "lang": "en",
+              "fetchedAt": "2026-07-27T22:04:34.051Z"
+            },
             "minEcts": 60,
-            "exampleCourses": [
-              "Propositional and Predicate Logic",
-              "Automata, Formal Languages and Decidability",
-              "Modelling, Specification and Semantics",
-              "Algorithms and Data Structures",
-              "Operating Systems",
-              "Computer Security",
-              "Computer Networks and Distributed Systems",
-              "Introduction to Compiler Construction",
-              "Introduction to Artificial Intelligence",
-              "Functional and Object-oriented Programming Concepts",
-              "Formal Methods in Software Design",
-              "Information Management",
-              "Parallel Programming",
-              "Probabilistic Methods in Computer Science",
-              "Scientific Computing",
-              "Software Engineering",
-              "Visual Computing",
-              "Digital Design and Computer Organisation"
-            ]
+            "exampleCourses": []
           }
         ],
-        "additionalStep": "If the entrance competencies could not be clearly clarified positively or negatively within the formal entrance examination, a substantive entrance examination is then conducted. Within the substantive entrance examination, an oral examination lasting 30 minutes will be conducted on the premises of the TU Darmstadt or via video telephony, which is harmless in terms of data protection. If it is foreseeable during the application period that more than 10 applicants will have to take a substantive entrance examination or that a video telephone call cannot be carried out properly, the examination board may decide that the suitability of the candidates will be checked instead by a written examination lasting 90 minutes on the premises of the Technische Universität Darmstadt or by a written examination as an online test."
+        "additionalStep": "substantive entrance examination if entrance competencies could not be clearly clarified positively or negatively within the formal entrance examination"
       }
     ],
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
-      "snippet": "The admission requirement for the Master's program Computer Science (M.Sc.) is a Bachelor's degree in Informatik (B.Sc.) from the TU Darmstadt or a degree in a study program which imparts competencies amounting to at least 180 CP, of which at least 60 CP are not significantly different from the entry competencies taught in the reference study program (comparable study program). ... Within the competencies of at least 180 CP to be proven from their previous degree, applicants for the M.Sc. Computer Science must prove entry competencies of a total of 60 CP from the reference study program or equivalent competencies for an admission.",
-      "section": "§ 17a (2) and Appendix II",
+      "snippet": "The admission requirement for the Master's program Computer Science (M.Sc.) is a Bachelor's degree in Informatik (B.Sc.) from the TU Darmstadt or a degree in a study program which imparts competencies amounting to at least 180 CP, of which at least 60 CP are not significantly different from the entry competencies taught in the reference study program (comparable study program).",
+      "section": "§ 17a (2)",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:34.051Z"
     },
     "confidence": 0.9
   },
@@ -96,24 +90,24 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
-      "snippet": "The entry competencies for the consecutive Master's program Computer Science (M.Sc.) result from the competence profile of the Bachelor's program Informatik (B.Sc.) of TU Darmstadt as the reference study program entitling to the Master's program. ... of which at least 60 CP are not significantly different from the entry competencies taught in the reference study program (comparable study program).",
+      "snippet": "The entry competencies for the consecutive Master's program Computer Science (M.Sc.) result from the competence profile of the Bachelor's program Informatik (B.Sc.) of TU Darmstadt as the reference study program entitling to the Master's program.\nThe admission requirement for the Master's program Computer Science (M.Sc.) is a Bachelor's degree in Informatik (B.Sc.) from the TU Darmstadt or a degree in a study program which imparts competencies amounting to at least 180 CP, of which at least 60 CP are not significantly different from the entry competencies taught in the reference study program (comparable study program).",
       "section": "§ 17a (2)",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:34.051Z"
     },
     "confidence": 0.9
   },
   "assessmentStyle": {
-    "value": "binary",
+    "value": "unstated",
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
-      "snippet": "The examiners determine the content of the examination with the aim of establishing the applicant's suitability for the M.Sc. Computer Science study program at TU Darmstadt.",
+      "snippet": "If the entrance competencies could not be clearly clarified positively or negatively within the formal entrance examination, a substantive entrance examination is then conducted.",
       "section": "§ 17a (4) c) (5)",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:34.051Z"
     },
-    "confidence": 0.9
+    "confidence": 0.5
   },
   "auflagen": {
     "value": {
@@ -122,27 +116,31 @@
       "deadline": "within the first two semesters"
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp",
-      "snippet": "If, after the entrance examination, it is found that the applicant lacks entry-level skills that can be compensated for by making up achievements in the amount of no more than 30 CP, admission can be made subject to remedial coursework. This must be completed within the first two semesters.",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+      "snippet": "If, after the entrance examination, it is found that the applicant lacks entrance competencies that can be compensated for by completing credits amounting to no more than 30 CP, a conditional admission may be granted. The letter of admission lists the modules or subject examinations that are imposed and by when they must be completed.",
+      "section": "§ 17a (8)",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:07.956Z"
+      "fetchedAt": "2026-07-27T22:04:34.051Z"
     },
-    "confidence": 0.9
+    "confidence": 0.8
   },
   "degreeInProgress": {
     "value": {
-      "allowed": "unstated"
+      "allowed": "unstated",
+      "minEctsSoFar": 180,
+      "thesisMustBeRegistered": false,
+      "certificateDeadline": "unstated"
     },
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
-      "snippet": "No information found regarding applying with a degree in progress.",
-      "section": "unstated",
+      "snippet": "The admission requirement for the Master's program Computer Science (M.Sc.) is a Bachelor's degree in Informatik (B.Sc.) from the TU Darmstadt or a degree in a study program which imparts competencies amounting to at least 180 CP",
+      "section": "§ 17a (2)",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:34.051Z"
     },
-    "confidence": 0.7
+    "confidence": 0.5
   },
   "language": {
     "value": [
@@ -151,27 +149,31 @@
         "cefr": "C1",
         "acceptedEvidence": [
           {
-            "name": "UNIcert"
-          },
-          {
-            "name": "TOEFL PBT",
-            "overall": 550
-          },
-          {
-            "name": "TOEFL CBT",
-            "overall": 213
+            "name": "UNIcert",
+            "overall": 3
           },
           {
             "name": "TOEFL iBT",
             "overall": 95
           },
           {
+            "name": "TOEFL CBT",
+            "overall": 213
+          },
+          {
+            "name": "TOEFL Paper",
+            "overall": 550
+          },
+          {
             "name": "IELTS",
             "overall": 7
+          },
+          {
+            "name": "CEFR"
           }
         ],
         "waiverIfMediumOfInstruction": "unstated",
-        "requiredFor": "admission"
+        "requiredFor": "unstated"
       }
     ],
     "provenance": {
@@ -179,7 +181,7 @@
       "sourceUrl": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp",
       "snippet": "Language requirement: Applicants must provide proof of their English skills: UNIcert level III, TOEFL test (Paper 550, CBT 213, iBT 95), IELTS 7.0, CEFR C1 or equivalent.",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:07.956Z"
+      "fetchedAt": "2026-07-27T22:04:35.834Z"
     },
     "confidence": 0.9
   },
@@ -188,13 +190,14 @@
       {
         "name": "GRE General Test",
         "required": "no",
+        "thresholds": "unstated",
         "appliesTo": {
-          "description": "applicant from another university or private provider",
+          "description": "an applicant from the substantive entrance examination if it is to be expected that he or she will successfully complete the Master's program on the basis of an admission and aptitude test of another university or a private provider with corresponding standards",
           "nationalities": [],
           "euEea": "any",
           "lisbonConvention": "any"
         },
-        "exemptions": "if it is to be expected that he or she will successfully complete the Master's program on the basis of an admission and aptitude test of another university or a private provider with corresponding standards (e.g. GRE or comparable tests)"
+        "exemptions": "unstated"
       }
     ],
     "provenance": {
@@ -203,7 +206,7 @@
       "snippet": "The examination board may exempt an applicant from the substantive entrance examination if it is to be expected that he or she will successfully complete the Master's program on the basis of an admission and aptitude test of another university or a private provider with corresponding standards (e.g. GRE or comparable tests).",
       "section": "§ 17a (4) c) (5)",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:34.051Z"
     },
     "confidence": 0.8
   },
@@ -212,10 +215,10 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
-      "snippet": "Within the substantive entrance examination, an oral examination lasting 30 minutes will be conducted on the premises of the TU Darmstadt or via video telephony",
+      "snippet": "Within the substantive entrance examination, an oral examination lasting 30 minutes will be conducted on the premises of the TU Darmstadt or via video telephony, which is harmless in terms of data protection.",
       "section": "§ 17a (4) c) (5)",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:34.051Z"
     },
     "confidence": 0.9
   },
@@ -224,9 +227,9 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp",
-      "snippet": "You first need to create an account at the TUCaN application portal . Follow the steps to select your desired study program and to indicate your prior studies.",
+      "snippet": "You first need to create an account at the TUCaN application portal . Follow the steps to select your desired study program and to indicate your prior studies. Make sure you upload your ID (passport or similar). Note that for international applications , you will need to submit your application once it is complete. Do this as soon as you are done, as the next step depends on it! Once the application has been submitted online – but not before -, the required attachments (“Annex Computer Science” and “Annex Computer Science study courses”) will become available. Click on the “Print link”, or on the “Print” link under “My applications”, and then on “Application or Information”. Fill out the forms appropriately. Note that the application materials need to be submitted “by post” (as it probably says in the application portal). This means that a hard copy has to be sent by a postal or courier service to the address given on the application form. It is neither possible nor sufficient to submit these files electronically!",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:07.956Z"
+      "fetchedAt": "2026-07-27T22:04:35.834Z"
     },
     "confidence": 0.9
   },
@@ -234,23 +237,145 @@
     "value": [
       {
         "intake": "winter",
-        "closes": "July 15th"
+        "opens": "01.06.",
+        "closes": "15.07.",
+        "appliesTo": {
+          "description": "applicants for a winter semester",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
       },
       {
         "intake": "summer",
-        "closes": "January 15th"
+        "opens": "01.12.",
+        "closes": "15.01.",
+        "appliesTo": {
+          "description": "applicants for a summer semester",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
       }
     ],
     "provenance": {
-      "sourceType": "satzung",
-      "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
-      "snippet": "Applications for the Master's program Computer Science (M.Sc.) are possible for applicants for a winter semester until July 15th of the year (cut-off deadline) and until January 15th of the year for a summer semester (cut-off deadline).",
-      "section": "§ 17a (2)",
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp",
+      "snippet": "Application: Summer term: 01.12.-15.01. | Winter term: 01.06.-15.07.",
       "lang": "en",
-      "fetchedAt": "2026-07-27T21:21:06.166Z"
+      "fetchedAt": "2026-07-27T22:04:35.834Z"
     },
     "confidence": 0.9
   },
-  "qualitative": [],
-  "extractedAt": "2026-07-27T21:21:06.166Z"
+  "qualitative": [
+    {
+      "value": "Theoretical Computer Science: the ability to use mathematical notations and methods for the foundation of concepts in computer science, in particular for the formal modelling and verification of software and hardware systems.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "Theoretical Computer Science: the ability to use mathematical notations and methods for the foundation of concepts in computer science, in particular for the formal modelling and verification of software and hardware systems.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Practical computer science: the ability, to independently select the standard algorithms and data structures required for the solution from a problem description according to the functional and non-functional requirements or to construct and assess new algorithms and data structures for solving the problem on the basis of known strategies, if necessary taking parallelism into account.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "Practical computer science: the ability, to independently select the standard algorithms and data structures required for the solution from a problem description according to the functional and non-functional requirements or to construct and assess new algorithms and data structures for solving the problem on the basis of known strategies, if necessary taking parallelism into account.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Practical computer science: the ability, to combine the individual components of a programming language independently and without an analogous example within the framework of a programming task into an overall solution.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "to combine the individual components of a programming language independently and without an analogous example within the framework of a programming task into an overall solution.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Practical computer science: the ability, to solve programming tasks in different, also parallel, programming languages that follow different paradigms, have different application areas and are located on the whole range of abstraction levels.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "to solve programming tasks in different, also parallel, programming languages that follow different paradigms, have different application areas and are located on the whole range of abstraction levels.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Practical computer science: the ability, to ensure the quality of the created implementations through formalised test procedures and design methods.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "to ensure the quality of the created implementations through formalised test procedures and design methods.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Practical computer science: the ability, to apply this knowledge in practically relevant areas of computer science such as networks and distributed systems, databases, as well as the creation of programming tools themselves. In each case, non-functional aspects, in particular also the security of the IT systems created, should also be taken into account.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "to apply this knowledge in practically relevant areas of computer science such as networks and distributed systems, databases, as well as the creation of programming tools themselves. In each case, non-functional aspects, in particular also the security of the IT systems created, should also be taken into account.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Computer engineering: the ability, to independently combine the individual design principles and basic elements of digital circuits, as introduced separately one after the other in the lectures, into an overall solution within the framework of a hardware design task without using an analogue example.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "Computer engineering: the ability, to independently combine the individual design principles and basic elements of digital circuits, as introduced separately one after the other in the lectures, into an overall solution within the framework of a hardware design task without using an analogue example.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Computer engineering: the ability, to solve design tasks at different levels of abstraction and from different application areas by means of structured design methods in different description languages and using a spectrum of design tools and evaluate them with regard to suitable quality measures.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "to solve design tasks at different levels of abstraction and from different application areas by means of structured design methods in different description languages and using a spectrum of design tools and evaluate them with regard to suitable quality measures.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Computer engineering: the ability, to understand the interaction of computer, processor and microarchitectures and make appropriate implementation decisions from this for the system and application software level.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.informatik.tu-darmstadt.de/media/informatik/fb20_studium/formulare_und_dokumente/ordnungen/ordnungen_cs/pruefungsordnungen_cs_2023/ordnung_des_studiengangs_m_sc_computer_science_po_2023_14045087.en.pdf",
+        "snippet": "to understand the interaction of computer, processor and microarchitectures and make appropriate implementation decisions from this for the system and application software level.",
+        "section": "Appendix II",
+        "lang": "en",
+        "fetchedAt": "2026-07-27T22:04:34.051Z"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "extractedAt": "2024-07-27T22:04:34.051Z"
 }

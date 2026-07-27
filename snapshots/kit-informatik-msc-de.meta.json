@@ -1,0 +1,14 @@
+{
+  "programId": "kit-informatik-msc-de",
+  "extractedAt": "2026-07-27T22:03:16.314Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.informatik.kit.edu/downloads/studium/Auswahlsatzung_Informatik_Master.pdf": "797825bf5f6b137eb04a64b5b7505424608820da9dc255137715ff741e32f463",
+    "https://www.sle.kit.edu/english/vorstudium/master-informatics.php": "153b40968f0ea74de38f39565e97f559f7a2f79cbcb64b5ef473cf7b9f308416"
+  },
+  "totalTokens": 32110,
+  "costUsd": 0.033448,
+  "defects": 0,
+  "reviews": 6
+}

@@ -13,7 +13,8 @@ import {
   snippetSupportsNumber,
   type SourceType,
 } from "../schema.js";
-import { generateStructured, pdfPart, textPart, type Part, type Usage } from "./gemini.js";
+import { providerFor, DEFAULT_MODEL } from "./registry.js";
+import type { Chunk, Usage } from "./provider.js";
 import { observeWith } from "../tracing.js";
 import type { FetchedDoc } from "./fetch.js";
 
@@ -145,6 +146,8 @@ export type ExtractionInput = {
   programName: string;
   field: string;
   docs: { doc: FetchedDoc; sourceType: SourceType }[];
+  /** Defaults to DEFAULT_MODEL. Set by `--model` so an A/B is a flag, not a code change. */
+  model?: string;
 };
 
 export type VerifyIssue = {
@@ -171,35 +174,32 @@ export async function extractProgram(input: ExtractionInput): Promise<Extraction
   const usable = input.docs.filter((d) => d.doc.kind !== "failed");
   if (usable.length === 0) return { ok: false, error: "no usable documents fetched" };
 
-  const parts: Part[] = [
-    textPart(
-      `Program: ${input.programName}\nUniversity: ${input.university}\nField: ${input.field}\n` +
+  const chunks: Chunk[] = [
+    {
+      kind: "text",
+      text:
+        `Program: ${input.programName}\nUniversity: ${input.university}\nField: ${input.field}\n` +
         `programId: ${input.programId}\n\n` +
         `Documents follow, each labelled with its sourceType and URL. Use the STRONGEST source ` +
-        `available for each field and set sourceType to the document you actually read it in.`
-    ),
+        `available for each field and set sourceType to the document you actually read it in.`,
+    },
   ];
 
   for (const { doc, sourceType } of usable) {
+    const header = `\n--- DOCUMENT (sourceType=${sourceType}, url=${doc.url}, fetchedAt=${doc.fetchedAt})`;
     if (doc.kind === "text") {
-      parts.push(
-        textPart(
-          `\n--- DOCUMENT (sourceType=${sourceType}, url=${doc.url}, fetchedAt=${doc.fetchedAt}) ---\n` +
-            doc.text.slice(0, 200_000)
-        )
-      );
+      chunks.push({ kind: "text", text: `${header} ---\n${doc.text.slice(0, 200_000)}` });
     } else if (doc.kind === "pdf") {
-      parts.push(
-        textPart(
-          `\n--- DOCUMENT (sourceType=${sourceType}, url=${doc.url}, fetchedAt=${doc.fetchedAt}) — PDF follows ---`
-        )
-      );
-      parts.push(pdfPart(doc.bytes));
+      chunks.push({ kind: "text", text: `${header} — PDF follows ---` });
+      chunks.push({ kind: "pdf", bytes: doc.bytes });
     }
   }
 
+  const model = input.model ?? DEFAULT_MODEL;
+  const provider = providerFor(model);
+
   const result = await observeWith("extract_program", async () => {
-    const r = await generateStructured(parts, SYSTEM_PROMPT, ProgramRequirements);
+    const r = await provider.generate(chunks, SYSTEM_PROMPT, ProgramRequirements);
     return {
       result: r,
       fields: {
@@ -209,7 +209,7 @@ export async function extractProgram(input: ExtractionInput): Promise<Extraction
         },
         output: r.ok ? { requirementSets: r.value.requirementSets.value.length } : { error: r.error },
         metadata: {
-          model: process.env["GEMINI_MODEL"] ?? "gemini-2.5-flash",
+          model,
           attempts: r.attempts,
           promptVersion: PROMPT_VERSION,
           ...(r.ok

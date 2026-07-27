@@ -18,6 +18,7 @@ import {
   writeSnapshotMeta,
 } from "../extract/cache.js";
 import { extractProgram, PROMPT_VERSION } from "../extract/extract.js";
+import { AB_MODELS, DEFAULT_MODEL } from "../extract/registry.js";
 import { startTracing, stopTracing, tracingEnabled } from "../tracing.js";
 import type { SourceType } from "../schema.js";
 
@@ -30,7 +31,10 @@ let runCostUsd = 0;
 
 type RunOutcome = "extracted" | "skipped" | "failed";
 
-async function runOne(programId: string, opts: { refresh: boolean; force: boolean }): Promise<RunOutcome> {
+async function runOne(
+  programId: string,
+  opts: { refresh: boolean; force: boolean; model: string }
+): Promise<RunOutcome> {
   const seed = SEEDS.find((s) => s.programId === programId);
   if (!seed) {
     console.error(`unknown programId: ${programId}`);
@@ -63,8 +67,12 @@ async function runOne(programId: string, opts: { refresh: boolean; force: boolea
     if (contentHash) docHashes[t.url] = contentHash;
   }
 
-  const model = process.env["GEMINI_MODEL"] ?? "gemini-2.5-flash";
-  const prev = readSnapshotMeta(SNAPSHOT_DIR, programId);
+  const model = opts.model;
+  // Non-default models write to their own directory so an A/B never overwrites the incumbent's
+  // snapshots — comparing them side by side is the entire point.
+  const snapshotDir =
+    model === DEFAULT_MODEL ? SNAPSHOT_DIR : join(SNAPSHOT_DIR, "_ab", model.replace(/[^\w.-]/g, "_"));
+  const prev = readSnapshotMeta(snapshotDir, programId);
 
   // The whole point of the cache: a run that changes nothing must cost nothing.
   if (!opts.force && inputsUnchanged(prev, { promptVersion: PROMPT_VERSION, model, docHashes })) {
@@ -78,6 +86,7 @@ async function runOne(programId: string, opts: { refresh: boolean; force: boolea
     programName: seed.programName,
     field: "Computer Science",
     docs,
+    model,
   });
 
   if (!result.ok) {
@@ -85,9 +94,9 @@ async function runOne(programId: string, opts: { refresh: boolean; force: boolea
     return "failed";
   }
 
-  mkdirSync(SNAPSHOT_DIR, { recursive: true });
+  mkdirSync(snapshotDir, { recursive: true });
   writeFileSync(
-    join(SNAPSHOT_DIR, `${programId}.json`),
+    join(snapshotDir, `${programId}.json`),
     JSON.stringify(result.data, null, 2) + "\n",
     "utf8"
   );
@@ -114,7 +123,7 @@ async function runOne(programId: string, opts: { refresh: boolean; force: boolea
   }
   if (result.issues.length === 0) console.log(`  verification clean`);
 
-  writeSnapshotMeta(SNAPSHOT_DIR, {
+  writeSnapshotMeta(snapshotDir, {
     programId,
     extractedAt: new Date().toISOString(),
     promptVersion: PROMPT_VERSION,
@@ -133,12 +142,24 @@ async function main() {
   const argv = process.argv.slice(2);
   const refresh = argv.includes("--refresh"); // re-download documents, ignoring the disk cache
   const force = argv.includes("--force"); // re-extract even when nothing changed
-  const args = argv.filter((a) => !a.startsWith("--") || a === "--all");
+
+  const modelFlag = argv.findIndex((a) => a === "--model");
+  const model =
+    (modelFlag >= 0 ? argv[modelFlag + 1] : undefined) ??
+    argv.find((a) => a.startsWith("--model="))?.split("=")[1] ??
+    DEFAULT_MODEL;
+
+  const args = argv.filter(
+    (a, i) => (!a.startsWith("--") || a === "--all") && !(modelFlag >= 0 && i === modelFlag + 1)
+  );
 
   if (args.length === 0) {
-    console.log("usage: npm run extract -- <programId> | --all [--refresh] [--force]");
+    console.log("usage: npm run extract -- <programId> | --all [--refresh] [--force] [--model <id>]");
     console.log("  --refresh  re-download documents instead of using the disk cache");
     console.log("  --force    re-extract even when documents, prompt and model are unchanged");
+    console.log(`  --model    extraction model (default ${DEFAULT_MODEL})`);
+    console.log(`             A/B candidates: ${AB_MODELS.join(", ")}`);
+    console.log("             non-default models write to snapshots/_ab/<model>/");
     console.log("\nseeds with at least one URL:");
     for (const s of SEEDS.filter((s) => s.admissionUrl || s.statuteUrl)) {
       console.log(`  ${s.programId.padEnd(28)} ${s.statuteUrl ? "statute+page" : "page only"}`);
@@ -152,13 +173,15 @@ async function main() {
       : args;
 
   startTracing();
-  console.log(tracingEnabled() ? "tracing: langfuse" : "tracing: off (no keys)");
+  console.log(
+    `model: ${model} | tracing: ${tracingEnabled() ? "langfuse" : "off (no keys)"}`
+  );
 
   const tally = { extracted: 0, skipped: 0, failed: 0 };
   try {
     for (const id of ids) {
       // Serial on purpose: this crawls university servers, and being polite matters more than speed.
-      tally[await runOne(id, { refresh, force })]++;
+      tally[await runOne(id, { refresh, force, model })]++;
     }
   } finally {
     // Short-lived process: without an explicit flush, buffered spans are lost on exit.

@@ -71,13 +71,13 @@
           {
             "canonical": [
               "cs_practical",
-              "cs_applied"
+              "cs_theory"
             ],
             "label": "mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Datenstrukturen bzw. Software Engineering",
             "provenance": {
               "sourceType": "satzung",
               "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-              "snippet": "mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Daten-strukturen bzw. Software Engineering.",
+              "snippet": "mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Datenstrukturen bzw. Software Engineering.",
               "section": "§ 5 Abs. 2 Nr. 3",
               "lang": "de",
               "fetchedAt": "2026-07-27T21:34:48.443Z"
@@ -91,7 +91,7 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-      "snippet": "(2) Der Nachweis ausreichender Fachkenntnisse gilt als erbracht, wenn folgende Leistungsnachweise vorliegen:\n1. mindestens 35 Leistungspunkte zu Themen der Betriebssysteme, Rechnernetze, Verteilte Systeme, Rechnerarchitektur, Technische Informatik, Datenbanken, Datensicherheit, Computergrafik bzw. Mensch-Computer-Interaktion,\n2. mindestens 35 Leistungspunkte zu Themen der Grundlagen der Mathematik (für Informatik), Theoretische Informatik bzw. Künstliche Intelligenz,\n3. mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Daten-strukturen bzw. Software Engineering.",
+      "snippet": "(2) Der Nachweis ausreichender Fachkenntnisse gilt als erbracht, wenn folgende Leistungsnachweise vorliegen:\n1. mindestens 35 Leistungspunkte zu Themen der Betriebssysteme, Rechnernetze, Verteilte Systeme, Rechnerarchitektur, Technische Informatik, Datenbanken, Datensicherheit, Computergrafik bzw. Mensch-Computer-Interaktion,\n2. mindestens 35 Leistungspunkte zu Themen der Grundlagen der Mathematik (für Informatik), Theoretische Informatik bzw. Künstliche Intelligenz,\n3. mindestens 20 Leistungspunkte zu Themen der Grundlagen der Programmierung, Datenstrukturen bzw. Software Engineering.",
       "section": "§ 5 Abs. 2",
       "lang": "de",
       "fetchedAt": "2026-07-27T21:34:48.443Z"
@@ -131,7 +131,7 @@
     "provenance": {
       "sourceType": "satzung",
       "sourceUrl": "https://www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2025-02/02_eignungsfesto_MACSc13022025.pdf",
-      "snippet": "(4) Liegt zum Zeitpunkt der Antragstellung der Nachweis des ersten berufsqualifizierenden Hochschulabschlusses (Abschlusszeugnis) gemäß Absatz 2 Nummer 2 noch nicht vor, wird die Bewerberin bzw. der Bewerber auch dann in das Eignungsfeststellungsverfahren nach dieser Ordnung einbezogen, wenn bereits 80 Prozent der durch den Hochschulabschluss erreichbaren Leistungspunkte durch Bescheinigung der Herkunftshochschule nachgewiesen werden.",
+      "snippet": "Liegt zum Zeitpunkt der Antragstellung der Nachweis des ersten berufsqualifizierenden Hochschulabschlusses (Abschlusszeugnis) gemäß Absatz 2 Nummer 2 noch nicht vor, wird die Bewerberin bzw. der Bewerber auch dann in das Eignungsfeststellungsverfahren nach dieser Ordnung einbezogen, wenn bereits 80 Prozent der durch den Hochschulabschluss erreichbaren Leistungspunkte durch Bescheinigung der Herkunftshochschule nachgewiesen werden.",
       "section": "§ 5 Abs. 4",
       "lang": "de",
       "fetchedAt": "2026-07-27T21:34:48.443Z"
@@ -147,11 +147,6 @@
           {
             "name": "TOEFL iBT",
             "overall": 100
-          },
-          {
-            "name": "TOEFL iBT",
-            "overall": 5,
-            "note": "ab Januar 2026"
           },
           {
             "name": "IELTS",
@@ -174,12 +169,12 @@
             "note": "das Fach Englisch bis einschließlich des letzten Schuljahrs belegt wurde"
           },
           {
-            "name": "Sprachzertifikate",
-            "note": "die die entsprechende Englischausbildung im Rahmen des vorangegangenen Hochschulstudiums nachweisen"
-          },
-          {
             "name": "medium of instruction certificate",
             "note": "das bisherige Studium vollständig in englischer Sprache (z.B. durch Angabe der Unterrichtssprache als „Medium of Instruction“, MOI) und in einem Land der Europäischen Union, Australien, Großbritannien, Norwegen, der Schweiz, Kanada, Neuseeland, USA, Hong Kong, Taiwan oder Singapur durchgeführt wurde"
+          },
+          {
+            "name": "Sprachzertifikate",
+            "note": "die die entsprechende Englischausbildung im Rahmen des vorangegangenen Hochschulstudiums nachweisen"
           }
         ],
         "waiverIfMediumOfInstruction": "yes",
@@ -234,7 +229,7 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
-      "snippet": "Die Bewerberweiche leitet Sie entsprechend der Herkunft Ihrer Hochschulzugangsberechtigung (HZB) entweder zum uni-assist-Bewerbungsportal (in erster Linie betrifft dies Bewerber:innen mit einer ausländischen HZB) oder zum selma-Bewerbungsportal der TU Dresden (Bewerber:innen mit einer inländischen HZB sowie bereits an der TU Dresden immatrikulierte Bewerber:innen).",
+      "snippet": "Die Bewerberweiche leitet Sie entsprechend der Herkunft Ihrer Hochschulzugangsberechtigung (HZB) entweder\nzum uni-assist-Bewerbungsportal (in erster Linie betrifft dies Bewerber:innen mit einer ausländischen HZB) oder\nzum selma-Bewerbungsportal der TU Dresden (Bewerber:innen mit einer inländischen HZB sowie bereits an der TU Dresden immatrikulierte Bewerber:innen).",
       "lang": "de",
       "fetchedAt": "2026-07-27T21:34:51.125Z"
     },
@@ -248,9 +243,7 @@
         "closes": "15.07.",
         "appliesTo": {
           "description": "Bewerbungen deutscher Studienbewerber:innen",
-          "nationalities": [
-            "Germany"
-          ],
+          "nationalities": [],
           "euEea": "any",
           "lisbonConvention": "any"
         }
@@ -261,9 +254,7 @@
         "closes": "15.01.",
         "appliesTo": {
           "description": "Bewerbungen deutscher Studienbewerber:innen",
-          "nationalities": [
-            "Germany"
-          ],
+          "nationalities": [],
           "euEea": "any",
           "lisbonConvention": "any"
         }
@@ -294,7 +285,7 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://tu-dresden.de/ing/informatik/studium/studienangebot/master-studiengaenge/m-sc-computer-science/admission",
-      "snippet": "Bewerbungen deutscher Studienbewerber:innen ... für den Studienbeginn im Wintersemester sind 01.06.–15.07. eines jeden Jahres bzw. für den Studienbeginn im Sommersemester sind 01.12.–15.01. eines jeden Jahres möglich. ... Bewerber:innen mit einer im Ausland erworbenen Hochschulzugangsberechtigung ... bewerben sich für einen Studienbeginn im Wintersemester im Zeitraum 01.04.–31.05. und für den Studienbeginn im Sommersemester im Zeitraum 01.10.–30.11. jeden Jahres .",
+      "snippet": "Bewerbungen deutscher Studienbewerber:innen ...\nfür den Studienbeginn im Wintersemester sind 01.06.–15.07. eines jeden Jahres bzw.\nfür den Studienbeginn im Sommersemester sind 01.12.–15.01. eines jeden Jahres möglich.\nBewerber:innen mit einer im Ausland erworbenen Hochschulzugangsberechtigung ...\n... bewerben sich\nfür einen Studienbeginn im Wintersemester im Zeitraum 01.04.–31.05. und\nfür den Studienbeginn im Sommersemester im Zeitraum 01.10.–30.11. jeden Jahres .",
       "lang": "de",
       "fetchedAt": "2026-07-27T21:34:51.125Z"
     },
