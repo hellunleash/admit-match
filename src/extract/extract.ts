@@ -42,7 +42,70 @@ You are a READER, not a judge. Rules, in order of importance:
 9. Requirements written qualitatively ("sufficient merit", "appropriate curricular content",
    "strong background in mathematics") go in "qualitative" verbatim. Never convert them to numbers.
 
-Return ONLY JSON matching the requested shape.`;
+Return ONLY JSON in exactly this shape. Every "cited" wrapper is {value, provenance, confidence}.
+Omit optional fields entirely rather than emitting null.
+
+{
+  "programId": "<given to you>",
+  "university": "<given to you>",
+  "programName": "<given to you>",
+  "field": "<given to you>",
+  "degree": "MSc",
+
+  "taughtIn":            { "value": "english|german|mixed", "provenance": PROV, "confidence": 0.0-1.0 },
+  "admissionRestricted": { "value": "nc|nc_free|unstated",  "provenance": PROV, "confidence": 0.0-1.0 },
+
+  // OPTIONAL. Only when a grade below which applicants are REJECTED is stated. German 1.0-4.0 scale.
+  "minGermanGrade": { "value": 2.5, "provenance": PROV, "confidence": 0.9 },
+  // OPTIONAL. A grade below which an EXTRA STEP follows (not a rejection).
+  "gradeTriggeredAssessment": { "value": { "worseThan": 2.5, "consequence": "oral aptitude test, approx 30 minutes" }, "provenance": PROV, "confidence": 0.9 },
+
+  // Each distinct ROUTE to qualifying is its own set.
+  "requirementSets": { "value": [
+    { "setId": "primary", "label": "primary requirements",
+      "requirements": [
+        { "canonical": "math_pure|math_applied|cs_theory|cs_practical|cs_technical|cs_applied|physics|electronics|materials_chemistry|engineering_other|thesis|total|other",
+          "label": "<the document's OWN wording, verbatim>",
+          "minEcts": 25,
+          "exampleCourses": ["<courses the document names, if any>"] }
+      ],
+      "satisfyAtLeast": 3,                       // OMIT unless the source says "at least N of the following"
+      "additionalStep": "aptitude interview"     // OMIT unless this route demands an extra step
+    }
+  ], "provenance": PROV, "confidence": 0.9 },
+
+  // OPTIONAL. Only when admission is defined by reference to ANOTHER program's curriculum.
+  "referenceCurriculum": { "value": { "referenceProgram": "B.Sc. Computer Science, TU Darmstadt", "minEcts": 60, "equivalenceWording": "<verbatim>", "referenceCurriculumUrl": "...", "selfAssessmentUrl": "..." }, "provenance": PROV, "confidence": 0.8 },
+
+  "assessmentStyle": { "value": "points|binary|unstated", "provenance": PROV, "confidence": 0.9 },
+  // OPTIONAL, only when points-based.
+  "pointsRubric": { "value": { "criteria": [ { "name": "subject relevance", "max": 40, "appliesTo": GROUP } ], "passMarks": [ { "appliesTo": GROUP, "value": 80 } ] }, "provenance": PROV, "confidence": 0.8 },
+
+  "auflagen":        { "value": { "offered": "yes|no|unstated", "maxEcts": 42, "deadline": "first two semesters" }, "provenance": PROV, "confidence": 0.8 },
+  "degreeInProgress":{ "value": { "allowed": "yes|no|unstated", "minEctsSoFar": 150, "thesisMustBeRegistered": true, "certificateDeadline": "<verbatim>" }, "provenance": PROV, "confidence": 0.8 },
+
+  "language": { "value": [ { "language": "english|german", "cefr": "C1", "test": { "name": "IELTS", "overall": 7.0, "minBand": 5.5 }, "waiverIfMediumOfInstruction": "yes|no|unstated", "requiredFor": "admission|enrolment|unstated" } ], "provenance": PROV, "confidence": 0.9 },
+  "tests":    { "value": [ { "name": "GRE General Test", "required": "yes|no|unstated", "thresholds": "<verbatim>", "appliesTo": GROUP, "exemptions": "<verbatim>" } ], "provenance": PROV, "confidence": 0.9 },
+  "interview":{ "value": "yes|no|unstated", "provenance": PROV, "confidence": 0.9 },
+
+  "applicationRoute": { "value": "direct|uni_assist|both|unstated", "provenance": PROV, "confidence": 0.9 },
+  "deadlines": { "value": [ { "intake": "winter|summer", "opens": "1 April", "closes": "31 May", "appliesTo": GROUP } ], "provenance": PROV, "confidence": 0.9 },
+
+  "qualitative": [ { "value": "<verbatim qualitative requirement>", "provenance": PROV, "confidence": 0.9 } ],
+
+  "extractedAt": "<ISO 8601 timestamp>"
+}
+
+PROV = { "sourceType": "satzung|program_page|faq", "sourceUrl": "<exact url given in the document header>",
+         "snippet": "<verbatim text containing the value>", "section": "§ 4 Abs. 3", "lang": "de|en",
+         "fetchedAt": "<the fetchedAt given in that document's header>" }
+
+GROUP (omit entirely when a rule applies to everyone) =
+  { "description": "<the document's own wording>", "nationalities": ["India"],
+    "euEea": "only|excluded|any", "lisbonConvention": "signatory|non_signatory|any" }
+
+Arrays are never null: use [] when a document states nothing. Enums must be exactly one of the
+listed literals — "not specified" is written as "unstated".`;
 
 export type ExtractionInput = {
   programId: string;
