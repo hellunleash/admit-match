@@ -8,6 +8,48 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-28 — Day 2: the extractor, and a header that wasn't ASCII
+
+Wrote fetch → extract → verify → snapshot. Ran it. It failed, which is why running it mattered.
+
+**The bug:** my User-Agent string contained an em-dash. HTTP header values are ByteStrings, so
+every single request threw `character at index 62 has a value of 8212` before touching the network.
+Both documents reported "FAILED" and it looked exactly like the universities blocking a scraper.
+Fixed to ASCII; the same run then pulled a **92 KB statute PDF and 12,776 characters** of the
+TU Dresden admission page. A typecheck would never have caught this.
+
+Fetch is three tiers: plain fetch → Jina Reader → (deferred) Playwright. Under 800 characters of
+text means the page is probably client-rendered, so Jina gets a turn; if that's also thin the page
+is *logged as needing Playwright* rather than silently extracted from nothing. PDFs are never
+converted — they go to Gemini as bytes, because a parse-then-hope pipeline loses the § structure
+that makes a citation worth having.
+
+Validation is zod-then-retry rather than a hand-written JSON `responseSchema`. The schema has
+nested unions and applicant-group scoping; maintaining a parallel JSON Schema would be a second
+source of truth waiting to drift. One retry feeds the validation errors back.
+
+`verify()` runs on every extraction: numeric values must literally appear in their cited snippet
+(German decimal commas normalised), snippets can't be empty, and a field read from a summary page
+when a statute was available is flagged as a source-tier violation. Issues are reported per-field
+rather than failing the whole program — one bad number shouldn't discard fourteen good ones.
+
+The prompt's whole job is to make the model a reader, not a judge. Nine rules, and the ones that
+matter most: never decide eligibility, never infer an unstated value ("silence is a finding"),
+every value needs a verbatim snippet, group-scoped rules must carry their group, and a grade
+CUTOFF is a different field from a grade TRIGGER.
+
+Also reconciled the transcript credits — 4 per course, 2 for workshops/electives — against the
+published semester totals. **128/128, all six semesters balance**, with failed courses excluded.
+Two values had to be inferred (MG301 and HU302A at 3 credits) because they're the only numbers that
+make their semesters add up. Flagged as inferred rather than quietly used.
+
+Confirmed from the DTU grading ordinance that the Bavarian formula bounds are nmax 10 / nmin 4, so
+CGPA 6.4 converts to a **German 2.8**. Still needs anabin, which is the authority German
+universities actually use, but the university's own table agreeing makes it a figure rather than a
+guess.
+
+**Blocked on:** `GEMINI_API_KEY`. Everything up to the model call is verified working.
+
 ## 2026-07-28 — Schema v2, and the profile stops being a number
 
 Rewrote the schema against the four gaps from yesterday, plus a fifth that only appeared once I put

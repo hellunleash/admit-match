@@ -10,7 +10,7 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "seeds": "tsx src/cli/seeds.ts"
+    "extract": "tsx --env-file=.env src/cli/extract.ts"
   },
   "dependencies": {
     "zod": "^3.24.1"
