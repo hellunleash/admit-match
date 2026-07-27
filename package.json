@@ -10,7 +10,8 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "extract": "tsx --env-file=.env src/cli/extract.ts"
+    "extract": "tsx --env-file=.env src/cli/extract.ts",
+    "traces": "tsx --env-file=.env src/cli/traces.ts"
   },
   "dependencies": {
     "@langfuse/otel": "^5.9.1",
