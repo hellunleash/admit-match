@@ -35,8 +35,14 @@ band — the slack is real but lives in three declared places:
 
 Explicitly refused to encode a blanket percentage tolerance. It appears in no source, can't be
 cited, and errs in the dangerous direction — telling someone they're fine when the committee will
-reject them. Replaced with a **near-miss band** (within 20% of an unmet threshold → borderline,
-labelled as a UX cutoff, never as eligibility).
+reject them.
+
+*(Correction, same day: I first replaced it with a "near-miss band" — within 20% of an unmet
+threshold renders as borderline. Cut that too. The question was about how real admission committees
+behave, not a request for a feature, and I turned an answer into a spec. Committee judgement is
+real but it isn't a percentage, and a UX cutoff dressed as a threshold is the same fabrication in a
+smaller font. The app reports the gap and quotes the applicable mechanism —
+`auflagenOffered`, `assessmentStyle`, course classification — and never softens the number.)*
 
 Best sentence the product can emit, and it only exists because classification is modelled rather
 than totalled:

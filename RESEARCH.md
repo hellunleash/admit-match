@@ -247,15 +247,15 @@ the number. There isn't. The slack is real but it lives in three specific, *decl
 3. **Points-based offsetting.** Where assessment is points-based, a curricular shortfall can be
    offset by grade or motivation. Where it's binary, it cannot.
 
-**Explicitly rejected: a blanket percentage tolerance** (e.g. "within 10–20% counts"). It would
-fabricate leniency that appears in no source, it cannot be cited, and it errs in the dangerous
-direction — telling an applicant they're fine when the committee will reject them. Inventing a
-tolerance is exactly the hallucination this product exists to eliminate.
+**Explicitly rejected: any tolerance band, of any width, anywhere in the app.** Committees do
+exercise judgement in the ways listed above, but that judgement is theirs and it is not a
+percentage. Encoding "within X% still counts" would fabricate leniency that appears in no source,
+could not be cited, and would err in the dangerous direction — telling an applicant they're fine
+when the committee will reject them. A threshold is unmet or it is met.
 
-What replaces it is a **near-miss band**: any single unmet threshold within **20%** renders as
-*borderline* with the reason and the applicable mechanism, never as eligible. The 20% is an
-arbitrary UX cutoff for "worth a closer look", is labelled as such in the UI, and carries no claim
-about what a committee will do.
+What the three mechanisms above *do* justify is showing the applicable mechanism alongside a
+shortfall, quoted from the statute — `auflagenOffered`, `assessmentStyle`, and the classification
+of the user's own courses. The app reports the gap and the mechanism; it never softens the number.
 
 The most valuable single line the product can emit falls out of this:
 
