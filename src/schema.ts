@@ -124,12 +124,19 @@ export const AreaRequirement = z.object({
    * matching would have double-counted. A requirement covers a SET of areas.
    */
   /**
-   * `.catch("other")` on each entry: the model occasionally invents a plausible-looking area
-   * ("cs_other") that isn't in the taxonomy. Degrading that one entry to "other" keeps the label
-   * and the citation — which is where the meaning actually lives — instead of discarding an
-   * otherwise-correct requirement over a vocabulary miss.
+   * OPTIONAL, and deliberately not load-bearing.
+   *
+   * A fixed taxonomy cannot survive contact with real programs: Dresden's "Systems &
+   * Infrastructure" and TU Berlin's "computer engineering or information technology" are different
+   * sets, and a hardware/AI corridor needs signal processing, embedded systems, VLSI, control and
+   * machine learning that a CS-shaped enum never had. Extending the list just moves the arbitrary
+   * boundary somewhere else.
+   *
+   * So matching runs on `label` (the program's own wording) and `exampleCourses` (the courses the
+   * statute itself names). Canonical areas are a coarse filter and a UI grouping — useful, never
+   * decisive. `.catch("other")` keeps a vocabulary miss from discarding a correct requirement.
    */
-  canonical: z.array(CanonicalArea.catch("other")).min(1),
+  canonical: z.array(CanonicalArea.catch("other")).default([]),
   /** The program's own phrasing, verbatim. Never discarded. */
   label: z.string().min(1),
   /**

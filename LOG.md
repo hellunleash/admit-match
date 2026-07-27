@@ -8,6 +8,37 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-28 — Wrong corridor: hardware/AI, not computer science
+
+Corrected on something I'd been anchoring on for days: the target isn't MSc Computer Science. It's
+the **hardware/AI intersection** — embedded and edge AI, AI accelerators and VLSI, microelectronics
+and nanoelectronics, EE/IT with an ML specialisation, communications and signal processing. Roles
+there are in demand and less saturated than pure ML, and the work is less brutal than hardcore RTL.
+
+The transcript agrees, and I should have read it that way from the start: semiconductor devices,
+compact modelling and process simulation, chiplets packaging, microprocessor architecture, digital
+and analog electronics, communication systems, quantum computation. That is a hardware profile with
+computing on top.
+
+It also resolves the eligibility problem rather than papering over it. A pure MSc CS wants 100+ ECTS
+of computer science and mathematics — Würzburg's 100/25/10, Dresden's 35/35/20 — which an
+Engineering Physics degree does not have and cannot retroactively acquire. Hardware/AI programs ask
+for the background this transcript actually contains. The honest answer to "am I eligible for MSc
+CS in Germany" was mostly no; the useful question was always which programs fit.
+
+**All 15 seeds are the wrong corridor.** They stay as extractor test fixtures — the pipeline is
+field-agnostic and their statutes are already cached — but the real seed list has to be rebuilt.
+
+**Also: canonical areas are now optional at extraction.** Same objection as matching, same fix. A
+fixed taxonomy cannot survive contact with real programs, and a hardware corridor needs signal
+processing, embedded, VLSI, control and ML that a CS-shaped enum never had. Extending the list only
+moves the arbitrary boundary. Matching runs on `label` (the program's own words) and
+`exampleCourses` (the courses the statute names); canonical is a filter and a UI grouping, never
+decisive. That removes "who decides what falls in which bucket" from the extractor entirely.
+
+**Tomorrow:** rebuild the seed list for the hardware/AI corridor, then build the judge
+(course→requirement, `clear`/`plausible`/`none`) and run the first end-to-end match.
+
 ## 2026-07-28 — Committees don't match on course names, and the law says so
 
 Two design objections landed at once, and both were right.

@@ -48,7 +48,20 @@ databases structurally cannot offer.
 
 ## 3. Scope: one corridor, deep
 
-Not "universities." **MS in Computer Science, Germany only, ~40 programs.**
+Not "universities." **Germany only. Field: the hardware/AI intersection**, not computer science —
+embedded and edge AI, AI accelerators and VLSI, microelectronics and nanoelectronics, electrical
+engineering and information technology with an ML specialisation, communications and signal
+processing.
+
+Chosen because that's where the applicant profile actually sits (semiconductor devices, compact
+modelling, chiplets packaging, microprocessor architecture, digital and analog electronics,
+communication systems) and because those programs' curricular analyses ask for exactly that
+background. A pure MSc CS asks for 100+ ECTS of computer science and maths, which an Engineering
+Physics degree does not have and cannot acquire retroactively.
+
+~40 programs. The 15 MSc CS seeds in `src/seeds.ts` were the wrong corridor and are being replaced;
+they stay only as extractor test fixtures, since the pipeline is field-agnostic and their statutes
+are already cached.
 
 Forty programs with accurate, cited, current requirements is a usable product. Two thousand
 programs at 60% accuracy is the stale database this replaces. Depth is the differentiator — the
