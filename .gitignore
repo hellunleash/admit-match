@@ -4,3 +4,9 @@ node_modules/
 dist/
 *.log
 .cache/
+
+# Personal academic data. Transcripts contain grades, failures and identifying detail —
+# they never belong in a public repository. Only profile.example.json is tracked.
+profile.local.json
+*.local.json
+transcripts/

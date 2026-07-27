@@ -8,6 +8,44 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-28 — Schema v2, and the profile stops being a number
+
+Rewrote the schema against the four gaps from yesterday, plus a fifth that only appeared once I put
+a real transcript into it.
+
+**The profile is no longer per-area ECTS totals — it's a course list.** v1 asked "how many maths
+credits do you have". The question that decides admissions is "which of YOUR courses would this
+committee count toward ITS definition of maths". Totals discard the mapping, and the mapping is the
+whole explanation. Each course now carries a classification with a `basis`
+(`user`/`rule`/`llm`/`program_example`), a confidence, and **alternatives** — which is what makes
+the reclassification line possible at all.
+
+**Subject areas went from a CS-only enum to an open STEM taxonomy.** The old enum was wrong in both
+directions: it couldn't express a physics program's requirements, and it couldn't express a physics
+*transcript* being matched against a CS program — which is the common case, not the exception. So
+extending beyond CS later needs no rewrite; the field is data, and areas are canonical buckets with
+the program's own wording preserved alongside.
+
+Also added, each forced by a specific program: `RequirementSet` with k-of-n
+(KIT INT's 3-of-4 fallback plus interview), `ReferenceCurriculumRequirement` (TU Darmstadt defining
+admission by reference to its own B.Sc. core), `ApplicantGroup` scoping on tests/pass marks/
+deadlines (TUM's GRE-for-India, Konstanz's 60-vs-80, Freiburg's shorter non-EU window),
+`DegreeInProgress` (LMU/Hamburg at ~150 ECTS with a registered thesis), and
+`gradeTriggeredAssessment` as a distinct thing from a cutoff (Würzburg's 2.5 → oral exam).
+
+**Credit conversion is now explicit and allowed to be unknown.** A foreign transcript isn't
+denominated in ECTS, and multiplying by a guessed factor before comparing against a statutory
+100-ECTS threshold would be the highest-consequence hallucination in the product: the number would
+look precise and be invented. `ectsPerUnit` is nullable, carries a `basis`, and `null` renders as
+unknown rather than as zero or as a guess. Same treatment for the Bavarian formula's `nmin`, which
+must come from anabin.
+
+Personal data is gitignored (`profile.local.json`, `*.local.json`, `transcripts/`). A transcript
+carries grades and failures; it doesn't go in a public repo, and git history is forever.
+
+**Next:** fill per-course credits from the official transcript — the result page only publishes
+semester totals — then Day 2 extraction.
+
 ## 2026-07-27 — Day 1b: all 15 seeds sourced, and the schema is already too small
 
 Worked through every seed against official pages. 15/15 now have an admission URL, 6 have a statute
