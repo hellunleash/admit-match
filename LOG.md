@@ -8,6 +8,57 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-28 — Committees don't match on course names, and the law says so
+
+Two design objections landed at once, and both were right.
+
+**First: rigid global buckets are the wrong mechanism.** Classifying a course into a canonical area
+and then comparing areas to requirements is a lossy round trip through a vocabulary neither side
+uses. Dresden's "Systems & Infrastructure" and TU Berlin's "computer engineering or information
+technology" are not the same set, and `cs_technical` pretends they are. It also forces a *global*
+answer to a *local* question: there is no universal truth about whether Digital and Analog
+Electronics is CS — it may count at RWTH, which names data communication and system programming,
+and not at Würzburg, which wants maths and theory.
+
+So matching moves to **per-requirement**: for each requirement, which of this applicant's courses
+satisfy *this* requirement, judged against its own verbatim label and the example courses the
+statute names. Canonical areas survive only as a coarse pre-filter and a UI grouping — never
+load-bearing. Ambiguous comp+electronics programs then stop being a special case: nobody has to
+decide what *kind* of program it is, because that question has no answer.
+
+**Second, and bigger: how does a committee decide a differently-named course counts?** Turns out
+this is codified. Germany ratified the **Lisbon Recognition Convention** in 2007, which replaced
+"equivalence" with **"wesentlicher Unterschied"** — substantial difference. The test is not whether
+things match but whether the difference is *so significant it would prevent the applicant
+succeeding*. **Learning outcomes are the centre of the assessment**; where they were achieved is
+explicitly irrelevant, and title differences don't block recognition when outcomes align.
+
+And the evidence they read is the **Modulhandbuch**. uni-assist, verbatim: *a transcript with
+lecture titles only is not sufficient.*
+
+Which is a direct verdict on what I was building. **Title matching is structurally weaker than what
+committees do.** "Computational Methods" is nearly contentless as a string; its module description
+decides whether it was numerical analysis or introductory scripting. So `Course.description` becomes
+the field that matters, every match carries an **evidence tier** (`description_backed` vs
+`title_only`), and a title-only match renders as provisional — it is a guess about a guess and must
+never appear as a finding.
+
+Uncertainty also stops being a point estimate. Classification is a judgement, so it gets computed
+**strict** and **generous**, and the output is a range: "18–31 of the required 25 ECTS, depending on
+whether Computational Methods and Discrete Structures count", naming the swing courses. This is not
+the tolerance band I killed earlier — that softened *their* threshold, inventing leniency. This
+leaves the threshold at exactly 25 and is honest about uncertainty in *my* classification, which is
+genuinely uncertain and is mine to own.
+
+One constraint the statutes impose: Dresden requires "sich inhaltlich nicht überschneidende"
+credits, so a course cannot count toward two requirements at once. Matching is an **assignment
+problem**, not independent per-requirement sums — easy to get wrong in a way that silently inflates
+every total.
+
+**Next:** rewrite the match design around learning outcomes and evidence tiers before building the
+engine. Also: request DTU's Modulhandbuch — it's a hard requirement at uni-assist regardless of this
+project, and it's usually slow to obtain.
+
 ## 2026-07-28 — Thinking off was cheaper AND wrong
 
 I said quality held with thinking disabled. I'd checked one program, informally. Asked to actually

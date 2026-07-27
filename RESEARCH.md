@@ -264,6 +264,45 @@ The most valuable single line the product can emit falls out of this:
 
 That sentence is only possible because classification is modelled, rather than a single total.
 
+#### How committees actually decide a course counts — not by name
+*Confidence: high. Verified 2026-07-28.*
+
+The obvious objection to curricular analysis is that course titles differ between universities even
+when the material is identical. Committees know this, and the law already answers it.
+
+**The legal standard is "wesentlicher Unterschied" (substantial difference)**, from the Lisbon
+Recognition Convention, ratified in Germany in 2007. It deliberately replaced the older test of
+"equivalence". The question is not *do these match* but:
+
+> is the difference so significant that it would likely prevent the applicant from successfully
+> continuing their studies or meeting the program's qualification objectives?
+
+**Learning outcomes are at the centre of that assessment**, considered together with level,
+workload and program profile. Where the outcomes were achieved — which university, which country,
+university or Fachhochschule — is explicitly not a factor. Differences in course title or module
+label do not by themselves prevent recognition when the learning outcomes align.
+
+Two consequences worth stating plainly to an applicant: the burden leans *toward* recognition, and
+a degree title that doesn't say "Computer Science" is not itself a barrier.
+
+**The evidence they read is the Modulhandbuch** (module handbook / syllabus): content, learning
+objectives, workload and requirements per module. uni-assist is explicit — *a transcript with
+lecture titles only is not sufficient.* It must be in German or English; where a university issues
+no such document, the applicant may compile the relevant course contents themselves plus written
+confirmation of that fact.
+
+**This is a direct verdict on our match design.** Matching on course titles is structurally weaker
+than what a committee does. "Computational Methods" is nearly contentless as a string; its module
+description determines whether it was numerical analysis or introductory scripting. So:
+
+- `Course.description` (learning outcomes from the Modulhandbuch) becomes the field that matters,
+  and titles become a fallback.
+- Every match carries an **evidence tier**: `description_backed` (what a committee could act on)
+  versus `title_only` (provisional, and labelled as such in the UI — a title-only match is a guess
+  about a guess and must never render as a finding).
+- The comparison to implement is "no substantial difference in learning outcomes against this
+  requirement's wording", not string similarity.
+
 #### Product consequences (these change v1's data model)
 
 1. **The user profile is not just CGPA.** It needs an **ECTS breakdown by subject area** — CS
@@ -398,3 +437,6 @@ anything that becomes a gate.
 - [Grade conversion (TUM)](https://www.tum.de/en/studies/application/application-info-portal/grade-conversion-formula-for-grades-earned-outside-germany)
 - [Grade conversion (Uni Passau)](https://www.sobi.uni-passau.de/en/study/examinations/grade-conversion)
 - [anabin (Wikipedia overview)](https://en.wikipedia.org/wiki/Anabin)
+- [HRK nexus — Anerkennung guidance (substantial difference, learning outcomes)](https://www.hrk-nexus.de/themen/anerkennung/haeufig-gestellte-fragen-zur-anerkennung/)
+- [HRK Modus — academic recognition](https://www.hrk-modus.de/en/information/topics/recognition)
+- [uni-assist — module manuals (Modulhandbuch)](https://www.uni-assist.de/en/tools/glossary-of-terms/description/term/module-manuals-modulhandbuch/)
