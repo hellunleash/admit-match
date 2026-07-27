@@ -8,6 +8,39 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-27 — Country rules are a separate layer
+
+Wrote [RESEARCH.md](RESEARCH.md) on the German pipeline. The finding that reshaped the design:
+
+A program page saying *"180 ECTS in Computer Science"* is meaningless alone. Whether you satisfy it
+depends on things that are nowhere on that page — is your university H+ in anabin, do you need APS,
+how does 8.4/10 convert (Modified Bavarian Formula, and the scale bounds come from anabin, not your
+transcript), does dMAT apply, do you apply direct or via uni-assist.
+
+So: **two layers.** Country rules are hand-curated, versioned, dated, cited — ~10 per country,
+high-stakes, publicly announced, and an LLM only helps *research* them, never *decides* one at
+runtime. Program requirements are LLM-extracted, because there are hundreds of fields and they
+change silently.
+
+Consequence I like: **deadlines get back-solved.** Program deadline minus uni-assist processing
+minus APS lead time (3 weeks, up to 3 months in peak season) minus a dMAT test date where it
+applies. Showing the raw deadline shows one you'll miss.
+
+dMAT is the proof the rules layer must be versioned: it did not exist a year ago, applies from
+Summer 2027 intake only, and covers some fields and not others. Open question I couldn't close —
+whether **Computer Science** counts as a notified field. Sources name engineering and
+business/commerce families; CS isn't listed explicitly. Highest-value unknown in the doc, and the
+whole v1 corridor depends on it.
+
+Also narrowed scope: **Germany only**, dropped the Netherlands. The country layer doesn't transfer,
+so "Europe" would have meant two rules packs before proving one.
+
+Not building observability or eval infra — Langfuse for traces, Promptfoo for extraction-prompt
+evals. Own tooling only for the statistical gating layer neither ships, and only once accuracy is
+real enough to gate.
+
+**Next:** verify the CS/dMAT question at the official APS source, then the 40-program seed list.
+
 ## 2026-07-27 — Plan
 
 Wrote [PLAN.md](PLAN.md). Nothing built yet.

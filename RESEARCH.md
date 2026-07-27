@@ -1,0 +1,262 @@
+# RESEARCH — country rules as a separate layer
+
+Why the same profile is eligible in Germany and ineligible in the US, and why that difference
+cannot live in the program extractor.
+
+Scope of this document: **Germany, MS, 2026–27 cycle**, in depth. Other countries are sketched only
+enough to prove the layering is necessary.
+
+Every factual claim is dated and sourced. Rules change per cycle; an undated claim in this file is
+a bug.
+
+---
+
+## 1. The core insight
+
+A program page says *"a bachelor's degree with at least 180 ECTS in Computer Science."* That
+sentence is meaningless on its own. Whether you satisfy it depends on rules that are **nowhere on
+that page**:
+
+- Is your university even recognised in Germany? (anabin institution status)
+- Has your degree been verified? (APS, mandatory for Indian applicants)
+- Does your 8.4/10 CGPA convert to a 1.7 or a 2.4? (Modified Bavarian Formula, using scale bounds
+  from anabin — not from your transcript)
+- Do you need an aptitude test that didn't exist last year? (dMAT)
+- Do you apply to the university, or through a clearing house? (uni-assist vs direct)
+
+None of that is extractable from the program page, because the page assumes it. A US program page
+assumes an entirely different set. **This is a second layer, not a harder extraction problem.**
+
+## 2. The architectural decision
+
+Two layers, built differently on purpose:
+
+| | Country Rules Pack | Program Requirements |
+|---|---|---|
+| **How many** | ~1 per country, ~10 rules each | ~40 programs × ~15 fields |
+| **How it's built** | Hand-curated, LLM-*assisted* research, human-verified | LLM-extracted from live pages |
+| **Volatility** | Changes 1–3× per year, with announcements | Changes every intake cycle, silently |
+| **Failure cost** | Catastrophic (wrong gate = wrong shortlist) | Contained to one program |
+| **Stored as** | Versioned TS/JSON, dated, cited, in git | Snapshot JSON, dated, cited, in git |
+| **Executed by** | Deterministic code | Deterministic code, over extracted structs |
+
+**A rules pack is codified, never inferred at runtime.** An LLM helps *research* a rule; it never
+*decides* one. There are ten of them per country, they're high-stakes, and they're announced
+publicly — writing them by hand and citing each one is both feasible and correct. Asking a model to
+re-derive "does this applicant need APS?" on every run is how you get a confident wrong gate.
+
+The extractor stays country-agnostic. It reads a page and fills a struct. The rules pack decides
+what that struct *means* for a given applicant.
+
+## 3. Germany — the full gate chain (MS, 2026–27)
+
+The order matters. Failing an early gate makes every later one irrelevant, and no existing tool
+models this as a chain.
+
+### 3.1 anabin institution status — the gate before all gates
+*Confidence: high. Verified 2026-07-27.*
+
+anabin (ZAB's database of foreign education) classifies **institutions**:
+
+- **H+** — institution comparable to a German Hochschule
+- **H+/-** — case-by-case; some of its degrees qualify, some don't
+- **H-** — not recognised
+
+If your university is H-, no German master's admission follows, regardless of grades. If it's
+H+/-, your specific degree needs individual assessment.
+
+**Critical nuance most tools get wrong:** H+ describes the *institution*, not your *degree*. An H+
+university does not guarantee your particular qualification is deemed equivalent. Any tool that
+reports "your uni is H+, you're fine" is wrong, and that's a differentiator we can state plainly.
+
+### 3.2 Grade conversion — Modified Bavarian Formula
+*Confidence: high. Verified 2026-07-27.*
+
+```
+Z = ( (Nmax − Nd) / (Nmax − Nmin) ) × 3 + 1
+```
+
+`Nmax` = best possible grade in the foreign system, `Nmin` = minimum passing grade, `Nd` = the
+grade achieved. Output is the German 1.0–4.0 scale (1.0 best).
+
+Used by most German public universities and by uni-assist. **`Nmax` and `Nmin` come from anabin for
+your country's system, not from your transcript** — this is where hand-rolled calculators get it
+wrong, and where a correct implementation is visibly better.
+
+This is pure arithmetic: **deterministic code, never an LLM.** It is the single clearest example of
+the extract-vs-decide split in the whole product.
+
+Caveat to encode: some universities publish their own conversion table instead. Where a program
+does, that table wins over the formula, and the citation must say which was used.
+
+### 3.3 APS certificate — mandatory for Indian applicants
+*Confidence: high. Verified 2026-07-27.*
+
+- Required for **all** Indian students applying for a German master's, **regardless of subject**
+- In force since November 2022
+- Fee ~INR 18,000, non-refundable
+- Processing 3–4 weeks normally, **up to 3 months in peak season**
+- Validity: indefinite once issued
+
+The processing time is the product-relevant part. It makes APS a **timeline dependency**, not just
+a checkbox: a July 15 uni-assist deadline means APS in hand by ~May, which means applying ~April.
+A tool that shows a deadline without back-solving the APS lead time is showing a deadline the user
+will miss.
+
+### 3.4 dMAT (Digital Master Test) — new, and mis-reported everywhere
+*Confidence: medium-high on the facts below; one open question flagged. Verified 2026-07-27.*
+
+- Announced ~June 2026; part of the APS process for selected Indian master's applicants
+- **Applies from Summer Semester 2027 intake onward.** Winter Semester 2026/27 applicants are
+  **not** affected — the first certificates only issue in October 2026
+- Fields named: Engineering, Business, Commerce, Accounting, Finance, Economics, Management
+- Structure: Core Module (analytical/logical/mathematical aptitude) + Subject Module (bachelor's
+  discipline). ~3.5 hours with a break
+- Cost: €150
+- 2026 cycle dates: registration **15 Sep 2026**, test **26 Sep 2026**, certificate **12 Oct 2026**
+
+**OPEN — must verify before shipping:** whether **Computer Science** falls under the notified
+"Engineering" bucket. Sources list engineering and business/commerce families; CS is not named
+explicitly. This is the highest-value unresolved fact in the document, since the whole v1 corridor
+is MS CS. Resolve against the official APS India source, not aggregator blogs.
+
+This exam is also the strongest proof of why the rules layer must be separate and versioned: it
+did not exist twelve months ago, it applies to some applicants and not others, and it is keyed to
+*intake semester*, not application date.
+
+### 3.5 uni-assist vs direct application
+*Confidence: high on mechanics.*
+
+Some universities take applications directly; others route through uni-assist, which pre-checks
+documents and issues a VPD (preliminary review documentation).
+
+- Fee: **€75 first application, €30 each additional**
+- Adds its own processing time on top of the university's deadline
+
+Per-program routing is an extracted field (it's stated on the page). The *fee and lead-time model*
+is a rules-pack fact. Cost-per-application is a real decision input nobody surfaces — applying to
+12 programs through uni-assist is €405 before you've bought a plane ticket.
+
+### 3.6 Deadlines and intakes
+*Confidence: high on structure; per-program dates must be extracted.*
+
+- Winter semester (Oct start) is the main intake; summer (Apr start) is smaller and many CS
+  programs don't offer it
+- A commonly cited uni-assist winter deadline is **15 July**, but per-program deadlines vary widely
+  and are the authoritative value — extract them, don't assume
+- Some programs are open-admission, some restricted (NC), some run their own aptitude assessment
+
+**Deadlines must be back-solved, not displayed.** Effective personal deadline = program deadline −
+uni-assist processing − APS lead time − (dMAT test date, if applicable). That chain is the feature.
+
+### 3.7 Language — deferred to Phase 2, but sketched here
+*Confidence: medium. Per-program verification required.*
+
+English-taught MS CS programs still vary in ways that break naive matching:
+
+- Most require IELTS/TOEFL, but **thresholds differ per program** (6.5 vs 7.0 overall, and some
+  set per-band minimums)
+- Some waive it if the bachelor's was English-medium — and the *evidence* accepted for that varies
+  (medium-of-instruction letter vs. degree certificate wording)
+- Some English-taught programs still require **A1/A2 German** for enrolment or visa purposes
+- German-taught programs need TestDaF/DSH, which changes the candidate pool entirely
+
+Same country, same city, sometimes the same faculty — different rules. This is precisely why
+language cannot be a country-level rule and must be an extracted, cited, per-program field.
+
+## 4. What is code, what is LLM, what is neither
+
+| Fact | Source | Decided by |
+|---|---|---|
+| anabin institution status | anabin lookup | Code (lookup) |
+| German grade equivalent | Bavarian formula + anabin bounds | **Code (arithmetic)** |
+| APS required? | Rules pack (nationality → rule) | **Code** |
+| dMAT required? | Rules pack (nationality + field + intake semester) | **Code** |
+| Effective deadline | Rules pack lead times + extracted deadline | **Code** |
+| ECTS / CGPA threshold | Program page | LLM extracts → code compares |
+| IELTS threshold + bands | Program page | LLM extracts → code compares |
+| uni-assist or direct | Program page | LLM extracts |
+| "Strong background in mathematics" | Program page | **Neither — surfaced with snippet, human decides** |
+
+Nothing in the right column is an LLM *decision*. That's the invariant.
+
+## 5. Why other countries can't share the pack
+
+Sketched only to prove the layering:
+
+- **US** — no central credential database, no APS equivalent, GRE increasingly optional but
+  program-specific, 4-year-degree expectations that collide with 3-year Indian bachelor's, GPA on a
+  4.0 scale with no official conversion authority, per-university transcript evaluation (WES etc.)
+- **Netherlands** — numerus fixus, Studielink central application, different credential recognition
+- **UK** — 2:1 / 2:2 classification system, no ECTS, per-university India-grade tables
+
+The 3-year-bachelor's problem alone flips eligibility between Germany and the US for the same
+applicant. One rules pack per country, versioned independently. No shared abstraction beyond the
+interface.
+
+## 6. Volatility model — what goes stale, and how fast
+
+| Fact | Changes | Detection |
+|---|---|---|
+| Program deadlines | Every cycle | Weekly recrawl; struct diff |
+| ECTS/CGPA thresholds | Occasionally, silently | Struct diff — the alert |
+| Language thresholds | Occasionally | Struct diff |
+| APS/dMAT rules | 1–3×/year, announced | Manual, on announcement; rules pack version bump |
+| anabin status | Rarely | Re-check per cycle |
+| Bavarian formula | Effectively never | — |
+
+**Struct diffs in git are the change-detection mechanism** (see PLAN.md §4). A university quietly
+raising its IELTS floor from 6.5 to 7.0 shows up as a one-line diff in a PR. That diff is a product
+feature, an alert, and a build-in-public post at the same time.
+
+Rules-pack facts get a `verifiedOn` date and a source URL. Anything past its staleness window
+renders as "unverified" rather than silently asserting a stale rule.
+
+## 7. Phase 3 — decision factors beyond eligibility
+
+Eligibility narrows the list. It doesn't choose. Deliberately **not** in v1, and deliberately not
+LLM-scored when it arrives — these are inputs a human weighs, presented with sources:
+
+- **Industry vs research orientation** — TU9 and TUM/RWTH-style research density vs Fachhochschule
+  applied/industry focus. Materially different outcomes; rarely surfaced side by side
+- **Regional employment reality** — Munich and Stuttgart (automotive, industrial software), Berlin
+  (startups, product), Aachen/Karlsruhe (research-adjacent). Where the jobs actually are for your
+  specialisation
+- **Hiring constraints** — German-language expectations in practice even for English-taught
+  graduates, work-permit and post-study visa terms, whether local employers hire non-German speakers
+  in that sector
+- **Cost of living vs Munich premium** — a cheaper city can beat a better-ranked program
+- **Specialisation depth** — does the department actually have people in your area, or one course
+
+**Rule for this phase:** present factors with sources, never fuse them into a single
+recommendation score. The moment you emit "Program A: 87/100," you've become the black box you set
+out to replace. Weighting is the user's job; surfacing evidence is ours.
+
+## 8. Open questions
+
+1. **Does CS fall under dMAT's notified fields?** Highest-priority unknown. Verify at the official
+   APS India source.
+2. **3-year Indian bachelor's acceptance** — per-program in Germany, and a hard blocker at many US
+   programs. Needs its own extracted field and probably a rules-pack note.
+3. **anabin programmatic access** — is there a stable machine-readable path, or does this need
+   careful scraping / a cached snapshot? Affects §3.1 feasibility directly.
+4. **Per-university conversion tables** overriding the Bavarian formula — how common? Determines
+   whether that's an edge case or a first-class field.
+5. **English-medium waiver evidence** — what documents each program accepts. Likely too varied to
+   normalise; probably a surfaced snippet.
+
+## 9. Sources
+
+Verified 2026-07-27. Aggregator sources are used for *signal*; official sources must confirm
+anything that becomes a gate.
+
+- [dMAT overview (Jamboree)](https://www.jamboreeindia.com/know-how/dmat-germany-explained-what-indian-students-planning-a-masters-in-germany-need-to-know)
+- [dMAT added to APS process, SS2027 (Collegedunia)](https://collegedunia.com/germany/news/germany-adds-dmat-test-to-aps-process-for-indian-masters-applicants-from-summer-2027)
+- [dMAT structure and dates (Shiksha)](https://www.shiksha.com/studyabroad/digital-master-test-dmat-exam-guide-articlepage-234591)
+- [APS India official FAQ](https://aps-india.de/faqs/)
+- [APS certificate requirements (Studying in Germany)](https://www.studying-in-germany.org/aps-certificate/)
+- [Requirements for Indian students 2026](https://www.studying-in-germany.org/requirements-to-study-in-germany-for-indian-students/)
+- [Modified Bavarian Formula (Heidelberg)](https://backend.uni-heidelberg.de/en/documents/modified-bavarian-formula/download)
+- [Grade conversion (TUM)](https://www.tum.de/en/studies/application/application-info-portal/grade-conversion-formula-for-grades-earned-outside-germany)
+- [Grade conversion (Uni Passau)](https://www.sobi.uni-passau.de/en/study/examinations/grade-conversion)
+- [anabin (Wikipedia overview)](https://en.wikipedia.org/wiki/Anabin)

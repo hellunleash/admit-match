@@ -4,6 +4,7 @@ Real-time eligibility matching for grad programs. Every requirement cited to its
 with the date it was fetched.
 
 Status: **planning**. Built in public — see [LOG.md](LOG.md).
+Country-rule research (Germany, in depth): [RESEARCH.md](RESEARCH.md).
 
 ---
 
@@ -47,15 +48,20 @@ databases structurally cannot offer.
 
 ## 3. Scope: one corridor, deep
 
-Not "universities." **MS in Computer Science, Germany + Netherlands, ~40 programs.**
+Not "universities." **MS in Computer Science, Germany only, ~40 programs.**
 
 Forty programs with accurate, cited, current requirements is a usable product. Two thousand
-programs at 60% accuracy is the stale database this replaces. Depth is the differentiator.
+programs at 60% accuracy is the stale database this replaces. Depth is the differentiator — the
+goal is that no other product models the German pipeline this precisely.
+
+Germany specifically, and not "Europe," because the country layer is not shared: anabin recognition,
+APS, dMAT, the Modified Bavarian Formula and uni-assist routing are German facts that do not
+transfer to the Netherlands, let alone the US. See [RESEARCH.md](RESEARCH.md).
 
 The corridor is the one I'm personally applying to, so my own use is the QA loop.
 
-Expansion (new country, new field) is a data problem once the pipeline works, not a rebuild. It is
-explicitly deferred until v1 is accurate.
+A second country is a new rules pack plus new seeds once the pipeline works — not a rebuild, but
+explicitly deferred until Germany is accurate.
 
 ## 4. Stack
 
@@ -74,8 +80,9 @@ Every row below is either a free tier or fractions of a cent per run.
 | Scheduled recrawl | **GitHub Actions cron** | Free scheduler. Opens a PR with the updated JSON; the diff is the changelog. No queue, no worker, no cron server. |
 | UI | **Next.js on Vercel** free tier | Known stack. Static-ish, one page. |
 | Profile storage | **localStorage / URL params — no accounts in v1** | No auth, no database, no privacy surface. GRE and CGPA never leave the browser. Biggest scope cut available and it also happens to be the ethical default. |
-| Observability | **Langfuse** free tier | Traces extraction calls, cost, failures. Not building this. |
-| Extraction QA | **golden set + promptfoo**, later [llm-eval-harness](https://github.com/hellunleash/llm-eval-harness) | Accuracy must be a measured number, not a vibe. |
+| Observability | **Langfuse** free tier | Traces every extraction call — cost, latency, failures, prompt version. Not building our own tracer. |
+| Prompt eval + optimisation | **Promptfoo** | Extraction-prompt matrices, model comparison, CI regression runs against the golden set. MIT, and the default for this in 2026. |
+| Statistical gating | later: [llm-eval-harness](https://github.com/hellunleash/llm-eval-harness) | The thin layer neither Langfuse nor Promptfoo ships — noise-floor calibration and variance-corrected thresholds, so accuracy gates don't false-alarm. Only once extraction accuracy is real enough to gate. |
 
 ### Explicitly NOT built
 
@@ -110,8 +117,24 @@ seed list (40 programs, hand-curated URLs)
   snapshot ── write JSON to git + SQLite; timestamp everything
       │
       ▼
-   match  ── plain TS: profile × requirements → eligible / borderline / ineligible + reasons
+   match  ── plain TS: profile × requirements × COUNTRY RULES PACK
+             → eligible / borderline / ineligible + reasons + effective deadline
 ```
+
+**The rules pack is the second input to matching, and it is not extracted.** A program page says
+"180 ECTS" and assumes everything else: whether your institution is recognised (anabin), whether
+your degree must be verified (APS), how your CGPA converts (Modified Bavarian Formula, using scale
+bounds from anabin rather than your transcript), whether a new aptitude test applies (dMAT), and
+whether you apply direct or through uni-assist. None of that is on the page.
+
+So country rules are **hand-curated, versioned, dated, and cited in git** — roughly ten per country,
+high-stakes, publicly announced. An LLM assists the research; it never decides a rule at runtime.
+Program requirements are the opposite: many, messy, silently changing, and therefore extracted.
+
+One consequence worth naming: deadlines are **back-solved, not displayed**. The effective personal
+deadline is the program deadline minus uni-assist processing, minus APS lead time (3 weeks to 3
+months), minus a dMAT test date where it applies. Showing a raw deadline shows one the user will
+miss.
 
 The **verify** step is what keeps hallucinated numbers out. If the model claims `min_cgpa: 3.0` but
 the cited snippet doesn't contain "3.0", the field is rejected. Cheap, deterministic, catches the
