@@ -206,6 +206,64 @@ a letter of motivation, a CV, an entrance test, or an interview — and **C1 Eng
 requirement for English-taught MSc CS, notably stricter than the IELTS 6.5 that generic guides
 assume.
 
+#### The authoritative source is the Satzung, not the web page
+*Confidence: high on the mechanism. Verified 2026-07-27.*
+
+Program web pages are **summaries**. The binding text is the **Zulassungssatzung** (admission
+statute) or **Prüfungsordnung** (examination regulations) — a formal legal document, usually a PDF,
+usually in German, amended between cycles.
+
+That's why the numbers on web pages read as vague: precision was dropped in summarising, not
+withheld. The precise version is one link deeper.
+
+**Source hierarchy — extract in this order, and record which was used:**
+
+1. **Zulassungssatzung / Prüfungsordnung** (binding, cite by § where possible)
+2. Official program admission page (summary, use when no statute is findable)
+3. Faculty FAQ (weakest; never the sole source for a hard gate)
+
+A field extracted from tier 2 when a tier-1 document exists is a **defect**, not a shortcut. No
+aggregator reads the statutes; doing so is the single biggest depth advantage available, and it is
+the difference between deep extraction and confident vagueness.
+
+Two consequences for the pipeline: statutes are **PDFs** (so PDF ingestion is not optional) and
+they are **in German** (so extraction must run on German legal text, not just English marketing
+copy). Gemini Flash ingests both natively, so this costs implementation attention rather than
+money.
+
+#### Where the leniency actually is
+*Confidence: medium-high. Auflagen mechanism verified 2026-07-27; prevalence not yet measured.*
+
+Thresholds look soft on web pages, which invites the assumption that there's a tolerance band on
+the number. There isn't. The slack is real but it lives in three specific, *declared* places:
+
+1. **Course-to-area classification.** The threshold is usually exact; what's soft is *which of your
+   courses count toward it*. Whether "Discrete Structures" lands in maths/theory or CS fundamentals
+   is a committee decision. This is where a 95-vs-100 gap actually disappears — not by waiving 5
+   ECTS, but by counting a course you didn't.
+2. **Auflagen — conditional admission.** Some universities admit with a requirement to make up
+   missing coursework in the first semesters; **others reject outright.** Per-program, stated in
+   the statute, therefore extractable as a field.
+3. **Points-based offsetting.** Where assessment is points-based, a curricular shortfall can be
+   offset by grade or motivation. Where it's binary, it cannot.
+
+**Explicitly rejected: a blanket percentage tolerance** (e.g. "within 10–20% counts"). It would
+fabricate leniency that appears in no source, it cannot be cited, and it errs in the dangerous
+direction — telling an applicant they're fine when the committee will reject them. Inventing a
+tolerance is exactly the hallucination this product exists to eliminate.
+
+What replaces it is a **near-miss band**: any single unmet threshold within **20%** renders as
+*borderline* with the reason and the applicable mechanism, never as eligible. The 20% is an
+arbitrary UX cutoff for "worth a closer look", is labelled as such in the UI, and carries no claim
+about what a committee will do.
+
+The most valuable single line the product can emit falls out of this:
+
+> Your *Discrete Mathematics* (6 ECTS) is currently classified as CS fundamentals. If the committee
+> counts it as maths/theory, you'd be 1 ECTS short instead of 7.
+
+That sentence is only possible because classification is modelled, rather than a single total.
+
 #### Product consequences (these change v1's data model)
 
 1. **The user profile is not just CGPA.** It needs an **ECTS breakdown by subject area** — CS
@@ -218,6 +276,10 @@ assume.
 4. **Match reasons become specific and useful**: not "ineligible," but *"you have 18 ECTS in
    maths/theory, this program requires 25 — here's the line that says so."* That sentence is the
    product.
+5. **`assessmentStyle`** (`points` | `binary`) and **`auflagenOffered`** (`yes` | `no` | `unstated`)
+   become extracted fields, because they decide whether a shortfall is fatal.
+6. **Every field records `sourceType`** (`satzung` | `program_page` | `faq`) alongside its URL and
+   snippet, so source quality is visible and auditable rather than assumed.
 
 ### 3.8 Language — deferred to Phase 2, but sketched here
 *Confidence: medium. Per-program verification required.*

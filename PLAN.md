@@ -101,13 +101,16 @@ is.
 seed list (40 programs, hand-curated URLs)
       │
       ▼
-  discover ── find the requirements/admission pages (bounded link-following, allowlisted domains)
+  discover ── find the admission page AND the binding Zulassungssatzung /
+             Prüfungsordnung PDF (bounded link-following, allowlisted domains)
       │
       ▼
-   fetch  ── undici → Jina Reader → Playwright fallback; PDFs passed through as-is
+   fetch  ── undici → Jina Reader → Playwright fallback; statute PDFs passed to
+             Gemini as-is (German-language legal text is expected, not an edge case)
       │
       ▼
-  extract ── Gemini Flash + strict schema; each field emits {value, snippet, sourceUrl, confidence}
+  extract ── Gemini Flash + strict schema; each field emits
+             {value, snippet, sourceUrl, sourceType, confidence}
       │
       ▼
   verify  ── deterministic checks: units sane, dates parseable, values in range,
@@ -139,6 +142,11 @@ miss.
 The **verify** step is what keeps hallucinated numbers out. If the model claims `min_cgpa: 3.0` but
 the cited snippet doesn't contain "3.0", the field is rejected. Cheap, deterministic, catches the
 failure mode that matters most.
+
+**Source hierarchy is enforced, not preferred.** Statute (`satzung`) beats program page beats FAQ,
+every field records which tier it came from, and extracting from a summary page when a statute
+exists is a defect. Web pages are summaries; the binding text is the Zulassungssatzung, and that's
+where the precision that looks "vague" online actually lives. See RESEARCH.md §3.7.
 
 Seeds are hand-curated. Auto-discovering universities is a v2 problem and a great way to spend
 three weeks producing noise.
@@ -190,16 +198,21 @@ Fifteen, not forty — forty is the v1 target, fifteen is what fits a week witho
 
 | Day | Deliverable | Explicitly not doing |
 |---|---|---|
-| 1 | Seed list: 15 German MSc CS programs, requirement URLs hand-checked. Extraction schema with per-area ECTS rules. | Auto-discovery of programs |
-| 2 | Fetch (undici → Jina Reader) + Gemini Flash extraction on 5 programs. Langfuse wired. | Playwright, PDFs |
-| 3 | Verify step (snippet must contain the value) + JSON snapshot to git. | Review-queue UI |
+| 1 | Seed list: 15 German MSc CS programs — admission page **and Zulassungssatzung URL** hand-checked for each. Extraction schema with per-area ECTS rules, `assessmentStyle`, `auflagenOffered`, `sourceType`. | Auto-discovery of programs |
+| 2 | Fetch (undici → Jina Reader) + Gemini Flash extraction on 5 programs, **statute PDFs included, German text expected**. Langfuse wired. | Playwright |
+| 3 | Verify step (snippet must contain the value) + source-tier enforcement + JSON snapshot to git. | Review-queue UI |
 | 4 | Germany rules pack: anabin status, Bavarian formula, APS, dMAT, uni-assist. Deterministic match engine. | Any second country |
 | 5 | CLI end-to-end: my profile → eligible/borderline/ineligible with reasons + back-solved deadlines. Hand-verify 10 programs, publish accuracy. | Promptfoo suite |
 | 6 | Minimal Next.js page: profile form → results with citations and fetch dates. | Auth, accounts, styling polish |
 | 7 | Remaining programs to 15, README demo GIF, LOG entry with real numbers. | Weekly cron |
 
-**Week-1 cuts, deliberate:** no Playwright (skip pages that need it, log them), no PDF ingestion,
-no GitHub Actions cron, no Promptfoo, no `llm-eval-harness`. All of those are v1, not MVP.
+**Week-1 cuts, deliberate:** no Playwright (skip pages that need it, log them), no GitHub Actions
+cron, no Promptfoo, no `llm-eval-harness`. All of those are v1, not MVP.
+
+**PDF ingestion is NOT cut**, despite being an obvious week-1 candidate. The binding requirements
+live in Zulassungssatzung PDFs, frequently in German — extracting only from English summary pages
+would produce exactly the vague, uncitable output this project exists to replace. Gemini Flash
+takes both natively, so the cost is attention, not money.
 
 If day 2 shows the schema doesn't survive real pages, the schema changes and the seed list shrinks.
 Accuracy is the constraint; program count is the variable.

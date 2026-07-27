@@ -8,6 +8,44 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-27 — The web page isn't the rule
+
+Chased why ECTS requirements read as vague online. They aren't vague — the web page is a
+**summary**. The binding text is the **Zulassungssatzung / Prüfungsordnung**: a formal statute,
+usually a PDF, usually in German, amended between cycles. The precision was dropped in summarising,
+not withheld.
+
+So the source hierarchy is now enforced, not preferred: **statute > program page > FAQ**, every
+field records which tier it came from, and extracting from a summary when a statute exists is a
+defect. No aggregator reads the statutes. That's the depth advantage, and it was sitting one link
+deeper the whole time.
+
+Cost: **PDF ingestion comes back into week 1** (I'd cut it), and extraction has to work on German
+legal text, not English marketing copy. Gemini Flash takes both natively, so it's attention, not
+money. Playwright stays cut.
+
+Also resolved the "surely there's a 10–20% tolerance on ECTS" intuition. There isn't a tolerance
+band — the slack is real but lives in three declared places:
+
+1. **Course-to-area classification** — the threshold is exact, what's soft is which of *your*
+   courses count toward it. This is where a 95-vs-100 gap actually vanishes.
+2. **Auflagen** — conditional admission with make-up coursework. Some universities offer it, others
+   reject outright. Stated in the statute, so it's a field, not a guess.
+3. **Points-based offsetting** — only where assessment is points-based, never where it's binary.
+
+Explicitly refused to encode a blanket percentage tolerance. It appears in no source, can't be
+cited, and errs in the dangerous direction — telling someone they're fine when the committee will
+reject them. Replaced with a **near-miss band** (within 20% of an unmet threshold → borderline,
+labelled as a UX cutoff, never as eligibility).
+
+Best sentence the product can emit, and it only exists because classification is modelled rather
+than totalled:
+
+> Your *Discrete Mathematics* (6 ECTS) is currently classified as CS fundamentals. If the committee
+> counts it as maths/theory, you'd be 1 ECTS short instead of 7.
+
+**Next:** Day 1 — 15 seeds with statute URLs, and the schema.
+
 ## 2026-07-27 — NC-frei doesn't mean easy, and MVP is a week
 
 Researched the thing that was confusing me: if a German MSc CS program has no NC, on what basis is
