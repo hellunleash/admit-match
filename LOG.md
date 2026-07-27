@@ -8,6 +8,39 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-27 — NC-frei doesn't mean easy, and MVP is a week
+
+Researched the thing that was confusing me: if a German MSc CS program has no NC, on what basis is
+anyone admitted or rejected?
+
+**~79.5% of computing programs in Germany are NC-free.** For MSc CS, a grade cutoff usually isn't
+the mechanism at all. NC-frei means *no ranked quota* — you're admitted if you meet the
+subject-specific requirements. Those requirements are a **curricular analysis**: your transcript
+decomposed by subject area against per-area ECTS minimums. A representative one is ≥100 ECTS in
+CS+maths, of which ≥25 in maths/theoretical CS, plus a ≥10 ECTS thesis.
+
+Two applicants with identical CGPAs get opposite outcomes, decided purely by transcript
+composition. Aggregators show "MSc CS · NC-frei" and stop, which reads as *no barrier* and is worse
+than showing nothing.
+
+Two consequences that changed the data model on day zero:
+
+- **Profile is not a CGPA.** It's an ECTS breakdown by subject area.
+- **Schema carries `{area, minEcts}` rules**, not `ects_required: 180`.
+
+Also learned programs split into **points-based** (shortfalls can offset) vs **binary** (hard
+gates) assessment, which changes what "borderline" even means. That's now an extracted field.
+
+Decided the dMAT/CS question by **assumption rather than waiting**: counting CS under Engineering,
+so dMAT applies from SS2027. It's the conservative direction — preparing for a test I might not
+need beats missing one I did. It renders in the UI as an assumption with its own citation, not as a
+fact, until APS India confirms.
+
+**Locked Germany-only** and set a **7-day MVP**: 15 programs, end-to-end answer for my own profile
+with citations. Cutting Playwright, PDFs, the cron, Promptfoo, and the eval harness out of week 1
+entirely. Accuracy is the constraint, program count is the variable — if the schema doesn't survive
+real pages on day 2, the list shrinks, not the standard.
+
 ## 2026-07-27 — Country rules are a separate layer
 
 Wrote [RESEARCH.md](RESEARCH.md) on the German pipeline. The finding that reshaped the design:

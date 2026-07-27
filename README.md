@@ -36,8 +36,23 @@ ineligible**, with the specific blocking requirement and a citation for every cl
 
 ## Scope
 
-MS in Computer Science · Germany + Netherlands · ~40 programs. Depth over breadth — 40 accurate
-cited programs beat 2,000 stale ones. More corridors once v1 is accurate.
+**MS in Computer Science · Germany only.** Depth over breadth — the goal is to model the German
+pipeline more precisely than anything else available, not to cover every country badly.
+
+Germany's rules don't transfer: anabin recognition, APS, dMAT, the Modified Bavarian Formula and
+uni-assist routing are German facts. A second country means a second rules pack, and that's
+deferred until Germany is genuinely the best resource that exists.
+
+### Why "NC-frei" is the interesting part
+
+Around 80% of German computing programs have no Numerus Clausus. That does **not** mean no barrier
+— it means the grade cutoff isn't the mechanism. Admission turns on a *curricular analysis*: your
+transcript decomposed by subject area against per-area ECTS minimums (e.g. ≥100 ECTS in CS and
+maths, of which ≥25 in maths/theoretical CS, plus a ≥10 ECTS thesis).
+
+Two applicants with identical CGPAs get opposite outcomes. Aggregator sites show "MSc CS · NC-frei"
+and stop, which reads as *no requirements*. This tool tells you which credits you're short and
+quotes the line that says so.
 
 ## Caveats
 

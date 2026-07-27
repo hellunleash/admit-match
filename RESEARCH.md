@@ -115,10 +115,15 @@ will miss.
 - Cost: €150
 - 2026 cycle dates: registration **15 Sep 2026**, test **26 Sep 2026**, certificate **12 Oct 2026**
 
-**OPEN — must verify before shipping:** whether **Computer Science** falls under the notified
-"Engineering" bucket. Sources list engineering and business/commerce families; CS is not named
-explicitly. This is the highest-value unresolved fact in the document, since the whole v1 corridor
-is MS CS. Resolve against the official APS India source, not aggregator blogs.
+**WORKING ASSUMPTION (2026-07-27): Computer Science counts under the notified "Engineering"
+family, so dMAT applies to MSc CS applicants from SS2027.** Sources name engineering and
+business/commerce families without listing CS explicitly, so this is a *decision*, not a verified
+fact. It is the conservative direction — assuming it applies means preparing for a test you might
+not need, rather than missing one you did.
+
+Flagged in the UI as an assumption with its own citation, and to be replaced with an official
+answer from APS India. This is the one rules-pack entry currently carrying stated uncertainty, and
+it is deliberately visible rather than silently baked in.
 
 This exam is also the strongest proof of why the rules layer must be separate and versioned: it
 did not exist twelve months ago, it applies to some applicants and not others, and it is keyed to
@@ -149,7 +154,72 @@ is a rules-pack fact. Cost-per-application is a real decision input nobody surfa
 **Deadlines must be back-solved, not displayed.** Effective personal deadline = program deadline −
 uni-assist processing − APS lead time − (dMAT test date, if applicable). That chain is the feature.
 
-### 3.7 Language — deferred to Phase 2, but sketched here
+### 3.7 How admission is ACTUALLY decided — NC-frei, and why GPA usually isn't the gate
+*Confidence: high on the mechanism. Verified 2026-07-27. Per-program thresholds must be extracted.*
+
+This is the single most misunderstood part of the German pipeline, and the core of what this
+product does that nothing else does.
+
+**~79.5% of computing programs in Germany are NC-free (zulassungsfrei).** For MSc Computer Science
+specifically, a Numerus Clausus grade cutoff is usually *not* how admission is decided.
+
+**NC-frei does not mean "easy" or "automatic."** It means the selection mechanism is different:
+
+- **NC / zulassungsbeschränkt** — more applicants than seats, ranked, typically by grade. A cutoff
+  exists and moves per cycle.
+- **NC-frei / zulassungsfrei** — no ranked quota. You are admitted if you **meet the
+  subject-specific requirements**. Fail one, and a 1.2 GPA doesn't save you.
+
+So for most German MSc CS programs, the question is not *"is my CGPA high enough?"* It's
+**"does my transcript contain the right credits?"**
+
+#### Eignungsfeststellungsverfahren (aptitude assessment) and curricular analysis
+
+Most MSc CS programs run an *Eignungsfeststellungsverfahren* — an aptitude assessment. Its core is
+a **curricular analysis**: your bachelor's transcript is decomposed by subject area and compared
+against per-area ECTS minimums.
+
+A representative shape (real, and exactly the kind of rule this product must model):
+
+- ≥ **100 ECTS** in computer science and mathematics fundamentals
+- of which ≥ **25 ECTS** specifically in **mathematics and theoretical computer science**
+- a completed **thesis** worth ≥ **10 ECTS**
+
+Two applicants with the same CGPA get opposite outcomes here, decided entirely by transcript
+composition. **No existing tool models this.** Aggregator databases show "MSc CS, NC-frei" and stop
+— which is worse than useless, because it reads as "no barrier."
+
+#### Two decision styles, and they behave differently
+
+- **Points-based** — the committee scores curricular fit, grade, and sometimes motivation
+  letter/interview/essay, then admits above a threshold. A shortfall in one area can be offset.
+- **Binary** — requirements are hard gates; accept or reject. No offsetting.
+
+The style is an extracted per-program field, because it changes what "borderline" means. Under
+binary, a 95-ECTS applicant against a 100-ECTS requirement is *rejected*. Under points, they may
+still be admitted.
+
+#### Other criteria that appear alongside
+
+Grade is explicitly allowed to be one factor but **not the only** criterion. Programs commonly add
+a letter of motivation, a CV, an entrance test, or an interview — and **C1 English** is a frequent
+requirement for English-taught MSc CS, notably stricter than the IELTS 6.5 that generic guides
+assume.
+
+#### Product consequences (these change v1's data model)
+
+1. **The user profile is not just CGPA.** It needs an **ECTS breakdown by subject area** — CS
+   fundamentals, mathematics/theoretical CS, thesis credits. Without that, eligibility can't be
+   computed for the majority of programs.
+2. **Extraction must capture per-area credit minimums**, not one number. The schema needs a list of
+   `{area, minEcts}` rules, not `ects_required: 180`.
+3. **"NC-frei" must never render as "no requirements."** It renders as *"no grade cutoff — admission
+   depends on these credit requirements,"* with the list.
+4. **Match reasons become specific and useful**: not "ineligible," but *"you have 18 ECTS in
+   maths/theory, this program requires 25 — here's the line that says so."* That sentence is the
+   product.
+
+### 3.8 Language — deferred to Phase 2, but sketched here
 *Confidence: medium. Per-program verification required.*
 
 English-taught MS CS programs still vary in ways that break naive matching:
@@ -234,10 +304,16 @@ out to replace. Weighting is the user's job; surfacing evidence is ours.
 
 ## 8. Open questions
 
-1. **Does CS fall under dMAT's notified fields?** Highest-priority unknown. Verify at the official
-   APS India source.
-2. **3-year Indian bachelor's acceptance** — per-program in Germany, and a hard blocker at many US
-   programs. Needs its own extracted field and probably a rules-pack note.
+1. **Does CS fall under dMAT's notified fields?** Currently answered by *assumption* (yes, under
+   Engineering — see §3.4). Needs official confirmation from APS India; until then it renders as an
+   assumption in the UI, not a fact.
+2. **3-year Indian bachelor's acceptance** — per-program in Germany. Needs its own extracted field
+   and probably a rules-pack note.
+6. **Per-area ECTS taxonomy** — programs describe subject areas in inconsistent language
+   ("mathematics and theoretical computer science", "formal foundations", "mathematical
+   fundamentals"). Normalising these into a small area vocabulary without distorting meaning is the
+   hardest extraction problem in v1. Leaning: keep the program's own wording as the label, map to a
+   coarse area for matching, and always show the original snippet.
 3. **anabin programmatic access** — is there a stable machine-readable path, or does this need
    careful scraping / a cached snapshot? Affects §3.1 feasibility directly.
 4. **Per-university conversion tables** overriding the Bavarian formula — how common? Determines

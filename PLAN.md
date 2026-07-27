@@ -145,6 +145,15 @@ three weeks producing noise.
 
 ## 6. Match output
 
+**The profile is not just a CGPA.** For German MSc CS, most programs are NC-free and admission
+turns on transcript *composition*, not grade rank — per-area ECTS minimums (e.g. ≥100 ECTS in
+CS+maths, of which ≥25 in maths/theoretical CS, plus a ≥10 ECTS thesis), assessed through an
+*Eignungsfeststellungsverfahren*. See RESEARCH.md §3.7.
+
+So the profile input is an **ECTS breakdown by subject area**, and the extraction schema carries a
+list of `{area, minEcts}` rules rather than a single number. This is the difference between a tool
+that works and one that reports "NC-frei" as though it meant "no requirements."
+
 Three states, never a single score:
 
 - **Eligible** — every hard requirement satisfied, each with its citation
@@ -174,13 +183,37 @@ interesting thing to write about while building in public.
 
 ## 8. Roadmap
 
-**Phase 0** — repo, LOG.md, seed list of 40 programs with hand-checked requirement URLs.
-**Phase 1** — fetch + extract + verify for 5 programs. Prove the schema survives real pages.
-**Phase 2** — deterministic match engine + CLI. First end-to-end answer for my own profile.
-**Phase 3** — all 40 programs, golden set, published accuracy numbers.
-**Phase 4** — Next.js UI with citations and fetch dates. Demo GIF in the README.
-**Phase 5** — GitHub Actions weekly recrawl; requirement-change diffs as a changelog.
-**Later** — second corridor, ambiguity-clarification chat, deadline reminders.
+### MVP: 7 days, Germany only
+
+Target: **a working end-to-end answer for my own profile across 15 programs**, with citations.
+Fifteen, not forty — forty is the v1 target, fifteen is what fits a week without cutting accuracy.
+
+| Day | Deliverable | Explicitly not doing |
+|---|---|---|
+| 1 | Seed list: 15 German MSc CS programs, requirement URLs hand-checked. Extraction schema with per-area ECTS rules. | Auto-discovery of programs |
+| 2 | Fetch (undici → Jina Reader) + Gemini Flash extraction on 5 programs. Langfuse wired. | Playwright, PDFs |
+| 3 | Verify step (snippet must contain the value) + JSON snapshot to git. | Review-queue UI |
+| 4 | Germany rules pack: anabin status, Bavarian formula, APS, dMAT, uni-assist. Deterministic match engine. | Any second country |
+| 5 | CLI end-to-end: my profile → eligible/borderline/ineligible with reasons + back-solved deadlines. Hand-verify 10 programs, publish accuracy. | Promptfoo suite |
+| 6 | Minimal Next.js page: profile form → results with citations and fetch dates. | Auth, accounts, styling polish |
+| 7 | Remaining programs to 15, README demo GIF, LOG entry with real numbers. | Weekly cron |
+
+**Week-1 cuts, deliberate:** no Playwright (skip pages that need it, log them), no PDF ingestion,
+no GitHub Actions cron, no Promptfoo, no `llm-eval-harness`. All of those are v1, not MVP.
+
+If day 2 shows the schema doesn't survive real pages, the schema changes and the seed list shrinks.
+Accuracy is the constraint; program count is the variable.
+
+### After the MVP
+
+**v1** — 40 programs, Playwright + PDF ingestion, hand-verified golden set with published
+per-field accuracy, Promptfoo extraction evals, GitHub Actions weekly recrawl with struct-diff
+changelogs.
+**Phase 2** — language requirements in depth (per-band IELTS minimums, English-medium waivers, A1/A2
+German for enrolment or visa), course-level prerequisites from a parsed transcript.
+**Phase 3** — decision factors beyond eligibility (see RESEARCH.md §7).
+**Deferred indefinitely** — second country. Germany only until Germany is genuinely the best
+resource that exists.
 
 ## 9. Ethics and politeness
 
