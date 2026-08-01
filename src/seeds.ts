@@ -97,11 +97,14 @@ export const HARDWARE_SEEDS: Seed[] = [
     city: "Ilmenau",
     programName: "Micro- and Nanotechnologies M.Sc.",
     taughtInHint: "english",
-    admissionUrl: "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/4823/",
+    admissionUrl:
+      "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
     admissionChecked: "found",
-    statuteChecked: "todo",
+    statuteUrl:
+      "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+    statuteChecked: "found",
     notes:
-      "Built on semiconductor technology, microelectronics, microtechnologies and nanotechnologies — explicitly deepens a bachelor's or practical background in those fields. X-FAB on the doorstep. DAAD listing is tier-2; resolve the university's own programme page and statute.",
+      "TECHNISCHE PHYSIK EXPLICITLY NAMED among accepted degrees, alongside EE/IT, electronics, mechanical engineering, mechatronics and materials science — and it asks for 'a high proportion of electrical engineering/electronics, SEMICONDUCTOR TECHNOLOGY and SOLID-STATE PHYSICS', which describes this transcript rather than merely tolerating it. Requires >=180 credit points / >=6 semesters. Knowledge areas: materials engineering, higher mathematics, experimental/theoretical/solid-state physics, basics of electrical engineering. POINTS-BASED: minimum 60 points across three categories. English B2, no German stated. DIRECT APPLICATION (not uni-assist) — cheaper and faster. Deadlines 15 May / 15 Sep for winter. Ecosystem: X-FAB Erfurt, CiS Mikrosensorik Erfurt, and the Jena optics cluster (Zeiss, Jenoptik, Fraunhofer IOF) within ~80 km.",
   },
   {
     programId: "hm-engineering-physics-msc",

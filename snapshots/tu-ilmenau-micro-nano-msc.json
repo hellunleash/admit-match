@@ -1,0 +1,291 @@
+{
+  "programId": "tu-ilmenau-micro-nano-msc",
+  "university": "Technische Universität Ilmenau",
+  "programName": "Micro- and Nanotechnologies M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
+      "snippet": "Teaching language English",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:31.890Z"
+    },
+    "confidence": 1
+  },
+  "admissionRestricted": {
+    "value": "nc_free",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
+      "snippet": "Restrictions on admission NC-free",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:31.890Z"
+    },
+    "confidence": 1
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "aptitude_test_knowledge_base",
+        "label": "first professional qualification with knowledge in the following fields",
+        "requirements": [
+          {
+            "canonical": [
+              "electronics"
+            ],
+            "label": "Principles of Electronic Engineering",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+              "snippet": "Principles of Electronic Engineering",
+              "section": "3.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T19:53:29.274Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "materials_chemistry"
+            ],
+            "label": "Principles of Materials Engineering",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+              "snippet": "Principles of Materials Engineering",
+              "section": "3.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T19:53:29.274Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure"
+            ],
+            "label": "Higher Mathematics",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+              "snippet": "Higher Mathematics",
+              "section": "3.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T19:53:29.274Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "physics"
+            ],
+            "label": "Experimental Physics/Theoretical Physics/Solid-state Physics",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+              "snippet": "Experimental Physics/Theoretical Physics/Solid-state Physics",
+              "section": "3.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T19:53:29.274Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "electronics"
+            ],
+            "label": "Principles of Electrical Engineering",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+              "snippet": "Principles of Electrical Engineering",
+              "section": "3.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T19:53:29.274Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "engineering_other"
+            ],
+            "label": "Principles of Mechanical Science/Engineering Mechanics/Mechatronics",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+              "snippet": "Principles of Mechanical Science/Engineering Mechanics/Mechatronics",
+              "section": "3.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T19:53:29.274Z"
+            },
+            "exampleCourses": []
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+      "snippet": "3. The Master's program is based on a first professional qualification with knowledge in the following fields:\n– Principles of Electronic Engineering\n– Principles of Materials Engineering\n– Higher Mathematics\n– Experimental Physics/Theoretical Physics/Solid-state Physics\n– Principles of Electrical Engineering\n– Principles of Mechanical Science/Engineering Mechanics/Mechatronics",
+      "section": "3.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:29.274Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "points",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+      "snippet": "2. Aptitude testing shall be based on a combination of the professional qualifications listed in the following sections 3 to 6 and weighted based on scores.",
+      "section": "2.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:29.274Z"
+    },
+    "confidence": 0.9
+  },
+  "pointsRubric": {
+    "value": {
+      "criteria": [
+        {
+          "name": "first professionally qualifying degree",
+          "max": 40
+        },
+        {
+          "name": "level of qualification (final grade)",
+          "max": 30
+        },
+        {
+          "name": "course related achievements",
+          "max": 20
+        }
+      ],
+      "passMarks": [
+        {
+          "value": 60
+        }
+      ]
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+      "snippet": "4. the first professionally qualifying degree within the meaning of § 67 para. 1 sentence 1 number 4 ThürHG is assessed:\na) with 40 points in the following programs:\nElectrical Engineering and Information Technology / Engineering degree programs with an in-depth specialization in content / Focus on micro- and nanotechnology or microsystems technology\nb) with 30 points in the following programs:\nEngineering degree programs with a considerable focus on electrical engineering or semiconductor physics or microelectronics\nc) with 20 points in the following programs:\nOther engineering or science degree programs\n5. In addition, the level of qualification is assessed according to the final grade of the degree program:\na) Final grade 1.0 – 1.5 = 30 points,\nb) Final grade 1.6 – 2.0 = 20 points,\nc) Final grade 2.1 – 2.5 = 10 points.\n6. Furthermore, there are considered:\na) Achievement of a final grade of \"good\" or \"very good” in the three subjects or subject groups relevant to the degree program:\nPrinciples of electrical engineering,\nExperimental Physics/Theoretical Physics/Solid-state Physics,\nPrinciples of materials engineering / Materials science and engineering,\nand\nb) the completion of a closely related and equivalent bachelor's thesis or a thesis with a grade of at least \"good\"\nand\nc) proven, qualified and closely related professional experience of at least one year.\nThe assessment consists of five points each.\nA maximum of 20 points can be earned.\n7. Should the applicant achieve the following according to the assessments in sections 3 to 6:\na) The aptitude test is to be assessed as \"Special access requirements met\" when the total score is 60 points or more according to the presented documents.",
+      "section": "4., 5., 6., 7a.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:29.274Z"
+    },
+    "confidence": 0.9
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
+      "snippet": "Micro- and Nanotechnologies (M.Sc.) | Technische Universität Ilmenau",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:31.890Z"
+    },
+    "confidence": 0
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
+      "snippet": "Micro- and Nanotechnologies (M.Sc.) | Technische Universität Ilmenau",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:31.890Z"
+    },
+    "confidence": 0
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "C1",
+        "acceptedEvidence": [],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "enrolment"
+      },
+      {
+        "language": "english",
+        "cefr": "B2",
+        "acceptedEvidence": [],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "admission"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
+      "snippet": "Language requirements For direct admission, C1 CEFR language level is the minimum requirement for enrolling. B2 CEFR language level is the minimum requirement for applying to a Master program to receive a conditional admission. English is the language of instruction and examinations in the degree program Micro- and Nanotechnologies. Individual elective modules may also be offered in German, but there are no admission requirements regarding German language skills. Further information on language requirements and accepted certificates",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:31.890Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
+      "snippet": "Micro- and Nanotechnologies (M.Sc.) | Technische Universität Ilmenau",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:31.890Z"
+    },
+    "confidence": 0
+  },
+  "interview": {
+    "value": "no",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf",
+      "snippet": "2. Aptitude testing shall be based on a combination of the professional qualifications listed in the following sections 3 to 6 and weighted based on scores.",
+      "section": "2.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:29.274Z"
+    },
+    "confidence": 0.9
+  },
+  "applicationRoute": {
+    "value": "uni_assist",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
+      "snippet": "Apply via uniassist",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:31.890Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [
+      {
+        "intake": "winter",
+        "appliesTo": {
+          "description": "Start of studies October 1",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc",
+      "snippet": "Start of studies October 1",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T19:53:31.890Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [],
+  "extractedAt": "2024-07-29T12:00:00Z"
+}

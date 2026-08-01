@@ -290,8 +290,14 @@ export const DegreeInProgress = z.object({
 export const Deadline = z.object({
   intake: z.enum(["winter", "summer"]),
   opens: z.string().optional(),
-  /** ISO date where resolvable, else the source's own wording ("31 May"). */
-  closes: z.string(),
+  /**
+   * ISO date where resolvable, else the source's own wording ("31 May").
+   *
+   * OPTIONAL: a source can announce an intake without publishing its closing date yet, and
+   * requiring one killed the whole TU Ilmenau extraction over a single missing field — the
+   * document-granularity failure this schema is supposed to have stopped making.
+   */
+  closes: z.string().optional(),
   appliesTo: ApplicantGroup.optional(),
 });
 

@@ -1,0 +1,14 @@
+{
+  "programId": "tu-ilmenau-micro-nano-msc",
+  "extractedAt": "2026-08-01T19:54:05.923Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.tu-ilmenau.de/fileadmin/Bereiche/Studium/ImStudium/Dokumente/Master-Zugangsvoraussetzungen/EN/M-ER-STR-SP-MNT-2021.pdf": "7e2538649e66792f5adb72f316b880ae4a7cb3cb9b08172e132b0a031c9d9600",
+    "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/micro-and-nanotechnologies-msc": "6481dd1af232f8bf73a55e7cc728e96c1f4df0a7e6c9106c571ced2e127159b9"
+  },
+  "totalTokens": 12101,
+  "costUsd": 0.0170393,
+  "defects": 0,
+  "reviews": 6
+}
