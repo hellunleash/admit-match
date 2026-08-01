@@ -38,6 +38,95 @@ export type Seed = {
   notes?: string;
 };
 
+/**
+ * HARDWARE / SEMICONDUCTOR CORRIDOR — the real target list.
+ *
+ * Selected on two axes, because admission difficulty and ecosystem quality are inversely
+ * correlated and a portfolio needs one of each:
+ *   1. does the programme accept a physics-family degree (stated, not hoped)
+ *   2. is it inside a semiconductor cluster, for Werkstudent and thesis placement
+ *
+ * The MSc CS seeds below this block are the WRONG corridor and stay only as extractor fixtures —
+ * their statutes are cached, so they are free regression tests.
+ */
+export const HARDWARE_SEEDS: Seed[] = [
+  {
+    programId: "btu-micro-nano-msc",
+    university: "BTU Cottbus-Senftenberg",
+    city: "Cottbus",
+    programName: "Micro- and Nanoelectronics M.Sc.",
+    taughtInHint: "english",
+    admissionUrl: "https://www.b-tu.de/en/micro-nano-electronics-ms",
+    admissionChecked: "opened",
+    statuteChecked: "todo",
+    notes:
+      "Listed as 'without admission limits' (NC-frei) on the programme page — MUST be confirmed in the statute. Equivalence defined by CONTENT: a degree counts if Mathematics, Theoretical Physics and Experimental Physics are comparable in scope. Described as aimed at physicists and electrical engineers for the semiconductor industry. Foreign qualifications route via uni-assist; WS 2026/27 window was 20 Apr – 15 Jul. Ecosystem: iCampus Cottbus — BTU + IHP Leibniz + Ferdinand-Braun-Institut + Fraunhofer IZM + IPMS, EUR 20M BMBF to 2026; IHP building a EUR 39.4M facility for ~100 researchers. Weak for corporate Werkstudent (no fab, Dresden 89 km / ~2h by train, direct regional every 4h; Berlin ~1h15), strong for thesis-to-PhD.",
+  },
+  {
+    programId: "tud-nanoelectronic-systems-msc",
+    university: "Technische Universität Dresden",
+    city: "Dresden",
+    programName: "Nanoelectronic Systems M.Sc.",
+    taughtInHint: "english",
+    admissionUrl:
+      "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+    admissionChecked: "found",
+    statuteChecked: "todo",
+    notes:
+      "EE faculty. Six named prerequisite subjects including Advanced Mathematics plus electronics/physics foundations — the prerequisite list is the risk, since an EE faculty enumerates EE subjects and the applicant lacks Signals & Systems. Best ecosystem in Europe: Silicon Saxony, 600+ companies, ~1/3 of Europe's chips, GlobalFoundries, four Infineon fabs (Smart Power Fab opened July 2026), Bosch, TSMC JV, Fraunhofer IPMS/CNT, NaMLab. Apply via uni-assist.",
+  },
+  {
+    programId: "tud-organic-molecular-electronics-msc",
+    university: "Technische Universität Dresden",
+    city: "Dresden",
+    programName: "Organic and Molecular Electronics M.Sc.",
+    taughtInHint: "english",
+    admissionUrl: "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+    admissionChecked: "found",
+    statuteUrl:
+      "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+    statuteChecked: "found",
+    notes:
+      "PHYSICS FACULTY — accepts physics, chemistry, nanotechnology, materials science or related. Aptitude assessment covers classical mechanics, electrodynamics, optics, thermodynamics, quantum theory and composition of matter: the applicant's transcript covers all six. Requires a 4-YEAR bachelor for non-EU applicants (B.Tech qualifies). English C1 / IELTS 7.0 — a real gate. DEADLINE CONFLICT: non-EU deadline 31 MAY for the October intake, and the applicant graduates end of May 2027 — verify whether pre-graduation application is permitted. Possibly renamed 'Sustainable Electronics and Photonics' (same course id 4856) — confirm.",
+  },
+  {
+    programId: "tu-ilmenau-micro-nano-msc",
+    university: "Technische Universität Ilmenau",
+    city: "Ilmenau",
+    programName: "Micro- and Nanotechnologies M.Sc.",
+    taughtInHint: "english",
+    admissionUrl: "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/4823/",
+    admissionChecked: "found",
+    statuteChecked: "todo",
+    notes:
+      "Built on semiconductor technology, microelectronics, microtechnologies and nanotechnologies — explicitly deepens a bachelor's or practical background in those fields. X-FAB on the doorstep. DAAD listing is tier-2; resolve the university's own programme page and statute.",
+  },
+  {
+    programId: "hm-engineering-physics-msc",
+    university: "Hochschule München (University of Applied Sciences)",
+    city: "Munich",
+    programName: "Engineering Physics M.Sc.",
+    taughtInHint: "unknown",
+    admissionUrl: "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+    admissionChecked: "found",
+    statuteChecked: "todo",
+    notes:
+      "UNVERIFIED whether the MASTER exists in this shape — only the bachelor page is confirmed. Bachelor runs specialisation tracks in semiconductor/micro- and nanotechnology and in photonics/laser technology, with standing Industrial Advisory Boards for both. Same degree title as the applicant's, so recognition friction is near zero. Munich ecosystem: Infineon HQ, Apple silicon design centre, Intel, Fraunhofer EMFT. FH — PhD via cooperative doctorate.",
+  },
+  {
+    programId: "th-wildau-photonics-meng",
+    university: "TH Wildau",
+    city: "Wildau (Berlin)",
+    programName: "Photonics M.Eng.",
+    taughtInHint: "english",
+    admissionUrl: "https://en.th-wildau.de/study/programmes/photonics-meng",
+    admissionChecked: "found",
+    statuteChecked: "todo",
+    notes:
+      "Switching to English from WS 2026/27. ~40 min from Berlin. Maps to the applicant's fibre optics, optical communication and electrodynamics coursework. FH — cooperative doctorate route for a PhD.",
+  },
+];
+
 export const SEEDS: Seed[] = [
   {
     programId: "tum-informatics-msc",

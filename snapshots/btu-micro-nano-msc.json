@@ -1,0 +1,191 @@
+{
+  "programId": "btu-micro-nano-msc",
+  "university": "BTU Cottbus-Senftenberg",
+  "programName": "Micro- and Nanoelectronics",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Language of instruction English",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "nc_free",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Procedure Without admission limits",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.9
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "physics_background",
+        "label": "Bachelor's degree with a focus on Physics",
+        "requirements": [
+          {
+            "canonical": [
+              "math_pure",
+              "physics"
+            ],
+            "label": "course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+              "snippet": "The degree is is deemed sufficiently similar if the course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:12.351Z"
+            },
+            "exampleCourses": []
+          }
+        ]
+      },
+      {
+        "setId": "electrical_engineering_background",
+        "label": "Bachelor's degree with a focus on Electrical Engineering",
+        "requirements": [
+          {
+            "canonical": [
+              "physics",
+              "math_applied",
+              "electronics",
+              "engineering_other"
+            ],
+            "label": "course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+              "snippet": "or the course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:12.351Z"
+            },
+            "exampleCourses": []
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Requirements At least a Bachelor's degree in a related study programme. The degree is is deemed sufficiently similar if the course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU or the course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU or have a comparable scope",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Requirements At least a Bachelor's degree in a related study programme. The degree is is deemed sufficiently similar if the course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU or the course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU or have a comparable scope Applicants need a certificate of English proficiency as described in the language requirements . Only valid certificates will be recognized, \"medium of instruction certificates\" will not be accepted.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.5
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Requirements At least a Bachelor's degree in a related study programme. The degree is is deemed sufficiently similar if the course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU or the course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU or have a comparable scope Applicants need a certificate of English proficiency as described in the language requirements . Only valid certificates will be recognized, \"medium of instruction certificates\" will not be accepted.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.5
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Requirements At least a Bachelor's degree in a related study programme. The degree is is deemed sufficiently similar if the course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU or the course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU or have a comparable scope Applicants need a certificate of English proficiency as described in the language requirements . Only valid certificates will be recognized, \"medium of instruction certificates\" will not be accepted.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.5
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "acceptedEvidence": [
+          {
+            "name": "certificate of English proficiency",
+            "note": "as described in the language requirements"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "no",
+        "requiredFor": "admission"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Applicants need a certificate of English proficiency as described in the language requirements . Only valid certificates will be recognized, \"medium of instruction certificates\" will not be accepted.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Requirements At least a Bachelor's degree in a related study programme. The degree is is deemed sufficiently similar if the course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU or the course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU or have a comparable scope Applicants need a certificate of English proficiency as described in the language requirements . Only valid certificates will be recognized, \"medium of instruction certificates\" will not be accepted.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.5
+  },
+  "interview": {
+    "value": "no",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Procedure Without admission limits",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.8
+  },
+  "applicationRoute": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Requirements At least a Bachelor's degree in a related study programme. The degree is is deemed sufficiently similar if the course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU or the course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU or have a comparable scope Applicants need a certificate of English proficiency as described in the language requirements . Only valid certificates will be recognized, \"medium of instruction certificates\" will not be accepted.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.5
+  },
+  "deadlines": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.b-tu.de/en/micro-nano-electronics-ms",
+      "snippet": "Admissions Requirements At least a Bachelor's degree in a related study programme. The degree is is deemed sufficiently similar if the course content in Mathematics, Theoretical Physics and Experimental Physics is comparable in scope to the Bachelor's degree programme in Physics at BTU or the course content in Physics, Mathematics, Electronics and Systems and Field Theory is comparable to the Bachelor's degree programme in Electrical Engineering with a focus on Information Technology or Electronics at BTU or have a comparable scope Applicants need a certificate of English proficiency as described in the language requirements . Only valid certificates will be recognized, \"medium of instruction certificates\" will not be accepted.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:12.351Z"
+    },
+    "confidence": 0.5
+  },
+  "qualitative": [],
+  "extractedAt": "2026-08-01T15:00:12.351Z"
+}

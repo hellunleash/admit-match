@@ -1,0 +1,134 @@
+{
+  "programId": "hm-engineering-physics-msc",
+  "university": "Hochschule München (University of Applied Sciences)",
+  "programName": "Engineering Physics M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The application period for this open-admission Bachelor's degree course for the start of the next winter semester has been extended until August 15.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.9
+  },
+  "requirementSets": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "language": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "interview": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "applicationRoute": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The bachelor's degree in Engineering Physic's deals with the engineering implementation of physical knowledge into beneficial and environmentally sound processes and products.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "deadlines": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html",
+      "snippet": "The application period for this open-admission Bachelor's degree course for the start of the next winter semester has been extended until August 15.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:03:08.793Z"
+    },
+    "confidence": 0.1
+  },
+  "qualitative": [],
+  "extractedAt": "2024-07-29T12:00:00Z"
+}

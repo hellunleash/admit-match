@@ -1,0 +1,13 @@
+{
+  "programId": "th-wildau-photonics-meng",
+  "extractedAt": "2026-08-01T15:03:08.792Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://en.th-wildau.de/study/programmes/photonics-meng": "f9937690732857d036e8e93d3410eb25136d4c82d46b2d238e5a8122743bdb82"
+  },
+  "totalTokens": 25104,
+  "costUsd": 0.0342986,
+  "defects": 0,
+  "reviews": 0
+}

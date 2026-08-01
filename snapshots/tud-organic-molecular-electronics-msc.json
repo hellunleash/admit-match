@@ -1,0 +1,280 @@
+{
+  "programId": "tud-organic-molecular-electronics-msc",
+  "university": "Technische Universität Dresden",
+  "programName": "Organic and Molecular Electronics M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+      "snippet": "Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:00:58.211Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+      "snippet": "In zulassungsfreien Studiengängen, senden Sie bitte nach festgestellter Eignung den Eignungsbescheid sowie alle angeforderten Unterlagen an das Immatrikulationsamt oder ans International Office.\n- In zulassungsbeschränkten Studiengängen erhalten Sie erst mit Ihrem Zulassungsbescheid eine gesonderte Aufforderung zur Einreichung der erforderlichen Unterlagen (ggf. mit Eignungsbescheid, sofern ein Eignungsfeststellungsverfahren Voraussetzung ist).",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:00:58.211Z"
+    },
+    "confidence": 0.5
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "primary",
+        "label": "Studienvoraussetzungen",
+        "requirements": [
+          {
+            "canonical": [
+              "other"
+            ],
+            "label": "Erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss auf einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+              "snippet": "Erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss auf einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:00:58.211Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "physics",
+              "other",
+              "math_pure"
+            ],
+            "label": "Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+              "snippet": "Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens (ggf. mit Eignungsgespräch) gemäß Eignungsfeststellungsordnung",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:00:58.211Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "total"
+            ],
+            "label": "a minimum of a 4-year Bachelor degree or 3-year Bachelor’s degree plus 1-year Master’s degree is required (i.e., a minimum of a 4-year study duration).",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+              "snippet": "Please note: from most non-EU countries (including India, China...) a minimum of a 4-year Bachelor degree or 3-year Bachelor’s degree plus 1-year Master’s degree is required (i.e., a minimum of a 4-year study duration).",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:59.846Z"
+            },
+            "exampleCourses": []
+          }
+        ],
+        "additionalStep": "Eignungsfeststellungsverfahren (ggf. mit Eignungsgespräch)"
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+      "snippet": "Studienvoraussetzungen \n• Erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss auf einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet \n• Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen\n• Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens (ggf. mit Eignungsgespräch) gemäß Eignungsfeststellungsordnung",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:00:58.211Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+      "snippet": "Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens (ggf. mit Eignungsgespräch) gemäß Eignungsfeststellungsordnung",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:00:58.211Z"
+    },
+    "confidence": 0.5
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated",
+      "maxEcts": 42,
+      "deadline": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+      "snippet": "Sustainable Electronics and Photonics application form (in uni assist referred to as an \"aptitude test\")",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:59.846Z"
+    },
+    "confidence": 0.1
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "yes",
+      "minEctsSoFar": 80,
+      "thesisMustBeRegistered": false,
+      "certificateDeadline": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+      "snippet": "If you do not have your degree certificate yet, we need: - a confirmation of a successful attainment of least 80% of the credit points required for a successful graduation - a written confirmation from your university of your anticipated graduation",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:59.846Z"
+    },
+    "confidence": 0.9
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "C1",
+        "acceptedEvidence": [
+          {
+            "name": "IELTS",
+            "overall": 7
+          },
+          {
+            "name": "TOEFL iBT",
+            "overall": 95
+          },
+          {
+            "name": "Hochschulreife",
+            "note": "vollständig in englischer Sprache abgelegt"
+          },
+          {
+            "name": "Hochschulabschluss",
+            "note": "vollständig in englischer Sprache abgelegt"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "yes",
+        "requiredFor": "admission"
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+      "snippet": "Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen\n• Nachweis über die geforderten Englischkenntnisse auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (Nachweis z.B. über IELTS: 7.0 oder TOEFL ibt 95 (neu: 5.0); Zeugnis über vollständig in englischer Sprache abgelegten Hochschulreife oder vollständig in englischer Sprache abgelegten Hochschulabschluss)",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:00:58.211Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [
+      {
+        "name": "APS certificate",
+        "required": "yes",
+        "thresholds": "unstated",
+        "appliesTo": {
+          "description": "Chinese, Mongolian and Vietnamese applicants",
+          "nationalities": [
+            "China",
+            "Mongolia",
+            "Vietnam"
+          ],
+          "euEea": "excluded",
+          "lisbonConvention": "non_signatory"
+        },
+        "exemptions": "unstated"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+      "snippet": "Chinese, Mongolian and Vietnamese applicants: original APS certificate from the Academic Evaluation Centre of German Embassy",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:59.846Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "yes",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+      "snippet": "Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens (ggf. mit Eignungsgespräch) gemäß Eignungsfeststellungsordnung",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:00:58.211Z"
+    },
+    "confidence": 0.9
+  },
+  "applicationRoute": {
+    "value": "both",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+      "snippet": "Depending on the country which issued your first degree, you will have to apply either directly at TU Dresden or via the application portal uni-assist (handling fee applies; applications will only be processed once uni-assist has received your payment).",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:59.846Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [
+      {
+        "intake": "winter",
+        "opens": "1 June",
+        "closes": "15 July",
+        "appliesTo": {
+          "description": "German",
+          "nationalities": [
+            "Germany"
+          ],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "winter",
+        "opens": "1 April",
+        "closes": "15 July",
+        "appliesTo": {
+          "description": "EU",
+          "nationalities": [],
+          "euEea": "only",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "winter",
+        "opens": "1 April",
+        "closes": "15 July",
+        "appliesTo": {
+          "description": "Non-EU (prospective) degree from a German institution of higher education",
+          "nationalities": [],
+          "euEea": "excluded",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "winter",
+        "opens": "1 April",
+        "closes": "31 May",
+        "appliesTo": {
+          "description": "Non-EU (prospective) degree from a non-German institution of higher education",
+          "nationalities": [],
+          "euEea": "excluded",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+      "snippet": "You can enroll to our Master’s Program only in the winter semester (i.e. each October). To enroll in October, the following application deadlines must be met: Nationality Start Application Period Closing Date Application Period German June 1 July 15 EU April 1 July 15 Non-EU (prospective) degree from a German institution of higher education April 1 July 15 Non-EU (prospective) degree from a non-German institution of higher education April 1 May 31",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:59.846Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [],
+  "extractedAt": "2024-07-29T12:00:00Z"
+}

@@ -10,7 +10,10 @@
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { SEEDS } from "../seeds.js";
+import { SEEDS as CS_SEEDS, HARDWARE_SEEDS } from "../seeds.js";
+
+/** Hardware corridor first — it's the live target list; the CS seeds are regression fixtures. */
+const SEEDS = [...HARDWARE_SEEDS, ...CS_SEEDS];
 import {
   fetchDocCached,
   inputsUnchanged,

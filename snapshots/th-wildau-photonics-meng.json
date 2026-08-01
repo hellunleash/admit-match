@@ -1,0 +1,262 @@
+{
+  "programId": "th-wildau-photonics-meng",
+  "university": "TH Wildau",
+  "programName": "Photonics M.Eng.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "Language of instruction English",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "In accordance with the Regulations of the TH Wildau for the selection of students for degree programmes with restricted admission criteria, a motivation letter written in English will also be required as an admission requirement (in the case of this degree programme)",
+      "section": "Admission requirements and application (5)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.5
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "primary",
+        "label": "Specific admission requirements",
+        "requirements": [
+          {
+            "canonical": [
+              "total"
+            ],
+            "label": "A first professional degree in a relevant field totalling at least 180 ECTS points (CP) in the European Credit Transfer System (ECTS) over a period of study lasting no less than 6 semesters, or an equivalent university degree that is not based on ECTS points, e.g. Diplom or Magister degrees.",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+              "snippet": "(1) A first professional degree in a relevant field totalling at least 180 ECTS points (CP) in the European Credit Transfer System (ECTS) over a period of study lasting no less than 6 semesters, or an equivalent university degree that is not based on ECTS points, e.g. Diplom or Magister degrees.",
+              "section": "Admission requirements and application (1)",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:02:15.643Z"
+            },
+            "minEcts": 180,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure",
+              "physics",
+              "materials_chemistry",
+              "engineering_other",
+              "electronics"
+            ],
+            "label": "scientific and technical knowledge e.g. in mathematics, physics and chemistry at bachelor degree level. It is therefore required that applicants hold a first degree in a relevant subject area that is comparable to the “Physical Engineering / Energy Systems” bachelor’s degree programme at TH Wildau, or the “Engineering Sciences” degree programme at TH Brandenburg. Suitable degrees for admission include, for example, degrees programmes such as photonics, physics, physical engineering, energy technology, optics/optical technologies, microsystems engineering, semi-conductor technology, electrical engineering, electronics, especially optoelectronics and communications engineering.",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+              "snippet": "(3) The specific requirements for the Photonics master’s degree programme include scientific and technical knowledge e.g. in mathematics, physics and chemistry at bachelor degree level. It is therefore required that applicants hold a first degree in a relevant subject area that is comparable to the “Physical Engineering / Energy Systems” bachelor’s degree programme at TH Wildau, or the “Engineering Sciences” degree programme at TH Brandenburg. Suitable degrees for admission include, for example, degrees programmes such as photonics, physics, physical engineering, energy technology, optics/optical technologies, microsystems engineering, semi-conductor technology, electrical engineering, electronics, especially optoelectronics and communications engineering. In case of any doubt, the final decision rests with the faculty Examinations Board.",
+              "section": "Admission requirements and application (3)",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:02:15.643Z"
+            },
+            "exampleCourses": []
+          }
+        ],
+        "additionalStep": "motivation letter written in English will also be required as an admission requirement (in the case of this degree programme), in which the applicant describes his/her motivation for the selected degree programme or why it appeals so strongly over a minimum of two pages and a maximum of three pages. This motivation letter must be submitted on time with the other application documentation."
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "Specific admission requirements \n (1) A first professional degree in a relevant field totalling at least 180 ECTS points (CP) in the European Credit Transfer System (ECTS) over a period of study lasting no less than 6 semesters, or an equivalent university degree that is not based on ECTS points, e.g. Diplom or Magister degrees. \n \n (2) English language skills: \n From the winter semester 2026/27, this degree programme will be taught in English. For admission to this degree programme, applicants must therefore provide evidence of their English language skills in at least one of the following forms from the winter semester 2026/27: \n Proof of at least C1 level of the Common European Framework of Reference for Languages (GER) (recognised documents and certificates as in the valid version of the Proof of English Language Skills for Enrolment at TH Wildau -> Link ), \n OR \n Proof of B2 level of the Common European Framework of Reference for Languages (GER) (recognised documents and certificates as in the valid version of the Proof of English Language Skills for Enrolment at TH Wildau -> Link ), and successful completion of modules of at least 40 Credit Points (CP) conducted in English in a bachelor’s degree programme that qualifies for admission to thjs master’s degree programme, \n OR \n Proof of English language skills is also accepted if applicants can prove that they have acquired their higher education entrance qualification or a higher education degree in English. \n \n (3) The specific requirements for the Photonics master’s degree programme include scientific and technical knowledge e.g. in mathematics, physics and chemistry at bachelor degree level. It is therefore required that applicants hold a first degree in a relevant subject area that is comparable to the “Physical Engineering / Energy Systems” bachelor’s degree programme at TH Wildau, or the “Engineering Sciences” degree programme at TH Brandenburg. Suitable degrees for admission include, for example, degrees programmes such as photonics, physics, physical engineering, energy technology, optics/optical technologies, microsystems engineering, semi-conductor technology, electrical engineering, electronics, especially optoelectronics and communications engineering. In case of any doubt, the final decision rests with the faculty Examinations Board. \n \n (4) If these requirements are not met , then students may be admitted on a case by case basis with support provided which will be considered when putting together an individual study plan. In putting this together, it must be ensured that all necessary material will be covered and that an appropriate limit is placed on the amount of work students are expected to do each semester. The final decision on the type and scope of support lies with the Examinations Board. \n \n (5) In accordance with the Regulations of the TH Wildau for the selection of students for degree programmes with restricted admission criteria, a motivation letter written in English will also be required as an admission requirement (in the case of this degree programme), in which the applicant describes his/her motivation for the selected degree programme or why it appeals so strongly over a minimum of two pages and a maximum of three pages. This motivation letter must be submitted on time with the other application documentation.",
+      "section": "Admission requirements and application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.9
+  },
+  "referenceCurriculum": {
+    "value": {
+      "referenceProgram": "“Physical Engineering / Energy Systems” bachelor’s degree programme at TH Wildau, or the “Engineering Sciences” degree programme at TH Brandenburg",
+      "equivalenceWording": "comparable to the “Physical Engineering / Energy Systems” bachelor’s degree programme at TH Wildau, or the “Engineering Sciences” degree programme at TH Brandenburg",
+      "selfAssessmentUrl": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "It is therefore required that applicants hold a first degree in a relevant subject area that is comparable to the “Physical Engineering / Energy Systems” bachelor’s degree programme at TH Wildau, or the “Engineering Sciences” degree programme at TH Brandenburg.",
+      "section": "Admission requirements and application (3)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.8
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "Specific admission requirements",
+      "section": "Admission requirements and application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.5
+  },
+  "auflagen": {
+    "value": {
+      "offered": "yes",
+      "deadline": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "(4) If these requirements are not met , then students may be admitted on a case by case basis with support provided which will be considered when putting together an individual study plan. In putting this together, it must be ensured that all necessary material will be covered and that an appropriate limit is placed on the amount of work students are expected to do each semester. The final decision on the type and scope of support lies with the Examinations Board.",
+      "section": "Admission requirements and application (4)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.8
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "Specific admission requirements",
+      "section": "Admission requirements and application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.5
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "C1",
+        "acceptedEvidence": [
+          {
+            "name": "Proof of at least C1 level of the Common European Framework of Reference for Languages (GER)",
+            "note": "(recognised documents and certificates as in the valid version of the Proof of English Language Skills for Enrolment at TH Wildau -> Link )"
+          },
+          {
+            "name": "Proof of B2 level of the Common European Framework of Reference for Languages (GER)",
+            "note": "(recognised documents and certificates as in the valid version of the Proof of English Language Skills for Enrolment at TH Wildau -> Link ), and successful completion of modules of at least 40 Credit Points (CP) conducted in English in a bachelor’s degree programme that qualifies for admission to thjs master’s degree programme"
+          },
+          {
+            "name": "Higher education entrance qualification or a higher education degree in English",
+            "note": "Proof of English language skills is also accepted if applicants can prove that they have acquired their higher education entrance qualification or a higher education degree in English."
+          }
+        ],
+        "waiverIfMediumOfInstruction": "yes",
+        "requiredFor": "admission"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "(2) English language skills: \n From the winter semester 2026/27, this degree programme will be taught in English. For admission to this degree programme, applicants must therefore provide evidence of their English language skills in at least one of the following forms from the winter semester 2026/27: \n Proof of at least C1 level of the Common European Framework of Reference for Languages (GER) (recognised documents and certificates as in the valid version of the Proof of English Language Skills for Enrolment at TH Wildau -> Link ), \n OR \n Proof of B2 level of the Common European Framework of Reference for Languages (GER) (recognised documents and certificates as in the valid version of the Proof of English Language Skills for Enrolment at TH Wildau -> Link ), and successful completion of modules of at least 40 Credit Points (CP) conducted in English in a bachelor’s degree programme that qualifies for admission to thjs master’s degree programme, \n OR \n Proof of English language skills is also accepted if applicants can prove that they have acquired their higher education entrance qualification or a higher education degree in English.",
+      "section": "Admission requirements and application (2)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "Specific admission requirements",
+      "section": "Admission requirements and application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "no",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "Specific admission requirements",
+      "section": "Admission requirements and application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.9
+  },
+  "applicationRoute": {
+    "value": "direct",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "You can apply to TH Wildau online . All the information you need to apply can be found on this page .",
+      "section": "Admission requirements and application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [
+      {
+        "intake": "winter",
+        "opens": "unstated",
+        "closes": "unstated",
+        "appliesTo": {
+          "description": "General",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+      "snippet": "Programme start winter semester",
+      "section": "Key facts",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:02:15.643Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [
+    {
+      "value": "scientific and technical knowledge e.g. in mathematics, physics and chemistry at bachelor degree level.",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+        "snippet": "(3) The specific requirements for the Photonics master’s degree programme include scientific and technical knowledge e.g. in mathematics, physics and chemistry at bachelor degree level.",
+        "section": "Admission requirements and application (3)",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T15:02:15.643Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "motivation letter written in English will also be required as an admission requirement (in the case of this degree programme), in which the applicant describes his/her motivation for the selected degree programme or why it appeals so strongly over a minimum of two pages and a maximum of three pages.",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://en.th-wildau.de/study/programmes/photonics-meng",
+        "snippet": "(5) In accordance with the Regulations of the TH Wildau for the selection of students for degree programmes with restricted admission criteria, a motivation letter written in English will also be required as an admission requirement (in the case of this degree programme), in which the applicant describes his/her motivation for the selected degree programme or why it appeals so strongly over a minimum of two pages and a maximum of three pages.",
+        "section": "Admission requirements and application (5)",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T15:02:15.643Z"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "extractedAt": "2024-07-29T12:00:00Z"
+}

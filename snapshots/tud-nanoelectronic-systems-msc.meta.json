@@ -1,0 +1,13 @@
+{
+  "programId": "tud-nanoelectronic-systems-msc",
+  "extractedAt": "2026-08-01T15:00:58.209Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements": "f62f1a6edf08fe743bcfb6cd1798f05b231e1563dd8f846668bff1d4797a2ee1"
+  },
+  "totalTokens": 9562,
+  "costUsd": 0.014313,
+  "defects": 1,
+  "reviews": 0
+}

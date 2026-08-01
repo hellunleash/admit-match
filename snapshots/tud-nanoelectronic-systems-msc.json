@@ -1,0 +1,252 @@
+{
+  "programId": "tud-nanoelectronic-systems-msc",
+  "university": "Technische Universität Dresden",
+  "programName": "Nanoelectronic Systems M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Master's programme in Nanoelectronic Systems",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.8
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Admission Requirements",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "primary",
+        "label": "Bachelor's degree * in Electrical Engineering, Information Technology, Physics, or similar with the following prerequisites",
+        "requirements": [
+          {
+            "canonical": [
+              "math_pure",
+              "math_applied"
+            ],
+            "label": "Advanced mathematics (multi-variable differential and integral calculus, probability and statistics)",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+              "snippet": "Advanced mathematics (multi-variable differential and integral calculus, probability and statistics)",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:34.323Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "electronics"
+            ],
+            "label": "Analogue and digital circuit design",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+              "snippet": "Analogue and digital circuit design",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:34.323Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "physics"
+            ],
+            "label": "Electro-magnetic fields",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+              "snippet": "Electro-magnetic fields",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:34.323Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_theory"
+            ],
+            "label": "Systems theory (Fourier, Laplace, and Z transformations)",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+              "snippet": "Systems theory (Fourier, Laplace, and Z transformations)",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:34.323Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "electronics"
+            ],
+            "label": "Operation and construction of basic electron devices (e. g. diode, bipolar, and MOS transistors)",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+              "snippet": "Operation and construction of basic electron devices (e. g. diode, bipolar, and MOS transistors)",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:34.323Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_practical"
+            ],
+            "label": "Object-oriented programming (e. g. C++, JAVA)",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+              "snippet": "Object-oriented programming (e. g. C++, JAVA)",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T15:00:34.323Z"
+            },
+            "exampleCourses": []
+          }
+        ],
+        "satisfyAtLeast": 5
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Bachelor's degree * in Electrical Engineering, Information Technology, Physics, or similar with the following prerequisites:\n\nAdvanced mathematics (multi-variable differential and integral calculus, probability and statistics)\nAnalogue and digital circuit design\nElectro-magnetic fields\nSystems theory (Fourier, Laplace, and Z transformations)\nOperation and construction of basic electron devices (e. g. diode, bipolar, and MOS transistors)\nObject-oriented programming (e. g. C++, JAVA)\n\nOne of the above prerequisites may be missing, but must be undertaken independently if accepted into the programme.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Admission Requirements",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "auflagen": {
+    "value": {
+      "offered": "yes",
+      "maxEcts": 6,
+      "deadline": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "One of the above prerequisites may be missing, but must be undertaken independently if accepted into the programme. The above given six subjects of prerequisites are required for the compulsory modules of the Master's programme in Nanoelectronic Systems.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "yes",
+      "minEctsSoFar": 144,
+      "certificateDeadline": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "If the applicant is unable to provide evidence of the first job-qualifying university degree at the time of application (degree certificate), the applicant will still be admitted to the aptitude assessment procedure pursuant to these regulations if 80 % or more credit points, which are required for successful graduation, have already been awarded.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "B2",
+        "acceptedEvidence": [
+          {
+            "name": "TOEFL iBT",
+            "overall": 94
+          },
+          {
+            "name": "IELTS",
+            "overall": 6.5
+          },
+          {
+            "name": "medium of instruction certificate",
+            "note": "confirming that the degree programme you completed was taught in English language"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "yes",
+        "requiredFor": "unstated"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Certificate of proficiency in English on the level of minimum B2 of the Common European Framework of Reference for Languages (CEFR) e.g., TOEFL IBT with 94 points, IELTS with level 6.5 (for non-native speakers only), or a certificate confirming that the degree programme you completed was taught in English language.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Admission Requirements",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Admission Requirements",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "applicationRoute": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Information on application procedure",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
+      "snippet": "Admission Requirements",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T15:00:34.323Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [],
+  "extractedAt": "2024-07-29T12:00:00Z"
+}

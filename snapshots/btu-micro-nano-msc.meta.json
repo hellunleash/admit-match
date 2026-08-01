@@ -1,0 +1,13 @@
+{
+  "programId": "btu-micro-nano-msc",
+  "extractedAt": "2026-08-01T15:00:34.320Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.b-tu.de/en/micro-nano-electronics-ms": "a03c8eaa2aefa46bcd5bcac96cf4e8cfa069a8d39ab37e792635afd5a54b8f16"
+  },
+  "totalTokens": 8905,
+  "costUsd": 0.0125583,
+  "defects": 0,
+  "reviews": 0
+}

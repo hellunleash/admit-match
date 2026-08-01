@@ -1,0 +1,14 @@
+{
+  "programId": "tud-organic-molecular-electronics-msc",
+  "extractedAt": "2026-08-01T15:01:27.483Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856": "54b54556b2b3a6754f8d72a4f5d2174a59c99f4d345924b3bac5681ec6a92281",
+    "https://tu-dresden.de/mn/physik/studium/master-ome/application": "3365701ac6f5334049d81260f22e3ba10cc3b8745dc94a676c90072d0519fdc3"
+  },
+  "totalTokens": 12263,
+  "costUsd": 0.015591899999999999,
+  "defects": 1,
+  "reviews": 3
+}

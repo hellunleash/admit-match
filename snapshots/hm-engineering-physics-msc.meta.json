@@ -1,0 +1,13 @@
+{
+  "programId": "hm-engineering-physics-msc",
+  "extractedAt": "2026-08-01T15:03:25.206Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://sci.hm.edu/studierende/studiengaenge/bachelor/technische_physik/index.en.html": "11007a2fcc74e4e72681426be5b77ccd2396aa041b49a29e004385d62398135f"
+  },
+  "totalTokens": 8056,
+  "costUsd": 0.010231200000000001,
+  "defects": 0,
+  "reviews": 0
+}
