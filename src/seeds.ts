@@ -83,10 +83,10 @@ export const HARDWARE_SEEDS: Seed[] = [
     city: "Dresden",
     programName: "Organic and Molecular Electronics M.Sc.",
     taughtInHint: "english",
-    admissionUrl: "https://tu-dresden.de/mn/physik/studium/master-ome/application",
-    admissionChecked: "found",
+    admissionChecked: "opened",
+    admissionUrl: "https://tu-dresden.de/mn/physik/studium/master-sep/application",
     statuteUrl:
-      "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
+      "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
     statuteChecked: "found",
     notes:
       "PHYSICS FACULTY — accepts physics, chemistry, nanotechnology, materials science or related. Aptitude assessment covers classical mechanics, electrodynamics, optics, thermodynamics, quantum theory and composition of matter: the applicant's transcript covers all six. Requires a 4-YEAR bachelor for non-EU (B.Tech qualifies). PRE-GRADUATION APPLICATION IS THE INTENDED ROUTE — the deadline row reads 'Non-EU (prospective) degree from a non-German institution', 1 Apr - 31 May, and degreeInProgress.allowed=yes requiring only (a) confirmation of >=80% of the credit points needed to graduate and (b) a written confirmation of anticipated graduation date. English C1, but waiverIfMediumOfInstruction=yes and accepted evidence includes a degree 'vollstaendig in englischer Sprache abgelegt' — so an English-medium B.Tech plus a medium-of-instruction letter may satisfy it without any test; IELTS 7.0 is one route, not the requirement. Possibly renamed 'Sustainable Electronics and Photonics' (same course id 4856) — confirm.",

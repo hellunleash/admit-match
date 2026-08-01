@@ -8,10 +8,11 @@
     "value": "english",
     "provenance": {
       "sourceType": "satzung",
-      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
-      "snippet": "Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER)",
+      "section": "§ 2 Nummer 2",
       "lang": "de",
-      "fetchedAt": "2026-08-01T15:00:58.211Z"
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
     "confidence": 0.9
   },
@@ -19,73 +20,91 @@
     "value": "unstated",
     "provenance": {
       "sourceType": "satzung",
-      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
-      "snippet": "In zulassungsfreien Studiengängen, senden Sie bitte nach festgestellter Eignung den Eignungsbescheid sowie alle angeforderten Unterlagen an das Immatrikulationsamt oder ans International Office.\n- In zulassungsbeschränkten Studiengängen erhalten Sie erst mit Ihrem Zulassungsbescheid eine gesonderte Aufforderung zur Einreichung der erforderlichen Unterlagen (ggf. mit Eignungsbescheid, sofern ein Eignungsfeststellungsverfahren Voraussetzung ist).",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "unstated",
+      "section": "unstated",
       "lang": "de",
-      "fetchedAt": "2026-08-01T15:00:58.211Z"
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
-    "confidence": 0.5
+    "confidence": 0
   },
   "requirementSets": {
     "value": [
       {
         "setId": "primary",
-        "label": "Studienvoraussetzungen",
+        "label": "Zugangsvoraussetzungen",
         "requirements": [
           {
             "canonical": [
               "other"
             ],
-            "label": "Erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss auf einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet",
+            "label": "ein erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss oder ein Abschluss einer staatlichen oder staatlich anerkannten Berufsakademie in einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet",
             "provenance": {
               "sourceType": "satzung",
-              "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
-              "snippet": "Erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss auf einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet",
+              "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+              "snippet": "ein erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss oder ein Abschluss einer staatlichen oder staatlich anerkannten Berufsakademie in einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet",
+              "section": "§ 2 Nummer 1",
               "lang": "de",
-              "fetchedAt": "2026-08-01T15:00:58.211Z"
+              "fetchedAt": "2026-08-01T15:51:37.837Z"
             },
             "exampleCourses": []
           },
           {
             "canonical": [
-              "physics",
-              "other",
+              "physics"
+            ],
+            "label": "der Grundlagen der Physik in den Themenbereichen Mechanik, Wärmelehre, Elektromagnetismus, Optik, Quantenphysik und Festkörperphysik",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+              "snippet": "der Grundlagen der Physik in den Themenbereichen Mechanik, Wärmelehre, Elektromagnetismus, Optik, Quantenphysik und Festkörperphysik",
+              "section": "§ 5 Absatz 1 Nummer 1",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:51:37.837Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "materials_chemistry"
+            ],
+            "label": "der Grundlagen der Allgemeinen und anorganischen Chemie oder der physikalischen Chemie",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+              "snippet": "der Grundlagen der Allgemeinen und anorganischen Chemie oder der physikalischen Chemie",
+              "section": "§ 5 Absatz 1 Nummer 2",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:51:37.837Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
               "math_pure"
             ],
-            "label": "Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens",
+            "label": "der mit Nummer 1 und Nummer 2 verbundenen mathematischen Grundlagen",
             "provenance": {
               "sourceType": "satzung",
-              "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
-              "snippet": "Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens (ggf. mit Eignungsgespräch) gemäß Eignungsfeststellungsordnung",
+              "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+              "snippet": "der mit Nummer 1 und Nummer 2 verbundenen mathematischen Grundlagen",
+              "section": "§ 5 Absatz 1 Nummer 3",
               "lang": "de",
-              "fetchedAt": "2026-08-01T15:00:58.211Z"
-            },
-            "exampleCourses": []
-          },
-          {
-            "canonical": [
-              "total"
-            ],
-            "label": "a minimum of a 4-year Bachelor degree or 3-year Bachelor’s degree plus 1-year Master’s degree is required (i.e., a minimum of a 4-year study duration).",
-            "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
-              "snippet": "Please note: from most non-EU countries (including India, China...) a minimum of a 4-year Bachelor degree or 3-year Bachelor’s degree plus 1-year Master’s degree is required (i.e., a minimum of a 4-year study duration).",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T15:00:59.846Z"
+              "fetchedAt": "2026-08-01T15:51:37.837Z"
             },
             "exampleCourses": []
           }
         ],
-        "additionalStep": "Eignungsfeststellungsverfahren (ggf. mit Eignungsgespräch)"
+        "additionalStep": "Eignungsgespräch gemäß § 6"
       }
     ],
     "provenance": {
       "sourceType": "satzung",
-      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
-      "snippet": "Studienvoraussetzungen \n• Erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss auf einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet \n• Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen\n• Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens (ggf. mit Eignungsgespräch) gemäß Eignungsfeststellungsordnung",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "Gemäß § 3 der Studienordnung für den konsekutiven Masterstudiengang Sustainable Electronics and Photonics sind Bewerberinnen und Bewerber für das Studium in diesem Studiengang qualifiziert und damit zugangsberechtigt, wenn nachweislich folgende Voraussetzungen vorliegen: 1. ein erster in Deutschland anerkannter berufsqualifizierender Hochschulabschluss oder ein Abschluss einer staatlichen oder staatlich anerkannten Berufsakademie in einem naturwissenschaftlichen oder ingenieurwissenschaftlichen Gebiet, 2. Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER) und 3. die besondere Eignung zum Studium im konsekutiven Masterstudiengang Sustainable Electronics and Photonics gemäß § 5.",
+      "section": "§ 2",
       "lang": "de",
-      "fetchedAt": "2026-08-01T15:00:58.211Z"
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
     "confidence": 0.9
   },
@@ -93,41 +112,42 @@
     "value": "unstated",
     "provenance": {
       "sourceType": "satzung",
-      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
-      "snippet": "Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens (ggf. mit Eignungsgespräch) gemäß Eignungsfeststellungsordnung",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "unstated",
+      "section": "unstated",
       "lang": "de",
-      "fetchedAt": "2026-08-01T15:00:58.211Z"
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
-    "confidence": 0.5
+    "confidence": 0
   },
   "auflagen": {
     "value": {
-      "offered": "unstated",
-      "maxEcts": 42,
-      "deadline": "unstated"
+      "offered": "yes",
+      "deadline": "ein Semester"
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
-      "snippet": "Sustainable Electronics and Photonics application form (in uni assist referred to as an \"aptitude test\")",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:59.846Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "Kann die Bewerberin oder der Bewerber den erfolgreichen Abschluss über den gemäß § 2 Nummer 1 erforderlichen Hochschulabschluss nicht bis zum Ende der Immatrikulationsfrist dem Sachgebiet 8.2 Immatrikulationsamt beziehungsweise Sachgebiet 8.3 International Office vorlegen, erfolgt nur eine befristete Immatrikulation. Die Dauer der Befristung wird vom Immatrikulationsamt beziehungsweise dem International Office festgelegt. Sie beträgt in der Regel ein Semester.",
+      "section": "§ 7 Absatz 3",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
-    "confidence": 0.1
+    "confidence": 0.9
   },
   "degreeInProgress": {
     "value": {
       "allowed": "yes",
       "minEctsSoFar": 80,
-      "thesisMustBeRegistered": false,
-      "certificateDeadline": "unstated"
+      "certificateDeadline": "Zum Nachweis dessen hat die Bewerberin oder der Bewerber eine entsprechende Bescheinigung seiner Hochschule im Original oder in amtlich beglaubigter Kopie vorzulegen."
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
-      "snippet": "If you do not have your degree certificate yet, we need: - a confirmation of a successful attainment of least 80% of the credit points required for a successful graduation - a written confirmation from your university of your anticipated graduation",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:59.846Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "Liegt zum Zeitpunkt der Antragstellung der Nachweis des ersten berufsqualifizierenden Hochschulabschlusses (Abschlusszeugnis) gemäß Absatz 2 Nummer 2 noch nicht vor, wird die Bewerberin oder der Bewerber auch dann in das Eignungsfeststellungsverfahren nach dieser Ordnung einbezogen, wenn bereits 80 Prozent der durch den Hochschulabschluss erreichbaren Leistungspunkte durch Bescheinigung der Herkunftshochschule nachgewiesen werden. Zum Nachweis dessen hat die Bewerberin oder der Bewerber eine entsprechende Bescheinigung seiner Hochschule im Original oder in amtlich beglaubigter Kopie vorzulegen.",
+      "section": "§ 4 Absatz 4",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
     "confidence": 0.9
   },
@@ -138,12 +158,8 @@
         "cefr": "C1",
         "acceptedEvidence": [
           {
-            "name": "IELTS",
-            "overall": 7
-          },
-          {
-            "name": "TOEFL iBT",
-            "overall": 95
+            "name": "Hochschulreife",
+            "note": "mit ausgewiesenem Sprachniveau C1 (GER)"
           },
           {
             "name": "Hochschulreife",
@@ -152,6 +168,14 @@
           {
             "name": "Hochschulabschluss",
             "note": "vollständig in englischer Sprache abgelegt"
+          },
+          {
+            "name": "IELTS",
+            "overall": 7
+          },
+          {
+            "name": "TOEFL iBT",
+            "overall": 95
           }
         ],
         "waiverIfMediumOfInstruction": "yes",
@@ -160,49 +184,35 @@
     ],
     "provenance": {
       "sourceType": "satzung",
-      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
-      "snippet": "Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen\n• Nachweis über die geforderten Englischkenntnisse auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (Nachweis z.B. über IELTS: 7.0 oder TOEFL ibt 95 (neu: 5.0); Zeugnis über vollständig in englischer Sprache abgelegten Hochschulreife oder vollständig in englischer Sprache abgelegten Hochschulabschluss)",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "Kenntnisse der englischen Sprache auf der Niveaustufe C1 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER) ... Nachweis der geforderten Englischkenntnisse gemäß § 2 Nummer 2 durch a) Zeugniskopie der allgemeinen oder fachgebundenen Hochschulreife mit ausgewiesenem Sprachniveau C1 (GER), b) Zeugniskopie der vollständig in englischer Sprache abgelegten Hochschulreife oder Zeugnis über einen vollständig in englischer Sprache abgelegten Hochschulabschluss, c) Ergebnis eines international angebotenen Tests wie zum Beispiel IELTS-Test: mindestens 7.0, TOEFL internetbasiert: mindestens 95 Punkte.",
+      "section": "§ 2 Nummer 2, § 4 Absatz 2 Nummer 5",
       "lang": "de",
-      "fetchedAt": "2026-08-01T15:00:58.211Z"
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
     "confidence": 0.9
   },
   "tests": {
-    "value": [
-      {
-        "name": "APS certificate",
-        "required": "yes",
-        "thresholds": "unstated",
-        "appliesTo": {
-          "description": "Chinese, Mongolian and Vietnamese applicants",
-          "nationalities": [
-            "China",
-            "Mongolia",
-            "Vietnam"
-          ],
-          "euEea": "excluded",
-          "lisbonConvention": "non_signatory"
-        },
-        "exemptions": "unstated"
-      }
-    ],
+    "value": [],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
-      "snippet": "Chinese, Mongolian and Vietnamese applicants: original APS certificate from the Academic Evaluation Centre of German Embassy",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:59.846Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "unstated",
+      "section": "unstated",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
-    "confidence": 0.9
+    "confidence": 0
   },
   "interview": {
     "value": "yes",
     "provenance": {
       "sourceType": "satzung",
-      "sourceUrl": "https://tu-dresden.de/studium/vor-dem-studium/studienangebot/sins/sins_eignungsfeststellung_detail?autoid=4856",
-      "snippet": "Nachweis von fundierten Fachkenntnissen aus bestimmten Bereichen der Physik, Chemie und Mathematik im Rahmen eines Eignungsfeststellungsverfahrens (ggf. mit Eignungsgespräch) gemäß Eignungsfeststellungsordnung",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/ressourcen/dateien/sustainable-electronics-and-photonics-sep/studiendokumente/EFO_Sustainable-Electronics-and-Photonics_04-03-2026.pdf",
+      "snippet": "Ergibt sich die besondere Eignung bzw. die Nichteignung hiernach nicht bereits aus den Unterlagen der Bewerberin bzw. des Bewerbers, wird ein Eignungsgespräch gemäß § 6 vor dem Zugangsausschuss durchgeführt.",
+      "section": "§ 5 Absatz 2",
       "lang": "de",
-      "fetchedAt": "2026-08-01T15:00:58.211Z"
+      "fetchedAt": "2026-08-01T15:51:37.837Z"
     },
     "confidence": 0.9
   },
@@ -210,10 +220,11 @@
     "value": "both",
     "provenance": {
       "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-sep/application",
       "snippet": "Depending on the country which issued your first degree, you will have to apply either directly at TU Dresden or via the application portal uni-assist (handling fee applies; applications will only be processed once uni-assist has received your payment).",
+      "section": "How can I apply?",
       "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:59.846Z"
+      "fetchedAt": "2026-08-01T15:51:42.760Z"
     },
     "confidence": 0.9
   },
@@ -221,21 +232,19 @@
     "value": [
       {
         "intake": "winter",
-        "opens": "1 June",
-        "closes": "15 July",
+        "opens": "June 1",
+        "closes": "July 15",
         "appliesTo": {
           "description": "German",
-          "nationalities": [
-            "Germany"
-          ],
+          "nationalities": [],
           "euEea": "any",
           "lisbonConvention": "any"
         }
       },
       {
         "intake": "winter",
-        "opens": "1 April",
-        "closes": "15 July",
+        "opens": "April 1",
+        "closes": "July 15",
         "appliesTo": {
           "description": "EU",
           "nationalities": [],
@@ -245,8 +254,8 @@
       },
       {
         "intake": "winter",
-        "opens": "1 April",
-        "closes": "15 July",
+        "opens": "April 1",
+        "closes": "July 15",
         "appliesTo": {
           "description": "Non-EU (prospective) degree from a German institution of higher education",
           "nationalities": [],
@@ -256,8 +265,8 @@
       },
       {
         "intake": "winter",
-        "opens": "1 April",
-        "closes": "31 May",
+        "opens": "April 1",
+        "closes": "May 31",
         "appliesTo": {
           "description": "Non-EU (prospective) degree from a non-German institution of higher education",
           "nationalities": [],
@@ -268,13 +277,51 @@
     ],
     "provenance": {
       "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-ome/application",
+      "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-sep/application",
       "snippet": "You can enroll to our Master’s Program only in the winter semester (i.e. each October). To enroll in October, the following application deadlines must be met: Nationality Start Application Period Closing Date Application Period German June 1 July 15 EU April 1 July 15 Non-EU (prospective) degree from a German institution of higher education April 1 July 15 Non-EU (prospective) degree from a non-German institution of higher education April 1 May 31",
+      "section": "When can you apply?",
       "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:59.846Z"
+      "fetchedAt": "2026-08-01T15:51:42.760Z"
     },
     "confidence": 0.9
   },
-  "qualitative": [],
+  "qualitative": [
+    {
+      "value": "Students with a sound knowledge in physics and mathematics",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-sep/application",
+        "snippet": "Students with a sound knowledge in physics and mathematics",
+        "section": "Who can apply?",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T15:51:42.760Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Students who enjoy interdisciplinary research and learning",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-sep/application",
+        "snippet": "Students who enjoy interdisciplinary research and learning",
+        "section": "Who can apply?",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T15:51:42.760Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Students who want to work practically in a lab",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://tu-dresden.de/mn/physik/studium/master-sep/application",
+        "snippet": "Students who want to work practically in a lab",
+        "section": "Who can apply?",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T15:51:42.760Z"
+      },
+      "confidence": 0.9
+    }
+  ],
   "extractedAt": "2024-07-29T12:00:00Z"
 }
