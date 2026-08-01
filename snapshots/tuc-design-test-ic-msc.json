@@ -1,0 +1,213 @@
+{
+  "programId": "tuc-design-test-ic-msc",
+  "university": "Technische Universität Chemnitz",
+  "programName": "Design and Test for Integrated Circuits M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "The medium of instruction is English .",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 1
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "Admission requirements for international students",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.8
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "primary",
+        "label": "Academic:",
+        "requirements": [
+          {
+            "canonical": [
+              "engineering_other"
+            ],
+            "label": "Bachelor’s degree in Elektrotechnik und Informationstechnik from Chemnitz University of Technology or an equivalent appropriate degree in the area of electrical engineering and information technology",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+              "snippet": "Bachelor’s degree in Elektrotechnik und Informationstechnik from Chemnitz University of Technology or an equivalent appropriate degree in the area of electrical engineering and information technology (equivalency will be assessed by the examination board)",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:42:05.484Z"
+            },
+            "exampleCourses": []
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "Academic: Bachelor’s degree in Elektrotechnik und Informationstechnik from Chemnitz University of Technology or an equivalent appropriate degree in the area of electrical engineering and information technology (equivalency will be assessed by the examination board)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "Admission requirements for international students",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.8
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "Admission requirements for international students",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.8
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "Admission requirements for international students",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.8
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "B2",
+        "acceptedEvidence": [
+          {
+            "name": "proof of English language proficiency",
+            "note": "B2 or equivalent"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "admission"
+      },
+      {
+        "language": "german",
+        "cefr": "A1",
+        "acceptedEvidence": [
+          {
+            "name": "German Level A1 Certificate"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "no",
+        "requiredFor": "admission"
+      },
+      {
+        "language": "german",
+        "cefr": "A2",
+        "acceptedEvidence": [
+          {
+            "name": "German Level A2 Certificate"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "no",
+        "requiredFor": "enrolment"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "English: B2 or equivalent proof of English language proficiency German: A1 for regular admission and enrolment. A2 until the end of the 3 rd semester ... Though the mode of teaching is in English for this course. German Level A1 Certificate is required for regular admission and enrolment and German Level A2 Certificate should be submitted by the end of 3rd semester. The medium of instruction is English . The additional requirement for German language proficiency is caused by general regularities of the university.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "Admission requirements for international students",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "no",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "Admission requirements for international students",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.8
+  },
+  "applicationRoute": {
+    "value": "uni_assist",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "International students have to apply though Uni Assist according to the instructions given by the related sites of uni-assist .",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [
+      {
+        "intake": "winter",
+        "closes": "15 th July",
+        "appliesTo": {
+          "description": "international students, Uni Assist",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+      "snippet": "Application deadline: 15 th July (international students, Uni Assist)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:42:05.484Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [
+    {
+      "value": "equivalency will be assessed by the examination board",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+        "snippet": "Bachelor’s degree in Elektrotechnik und Informationstechnik from Chemnitz University of Technology or an equivalent appropriate degree in the area of electrical engineering and information technology (equivalency will be assessed by the examination board)",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T18:42:05.484Z"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "extractedAt": "2026-08-01T18:42:05.484Z"
+}

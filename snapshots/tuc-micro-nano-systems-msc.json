@@ -1,0 +1,252 @@
+{
+  "programId": "tuc-micro-nano-systems-msc",
+  "university": "Technische Universität Chemnitz",
+  "programName": "Micro and Nano Systems M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "This English-language programme",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "The application portal in Uniassist opens at the beginning of May 2026.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.1
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "academic_degree",
+        "label": "Academic Degree Requirements",
+        "requirements": [
+          {
+            "canonical": [
+              "other"
+            ],
+            "label": "Bachelor’s degree in Elektrotechnik und Informationstechnik from Chemnitz University of Technology or an equivalent appropriate degree in the area of electrical engineering and information technology",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+              "snippet": "Bachelor’s degree in Elektrotechnik und Informationstechnik from Chemnitz University of Technology or an equivalent appropriate degree in the area of electrical engineering and information technology (equivalency will be assessed by the examination board)",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:41:36.666Z"
+            },
+            "exampleCourses": []
+          }
+        ],
+        "additionalStep": "equivalency will be assessed by the examination board"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "Academic: Bachelor’s degree in Elektrotechnik und Informationstechnik from Chemnitz University of Technology or an equivalent appropriate degree in the area of electrical engineering and information technology (equivalency will be assessed by the examination board)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.9
+  },
+  "referenceCurriculum": {
+    "value": {
+      "referenceProgram": "Bachelorstudiengang Elektrotechnik und Informationstechnik, Technische Universität Chemnitz",
+      "equivalenceWording": "wer an der Technischen Universität Chemnitz im Bachelorstudiengang Elektrotechnik und Informationstechnik oder wer in einem inhaltlich gleichwertigen Studiengang einen berufsqualifizierenden Hochschulabschluss erworben hat",
+      "referenceCurriculumUrl": "unstated",
+      "selfAssessmentUrl": "unstated"
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2023/AB_2023_14_2.pdf",
+      "snippet": "wer an der Technischen Universität Chemnitz im Bachelorstudiengang Elektrotechnik und Informationstechnik oder wer in einem inhaltlich gleichwertigen Studiengang einen berufsqualifizierenden Hochschulabschluss erworben hat",
+      "section": "§ 3 Abs. 1",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:41:33.536Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2023/AB_2023_14_2.pdf",
+      "snippet": "Aufgrund von § 13 Abs. 4 i. V. m. § 36 Abs. 1 des Gesetzes über die Freiheit der Hochschulen im Freistaat Sachsen (Sächsisches Hochschulfreiheitsgesetz - SächsHSFG) in der Fassung der Bekanntmachung vom 15. Januar 2013 (SächsGVBI. S. 3), das zuletzt durch das Gesetz vom 1. Juni 2022 (SächsGVBI. S. 381) geändert worden ist, hat der Fakultätsrat der Fakultät für Elektrotechnik und Informationstechnik der Technischen Universität Chemnitz die folgende Studienordnung erlassen:",
+      "section": "§ 3",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:41:33.536Z"
+    },
+    "confidence": 0.1
+  },
+  "auflagen": {
+    "value": {
+      "offered": "yes",
+      "maxEcts": 42,
+      "deadline": "end of the 3 rd semester"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "German Level A1 Certificate is required for regular admission and enrolment and German Level A2 Certificate should be submitted by the end of 3 rd semester.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.9
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "yes",
+      "minEctsSoFar": 150,
+      "thesisMustBeRegistered": false,
+      "certificateDeadline": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "Furthermore, it is possible to apply for a higher semester, provided that sufficient credits have been earned and the semester classification applied for corresponds to the semester for which admission has been granted.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.8
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "B2",
+        "acceptedEvidence": [
+          {
+            "name": "B2 or equivalent proof of English language proficiency",
+            "note": "unstated"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "admission"
+      },
+      {
+        "language": "german",
+        "cefr": "A1",
+        "acceptedEvidence": [
+          {
+            "name": "German Level A1 Certificate",
+            "note": "unstated"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "admission"
+      },
+      {
+        "language": "german",
+        "cefr": "A2",
+        "acceptedEvidence": [
+          {
+            "name": "German Level A2 Certificate",
+            "note": "unstated"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "enrolment"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "English: B2 or equivalent proof of English language proficiency\nGerman: A1 for regular admission and enrolment. A2 until the end of the 3 rd semester",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "Admission requirements for international students",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "no",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "Admission requirements for international students",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.8
+  },
+  "applicationRoute": {
+    "value": "uni_assist",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "International students have to apply though Uni Assist according to the instructions given by the related sites of uni-assist .",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [
+      {
+        "intake": "winter",
+        "opens": "unstated",
+        "closes": "15 th July",
+        "appliesTo": {
+          "description": "international students",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+      "snippet": "Application deadline: 15 th July (international students, Uni Assist)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:41:36.666Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [
+    {
+      "value": "Students applying to this course are expected to have fundamental knowledge in the following areas: IC design, Analog electronics (Operational Amplifiers), Digital Logic.",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+        "snippet": "Students applying to this course are expected to have fundamental knowledge in the following areas: IC design, Analog electronics (Operational Amplifiers), Digital Logic.",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T18:41:36.666Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "Über die Gleichwertigkeit sowie über den Zugang anderer Bewerber entscheidet der Prüfungsausschuss.",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2023/AB_2023_14_2.pdf",
+        "snippet": "Über die Gleichwertigkeit sowie über den Zugang anderer Bewerber entscheidet der Prüfungsausschuss.",
+        "section": "§ 3 Abs. 2",
+        "lang": "de",
+        "fetchedAt": "2026-08-01T18:41:33.536Z"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "extractedAt": "2024-01-01T12:00:00Z"
+}

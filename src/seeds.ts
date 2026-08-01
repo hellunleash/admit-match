@@ -116,6 +116,32 @@ export const HARDWARE_SEEDS: Seed[] = [
       "UNVERIFIED whether the MASTER exists in this shape — only the bachelor page is confirmed. Bachelor runs specialisation tracks in semiconductor/micro- and nanotechnology and in photonics/laser technology, with standing Industrial Advisory Boards for both. Same degree title as the applicant's, so recognition friction is near zero. Munich ecosystem: Infineon HQ, Apple silicon design centre, Intel, Fraunhofer EMFT. FH — PhD via cooperative doctorate.",
   },
   {
+    programId: "tuc-micro-nano-systems-msc",
+    university: "Technische Universität Chemnitz",
+    city: "Chemnitz",
+    programName: "Micro and Nano Systems M.Sc.",
+    taughtInHint: "english",
+    admissionUrl: "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn",
+    admissionChecked: "opened",
+    statuteUrl:
+      "https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2023/AB_2023_14_2.pdf",
+    statuteChecked: "found",
+    notes:
+      "Faculty of Electrical Engineering and Information Technology. DEGREE REQUIREMENT IS EE-NAMED: 'Bachelor in Elektrotechnik und Informationstechnik ... or an equivalent appropriate degree in the AREA OF electrical engineering and information technology' — Engineering Physics is an equivalence argument here, unlike BTU (content test naming physics) or TUD SEP (natural sciences OR engineering). Prior knowledge expected: IC design, analog electronics (operational amplifiers), digital logic. Applicant has digital logic (EP207N: Boolean algebra, K-maps, TTL/CMOS) and partial analog (BJT/FET amplifiers; op-amps unconfirmed) but NO IC design. English B2. German A1 for admission, A2 by end of 3rd semester — applicant's B1 clears both. Latest statutes: Studienordnung + Pruefungsordnung both 30.05.2023 (AB_2023_14_2 / _3). No separate Zugangs- or Eignungsfeststellungsordnung is published for this programme.",
+  },
+  {
+    programId: "tuc-design-test-ic-msc",
+    university: "Technische Universität Chemnitz",
+    city: "Chemnitz",
+    programName: "Design and Test for Integrated Circuits M.Sc.",
+    taughtInHint: "english",
+    admissionUrl: "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt",
+    admissionChecked: "opened",
+    statuteChecked: "todo",
+    notes:
+      "Same EE-named degree requirement as Micro and Nano Systems. English-taught, 120 ECTS, winter start. English B2; German A1 for admission, A2 by end of 3rd semester. International deadline 15 July via uni-assist. No specific technical prerequisites stated beyond the disciplinary requirement — which makes it LESS prerequisite-gated than Micro and Nano Systems, though the degree-area requirement still has to be argued. Regulations index: https://www.tu-chemnitz.de/zpa/sopo/88/C9C.php",
+  },
+  {
     programId: "th-wildau-photonics-meng",
     university: "TH Wildau",
     city: "Wildau (Berlin)",

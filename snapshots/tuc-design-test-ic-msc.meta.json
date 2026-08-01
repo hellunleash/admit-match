@@ -1,0 +1,13 @@
+{
+  "programId": "tuc-design-test-ic-msc",
+  "extractedAt": "2026-08-01T18:42:24.698Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_dt": "024f31fa8c701c444828e670eacd9103bad52b84baaee3115cd85b644e120275"
+  },
+  "totalTokens": 10436,
+  "costUsd": 0.0121178,
+  "defects": 0,
+  "reviews": 0
+}

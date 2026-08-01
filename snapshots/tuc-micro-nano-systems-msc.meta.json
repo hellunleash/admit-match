@@ -1,0 +1,14 @@
+{
+  "programId": "tuc-micro-nano-systems-msc",
+  "extractedAt": "2026-08-01T18:42:05.483Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2023/AB_2023_14_2.pdf": "a242ce9674173b04a7f7b521646d038ecbd37784f9c6a33444c19d793ba24050",
+    "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_mn": "9dd4792bcdb372d63331cc6ec77c7d087206129e2f09455d45adce906b4b621d"
+  },
+  "totalTokens": 20948,
+  "costUsd": 0.0170644,
+  "defects": 1,
+  "reviews": 7
+}
