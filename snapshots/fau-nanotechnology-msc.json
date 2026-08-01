@@ -5,130 +5,321 @@
   "field": "Computer Science",
   "degree": "MSc",
   "taughtIn": {
-    "value": "unstated",
+    "value": "english",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "Abweichend von § 4 Abs. 5 ABMPO/TF ist die Unterrichts- und Prüfungssprache in den Masterstudiengängen Englisch.",
+      "section": "§ 41 Abs. 4",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
-    "confidence": 0.5
+    "confidence": 0.9
   },
   "admissionRestricted": {
     "value": "unstated",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "§ 54 Qualifikation zum Masterstudium Nanotechnology, Nachweise, Zugangsvoraussetzung",
+      "section": "§ 54",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
     "confidence": 0.5
   },
-  "requirementSets": {
-    "value": [],
+  "minGermanGrade": {
+    "value": 4,
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "Abschlussnote zwischen 2,51 und 4,0",
+      "section": "§ 54 Abs. 6",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
+    },
+    "confidence": 0.9
+  },
+  "gradeTriggeredAssessment": {
+    "value": {
+      "worseThan": 2.51,
+      "consequence": "mündliche Zugangsprüfung"
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "Bewerberinnen bzw. Bewerber, mit fachspezifischem Erstabschluss i. S. d. Abs. 1 Satz 1 und einer Abschlussnote zwischen 2,51 und 4,0 sowie Bewerberinnen und Bewerber mit fachverwandtem Abschluss i. S. d. Abs. 1 Satz 2, die den Zugangstest nach Abs. 5 gemäß Abs. 5 Satz 3 erfolgreich absolviert haben auf Basis folgender Kriterien und Gewichtung beurteilt:",
+      "section": "§ 54 Abs. 6",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
+    },
+    "confidence": 0.9
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "fachspezifischer_abschluss",
+        "label": "Fachspezifischer Abschluss",
+        "requirements": [],
+        "additionalStep": "mündliche Zugangsprüfung"
+      },
+      {
+        "setId": "fachverwandter_abschluss",
+        "label": "Fachverwandter Abschluss",
+        "requirements": [
+          {
+            "canonical": [
+              "math_pure"
+            ],
+            "label": "Mathematik",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+              "snippet": "mind. 10 ECTS-Punkte in Mathematik,",
+              "section": "§ 54 Abs. 1 Satz 2 Nr. 1",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T19:00:29.642Z"
+            },
+            "minEcts": 10,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "physics",
+              "materials_chemistry"
+            ],
+            "label": "Physik und Chemie",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+              "snippet": "mind. 20 ECTS-Punkte in Physik und Chemie,",
+              "section": "§ 54 Abs. 1 Satz 2 Nr. 2",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T19:00:29.642Z"
+            },
+            "minEcts": 20,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "cs_practical",
+              "other"
+            ],
+            "label": "Laborpraktika und IT",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+              "snippet": "mind. 10 ECTS-Punkte in Laborpraktika und IT und",
+              "section": "§ 54 Abs. 1 Satz 2 Nr. 3",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T19:00:29.642Z"
+            },
+            "minEcts": 10,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "other"
+            ],
+            "label": "nanotechnologischen Grundlagen",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+              "snippet": "mind. 20 ECTS-Punkte in nanotechnologischen Grundlagen.",
+              "section": "§ 54 Abs. 1 Satz 2 Nr. 4",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T19:00:29.642Z"
+            },
+            "minEcts": 20,
+            "exampleCourses": []
+          }
+        ],
+        "additionalStep": "elektronischer Zugangstest und mündliche Zugangsprüfung"
+      }
+    ],
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "§ 54 Qualifikation zum Masterstudium Nanotechnology, Nachweise, Zugangsvoraussetzung\n(1) 1Fachspezifischer Abschluss i. S. d. § 33 Abs. 1 Nr. 1 ABMPO/TF ist der Abschluss des Bachelorstudiengangs Nanotechnologie nach dieser Fachstudien- und Prüfungsordnung bzw. ein gleichwertiger in- oder ausländischer Abschluss im Fach Nanotechnologie, der hinsichtlich der Qualifikation keine wesentlichen Unterschiede zu dem Bachelorabschluss nach dieser Fachstudien- und Prüfungsordnung aufweist. 2Als fachverwandte bzw. im Hinblick auf die Qualifikation nicht wesentlich unterschiedliche Abschlüsse im Sinne des § 33 Abs. 1 Nr. 1 Alt. 2 ABMPO/TF werden Abschlüsse in Studiengängen mit breiten nanotechnologischen Schwerpunkten anerkannt, wenn und soweit in ihnen folgende Mindestkenntnisse vermittelt wurden:\n1. mind. 10 ECTS-Punkte in Mathematik,\n2. mind. 20 ECTS-Punkte in Physik und Chemie,\n3. mind. 10 ECTS-Punkte in Laborpraktika und IT und\n4. mind. 20 ECTS-Punkte in nanotechnologischen Grundlagen.\n(2) 1Soweit den Bewerberinnen und Bewerbern nicht gemäß Abs. 4 direkter Zugang zum Masterstudiengang gewährt werden kann, wird das weitere Verfahren auf einer (fachspezifischer Erstabschluss i. S. d. Abs. 1 Satz 1) bzw. auf zwei Stufen (fachverwandter Erstabschluss i. S. d. Abs. 1 Satz 2) durchgeführt. 2Für Bewerberinnen und Bewerber mit fachspezifischem Abschluss findet eine mündliche Zugangsprüfung gemäß Abs. 5 statt. 3Bewerberinnen bzw. Bewerber mit einem fachverwandten Abschluss nach Abs. 1 Satz 2 können gemäß Abs. 5 Satz 4 Anlage ABMPO/TF nur auf Grundlage eines bestandenen elektronischen Zugangstests (Abs. 5) und einer sich daran anschließenden bestandenen mündlichen Zugangsprüfung nach Abs. 7 in das Masterstudium aufgenommen werden.",
+      "section": "§ 54 Abs. 1, 2",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
     "confidence": 0.9
   },
   "assessmentStyle": {
-    "value": "unstated",
+    "value": "points",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "auf Basis folgender Kriterien und Gewichtung beurteilt:\n1. Grundkenntnisse im Bereich der Materialwissenschaft, Physik und Chemie der kondensierten Materie (insbesondere atomare Struktur, thermodynamische, optische, elektronische und magnetische Eigenschaften von Materialien sowie Charakterisierungsmethoden) (50 Prozent) und\n2. gute Kenntnisse in den Bereichen der Nanotechnologie, bspw. chemische Werkstoffprozessierung oder Nano Charakterisierungsmethoden (50 Prozent).",
+      "section": "§ 54 Abs. 6",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
-    "confidence": 0.5
+    "confidence": 0.9
+  },
+  "pointsRubric": {
+    "value": {
+      "criteria": [
+        {
+          "name": "Grundkenntnisse im Bereich der Materialwissenschaft, Physik und Chemie der kondensierten Materie (insbesondere atomare Struktur, thermodynamische, optische, elektronische und magnetische Eigenschaften von Materialien sowie Charakterisierungsmethoden)",
+          "max": 50
+        },
+        {
+          "name": "gute Kenntnisse in den Bereichen der Nanotechnologie, bspw. chemische Werkstoffprozessierung oder Nano Charakterisierungsmethoden",
+          "max": 50
+        }
+      ],
+      "passMarks": []
+    },
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "auf Basis folgender Kriterien und Gewichtung beurteilt:\n1. Grundkenntnisse im Bereich der Materialwissenschaft, Physik und Chemie der kondensierten Materie (insbesondere atomare Struktur, thermodynamische, optische, elektronische und magnetische Eigenschaften von Materialien sowie Charakterisierungsmethoden) (50 Prozent) und\n2. gute Kenntnisse in den Bereichen der Nanotechnologie, bspw. chemische Werkstoffprozessierung oder Nano Charakterisierungsmethoden (50 Prozent).",
+      "section": "§ 54 Abs. 6",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
+    },
+    "confidence": 0.8
   },
   "auflagen": {
     "value": {
-      "offered": "unstated"
+      "offered": "yes",
+      "maxEcts": 42,
+      "deadline": "unstated"
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "In der mündlichen Zugangsprüfung gemäß Abs. 5 Satz 3 ff. Anlage ABMPO/TF werden die Bewerberinnen bzw. Bewerber, mit fachspezifischem Erstabschluss i. S. d. Abs. 1 Satz 1 und einer Abschlussnote zwischen 2,51 und 4,0 sowie Bewerberinnen und Bewerber mit fachverwandtem Abschluss i. S. d. Abs. 1 Satz 2, die den Zugangstest nach Abs. 5 gemäß Abs. 5 Satz 3 erfolgreich absolviert haben auf Basis folgender Kriterien und Gewichtung beurteilt:",
+      "section": "§ 54 Abs. 6",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
-    "confidence": 0.5
+    "confidence": 0.8
   },
   "degreeInProgress": {
     "value": {
-      "allowed": "unstated"
+      "allowed": "unstated",
+      "minEctsSoFar": 150,
+      "thesisMustBeRegistered": false,
+      "certificateDeadline": "unstated"
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "Voraussetzungen für die Zulassung zur Masterarbeit (Modul M14) sind:\n1. der Erwerb von mindestens 60 ECTS-Punkten im Masterstudium und\n2. die Vorlage entsprechender Nachweise, falls der Zugang zum Masterstudium unter Auflagen gemäß § 33 Abs. 2 Satz 2 ABMPO/TF gewährt wurde.",
+      "section": "§ 53 Abs. 1",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
-    "confidence": 0.5
+    "confidence": 0.8
   },
   "language": {
-    "value": [],
+    "value": [
+      {
+        "language": "english",
+        "cefr": "B2",
+        "acceptedEvidence": [
+          {
+            "name": "schulischer Englischunterricht",
+            "note": "bis zur Niveaustufe B2 GER mit diesbezüglicher Zertifizierung im Zeugnis bzw. einer entsprechenden Bescheinigung der Schule"
+          },
+          {
+            "name": "TOEFL iBT",
+            "overall": 85
+          },
+          {
+            "name": "IELTS",
+            "overall": 5.5
+          }
+        ],
+        "waiverIfMediumOfInstruction": "yes",
+        "requiredFor": "admission"
+      }
+    ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "Als weitere Unterlage im Sinne des Abs. 2 Satz 6 Nr. 3 Anlage ABMPO/TF müssen alle Bewerberinnen und Bewerber einen Nachweis über englische Sprachkenntnisse auf dem Niveau von mindestens B2 des Gemeinsamen Europäischen Referenzrahmens (GER) für Sprachen durch ausreichende Schul- oder Hochschulkenntnisse oder geeignete Sprachzertifikate erbringen. 2Der Nachweis kann insbesondere durch den Nachweis\n1. des schulischen Englischunterrichts bis zur Niveaustufe B2 GER mit diesbezüglicher Zertifizierung im Zeugnis bzw. einer entsprechenden Bescheinigung der Schule,\n2. des erfolgreichen Test of English as a Foreign Language (TOEFL) mit mindestens 85 Punkten im iBT, oder\n3. des International English Language Testing System (IELTS) 5.5 oder höher\ngeführt werden; für alternative Nachweismöglichkeiten wird beispielhaft auf die Äquivalenztabelle des Sprachenzentrums der FAU verwiesen. 3Der Nachweis ist nicht zu erbringen, falls die Hochschulzugangsberechtigung bzw. der einschlägige erste berufsqualifizierende Abschluss in englischer Sprache erworben wurde.",
+      "section": "§ 54 Abs. 3",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
     "confidence": 0.9
   },
   "tests": {
     "value": [],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "§ 54 Qualifikation zum Masterstudium Nanotechnology, Nachweise, Zugangsvoraussetzung",
+      "section": "§ 54",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
-    },
-    "confidence": 0.9
-  },
-  "interview": {
-    "value": "unstated",
-    "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
-      "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
     "confidence": 0.5
+  },
+  "interview": {
+    "value": "yes",
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "Für Bewerberinnen und Bewerber mit fachspezifischem Abschluss findet eine mündliche Zugangsprüfung gemäß Abs. 5 statt.",
+      "section": "§ 54 Abs. 2",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
+    },
+    "confidence": 0.9
   },
   "applicationRoute": {
     "value": "unstated",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Bewerbung und Zulassung",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "§ 54 Qualifikation zum Masterstudium Nanotechnology, Nachweise, Zugangsvoraussetzung",
+      "section": "§ 54",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
     "confidence": 0.5
   },
   "deadlines": {
-    "value": [],
+    "value": [
+      {
+        "intake": "winter",
+        "opens": "unstated",
+        "closes": "unstated",
+        "appliesTo": {
+          "description": "Die Masterstudiengänge können jeweils entweder im Winter- oder im Sommersemester begonnen werden.",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "summer",
+        "opens": "unstated",
+        "closes": "unstated",
+        "appliesTo": {
+          "description": "Die Masterstudiengänge können jeweils entweder im Winter- oder im Sommersemester begonnen werden.",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+      "snippet": "Die Masterstudiengänge können jeweils entweder im Winter- oder im Sommersemester begonnen werden.",
+      "section": "§ 41 Abs. 2",
       "lang": "de",
-      "fetchedAt": "2026-08-01T18:53:03.416Z"
+      "fetchedAt": "2026-08-01T19:00:29.642Z"
     },
     "confidence": 0.9
   },
   "qualitative": [],
-  "extractedAt": "2026-08-01T18:53:03.416Z"
+  "extractedAt": "2026-08-01T19:00:29.642Z"
 }

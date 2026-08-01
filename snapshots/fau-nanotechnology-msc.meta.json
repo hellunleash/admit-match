@@ -1,13 +1,13 @@
 {
   "programId": "fau-nanotechnology-msc",
-  "extractedAt": "2026-08-01T18:53:23.704Z",
+  "extractedAt": "2026-08-01T19:01:12.355Z",
   "promptVersion": "2026-07-28.3",
   "model": "gemini-2.5-flash",
   "docHashes": {
-    "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/": "2af0cb8c7b04be96776f34f95ed758240b182f4fdc5a59743182d07df1404b57"
+    "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf": "b1ff94a9880ac4ba05b6131f9610b5bbbd09a76123730ff5205745acc7bf5536"
   },
-  "totalTokens": 12010,
-  "costUsd": 0.011589,
-  "defects": 0,
+  "totalTokens": 17362,
+  "costUsd": 0.021228999999999998,
+  "defects": 1,
   "reviews": 0
 }

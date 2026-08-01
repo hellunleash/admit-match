@@ -121,11 +121,13 @@ export const HARDWARE_SEEDS: Seed[] = [
     city: "Erlangen",
     programName: "Nanotechnology M.Sc.",
     taughtInHint: "english",
-    admissionUrl: "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
-    admissionChecked: "found",
-    statuteChecked: "todo",
+    admissionUrl: "https://www.fau.eu/degree-program/nanotechnology-m-sc",
+    admissionChecked: "opened",
+    statuteUrl:
+      "https://www.doc.zuv.fau.de//L1/PO/Tech/Werkstoffwissenschaften/konsolidierte_Fassungen/BSc-MSc_FPOWW_20240807_idF_20260213.pdf",
+    statuteChecked: "found",
     notes:
-      "PHYSICS EXPLICITLY NAMED: 'degrees recognized as subject-related are, in particular, bachelor's or diploma degrees in materials science, chemistry, PHYSICS, as well as courses of study with a broad nanotechnology focus.' English B2 only — the lowest language bar of any target so far, and no German stated. Distinguishes itself by an ENGINEERING focus rather than a physics one, which suits an Engineering Physics background. Ecosystem: Siemens, Fraunhofer IIS, the Erlangen-Nuernberg cluster; Infineon Regensburg within reach. Programme site: https://nano.study.fau.eu/",
+      "PHYSICS EXPLICITLY NAMED as subject-related, alongside materials science and chemistry. English B2 / TOEFL 80 / IELTS 5.5 — the lowest language bar found anywhere in this corridor; no German required. GRADE: the programme page says '2.50 or better', but the STATUTE (§ 54 Abs. 6) provides for an 'Abschlussnote zwischen 2,51 und 4,0' — so 2.50 is the threshold for DIRECT admission, and 2.51-4.0 routes the applicant into the aptitude procedure rather than rejecting them. assessmentStyle=points, interview=yes. The applicant's ~2.8 falls inside that band and is NOT excluded. This is a grade TRIGGER, not a cutoff, and the page's simplification would have cost an application. Minimum competencies at statute tier (§ 54 Abs. 1 Satz 2): mathematics 10 ECTS, physics+chemistry 20 ECTS, lab work and IT 10 ECTS, nanotechnological fundamentals 20 ECTS — the last is the weakest for this transcript and the one place the DTU credit->ECTS conversion decides an outcome. Deadlines: 31 May (winter), 30 Nov (summer). Statute: consolidated Fachstudien- und Pruefungsordnung 07.08.2024 in der Fassung vom 13.02.2026; English version at .../englisch/BSc-MSc_FPOWW_20240807_en.pdf. Ecosystem: Siemens, Fraunhofer IIS, Erlangen-Nuernberg; Infineon Regensburg within reach.",
   },
   {
     programId: "freiburg-microsystems-msc",
