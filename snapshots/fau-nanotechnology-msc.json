@@ -1,0 +1,134 @@
+{
+  "programId": "fau-nanotechnology-msc",
+  "university": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+  "programName": "Nanotechnology M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.5
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.5
+  },
+  "requirementSets": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.5
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.5
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.5
+  },
+  "language": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.5
+  },
+  "applicationRoute": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Bewerbung und Zulassung",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.5
+  },
+  "deadlines": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+      "snippet": "Studienorientierung: Der Weg an die FAU",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T18:53:03.416Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [],
+  "extractedAt": "2026-08-01T18:53:03.416Z"
+}

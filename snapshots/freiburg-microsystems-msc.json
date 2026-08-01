@@ -1,0 +1,321 @@
+{
+  "programId": "freiburg-microsystems-msc",
+  "university": "Albert-Ludwigs-Universität Freiburg",
+  "programName": "Microsystems Engineering M.Sc.",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "english",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "Language of instruction: English",
+      "section": "Facts and Figures",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 1
+  },
+  "admissionRestricted": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "The admissions committee will verify whether you fulfill the special prerequisites specified in the admissions regulations.",
+      "section": "Admissions",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.5
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "primary",
+        "label": "Prerequisites",
+        "requirements": [
+          {
+            "canonical": [
+              "engineering_other",
+              "electronics",
+              "other",
+              "other",
+              "other"
+            ],
+            "label": "Bachelor's degree in mechatronics, electrical, electronics, or mechanical engineering, or in a closely related study field",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+              "snippet": "Bachelor's degree in mechatronics, electrical, electronics, or mechanical engineering, or in a closely related study field",
+              "section": "Prerequisites",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:23.705Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure",
+              "other",
+              "physics",
+              "electronics",
+              "other",
+              "other",
+              "materials_chemistry"
+            ],
+            "label": "previous knowledge in mathematics, chemistry, physics, electronics, electrical and mechanical engineering and materials",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+              "snippet": "previous knowledge in mathematics, chemistry, physics, electronics, electrical and mechanical engineering and materials",
+              "section": "Prerequisites",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:23.705Z"
+            },
+            "exampleCourses": []
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "Prerequisites\n\nBachelor's degree in mechatronics, electrical, electronics, or mechanical engineering, or in a closely related study field, previous knowledge in mathematics, chemistry, physics, electronics, electrical and mechanical engineering and materials",
+      "section": "Prerequisites",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "binary",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "The admissions committee will verify whether you fulfill the special prerequisites specified in the admissions regulations.",
+      "section": "Admissions",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.8
+  },
+  "auflagen": {
+    "value": {
+      "offered": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "The admissions committee will verify whether you fulfill the special prerequisites specified in the admissions regulations.",
+      "section": "Admissions",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.5
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "yes",
+      "certificateDeadline": "If you have not yet completed your undergraduate studies, please submit a letter or certificate issued by your university, stating one of the following: registration, submission or completion of your final thesis, or expected graduation date ."
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "If you have not yet completed your undergraduate studies, please submit a letter or certificate issued by your university, stating one of the following: registration, submission or completion of your final thesis, or expected graduation date .",
+      "section": "Application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.9
+  },
+  "language": {
+    "value": [
+      {
+        "language": "english",
+        "cefr": "C1",
+        "acceptedEvidence": [
+          {
+            "name": "Academic IELTS",
+            "overall": 7
+          },
+          {
+            "name": "IELTS Online Academic",
+            "overall": 7
+          },
+          {
+            "name": "TOEFL",
+            "overall": 95,
+            "note": "ibT score 95 or 5.0 according to the new TOEFL scale 2026"
+          },
+          {
+            "name": "TOEFL ibT home edition",
+            "overall": 95,
+            "note": "ibT score 95 or 5.0 according to the new TOEFL scale 2026"
+          },
+          {
+            "name": "TOEFL Essentials",
+            "overall": 5,
+            "note": "ibT score 95 or 5.0 according to the new TOEFL scale 2026"
+          },
+          {
+            "name": "Cambridge CAE"
+          },
+          {
+            "name": "Cambridge CPE"
+          },
+          {
+            "name": "Pearson PTE Academic",
+            "overall": 76
+          },
+          {
+            "name": "telc University"
+          },
+          {
+            "name": "TOEIC"
+          },
+          {
+            "name": "OOPT"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "no",
+        "requiredFor": "admission"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "English language proficiency level C1 (to find out which language certificates are accepted, please go to Application / English language proficiency).\nEnglish language proficiency : The following English language certificates are accepted: Academic IELTS, including IELTS Online Academic (minimum 7.0), TOEFL, including TOEFL ibT home edition and TOEFL Essentials (minimum ibT score 95 or 5.0 according to the new TOEFL scale 2026), Cambridge CAE or CPE, Pearson PTE Academic (minimum score 76), telc University, TOEIC, OOPT. Only native speakers from the USA, the UK, Australia, New Zealand and Canada or students having completed their bachelor's degree in one of these countries are exempted from submitting a test score. A confirmation that the medium of instruction at your university was English is not sufficient.",
+      "section": "Prerequisites / English language proficiency",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [
+      {
+        "name": "APS certificate",
+        "required": "yes",
+        "appliesTo": {
+          "description": "applicants who have studied in China, India or Vietnam",
+          "nationalities": [
+            "China",
+            "India",
+            "Vietnam"
+          ],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "name": "GRE General Test",
+        "required": "no",
+        "thresholds": "all 3 sections are important"
+      },
+      {
+        "name": "GATE score",
+        "required": "no",
+        "appliesTo": {
+          "description": "Indian students",
+          "nationalities": [
+            "India"
+          ],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "APS certificate (only for applicants who have studied in China, India or Vietnam). Please note: It is not possible to submit the APS certificate after the application deadline.\nOptional documents that can be useful to submit:\nGRE score (all 3 sections are important)\nGATE score (only applicable for Indian students)",
+      "section": "Application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "no",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "The admissions committee will verify whether you fulfill the special prerequisites specified in the admissions regulations.",
+      "section": "Admissions",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.8
+  },
+  "applicationRoute": {
+    "value": "direct",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "Applications will be done electronically. Please register in the online application portal, enter your data and upload the following documents :",
+      "section": "Application",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [
+      {
+        "intake": "winter",
+        "opens": "March 1, 2026",
+        "closes": "May 1",
+        "appliesTo": {
+          "description": "early bird",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "winter",
+        "closes": "May 31",
+        "appliesTo": {
+          "description": "non-EU nationals",
+          "nationalities": [],
+          "euEea": "excluded",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "winter",
+        "closes": "July 15",
+        "appliesTo": {
+          "description": "EU nationals",
+          "nationalities": [],
+          "euEea": "only",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+      "snippet": "Application deadlines:\nApplications for the winter semester 2026 will begin on March 1, 2026.\nMay 1 (early bird): You would like to be informed about the result of your application by the end of May? Then apply before May 1! May 31 (final deadline for non-EU nationals) July 15 (final deadline for EU nationals)",
+      "section": "Application deadlines",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:23.705Z"
+    },
+    "confidence": 0.9
+  },
+  "qualitative": [
+    {
+      "value": "Incomplete applications will not be considered.",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+        "snippet": "Please note : Incomplete applications will not be considered.",
+        "section": "English language proficiency",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T18:53:23.705Z"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "extractedAt": "2026-08-01T18:53:23.705Z"
+}

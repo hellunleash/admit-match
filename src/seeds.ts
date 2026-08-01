@@ -116,6 +116,43 @@ export const HARDWARE_SEEDS: Seed[] = [
       "UNVERIFIED whether the MASTER exists in this shape — only the bachelor page is confirmed. Bachelor runs specialisation tracks in semiconductor/micro- and nanotechnology and in photonics/laser technology, with standing Industrial Advisory Boards for both. Same degree title as the applicant's, so recognition friction is near zero. Munich ecosystem: Infineon HQ, Apple silicon design centre, Intel, Fraunhofer EMFT. FH — PhD via cooperative doctorate.",
   },
   {
+    programId: "fau-nanotechnology-msc",
+    university: "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    city: "Erlangen",
+    programName: "Nanotechnology M.Sc.",
+    taughtInHint: "english",
+    admissionUrl: "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/",
+    admissionChecked: "found",
+    statuteChecked: "todo",
+    notes:
+      "PHYSICS EXPLICITLY NAMED: 'degrees recognized as subject-related are, in particular, bachelor's or diploma degrees in materials science, chemistry, PHYSICS, as well as courses of study with a broad nanotechnology focus.' English B2 only — the lowest language bar of any target so far, and no German stated. Distinguishes itself by an ENGINEERING focus rather than a physics one, which suits an Engineering Physics background. Ecosystem: Siemens, Fraunhofer IIS, the Erlangen-Nuernberg cluster; Infineon Regensburg within reach. Programme site: https://nano.study.fau.eu/",
+  },
+  {
+    programId: "freiburg-microsystems-msc",
+    university: "Albert-Ludwigs-Universität Freiburg",
+    city: "Freiburg",
+    programName: "Microsystems Engineering M.Sc. (IMTEK)",
+    taughtInHint: "english",
+    admissionUrl:
+      "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
+    admissionChecked: "found",
+    statuteChecked: "todo",
+    notes:
+      "Fully English-taught, 4 semesters, Department of Microsystems Engineering (IMTEK). Accepts 'a degree in Natural or Engineering Science, such as Electrical and Electronic Engineering, Mechanical Engineering, Mechatronics or PHYSICS'. NO German required. WARNING: English C1 required AND 'a confirmation that the medium of instruction at your university was English is NOT sufficient' — unlike TUD SEP, the medium-of-instruction route is explicitly closed, so an IELTS/TOEFL score is mandatory here. Non-EU application window 1 March - 31 May. Ecosystem: Fraunhofer IAF, ISE and IPM in Freiburg — strong for microsystems, photovoltaics and compound semiconductors.",
+  },
+  {
+    programId: "ude-nanoengineering-msc",
+    university: "Universität Duisburg-Essen",
+    city: "Duisburg",
+    programName: "NanoEngineering M.Sc.",
+    taughtInHint: "unknown",
+    admissionUrl: "https://www.uni-due.de/iw/en/study/m-nano.php",
+    admissionChecked: "found",
+    statuteChecked: "todo",
+    notes:
+      "THE ONLY TARGET SO FAR WITH QUANTIFIED ECTS THRESHOLDS. For the Nano electronics / Nano optoelectronics specialisation: 30 ECTS mathematical/scientific basics, 20 ECTS materials science / nanotechnology, 10 ECTS electrical engineering and information technology. That makes the DTU credit->ECTS conversion load-bearing here, unlike everywhere else in this corridor. Language of instruction UNVERIFIED. Ecosystem: Fraunhofer IMS Duisburg (microelectronic circuits and sensors).",
+  },
+  {
     programId: "tuc-micro-nano-systems-msc",
     university: "Technische Universität Chemnitz",
     city: "Chemnitz",

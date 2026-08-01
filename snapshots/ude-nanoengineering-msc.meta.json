@@ -1,0 +1,13 @@
+{
+  "programId": "ude-nanoengineering-msc",
+  "extractedAt": "2026-08-01T18:54:13.026Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.uni-due.de/iw/en/study/m-nano.php": "1c5aa009b3d366642d222ea258b00ee3d3d46589f3320c7e5a6dec6a3de5fc24"
+  },
+  "totalTokens": 11771,
+  "costUsd": 0.0168369,
+  "defects": 1,
+  "reviews": 0
+}

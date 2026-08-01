@@ -1,0 +1,313 @@
+{
+  "programId": "ude-nanoengineering-msc",
+  "university": "Universität Duisburg-Essen",
+  "programName": "M.Sc. NanoEngineering",
+  "field": "Computer Science",
+  "degree": "MSc",
+  "taughtIn": {
+    "value": "german",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "Language German",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.9
+  },
+  "admissionRestricted": {
+    "value": "nc_free",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "Unrestricted admission (study places are not limited)",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.9
+  },
+  "requirementSets": {
+    "value": [
+      {
+        "setId": "nano_electronics_optoelectronics",
+        "label": "Admission requirements for specialization Nano electronics / Nano optoelectronics",
+        "requirements": [
+          {
+            "canonical": [
+              "other"
+            ],
+            "label": "Bachelor's programme NanoEngineering at the University of Duisburg-Essen or an equivalent degree programme in the fields of engineering or natural sciences",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+              "snippet": "The prerequisite for admission to the Master's programme NanoEngineering is the successful completion of Bachelor's programme NanoEngineering at the University of Duisburg-Essen or an equivalent degree programme in the fields of engineering or natural sciences as well as a qualification related to the course of study.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:45.297Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure",
+              "physics",
+              "other"
+            ],
+            "label": "knowledge in the field of mathematical/scientific basics",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+              "snippet": "For the specialization Nano electronics / Nano optoelectronics knowledge in the field of mathematical/scientific basics amounting to 30 ECTS",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:45.297Z"
+            },
+            "minEcts": 30,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "materials_chemistry",
+              "physics",
+              "engineering_other"
+            ],
+            "label": "knowledge in the field of material sciences / nanotechnology",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+              "snippet": "knowledge in the field of material sciences / nanotechnology amounting to 20 ECTS",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:45.297Z"
+            },
+            "minEcts": 20,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "electronics",
+              "cs_practical"
+            ],
+            "label": "knowledge in the field of electrical engineering and information technology",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+              "snippet": "knowledge in the field of electrical engineering and information technology amounting to 10 ECTS.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:45.297Z"
+            },
+            "minEcts": 10,
+            "exampleCourses": []
+          }
+        ]
+      },
+      {
+        "setId": "nanoprocess_technology",
+        "label": "Admission requirements for specialization Nanoprocess Technology",
+        "requirements": [
+          {
+            "canonical": [
+              "other"
+            ],
+            "label": "Bachelor's programme NanoEngineering at the University of Duisburg-Essen or an equivalent degree programme in the fields of engineering or natural sciences",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+              "snippet": "The prerequisite for admission to the Master's programme NanoEngineering is the successful completion of Bachelor's programme NanoEngineering at the University of Duisburg-Essen or an equivalent degree programme in the fields of engineering or natural sciences as well as a qualification related to the course of study.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:45.297Z"
+            },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "math_pure",
+              "physics",
+              "other"
+            ],
+            "label": "Mathematical/scientific basics",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+              "snippet": "For the specialization Nanoprocess Technology Mathematical/scientific basics to the extent of 30 ECTS",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:45.297Z"
+            },
+            "minEcts": 30,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "materials_chemistry",
+              "physics",
+              "engineering_other"
+            ],
+            "label": "knowledge in the field of material sciences / nanotechnology",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+              "snippet": "knowledge in the field of material sciences / nanotechnology to the extent of 20 ECTS",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:45.297Z"
+            },
+            "minEcts": 20,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "engineering_other"
+            ],
+            "label": "knowledge in the field of mechanical engineering / process technology",
+            "provenance": {
+              "sourceType": "program_page",
+              "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+              "snippet": "knowledge in the field of mechanical engineering / process technology to the extent of 10 ECTS.",
+              "lang": "en",
+              "fetchedAt": "2026-08-01T18:53:45.297Z"
+            },
+            "minEcts": 10,
+            "exampleCourses": []
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "The prerequisite for admission to the Master's programme NanoEngineering is the successful completion of Bachelor's programme NanoEngineering at the University of Duisburg-Essen or an equivalent degree programme in the fields of engineering or natural sciences as well as a qualification related to the course of study. In addition, the applicant must demonstrate the following specific knowledge depending on the chosen specialization: For the specialization Nano electronics / Nano optoelectronics knowledge in the field of mathematical/scientific basics amounting to 30 ECTS, knowledge in the field of material sciences / nanotechnology amounting to 20 ECTS, knowledge in the field of electrical engineering and information technology amounting to 10 ECTS. For the specialization Nanoprocess Technology Mathematical/scientific basics to the extent of 30 ECTS, knowledge in the field of material sciences / nanotechnology to the extent of 20 ECTS, knowledge in the field of mechanical engineering / process technology to the extent of 10 ECTS.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.9
+  },
+  "assessmentStyle": {
+    "value": "unstated",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "The determination of the equivalence of the degree programme and the decision on exceptions is made by the examination board.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.5
+  },
+  "auflagen": {
+    "value": {
+      "offered": "yes",
+      "maxEcts": 42,
+      "deadline": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "The examination board may also grant admission subject to conditions.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.8
+  },
+  "degreeInProgress": {
+    "value": {
+      "allowed": "unstated",
+      "certificateDeadline": "unstated"
+    },
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "The prerequisite for admission to the Master's programme NanoEngineering is the successful completion of Bachelor's programme NanoEngineering at the University of Duisburg-Essen",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.5
+  },
+  "language": {
+    "value": [
+      {
+        "language": "german",
+        "cefr": "C1",
+        "acceptedEvidence": [
+          {
+            "name": "DSH",
+            "note": "DSH 2 level"
+          },
+          {
+            "name": "TestDaF",
+            "note": "TDN 4"
+          }
+        ],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "admission"
+      },
+      {
+        "language": "english",
+        "cefr": "B2",
+        "acceptedEvidence": [],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "unstated"
+      }
+    ],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "The language of instruction at the University of Duisburg-Essen is German (except in the English-language programs). Therefore, you must have good German language skills if you want to study successfully. The majority of foreign applicants must pass the \"Deutsche Sprachprüfung für den Hochschulzugang\" (DSH 2 level; with some exceptions) before beginning their studies. German nationals (persons who have acquired their higher education entrance qualification in Germany or at a German school abroad) do not require any special proof of German language skills. Citizens of an EU member state (and citizens of Iceland, Liechtenstein, Norway) or German citizens with a foreign educational qualification, as well as Citizens of a country outside the EU with a foreign university entrance qualification must pass the \"Deutsche Sprachprüfung für den Hochschulzugang\" (DSH 2 level) or the TestDaF (TDN 4) before the begin of their studies. ... In the international environment of nanotechnology, English plays an increasing role as an international technical language. The aim of the study programme is therefore also to convey a familiarity with the English technical language through the use of the English language in selected courses. Appropriate language skills are therefore expected from the second year of study onwards.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.9
+  },
+  "tests": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "The prerequisite for admission to the Master's programme NanoEngineering is the successful completion of Bachelor's programme NanoEngineering at the University of Duisburg-Essen",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.9
+  },
+  "interview": {
+    "value": "no",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "The determination of the equivalence of the degree programme and the decision on exceptions is made by the examination board.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.5
+  },
+  "applicationRoute": {
+    "value": "direct",
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "Enrollment takes place during the enrollment period at the student register's office on the Duisburg Campus. Prospective students from non-EU countries should apply to the International Office on the Duisburg Campus.",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.9
+  },
+  "deadlines": {
+    "value": [],
+    "provenance": {
+      "sourceType": "program_page",
+      "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+      "snippet": "Study begin Winter and summer semester",
+      "lang": "en",
+      "fetchedAt": "2026-08-01T18:53:45.297Z"
+    },
+    "confidence": 0.5
+  },
+  "qualitative": [
+    {
+      "value": "a qualification related to the course of study",
+      "provenance": {
+        "sourceType": "program_page",
+        "sourceUrl": "https://www.uni-due.de/iw/en/study/m-nano.php",
+        "snippet": "as well as a qualification related to the course of study.",
+        "lang": "en",
+        "fetchedAt": "2026-08-01T18:53:45.297Z"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "extractedAt": "2024-07-29T12:00:00Z"
+}

@@ -1,0 +1,13 @@
+{
+  "programId": "fau-nanotechnology-msc",
+  "extractedAt": "2026-08-01T18:53:23.704Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://meinstudium.fau.de/en/studienangebot/nanotechnology-msc/": "2af0cb8c7b04be96776f34f95ed758240b182f4fdc5a59743182d07df1404b57"
+  },
+  "totalTokens": 12010,
+  "costUsd": 0.011589,
+  "defects": 0,
+  "reviews": 0
+}

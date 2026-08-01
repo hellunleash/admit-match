@@ -1,0 +1,13 @@
+{
+  "programId": "freiburg-microsystems-msc",
+  "extractedAt": "2026-08-01T18:53:45.293Z",
+  "promptVersion": "2026-07-28.3",
+  "model": "gemini-2.5-flash",
+  "docHashes": {
+    "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en": "01b9b4f639eb12c0de24a96475d4468a1aa40f8d86eea1d347bdb2807e8de9e2"
+  },
+  "totalTokens": 11739,
+  "costUsd": 0.0145525,
+  "defects": 0,
+  "reviews": 0
+}
