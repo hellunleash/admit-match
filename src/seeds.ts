@@ -70,8 +70,10 @@ export const HARDWARE_SEEDS: Seed[] = [
     taughtInHint: "english",
     admissionUrl:
       "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-    admissionChecked: "found",
-    statuteChecked: "todo",
+    admissionChecked: "opened",
+    statuteUrl:
+      "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+    statuteChecked: "found",
     notes:
       "EE faculty. Requires AT LEAST 5 OF 6 named subjects: advanced mathematics (multivariable calculus, probability); analogue and digital circuit design; electromagnetic fields; systems theory (Fourier, Laplace, Z); basic electron devices (diode, bipolar, MOS); object-oriented programming (C++/Java). Checked against the Modulhandbuch rather than course titles: EP203N carries Fourier series and transforms plus vector calculus, complex analysis and residues; EP207N carries BJT/JFET/MOSFET amplifiers AND Boolean algebra, K-maps, TTL/CMOS logic families; EP104 covers fields; EP301M/SC302 cover devices strongly; probability is implied by thermal physics, quantum mechanics and condensed matter. Five of six are satisfied — only OOP is genuinely open, since MATLAB and 'Programming Fundamentals' are not necessarily C++/Java. English is only B2 / IELTS 6.5, an easier bar than OME. Best ecosystem in Europe: Silicon Saxony, 600+ companies, ~1/3 of Europe's chips, GlobalFoundries, four Infineon fabs (Smart Power Fab opened July 2026), Bosch, TSMC JV, Fraunhofer IPMS/CNT, NaMLab. Apply via uni-assist.",
   },

@@ -9,41 +9,43 @@
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Master's programme in Nanoelectronic Systems",
+      "snippet": "Certificate of proficiency in English on the level of minimum B2 of the Common European Framework of Reference for Languages (CEFR) e.g., TOEFL IBT with 94 points, IELTS with level 6.5 (for non-native speakers only), or a certificate confirming that the degree programme you completed was taught in English language.",
       "lang": "en",
       "fetchedAt": "2026-08-01T15:00:34.323Z"
     },
-    "confidence": 0.8
+    "confidence": 0.9
   },
   "admissionRestricted": {
-    "value": "unstated",
+    "value": "nc_free",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Admission Requirements",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "Gemäß § 3 der Studienordnung für den konsekutiven Masterstudiengang Nanoelectronic Systems wird jede Bewerberin und jeder Bewerber zugelassen, die bzw. der die erforderliche Eignung (Qualifikation) für das Masterstudium Nanoelectronic Systems besitzt.",
+      "section": "§ 2 Abs. 1",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
     "confidence": 0.9
   },
   "requirementSets": {
     "value": [
       {
-        "setId": "primary",
-        "label": "Bachelor's degree * in Electrical Engineering, Information Technology, Physics, or similar with the following prerequisites",
+        "setId": "besondere_eignung",
+        "label": "Nachweis und Feststellung der besonderen Eignung",
         "requirements": [
           {
             "canonical": [
               "math_pure",
               "math_applied"
             ],
-            "label": "Advanced mathematics (multi-variable differential and integral calculus, probability and statistics)",
+            "label": "Höhere Mathematik (Differential- und Integralrechnung mit mehreren Variablen, Wahrscheinlichkeitsrechnung)",
             "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-              "snippet": "Advanced mathematics (multi-variable differential and integral calculus, probability and statistics)",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T15:00:34.323Z"
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+              "snippet": "1. Höhere Mathematik (Differential- und Integralrechnung mit mehreren Variablen, Wahrscheinlichkeitsrechnung)",
+              "section": "§ 5 Abs. 1 Nr. 1",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:42:01.308Z"
             },
             "exampleCourses": []
           },
@@ -51,13 +53,14 @@
             "canonical": [
               "electronics"
             ],
-            "label": "Analogue and digital circuit design",
+            "label": "digitale und analoge Schaltungstechnik",
             "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-              "snippet": "Analogue and digital circuit design",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T15:00:34.323Z"
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+              "snippet": "2. digitale und analoge Schaltungstechnik",
+              "section": "§ 5 Abs. 1 Nr. 2",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:42:01.308Z"
             },
             "exampleCourses": []
           },
@@ -65,13 +68,14 @@
             "canonical": [
               "physics"
             ],
-            "label": "Electro-magnetic fields",
+            "label": "elektrische und magnetische Felder",
             "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-              "snippet": "Electro-magnetic fields",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T15:00:34.323Z"
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+              "snippet": "3. elektrische und magnetische Felder",
+              "section": "§ 5 Abs. 1 Nr. 3",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:42:01.308Z"
             },
             "exampleCourses": []
           },
@@ -79,13 +83,14 @@
             "canonical": [
               "cs_theory"
             ],
-            "label": "Systems theory (Fourier, Laplace, and Z transformations)",
+            "label": "Systemtheorie (Fourier-, Laplace- und z-Transformation)",
             "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-              "snippet": "Systems theory (Fourier, Laplace, and Z transformations)",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T15:00:34.323Z"
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+              "snippet": "4. Systemtheorie (Fourier-, Laplace- und z-Transformation)",
+              "section": "§ 5 Abs. 1 Nr. 4",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:42:01.308Z"
             },
             "exampleCourses": []
           },
@@ -93,13 +98,14 @@
             "canonical": [
               "electronics"
             ],
-            "label": "Operation and construction of basic electron devices (e. g. diode, bipolar, and MOS transistors)",
+            "label": "Aufbau und Funktionsweise elektronischer Bauelemente",
             "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-              "snippet": "Operation and construction of basic electron devices (e. g. diode, bipolar, and MOS transistors)",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T15:00:34.323Z"
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+              "snippet": "5. Aufbau und Funktionsweise elektronischer Bauelemente",
+              "section": "§ 5 Abs. 1 Nr. 5",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:42:01.308Z"
             },
             "exampleCourses": []
           },
@@ -107,13 +113,14 @@
             "canonical": [
               "cs_practical"
             ],
-            "label": "Object-oriented programming (e. g. C++, JAVA)",
+            "label": "Objektorientierte Programmierung",
             "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-              "snippet": "Object-oriented programming (e. g. C++, JAVA)",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T15:00:34.323Z"
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+              "snippet": "6. Objektorientierte Programmierung",
+              "section": "§ 5 Abs. 1 Nr. 6",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T15:42:01.308Z"
             },
             "exampleCourses": []
           }
@@ -122,35 +129,36 @@
       }
     ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Bachelor's degree * in Electrical Engineering, Information Technology, Physics, or similar with the following prerequisites:\n\nAdvanced mathematics (multi-variable differential and integral calculus, probability and statistics)\nAnalogue and digital circuit design\nElectro-magnetic fields\nSystems theory (Fourier, Laplace, and Z transformations)\nOperation and construction of basic electron devices (e. g. diode, bipolar, and MOS transistors)\nObject-oriented programming (e. g. C++, JAVA)\n\nOne of the above prerequisites may be missing, but must be undertaken independently if accepted into the programme.",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "Die besondere Eignung für den konsekutiven Masterstudiengang Nanoelectronic Systems gemäß § 2 Absatz 2 Nummer 3 liegt dann vor, wenn der Nachweis von fundierten Kenntnissen in den Bereichen:\n1. Höhere Mathematik (Differential- und Integralrechnung mit mehreren Variablen, Wahrscheinlichkeitsrechnung)\n2. digitale und analoge Schaltungstechnik\n3. elektrische und magnetische Felder\n4. Systemtheorie (Fourier-, Laplace- und z-Transformation)\n5. Aufbau und Funktionsweise elektronischer Bauelemente\n6. Objektorientierte Programmierung\ndurch abgeschlossene Module und Projekte erbracht wurde. Hierbei ist es möglich, dass für eines der Gebiete die Voraussetzung nicht erfüllt ist.",
+      "section": "§ 5 Abs. 1",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
     "confidence": 0.9
   },
   "assessmentStyle": {
     "value": "unstated",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Admission Requirements",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "Ob der Nachweis der besonderen Eignung erbracht ist, prüft der Zugangsausschuss zunächst anhand der dem Antrag beigefügten Unterlagen, insbesondere der Unterlagen gemäß § 4 Absatz 2 Nummer 3, jedoch nur dann, wenn die Zugangsvoraussetzungen gemäß § 2 Absatz 2 Nummer 1 und 2 erfüllt sind. Ergibt sich die besondere Eignung hiernach nicht bereits aus den eingereichten Unterlagen, wird ein Eignungsgespräch gemäß § 6 vor dem Zugangsausschuss durchgeführt.",
+      "section": "§ 5 Abs. 2",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
-    "confidence": 0.9
+    "confidence": 0.5
   },
   "auflagen": {
     "value": {
       "offered": "yes",
-      "maxEcts": 6,
       "deadline": "unstated"
     },
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "One of the above prerequisites may be missing, but must be undertaken independently if accepted into the programme. The above given six subjects of prerequisites are required for the compulsory modules of the Master's programme in Nanoelectronic Systems.",
+      "snippet": "One of the above prerequisites may be missing, but must be undertaken independently if accepted into the programme.",
       "lang": "en",
       "fetchedAt": "2026-08-01T15:00:34.323Z"
     },
@@ -159,15 +167,16 @@
   "degreeInProgress": {
     "value": {
       "allowed": "yes",
-      "minEctsSoFar": 144,
-      "certificateDeadline": "unstated"
+      "minEctsSoFar": 80,
+      "certificateDeadline": "bis zum Ende der Immatrikulationsfrist"
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "If the applicant is unable to provide evidence of the first job-qualifying university degree at the time of application (degree certificate), the applicant will still be admitted to the aptitude assessment procedure pursuant to these regulations if 80 % or more credit points, which are required for successful graduation, have already been awarded.",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "Liegt zum Zeitpunkt der Antragstellung der Nachweis des ersten berufsqualifizierenden Hochschulabschlusses (Abschlusszeugnis) gemäß Absatz 2 Nummer 2 noch nicht vor, wird die Bewerberin bzw. der Bewerber auch dann in das Eignungsfeststellungsverfahren nach dieser Ordnung einbezogen, wenn bereits 80 Prozent der durch den Hochschulabschluss erreichbaren Leistungspunkte durch Bescheinigung der Herkunftshochschule nachgewiesen werden. Zum Nachweis dessen hat die Bewerberin bzw. der Bewerber eine entsprechende Bescheinigung ihrer bzw. seiner Hochschule vorzulegen. Die Notwendigkeit der Vorlage aller anderen in Absatz 2 genannten Nachweise mit dem Antrag sowie Absatz 3 bleiben hiervon unberührt.",
+      "section": "§ 4 Abs. 4",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
     "confidence": 0.9
   },
@@ -178,7 +187,7 @@
         "cefr": "B2",
         "acceptedEvidence": [
           {
-            "name": "TOEFL iBT",
+            "name": "TOEFL IBT",
             "overall": 94
           },
           {
@@ -186,64 +195,100 @@
             "overall": 6.5
           },
           {
+            "name": "Zeugnis der allgemeinen oder fachgebundenen Hochschulreife",
+            "note": "mit einem in Englisch abgeschlossenen Leistungskurs"
+          },
+          {
+            "name": "Zeugnis der vollständig in englischer Sprache abgelegten Hochschulreife"
+          },
+          {
+            "name": "Zeugnis über einen vollständig in englischer Sprache abgelegten Hochschulabschluss"
+          },
+          {
             "name": "medium of instruction certificate",
             "note": "confirming that the degree programme you completed was taught in English language"
           }
         ],
         "waiverIfMediumOfInstruction": "yes",
-        "requiredFor": "unstated"
+        "requiredFor": "admission"
       }
     ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Certificate of proficiency in English on the level of minimum B2 of the Common European Framework of Reference for Languages (CEFR) e.g., TOEFL IBT with 94 points, IELTS with level 6.5 (for non-native speakers only), or a certificate confirming that the degree programme you completed was taught in English language.",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "über sichere Kenntnisse der englischen Sprache auf dem Niveau B2 des Europäischen Referenzrahmens für Sprachen verfügt und\n4. Kopie des Nachweises ausreichender Sprachkenntnisse gemäß § 2 Absatz 2 Nummer 2 (einschlägiges Zeugnis oder Sprachzertifikat) wie zum Beispiel:\na) Zeugnis der allgemeinen oder fachgebundenen Hochschulreife mit einem in Englisch abgeschlossenen Leistungskurs,\nb) Zeugnis der vollständig in englischer Sprache abgelegten Hochschulreife oder Zeugnis\nüber einen vollständig in englischer Sprache abgelegten Hochschulabschluss oder\nc) englische Sprachzertifikate wie zum Beispiel TOEFL IBT (mind. 94), IELTS (mind. 6,5) und\nvergleichbare Sprachzertifikate.",
+      "section": "§ 2 Abs. 2 Nr. 2, § 4 Abs. 2 Nr. 4",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
     "confidence": 0.9
   },
   "tests": {
     "value": [],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Admission Requirements",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "Aufgrund von § 14 Absatz 4 und § 18 Absatz 11 des Sächsischen Hochschulgesetzes in der Fassung der Bekanntmachung vom 31. Mai 2023 (SächsGVBI. S. 329), das zuletzt durch Artikel 2 des Gesetzes vom 31. Januar 2024 (SächsGVBI. S. 83) geändert worden ist, erlässt die Technische Universität Dresden die folgende Eignungsfeststellungsordnung als Satzung:",
+      "section": "§ 1",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
-    "confidence": 0.9
+    "confidence": 0
   },
   "interview": {
-    "value": "unstated",
+    "value": "yes",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Admission Requirements",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "Ergibt sich die besondere Eignung hiernach nicht bereits aus den eingereichten Unterlagen, wird ein Eignungsgespräch gemäß § 6 vor dem Zugangsausschuss durchgeführt.",
+      "section": "§ 5 Abs. 2",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
     "confidence": 0.9
   },
   "applicationRoute": {
-    "value": "unstated",
+    "value": "both",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Information on application procedure",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "1. Bewerberinnen und Bewerber mit einem in Deutschland erworbenen Hochschulabschluss (Masterzugangsberechtigung) müssen sich bei folgender Stelle bewerben:\na) wenn sie eine deutsche Staatsbürgerschaft besitzen, gilt folgende Anschrift:\nTechnische Universität Dresden\nFakultät Elektrotechnik und Informationstechnik\nZugangsausschuss Nanoelectronic Systems\n01062 Dresden\nDeutschland\nb) wenn sie eine ausländische Staatsbürgerschaft besitzen, gilt folgende Anschrift:\nTechnische Universität Dresden\nInternational Office\n01062 Dresden\nDeutschland\n2. Bewerberinnen und Bewerber mit einem im Ausland erworbenen Hochschulabschluss (Masterzugangsberechtigung) müssen sich bei uni-assist e.V. bewerben.",
+      "section": "§ 4 Abs. 1 Nr. 1, 2",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
     "confidence": 0.9
   },
   "deadlines": {
-    "value": [],
+    "value": [
+      {
+        "intake": "winter",
+        "closes": "31. Mai",
+        "appliesTo": {
+          "description": "Bewerberinnen und Bewerber mit einer Staatsbürgerschaft außerhalb der EU, die ihren Hochschulabschluss (Masterzugangsberechtigung) an einer ausländischen Hochschule erbracht haben",
+          "nationalities": [],
+          "euEea": "excluded",
+          "lisbonConvention": "any"
+        }
+      },
+      {
+        "intake": "winter",
+        "closes": "15. Juli",
+        "appliesTo": {
+          "description": "Alle anderen deutschen und ausländischen Bewerberinnen und Bewerber",
+          "nationalities": [],
+          "euEea": "any",
+          "lisbonConvention": "any"
+        }
+      }
+    ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://tu-dresden.de/ing/elektrotechnik/studium/im_studium/studiengaenge/masters-programme-nanoelectronic-systems/prospective-students/admission-requirements",
-      "snippet": "Admission Requirements",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T15:00:34.323Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.verw.tu-dresden.de/Amtbek/PDF-Dateien/2025-01/07_08_12_eignungsfeststO13.02.2025.pdf",
+      "snippet": "3. Bewerberinnen und Bewerber mit einer Staatsbürgerschaft außerhalb der EU, die ihren Hochschulabschluss (Masterzugangsberechtigung) an einer ausländischen Hochschule erbracht haben, müssen sich für das Wintersemester bis zum 31. Mai bewerben. Alle anderen deutschen und ausländischen Bewerberinnen und Bewerber müssen sich für das Wintersemester bis zum 15. Juli des jeweiligen Jahres bewerben.",
+      "section": "§ 4 Abs. 1 Nr. 3",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T15:42:01.308Z"
     },
     "confidence": 0.9
   },
