@@ -10,126 +10,174 @@
       "sourceType": "program_page",
       "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
       "snippet": "Language of instruction: English",
-      "section": "Facts and Figures",
       "lang": "en",
       "fetchedAt": "2026-08-01T18:53:23.705Z"
     },
-    "confidence": 1
+    "confidence": 0.9
   },
   "admissionRestricted": {
     "value": "unstated",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "The admissions committee will verify whether you fulfill the special prerequisites specified in the admissions regulations.",
-      "section": "Admissions",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "Zulassungsordnung der Albert-Ludwigs-Universität für den\nStudiengang Master of Science Microsystems Engineering",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
     "confidence": 0.5
+  },
+  "minGermanGrade": {
+    "value": 2.9,
+    "provenance": {
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "einen ersten Abschluss mit einem Notendurchschnitt von mindestens 2,9 an einer deutschen Hoch-\nschule in einem Bachelorstudiengang im Fach Mikrosystemtechnik, Elektrotechnik oder Mechatronik\noder in einem gleichwertigen mindestens dreijährigen Studiengang an einer deutschen oder auslän-\ndischen Hochschule erworben hat",
+      "section": "§ 2 Abs. 1 Nr. 1",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
+    },
+    "confidence": 0.9
   },
   "requirementSets": {
     "value": [
       {
-        "setId": "primary",
-        "label": "Prerequisites",
+        "setId": "base_degree",
+        "label": "einen ersten Abschluss mit einem Notendurchschnitt von mindestens 2,9 an einer deutschen Hochschule in einem Bachelorstudiengang im Fach Mikrosystemtechnik, Elektrotechnik oder Mechatronik oder in einem gleichwertigen mindestens dreijährigen Studiengang an einer deutschen oder ausländischen Hochschule erworben hat",
         "requirements": [
           {
             "canonical": [
-              "engineering_other",
-              "electronics",
-              "other",
-              "other",
-              "other"
+              "engineering_other"
             ],
-            "label": "Bachelor's degree in mechatronics, electrical, electronics, or mechanical engineering, or in a closely related study field",
+            "label": "im Fach Mikrosystemtechnik, Elektrotechnik oder Mechatronik oder in einem gleichwertigen mindestens dreijährigen Studiengang",
             "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-              "snippet": "Bachelor's degree in mechatronics, electrical, electronics, or mechanical engineering, or in a closely related study field",
-              "section": "Prerequisites",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T18:53:23.705Z"
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+              "snippet": "einen ersten Abschluss mit einem Notendurchschnitt von mindestens 2,9 an einer deutschen Hoch-\nschule in einem Bachelorstudiengang im Fach Mikrosystemtechnik, Elektrotechnik oder Mechatronik\noder in einem gleichwertigen mindestens dreijährigen Studiengang an einer deutschen oder auslän-\ndischen Hochschule erworben hat",
+              "section": "§ 2 Abs. 1 Nr. 1",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T20:03:43.957Z"
             },
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "engineering_other"
+            ],
+            "label": "im Fach Mikrosystemtechnik mindestens 20 ECTS-Punkte erworben hat",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+              "snippet": "im Fach Mikrosystemtechnik mindestens 20 ECTS-Punkte erworben hat",
+              "section": "§ 2 Abs. 2",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T20:03:43.957Z"
+            },
+            "minEcts": 20,
+            "exampleCourses": []
+          },
+          {
+            "canonical": [
+              "electronics",
+              "materials_chemistry"
+            ],
+            "label": "mindestens 30 ECTS-Punkte in den Bereichen Elektrotechnik und Materialwissenschaften",
+            "provenance": {
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+              "snippet": "mindestens 30 ECTS-Punkte in den Bereichen Elektrotechnik und Materialwissenschaften",
+              "section": "§ 2 Abs. 2",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T20:03:43.957Z"
+            },
+            "minEcts": 30,
             "exampleCourses": []
           },
           {
             "canonical": [
               "math_pure",
               "other",
-              "physics",
-              "electronics",
-              "other",
-              "other",
-              "materials_chemistry"
+              "physics"
             ],
-            "label": "previous knowledge in mathematics, chemistry, physics, electronics, electrical and mechanical engineering and materials",
+            "label": "mindestens 40 ECTS-Punkte in den Bereichen Mathematik, Chemie und Physik",
             "provenance": {
-              "sourceType": "program_page",
-              "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-              "snippet": "previous knowledge in mathematics, chemistry, physics, electronics, electrical and mechanical engineering and materials",
-              "section": "Prerequisites",
-              "lang": "en",
-              "fetchedAt": "2026-08-01T18:53:23.705Z"
+              "sourceType": "satzung",
+              "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+              "snippet": "mindestens 40 ECTS-Punkte in den Bereichen Mathematik, Chemie und Physik",
+              "section": "§ 2 Abs. 2",
+              "lang": "de",
+              "fetchedAt": "2026-08-01T20:03:43.957Z"
             },
+            "minEcts": 40,
             "exampleCourses": []
           }
         ]
       }
     ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "Prerequisites\n\nBachelor's degree in mechatronics, electrical, electronics, or mechanical engineering, or in a closely related study field, previous knowledge in mathematics, chemistry, physics, electronics, electrical and mechanical engineering and materials",
-      "section": "Prerequisites",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "(1) Zum Studium im Studiengang Master of Science Microsystems Engineering wird zugelassen, wer\n1. einen ersten Abschluss mit einem Notendurchschnitt von mindestens 2,9 an einer deutschen Hoch-\nschule in einem Bachelorstudiengang im Fach Mikrosystemtechnik, Elektrotechnik oder Mechatronik\noder in einem gleichwertigen mindestens dreijährigen Studiengang an einer deutschen oder auslän-\ndischen Hochschule erworben hat, der den in Absatz 2 genannten qualifizierten Anforderungen ge-\nnügt, und\n2. entweder über Kenntnisse der deutschen Sprache, die mindestens dem Niveau C1 des Gemeinsa-\nmen europäischen Referenzrahmens für Sprachen entsprechen, sowie über Kenntnisse der engli-\nschen Sprache, die mindestens dem Niveau B2 des Gemeinsamen europäischen Referenzrahmens\nfür Sprachen entsprechen, verfügt oder über Kenntnisse der englischen Sprache, die mindestens\ndem Niveau C1 des Gemeinsamen europäischen Referenzrahmens für Sprachen entsprechen.\nDie Noten ausländischer Bildungsnachweise sind in das deutsche Notensystem umzurechnen.\n(2) Der Bewerber/Die Bewerberin hat den Nachweis zu erbringen, dass er/sie im Rahmen des zum er-\nsten Abschluss führenden Hochschulstudiums (Absatz 1 Satz 1 Nr. 1) durch die Erbringung von Studien-\nund Prüfungsleistungen im Fach Mikrosystemtechnik mindestens 20 ECTS-Punkte erworben hat. Dar-\nüber hinaus müssen mindestens 30 ECTS-Punkte in den Bereichen Elektrotechnik und Materialwissen-\nschaften sowie mindestens 40 ECTS-Punkte in den Bereichen Mathematik, Chemie und Physik erworben\nworden sein. Über die Anerkennung von Leistungen, die den gemäß Satz 1 und 2 geforderten Leistungen\nvergleichbar sind, entscheidet die Zulassungskommission.",
+      "section": "§ 2 Abs. 1, Abs. 2",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
     "confidence": 0.9
   },
   "assessmentStyle": {
-    "value": "binary",
+    "value": "unstated",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "The admissions committee will verify whether you fulfill the special prerequisites specified in the admissions regulations.",
-      "section": "Admissions",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "Zulassungsordnung der Albert-Ludwigs-Universität für den\nStudiengang Master of Science Microsystems Engineering",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
-    "confidence": 0.8
+    "confidence": 0.5
   },
   "auflagen": {
     "value": {
       "offered": "unstated"
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "The admissions committee will verify whether you fulfill the special prerequisites specified in the admissions regulations.",
-      "section": "Admissions",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "Zulassungsordnung der Albert-Ludwigs-Universität für den\nStudiengang Master of Science Microsystems Engineering",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
     "confidence": 0.5
   },
   "degreeInProgress": {
     "value": {
       "allowed": "yes",
-      "certificateDeadline": "If you have not yet completed your undergraduate studies, please submit a letter or certificate issued by your university, stating one of the following: registration, submission or completion of your final thesis, or expected graduation date ."
+      "certificateDeadline": "unverzüglich, spätestens jedoch bei der Einschreibung"
     },
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "If you have not yet completed your undergraduate studies, please submit a letter or certificate issued by your university, stating one of the following: registration, submission or completion of your final thesis, or expected graduation date .",
-      "section": "Application",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "(3) Sofern der Bewerber/die Bewerberin bis zum Bewerbungsschluss gemäß § 1 Satz 2 das Hochschul-\nstudium noch nicht abgeschlossen hat, hat er/sie das voraussichtliche Erreichen der Zugangsvorausset-\nzung gemäß § 2 Absatz 1 Satz 1 Nr. 1 durch eine Bescheinigung der Hochschule über alle bereits er-\nbrachten Leistungen (einschließlich Noten und Angaben zu erworbenen ECTS-Punkten) sowie eine Be-\nstäti gung der Hochschule über die Benotung, ersatzweise die Einreichung oder zumindest die Anmel-\ndung der Abschlussarbeit oder über das voraussichtliche Abschlussdatum des Studiums nachzuweisen.\nDie Zulassung erfolgt in diesem Fall unter der Bedingung, dass der erfolgreiche Abschluss des Studiums\ngemäß § 2 Absatz 1 Satz 1 Nr. 1 unverzüglich, spätestens jedoch bei der Einschreibung durch eine amt-\nlich beglaubigte Kopie des Zeugnisses des ersten Hochschulabschlusses gegenüber der Zulassungs-\nkommission nachgewiesen wird.",
+      "section": "§ 3 Abs. 3",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
     "confidence": 0.9
   },
   "language": {
     "value": [
+      {
+        "language": "german",
+        "cefr": "C1",
+        "acceptedEvidence": [],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "admission"
+      },
+      {
+        "language": "english",
+        "cefr": "B2",
+        "acceptedEvidence": [],
+        "waiverIfMediumOfInstruction": "unstated",
+        "requiredFor": "admission"
+      },
       {
         "language": "english",
         "cefr": "C1",
@@ -144,18 +192,16 @@
           },
           {
             "name": "TOEFL",
-            "overall": 95,
-            "note": "ibT score 95 or 5.0 according to the new TOEFL scale 2026"
+            "overall": 95
           },
           {
             "name": "TOEFL ibT home edition",
-            "overall": 95,
-            "note": "ibT score 95 or 5.0 according to the new TOEFL scale 2026"
+            "overall": 95
           },
           {
             "name": "TOEFL Essentials",
             "overall": 5,
-            "note": "ibT score 95 or 5.0 according to the new TOEFL scale 2026"
+            "note": "according to the new TOEFL scale 2026"
           },
           {
             "name": "Cambridge CAE"
@@ -182,39 +228,27 @@
       }
     ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "English language proficiency level C1 (to find out which language certificates are accepted, please go to Application / English language proficiency).\nEnglish language proficiency : The following English language certificates are accepted: Academic IELTS, including IELTS Online Academic (minimum 7.0), TOEFL, including TOEFL ibT home edition and TOEFL Essentials (minimum ibT score 95 or 5.0 according to the new TOEFL scale 2026), Cambridge CAE or CPE, Pearson PTE Academic (minimum score 76), telc University, TOEIC, OOPT. Only native speakers from the USA, the UK, Australia, New Zealand and Canada or students having completed their bachelor's degree in one of these countries are exempted from submitting a test score. A confirmation that the medium of instruction at your university was English is not sufficient.",
-      "section": "Prerequisites / English language proficiency",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "entweder über Kenntnisse der deutschen Sprache, die mindestens dem Niveau C1 des Gemeinsa-\nmen europäischen Referenzrahmens für Sprachen entsprechen, sowie über Kenntnisse der engli-\nschen Sprache, die mindestens dem Niveau B2 des Gemeinsamen europäischen Referenzrahmens\nfür Sprachen entsprechen, verfügt oder über Kenntnisse der englischen Sprache, die mindestens\ndem Niveau C1 des Gemeinsamen europäischen Referenzrahmens für Sprachen entsprechen.",
+      "section": "§ 2 Abs. 1 Nr. 2",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
     "confidence": 0.9
   },
   "tests": {
     "value": [
       {
-        "name": "APS certificate",
-        "required": "yes",
-        "appliesTo": {
-          "description": "applicants who have studied in China, India or Vietnam",
-          "nationalities": [
-            "China",
-            "India",
-            "Vietnam"
-          ],
-          "euEea": "any",
-          "lisbonConvention": "any"
-        }
-      },
-      {
         "name": "GRE General Test",
         "required": "no",
-        "thresholds": "all 3 sections are important"
+        "thresholds": "all 3 sections are important",
+        "exemptions": "unstated"
       },
       {
         "name": "GATE score",
         "required": "no",
+        "thresholds": "unstated",
         "appliesTo": {
           "description": "Indian students",
           "nationalities": [
@@ -222,14 +256,14 @@
           ],
           "euEea": "any",
           "lisbonConvention": "any"
-        }
+        },
+        "exemptions": "unstated"
       }
     ],
     "provenance": {
       "sourceType": "program_page",
       "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "APS certificate (only for applicants who have studied in China, India or Vietnam). Please note: It is not possible to submit the APS certificate after the application deadline.\nOptional documents that can be useful to submit:\nGRE score (all 3 sections are important)\nGATE score (only applicable for Indian students)",
-      "section": "Application",
+      "snippet": "Optional documents that can be useful to submit:\nGRE score (all 3 sections are important)\ncertificate about your class rank\ncertificate about the average grade of your class\nUniversity entrance exam result from your home country (if applicable)\nGATE score (only applicable for Indian students)",
       "lang": "en",
       "fetchedAt": "2026-08-01T18:53:23.705Z"
     },
@@ -238,24 +272,23 @@
   "interview": {
     "value": "no",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "The admissions committee will verify whether you fulfill the special prerequisites specified in the admissions regulations.",
-      "section": "Admissions",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "Zulassungsordnung der Albert-Ludwigs-Universität für den\nStudiengang Master of Science Microsystems Engineering",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
-    "confidence": 0.8
+    "confidence": 0.5
   },
   "applicationRoute": {
     "value": "direct",
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "Applications will be done electronically. Please register in the online application portal, enter your data and upload the following documents :",
-      "section": "Application",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "Bewerbungen um Zulassung zum Studium müssen von Nicht-EU-\nBürgern/Nicht-EU-Bürgerinnen bis zum vorausgehenden 31. Mai und von EU-Bürgern/EU-Bürgerinnen\nbis zum vorausgehenden 15. Juli bei der Albert-Ludwigs-Universität eingegangen sein.",
+      "section": "§ 1",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
     "confidence": 0.9
   },
@@ -263,20 +296,9 @@
     "value": [
       {
         "intake": "winter",
-        "opens": "March 1, 2026",
-        "closes": "May 1",
+        "closes": "31 May",
         "appliesTo": {
-          "description": "early bird",
-          "nationalities": [],
-          "euEea": "any",
-          "lisbonConvention": "any"
-        }
-      },
-      {
-        "intake": "winter",
-        "closes": "May 31",
-        "appliesTo": {
-          "description": "non-EU nationals",
+          "description": "Nicht-EU-Bürgern/Nicht-EU-Bürgerinnen",
           "nationalities": [],
           "euEea": "excluded",
           "lisbonConvention": "any"
@@ -284,9 +306,9 @@
       },
       {
         "intake": "winter",
-        "closes": "July 15",
+        "closes": "15 July",
         "appliesTo": {
-          "description": "EU nationals",
+          "description": "EU-Bürgern/EU-Bürgerinnen",
           "nationalities": [],
           "euEea": "only",
           "lisbonConvention": "any"
@@ -294,28 +316,39 @@
       }
     ],
     "provenance": {
-      "sourceType": "program_page",
-      "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-      "snippet": "Application deadlines:\nApplications for the winter semester 2026 will begin on March 1, 2026.\nMay 1 (early bird): You would like to be informed about the result of your application by the end of May? Then apply before May 1! May 31 (final deadline for non-EU nationals) July 15 (final deadline for EU nationals)",
-      "section": "Application deadlines",
-      "lang": "en",
-      "fetchedAt": "2026-08-01T18:53:23.705Z"
+      "sourceType": "satzung",
+      "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+      "snippet": "Bewerbungen um Zulassung zum Studium müssen von Nicht-EU-\nBürgern/Nicht-EU-Bürgerinnen bis zum vorausgehenden 31. Mai und von EU-Bürgern/EU-Bürgerinnen\nbis zum vorausgehenden 15. Juli bei der Albert-Ludwigs-Universität eingegangen sein.",
+      "section": "§ 1",
+      "lang": "de",
+      "fetchedAt": "2026-08-01T20:03:43.957Z"
     },
     "confidence": 0.9
   },
   "qualitative": [
     {
-      "value": "Incomplete applications will not be considered.",
+      "value": "der den in Absatz 2 genannten qualifizierten Anforderungen genügt",
+      "provenance": {
+        "sourceType": "satzung",
+        "sourceUrl": "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf",
+        "snippet": "einen ersten Abschluss mit einem Notendurchschnitt von mindestens 2,9 an einer deutschen Hoch-\nschule in einem Bachelorstudiengang im Fach Mikrosystemtechnik, Elektrotechnik oder Mechatronik\noder in einem gleichwertigen mindestens dreijährigen Studiengang an einer deutschen oder auslän-\ndischen Hochschule erworben hat, der den in Absatz 2 genannten qualifizierten Anforderungen ge-\nnügt",
+        "section": "§ 2 Abs. 1 Nr. 1",
+        "lang": "de",
+        "fetchedAt": "2026-08-01T20:03:43.957Z"
+      },
+      "confidence": 0.9
+    },
+    {
+      "value": "APS certificate (only for applicants who have studied in China, India or Vietnam). Please note: It is not possible to submit the APS certificate after the application deadline.",
       "provenance": {
         "sourceType": "program_page",
         "sourceUrl": "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en",
-        "snippet": "Please note : Incomplete applications will not be considered.",
-        "section": "English language proficiency",
+        "snippet": "APS certificate (only for applicants who have studied in China, India or Vietnam). Please note: It is not possible to submit the APS certificate after the application deadline.",
         "lang": "en",
         "fetchedAt": "2026-08-01T18:53:23.705Z"
       },
       "confidence": 0.9
     }
   ],
-  "extractedAt": "2026-08-01T18:53:23.705Z"
+  "extractedAt": "2024-07-29T12:00:00Z"
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "admit-match",
   "version": "0.0.1",
   "private": true,
@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "extract": "tsx --env-file=.env src/cli/extract.ts",
     "traces": "tsx --env-file=.env src/cli/traces.ts",
-    "modules": "tsx --env-file=.env src/cli/modules.ts"
+    "modules": "tsx --env-file=.env src/cli/modules.ts",
+    "ask": "tsx --env-file=.env src/cli/ask.ts"
   },
   "dependencies": {
     "@langfuse/otel": "^5.9.1",
@@ -26,3 +27,4 @@
     "typescript": "^5.7.0"
   }
 }
+

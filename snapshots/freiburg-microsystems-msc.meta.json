@@ -1,13 +1,14 @@
 {
   "programId": "freiburg-microsystems-msc",
-  "extractedAt": "2026-08-01T18:53:45.293Z",
+  "extractedAt": "2026-08-01T20:04:42.640Z",
   "promptVersion": "2026-07-28.3",
   "model": "gemini-2.5-flash",
   "docHashes": {
+    "https://www.jsl.uni-freiburg.de/informationen_fuer_studierende_web/zulassungsordnungen/zulassungsordnung_m_sc__microsystems_engineering_19_01_2009.pdf": "45f41878d4ee51d2b12f8d61215c28bc6c518346a48cabefb3331eabbd0cb2e8",
     "https://www.tf.uni-freiburg.de/en/study-programs/microsystem-engineering/m-sc-microsystems-engineering-en": "01b9b4f639eb12c0de24a96475d4468a1aa40f8d86eea1d347bdb2807e8de9e2"
   },
-  "totalTokens": 11739,
-  "costUsd": 0.0145525,
+  "totalTokens": 28601,
+  "costUsd": 0.0370395,
   "defects": 0,
-  "reviews": 0
+  "reviews": 2
 }
