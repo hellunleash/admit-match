@@ -9,5 +9,6 @@ dist/
 # they never belong in a public repository. Only profile.example.json is tracked.
 profile.local.json
 *.local.json
+*.local.md
 transcripts/
 .cache/
