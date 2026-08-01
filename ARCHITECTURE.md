@@ -34,9 +34,26 @@ the programs worth arguing for.
 | **DAAD International Programmes** | Internationally oriented / English-taught programmes specifically — exactly our corridor. Now surfaced via My GUIDE. | No public API found; ask DAAD. |
 | **DEQAR** (EQAR) | Accredited programmes across the EHEA, with QA reports and decisions. **Has a documented API** (docs.deqar.eu) built to be fed live. | Public API. Free. |
 
-Start with **DEQAR** because it is the only one with a real API, and use it for programme/institution
-identity and accreditation status. Treat Hochschulkompass as the coverage target and write to HRK
-about an export — a partner export replaces the entire discovery problem with a file.
+**Correction (verified 2026-07-29): DEQAR cannot be the German programme registry.** German
+institutions may hold *Systemakkreditierung*, under which the institution self-accredits its own
+programmes — and those programmes are then **not listed individually** in DEQAR, only the
+institution's system accreditation. TU Dresden, TUM, RWTH and KIT are precisely that case, so a
+DEQAR-driven registry would return their institutions and none of their programmes. Programme
+accreditation (and therefore individual DEQAR records) is the obligatory route only for institutions
+*without* system accreditation — disproportionately Fachhochschulen.
+
+So the order is:
+
+1. **Hochschulkompass — primary.** It is the only source that is complete by construction: every
+   state-recognised HEI, every programme, entered by the universities themselves. No public API, so
+   **write to HRK for a partner data export**. That single email replaces the whole discovery layer.
+2. **DAAD International Programmes — secondary.** English-taught subset, which is most of our
+   corridor, and useful for cross-checking Hochschulkompass coverage.
+3. **DEQAR — accreditation status only**, not discovery. Genuinely useful for confirming a
+   programme-accredited FH is in good standing, and it has the only real API of the three.
+
+Until an export arrives, seeds stay hand-curated — which is fine at 40 programmes and honest about
+what it is.
 
 Registry data changes on the order of an intake cycle. Refresh monthly at most.
 
@@ -157,8 +174,25 @@ actionable and "ineligible" is not.
 
 1. **Gates + overlap scoring** — the match model above. Biggest product change, no new infrastructure.
 2. **Gazette tracking (L2)** for the hardware/AI corridor — kills the recurring fetch/extract cost.
-3. **DEQAR ingest (L1)** — replaces hand-curated seeds; write to HRK about a Hochschulkompass export.
+3. **Registry (L1)** — request the Hochschulkompass export; DAAD as secondary; DEQAR for
+   accreditation status only.
 4. **Conditional GET + sitemap (L3)** — small, cheap, compounding.
 5. **Golden set (L4)** — unblocks model choice and drift detection.
+
+## Where things are stored, and what is never stored
+
+| Thing | Source | Stored? | Where |
+|---|---|---|---|
+| Programme list | Hochschulkompass export / DAAD | yes, as data | `src/seeds.ts` → later a data file |
+| Statute PDFs | University gazette (no API exists for these) | yes, cached bytes | `.cache/docs/` — gitignored, 14-day TTL |
+| Extracted requirements | our extractor | yes, committed | `snapshots/*.json` — the diff is the changelog |
+| Extraction provenance | our extractor | yes, committed | `snapshots/*.meta.json` |
+| Applicant transcript | the user | **never leaves the machine** | `profile.local.json` — gitignored |
+| Module descriptions | Modulhandbuch | local only | `modules.local.json` — gitignored |
+| Match results | computed | not stored | derived on demand |
+
+Nobody serves German statutes over an API. They are PDFs in university gazettes, which is exactly
+why fetching them is version-tracked rather than live: fetch once per gazette number, extract once,
+commit the result, and every later run reads the snapshot.
 
 Deferred: amendment chains, Wayback recovery, SQLite index, second country.
