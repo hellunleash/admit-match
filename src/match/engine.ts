@@ -1,42 +1,51 @@
 /**
- * The match engine. Deterministic: it consumes course→requirement judgements and produces a
- * verdict. It never calls a model and never decides eligibility "by feel".
+ * Match engine — deterministic. Consumes course→requirement judgements and gate evaluations, emits
+ * a shortlist entry. It never calls a model and never decides eligibility by feel.
  *
- * Two rules the German statutes force, both easy to get wrong in a way that silently inflates
- * every total:
+ * Design rules, each learned from a real German statute:
  *
- *  1. NON-OVERLAPPING credits. Dresden requires "sich inhaltlich nicht überschneidende"
- *     Leistungspunkte, so one course cannot count toward two requirements at once. Summing each
- *     requirement independently would let a single course satisfy three of them.
- *  2. STRICT decides the verdict. A total that only clears the bar under a generous reading is
- *     `uncertain`, never `eligible` — telling someone they qualify on a maybe costs them €75 and
- *     an application cycle.
+ *  1. **Gates filter; credits score.** Only a stated, binary rule (language, a real grade cutoff, a
+ *     required test, degree status, a passed deadline) removes a program. A credit shortfall never
+ *     does — it becomes a number with an explanation.
+ *  2. **Non-overlapping credits.** Dresden requires "sich inhaltlich nicht überschneidende"
+ *     Leistungspunkte: a course is spent once. Summing requirements independently would let one
+ *     course satisfy three of them and silently inflate every score.
+ *  3. **Coverage is capped per requirement.** Surplus in one area cannot mask a gap in another —
+ *     that is precisely the substitution a curricular analysis refuses to make.
  */
 
-import type { CourseMatch, ProgramMatch, RequirementOutcome } from "./types.js";
+import type {
+  CourseMatch,
+  Gate,
+  ProgramMatch,
+  RequirementOverlap,
+} from "./types.js";
 
-/** Assignment under the non-overlap rule: a course is spent once, on the requirement that needs it
- *  most. "Most" = the scarcest requirement first, so a course isn't wasted on one already met. */
+/**
+ * Assignment under the non-overlap rule. Tightest quantified requirement first: an unquantified
+ * area can absorb leftovers, and a course spent on an already-satisfied requirement is a course
+ * that cannot close a gap elsewhere.
+ */
 function assign(
-  requirements: { label: string; minEcts: number | undefined; candidates: CourseMatch[] }[],
+  requirements: { label: string; requiredCredits: number | undefined; candidates: CourseMatch[] }[],
   include: (m: CourseMatch) => boolean
 ): Map<string, CourseMatch[]> {
   const spent = new Set<string>();
   const out = new Map<string, CourseMatch[]>();
   for (const r of requirements) out.set(r.label, []);
 
-  // Quantified requirements first, tightest first: an unquantified area can absorb leftovers, and
-  // a course spent on a satisfied requirement is a course that can't rescue a failing one.
   const order = [...requirements].sort((a, b) => {
-    if ((a.minEcts === undefined) !== (b.minEcts === undefined)) return a.minEcts === undefined ? 1 : -1;
-    return (b.minEcts ?? 0) - (a.minEcts ?? 0);
+    const aQ = a.requiredCredits === undefined;
+    const bQ = b.requiredCredits === undefined;
+    if (aQ !== bQ) return aQ ? 1 : -1;
+    return (b.requiredCredits ?? 0) - (a.requiredCredits ?? 0);
   });
 
   for (const r of order) {
     let total = 0;
     for (const m of r.candidates.filter(include)) {
       if (spent.has(m.courseCode)) continue;
-      if (r.minEcts !== undefined && total >= r.minEcts) break; // satisfied — leave the rest
+      if (r.requiredCredits !== undefined && total >= r.requiredCredits) break;
       spent.add(m.courseCode);
       out.get(r.label)!.push(m);
       total += m.credits;
@@ -54,95 +63,119 @@ export type EngineInput = {
   setId: string;
   requirements: {
     label: string;
-    canonical: RequirementOutcome["canonical"];
-    minEcts: number | undefined;
-    citation?: RequirementOutcome["citation"];
-    /** Every course judged against THIS requirement, in the judge's preferred order. */
+    canonical: RequirementOverlap["canonical"];
+    requiredCredits: number | undefined;
+    citation?: RequirementOverlap["citation"];
     candidates: CourseMatch[];
   }[];
-  otherGates: ProgramMatch["otherGates"];
+  gates: Gate[];
   notes?: string[];
 };
+
+/** Below this, a swing course isn't worth asking a human for a document. */
+const MATERIAL_SWING_CREDITS = 2;
 
 export function evaluate(input: EngineInput): ProgramMatch {
   const strictAssign = assign(input.requirements, (m) => m.strength === "clear");
   const generousAssign = assign(input.requirements, (m) => m.strength !== "none");
 
-  const requirements: RequirementOutcome[] = input.requirements.map((r) => {
+  const requirements: RequirementOverlap[] = input.requirements.map((r) => {
     const strict = strictAssign.get(r.label) ?? [];
     const generous = generousAssign.get(r.label) ?? [];
-    const strictEcts = sum(strict);
-    const generousEcts = sum(generous);
+    const strictCredits = sum(strict);
+    const generousCredits = sum(generous);
 
-    let verdict: RequirementOutcome["verdict"];
-    if (r.minEcts === undefined) {
-      // Named but unquantified (RWTH does this for all four areas). There is no number to clear, so
-      // claiming "met" would be inventing a threshold the statute declined to state.
-      verdict = strictEcts > 0 ? "met" : "uncertain";
-    } else if (strictEcts >= r.minEcts) {
-      verdict = "met";
-    } else if (generousEcts >= r.minEcts) {
-      verdict = "uncertain"; // the swing courses decide this one
-    } else {
-      verdict = "not_met";
-    }
-
-    // Swing courses: plausible-but-not-clear matches that are load-bearing — present only when the
-    // generous reading clears a bar the strict reading doesn't.
-    const swingCourses =
-      verdict === "uncertain" && r.minEcts !== undefined
-        ? generous.filter((m) => m.strength === "plausible")
-        : [];
+    // An unquantified requirement (RWTH names four areas with no figures) has no denominator.
+    // Coverage is "did anything match at all" — inventing a threshold the statute declined to
+    // state would be exactly the fabrication this project exists to avoid.
+    const req = r.requiredCredits;
+    const cov = (credits: number) =>
+      req === undefined ? (credits > 0 ? 1 : 0) : Math.min(1, credits / req);
 
     return {
       requirementLabel: r.label,
       canonical: r.canonical,
-      minEcts: r.minEcts,
+      requiredCredits: req,
       ...(r.citation ? { citation: r.citation } : {}),
-      strictEcts,
-      generousEcts,
+      strictCredits,
+      generousCredits,
+      strictCoverage: cov(strictCredits),
+      generousCoverage: cov(generousCredits),
+      shortfall: req === undefined ? 0 : Math.max(0, req - strictCredits),
       matched: generous,
-      swingCourses,
-      verdict,
+      swingCourses: generous.filter((m) => m.strength === "plausible"),
     };
   });
 
-  const blockers = requirements.filter((r) => r.verdict === "not_met").map((r) => r.requirementLabel);
-  const uncertain = requirements.filter((r) => r.verdict === "uncertain");
+  /**
+   * Credit-weighted overlap: a 35-credit requirement matters more than a 10-credit one. Unquantified
+   * requirements get a nominal weight so they count without dominating — they carry no credit figure
+   * to weight by, and dropping them entirely would flatter programs that quantify nothing.
+   */
+  const weightOf = (r: RequirementOverlap) => r.requiredCredits ?? 10;
+  const totalWeight = requirements.reduce((n, r) => n + weightOf(r), 0) || 1;
+  const weighted = (pick: (r: RequirementOverlap) => number) =>
+    requirements.reduce((n, r) => n + weightOf(r) * pick(r), 0) / totalWeight;
 
-  const verdict: ProgramMatch["verdict"] =
-    blockers.length > 0 ? "ineligible" : uncertain.length > 0 ? "uncertain" : "eligible";
+  const biggestGaps = requirements
+    .filter((r) => r.shortfall > 0)
+    .map((r) => ({ requirementLabel: r.requirementLabel, shortfall: r.shortfall }))
+    .sort((a, b) => b.shortfall - a.shortfall);
 
   /**
-   * The escalation ask, and the reason it stays short: evidence is requested ONLY for courses whose
-   * classification changes the verdict. If a requirement fails by 60 ECTS, no module description
-   * rescues it and nobody should be asked for one. Precision that changes nothing is not worth a
-   * person's time.
+   * Evidence is requested only where it moves the number materially. If a requirement is short by
+   * 30 credits, no module description rescues it and nobody should be asked for one; precision that
+   * changes nothing is not worth a person's time.
    */
   const seen = new Set<string>();
   const needsEvidenceFor: ProgramMatch["needsEvidenceFor"] = [];
-  for (const r of uncertain) {
+  for (const r of requirements) {
+    if (r.shortfall === 0) continue;
     for (const m of r.swingCourses) {
-      if (m.evidence === "description_backed" || seen.has(m.courseCode)) continue;
+      if (m.evidence === "description_backed") continue;
+      if (m.credits < MATERIAL_SWING_CREDITS || seen.has(m.courseCode)) continue;
       seen.add(m.courseCode);
       needsEvidenceFor.push({
         courseCode: m.courseCode,
         courseTitle: m.courseTitle,
-        because: `decides "${r.requirementLabel.slice(0, 60)}" — ${r.strictEcts}/${r.minEcts} certain, ${r.generousEcts} if counted`,
+        because:
+          `"${r.requirementLabel.slice(0, 55)}": ${r.strictCredits}/${r.requiredCredits} certain, ` +
+          `${r.generousCredits} if this counts`,
       });
     }
   }
+
+  const failed = input.gates.some((g) => g.status === "failed");
+  const unknown = input.gates.some((g) => g.status === "unknown");
 
   return {
     programId: input.programId,
     university: input.university,
     programName: input.programName,
     bestSetId: input.setId,
+    gates: input.gates,
+    gateStatus: failed ? "failed" : unknown ? "unknown" : "passed",
     requirements,
-    verdict,
-    blockers,
+    overlapStrict: weighted((r) => r.strictCoverage),
+    overlapGenerous: weighted((r) => r.generousCoverage),
+    biggestGaps,
     needsEvidenceFor,
-    otherGates: input.otherGates,
     notes: input.notes ?? [],
+  };
+}
+
+/**
+ * Shortlist ordering: gate failures are separated rather than buried, because "you need German C1"
+ * is actionable and a low rank is not. Within each group, higher overlap first.
+ */
+export function shortlist(matches: ProgramMatch[]): {
+  eligible: ProgramMatch[];
+  gated: ProgramMatch[];
+} {
+  const byOverlap = (a: ProgramMatch, b: ProgramMatch) =>
+    b.overlapStrict - a.overlapStrict || b.overlapGenerous - a.overlapGenerous;
+  return {
+    eligible: matches.filter((m) => m.gateStatus !== "failed").sort(byOverlap),
+    gated: matches.filter((m) => m.gateStatus === "failed").sort(byOverlap),
   };
 }

@@ -8,6 +8,60 @@ Rewriting history to look smarter is not.
 
 ---
 
+## 2026-07-29 — Stop scraping what's already published; stop gating on credits
+
+Two structural corrections, written up in [ARCHITECTURE.md](ARCHITECTURE.md).
+
+### We were scraping documents that have canonical addresses
+
+Every German university publishes binding rules in an official gazette — *Amtliche Bekanntmachungen*
+/ *Amtliche Mitteilungen* — as **dated, numbered PDFs in a stable archive** (`2022-050.pdf`,
+`04_2021 Zweite Satzung zur Änderung…`). RWTH keeps expired versions online. Stuttgart runs a
+**mailing list for new announcements**.
+
+So the statute layer should resolve a programme to its **gazette series**, poll the cheap HTML
+index, and treat the gazette number as the version key — fetching a PDF only when a new number
+appears, or receiving a push where a mailing list exists. Today we re-read 700 KB PDFs to check
+whether anything changed. In steady state this should cost one conditional GET.
+
+It also exposes something the current design gets wrong: rules change by **Änderungssatzung**. The
+current rule is a base statute plus its amendments, so reading only the newest PDF gets you a diff,
+not the rule. That's the deeper reason "extract the program page" was always fragile — the page is a
+summary of a versioned document set that is public.
+
+For the registry layer (who exists), three real sources, and none of them need scraping:
+**Hochschulkompass** (HRK — 19,000+ programmes, maintained by the universities themselves, data
+exports to partners), **DAAD International Programmes** (English-taught, our corridor), and
+**DEQAR** (EQAR — accredited programmes across the EHEA, and the only one with a documented public
+API). Start with DEQAR; ask HRK for an export, which would replace the whole discovery problem with
+a file.
+
+Also missing and nearly free: conditional GET (`If-None-Match` / `If-Modified-Since`), `sitemap.xml`
+`lastmod` hints, and the Wayback CDX API for recovering a statute version a university has replaced
+mid-cycle.
+
+### Credits are a score, not a gate
+
+Bigger change. The engine now separates **gates** from **overlap**:
+
+- **Gates** — language of instruction, a *stated* grade cutoff, a required test that applies to this
+  applicant group, degree status, a passed deadline. These are the only things that can produce a
+  "no", each with a citation, each with a remedy where one exists.
+- **Overlap** — curricular fit is a credit-weighted coverage score, reported strict and generous,
+  per requirement, with the shortfall in credits and the courses that contributed.
+
+The old model was wrong on the law. Under Lisbon a committee weighs substantial difference against
+learning outcomes; nobody is auto-rejected for being 7 ECTS under a guideline. Printing "ineligible"
+on a credit count hid exactly the programmes worth applying to or arguing for.
+
+Coverage is capped per requirement, so surplus in one area can't mask a gap in another — that is
+precisely the substitution a curricular analysis refuses to make. Unquantified requirements (RWTH
+names four areas with no figures) get a nominal weight rather than a fabricated threshold.
+
+Output shape now: *gates passed · overlap 72–81% · Foundations & Theory 24/35, short 11 · swing:
+Computational Methods could count here or under Software Development.* Nobody is told "ineligible"
+for that; they're told what's thin and by how much.
+
 ## 2026-07-28 — Wrong corridor: hardware/AI, not computer science
 
 Corrected on something I'd been anchoring on for days: the target isn't MSc Computer Science. It's
